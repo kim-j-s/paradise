@@ -1,34 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-<title>파라다이스 시티</title>
-<link href="../static/css/lib/swiper.css" rel="stylesheet">
-<link href="../static/css/reset.css" rel="stylesheet" />
-<link href="../static/css/common.css" rel="stylesheet" />
-<link href="../static/css/contents.css" rel="stylesheet" />
-<link href="../static/css/main.css" rel="stylesheet" />
-<script type="text/javascript" src="../static/js/common.js"></script>
-<script type="text/javascript" src="../static/js/ui.js"></script>
-<!--[if lt IE 9]>
-    <script type="text/javascript">
-        document.createElement("header"); 
-        document.createElement("nav"); 
-        document.createElement("section"); 
-        document.createElement("article"); 
-        document.createElement("footer");
-    </script>
-<![endif]-->
-</head>
+@@include('static/include/head.html')
 <body>
 	<div class="layerfullWrap">
 		<!-- 헤더영역 -->
-		<div id="layerHeader">
-			상세 설정
-			<a href="#" class="layerCloseBtn"></a>
-		</div>
+		@@include('static/include/layer_header.html',{
+			"title":"상세 설정"
+		})
 		<!-- //헤더영역 -->
 		<!-- 컨텐츠 영역 -->
 		<section id="layerContent">
@@ -38,50 +14,46 @@
 
 			<div class="detailSettingWrap">
 				<div class="detailHeader">
-					<h2 class="detailTitle">ART of paradise</h2>
+					<h2 class="detailTitle">CIMER SUNBED&amp;CABANA</h2>
 					<p class="desc">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을 모던하면서도 아늑한 인테리어의 호텔 파라다이스</p>
 				</div>
 
 				<div class="settingCont mt20">
 					<ul class="slideWrap dept mt18">
+
 						<li class="slideList other">
 							<div class="slideDept1">
-								<span class="title">인원</span>
-								<span class="rst">성인 <span class="color">2</span>인 / 어린이 <span class="color">2</span>인</span>
+								<span class="title">날짜</span>
+								<span class="rst">2018.05.04 - 2018.05.07</span>
 							</div>
-							<div class="slideDept2">
-								<ul class="borderList">
-									<li>
-										<span class="tit counter">성인 <small>(48,000 원)</small></span>
-										<div class="countWrap">
-											<span class="count">0</span>
-											<button class="countMinus"><span>감소</span></button>
-											<button class="countPlus"><span>증가</span></button>
-										</div>
-									</li>
-									<li>
-										<span class="tit counter">어린이 <small>(48,000 원)</small></span>
-										<div class="countWrap">
-											<span class="count">0</span>
-											<button class="countMinus"><span>감소</span></button>
-											<button class="countPlus"><span>증가</span></button>
-										</div>
-									</li>
-								</ul>
+							<div class="slideDept2 pt13 pb7">
+								<a href="#" class="btn ty5"><span>입장일</span></a>
 							</div>
 						</li>
-					</ul>
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">시간</span>
+								<span class="rst">오전(HH:MM-HH:MM)</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<select name="" id="" class="selectbox">
+									<option value="">오전(HH:MM-HH:MM)</option>
+									<option value="">오후(HH:MM-HH:MM)</option>
+									<option value="">야간(HH:MM-HH:MM)</option>
+								</select>
+							</div>
+						</li>
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">층 &amp; 위치</span>
+								<span class="rst">1층 A존</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<a href="#" class="btn ty6"><span>층 &amp; 위치</span></a>
+							</div>
+						</li>
 
-					<div class="dimmedBtn mt20">
-						<a href="#" class="btn ty4">완료</a>
-					</div>
-					<!-- 버튼 활성화 -->
-					<!--
-					<div class="dimmedBtn on">
-						<a href="#" class="btn ty4">완료</a>
-					</div>
-					-->
-					<!--// 버튼 활성화 -->
+					</ul>
 
 					<dl class="notiTxt list mt15">
 						<dt class="point">유의사항</dt>

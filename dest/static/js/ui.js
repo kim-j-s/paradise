@@ -369,3 +369,15 @@ $(function(){
 		}
 	});
 });
+
+/* 침대 객실 */
+$(function(){
+	var swiper = new Swiper('.roomGallery', {
+		slidesPerView: 'auto',
+		spaceBetween: 8,
+		pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+		},
+	});
+});

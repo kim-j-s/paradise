@@ -1,0 +1,219 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"상세 설정"
+		})
+		<!-- //헤더영역 -->
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="detailThumb">
+				<img src="../static/images/sample/img_spoffer.jpg" alt="" />
+			</div>
+
+			<div class="detailSettingWrap">
+				<div class="detailHeader">
+					<h2 class="detailTitle">Scent Of Paradise</h2>
+					<p class="desc">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을 모던하면서도 아늑한 인테리어의 호텔 파라다이스</p>
+				</div>
+
+				<!--
+				<ul class="slideWrap dept">
+					<li class="slideList other etc">
+						<div class="slideDept1">
+							<span class="title">날짜</span>
+						</div>
+						<div class="slideDept2">
+							<ul class="list">
+								<li>
+									호텔 파라다이스 객실 (다음 중 택1)<br /> Deluse, Deluse Suite, Premier Deluse Suite
+								</li>
+								<li>크로마 테이블 A구역 1개</li>
+								<li>Pool</li>
+								<li>Play Station</li>
+								<li>Fitness</li>
+							</ul>							
+						</div>
+					</li>
+				</ul>
+				-->
+
+				<div class="settingCont mt20">
+					<ul class="slideWrap dept mt18">
+						<!-- 기간 -->
+						<!--
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">기간</span>
+								<span class="rst">2018.05.04 - 2018.05.07</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<a href="#" class="btn ty5 other">
+									<span><span>CHECK IN</span></span> <span><span>CHECK OUT</span></span>
+								</a>
+							</div>
+						</li>
+						-->
+
+						<!-- 인원 -->
+						<!--
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">인원</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<a href="#" class="btn ty7">
+									<span class="inner">성인 <em>0</em></span>
+									<span class="inner">어린이 <em>0</em></span>
+									<span class="inner">유아 <em>0</em></span>
+								</a>
+							</div>
+						</li>
+						-->
+
+						<!-- 객실 / 침대 -->
+						<!--
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">객실 &amp; 침대</span>
+								<span class="rst">객실</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<div class="roomGalleryCont">
+									<div class="swiper-container roomGallery">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide roomCont">
+												<a href="#" class="thumb">
+													<img src="../static/images/sample/img_room.jpg" alt="" />
+													<span class="desc">
+														<span class="txt">
+															GRAND PREMIEM DELUXE<br /> 682,000 <span class="umit">원 (1박)</span>
+														</span>
+													</span>
+												</a>
+												<div class="tblDiv">
+													<div class="cellDiv">
+														<div class="radioBox">
+															<input type="radio" id="radio1" name="radio"><label for="radio1">KING</label>
+														</div>
+													</div>
+													<div class="cellDiv">
+														<div class="radioBox">
+															<input type="radio" id="radio2" name="radio"><label for="radio2">QUEEN</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide roomCont">
+												<a href="#" class="thumb">
+													<img src="../static/images/sample/img_room.jpg" alt="" />
+													<span class="desc">
+														<span class="txt">
+															GRAND PREMIEM DELUXE<br /> 682,000 <span class="umit">원 (1박)</span>
+														</span>
+													</span>
+												</a>
+												<div class="tblDiv">
+													<div class="cellDiv">
+														<div class="radioBox">
+															<input type="radio" id="radio3" name="radio"><label for="radio3">KING</label>
+														</div>
+													</div>
+													<div class="cellDiv">
+														<div class="radioBox">
+															<input type="radio" id="radio4" name="radio"><label for="radio4">QUEEN</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						-->
+
+						<li class="slideList other">
+							<div class="slideDept1">
+								<span class="title">추가 옵션</span>
+							</div>
+							<div class="slideDept2 pt13 pb7">
+								<div class="spOfferWrap">
+									<div class="spOfferHeader">
+										<div class="spOfferThumb">
+											<img src="../static/images/sample/img_spoffer.jpg" alt="" />
+										</div>
+										<div class="spOfferTitle">
+											<strong>조식</strong>
+											<p class="desc">동서양의 5가지 Station으로 구성된 Premium Buffet Restaurant</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+
+					<dl class="notiTxt list mt15">
+						<dt class="point">유의사항</dt>
+						<dd>
+							<ul class="list">
+								<li class="point">크로마는 성인만 이용 가능한 시설입니다.</li>
+								<li class="point">온라인 예약 및 결제 완료 시에도 현장 입장 시점에 신분증 확인 절차가 진행되며, 미성년자인 경우 보호자를 동반하더라도 출입은 불가합니다.</li>
+								<li>안전하고 편안한 이용을 위하여 튜브, 기타 물놀이 기구 사용 및 음식물 반입, 흡연, 오일 사용을 금하고 있습니다.</li>
+								<li>얼리버드 및 특정 프로모션 상품은 예약취소가 불가능합니다.</li>
+								<li>상세한 내용은 상품 상세 페이지를 확인하시기 바랍니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="settingCont pt0 mt32">
+					<ul class="slideWrap dept">
+						<li class="slideList other final">
+							<div class="slideDept1 on">
+								<span class="title">최종 금액</span>
+								<span class="rst"><span class="finalPrice">200,000</span> <span class="unit">원</span></span>
+							</div>
+							<ul class="slideDept2 price" style="display:none;">
+								<li>
+									<span class="title">CIMER + HOTEL 패키지</span>
+									<span class="price">
+										<span class="num">2,000,000</span><span class="unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="title">조식</span>
+									<span class="price">
+										<span class="num">2,000,000</span><span class="unit">원</span>
+									</span>
+								</li>
+								<li>
+									<span class="title">조식 추가</span>
+									<span class="price">
+										<span class="num">2,000,000</span><span class="unit">원</span>
+									</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btnMore">더보기</a>				
+			</div>
+
+			<!-- //컨텐츠 영역 -->
+			<div class="dimmedBtn full">
+				<a href="#" class="btn ty1">상세 설정 완료</a>
+			</div>
+			<!-- 버튼 활성화 -->
+			<!--
+			<div class="dimmedBtn on">
+				<a href="#" class="btn ty1">상세 설정 완료</a>
+			</div>
+			-->
+			<!--// 버튼 활성화 -->
+		</section>
+	</div>
+</body>
+</html>
