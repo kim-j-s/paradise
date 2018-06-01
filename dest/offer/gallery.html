@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>파라다이스 시티</title>
+<link href="../static/css/reset.css" rel="stylesheet" />
+<link href="../static/css/common.css" rel="stylesheet" />
+<link href="../static/css/contents.css" rel="stylesheet" />
+<link href="../static/css/main.css" rel="stylesheet" />
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script type="text/javascript" src="../static/js/ui.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+<body>
+	<!-- 헤더영역 -->
+	<header id="headerWrap">
+		<h1>@@header</h1>
+	</header>
+
+<style type="text/css">
+	#headerWrap {height:60px; background:#fff; color:#blue; text-align:center; line-height:60px;}
+	#headerWrap h1 {line-height:60px; font-size:17px; font-weight:bold; color:#111;}
+</style>
+	<!-- //헤더영역 -->
+
+<script type="text/javascript">
+$(function(){
+	/*
+	$(function(){
+		$('.sw').bxSlider({
+			auto: true,
+			slideWidth: 2500,
+            minSlides: 2.2,
+            maxSlides: 3,
+            slideMargin: 12,
+			moveSlides: 1,
+            pager: false
+		});
+	});
+	*/
+	ss = $('.item').length;
+	$('.mix').html(ss);
+	if (ss <= 2)
+	{
+		$('.mix').html(ss + 'y');
+		return false;
+	} else if ( ss >= 2)
+	{
+		$('.sw').bxSlider({
+			auto: true,
+			slideWidth: 2500,
+			minSlides: 2.2,
+			maxSlides: 3,
+			slideMargin: 12,
+			moveSlides: 1,
+			pager: false
+		});
+		$('.mix').html(ss + 'x');
+	}
+});
+</script>
+
+<style type="text/css">
+	#container {padding:0 10px;}
+	.item {line-height:100px; border:1px solid blue; text-align:center; box-sizing:border-box; }
+	.item.a {background:#ddd;}
+	.item.b {background:blue;}
+	.item.c {background:red;}
+	.mix {position:fixed; top:0; left:0;}
+</style>
+<div class="mix"></div>
+	<!-- 컨텐츠 영역 -->
+	<section id="container">
+		<div class="sw">
+			<div class="item a">1</div>
+			<div class="item b">2</div>
+			<!-- <div class="item c">3</div> -->
+			<!-- <div class="item a">4</div>
+			<div class="item b">5</div>
+			<div class="item c">6</div>
+			<div class="item a">7</div>
+			<div class="item b">8</div>
+			<div class="item c">9</div>
+			<div class="item a">10</div>
+			<div class="item b">11</div>
+			<div class="item c">12</div> -->
+		</div>
+	</section>
+	<!-- //컨텐츠 영역 -->
+
+	<!-- 하단 영역 -->
+	<footer id="footerWrap">
+		푸터내용
+	</footer>
+<style type="text/css">
+	footer {line-height:50px; background:#333; text-align:center; color:#fff;}
+</style>
+	<!-- //하단 영역 -->
+</body>
+</html>

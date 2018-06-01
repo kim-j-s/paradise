@@ -1,0 +1,76 @@
+@@include('static/include/head.html')
+<body>
+	<!-- 헤더영역 -->
+	@@include('static/include/header.html')
+	<!-- //헤더영역 -->
+
+<script type="text/javascript">
+$(function(){
+	/*
+	$(function(){
+		$('.sw').bxSlider({
+			auto: true,
+			slideWidth: 2500,
+            minSlides: 2.2,
+            maxSlides: 3,
+            slideMargin: 12,
+			moveSlides: 1,
+            pager: false
+		});
+	});
+	*/
+	ss = $('.item').length;
+	$('.mix').html(ss);
+	if (ss <= 2)
+	{
+		$('.mix').html(ss + 'y');
+		return false;
+	} else if ( ss >= 2)
+	{
+		$('.sw').bxSlider({
+			auto: true,
+			slideWidth: 2500,
+			minSlides: 2.2,
+			maxSlides: 3,
+			slideMargin: 12,
+			moveSlides: 1,
+			pager: false
+		});
+		$('.mix').html(ss + 'x');
+	}
+});
+</script>
+
+<style type="text/css">
+	#container {padding:0 10px;}
+	.item {line-height:100px; border:1px solid blue; text-align:center; box-sizing:border-box; }
+	.item.a {background:#ddd;}
+	.item.b {background:blue;}
+	.item.c {background:red;}
+	.mix {position:fixed; top:0; left:0;}
+</style>
+<div class="mix"></div>
+	<!-- 컨텐츠 영역 -->
+	<section id="container">
+		<div class="sw">
+			<div class="item a">1</div>
+			<div class="item b">2</div>
+			<!-- <div class="item c">3</div> -->
+			<!-- <div class="item a">4</div>
+			<div class="item b">5</div>
+			<div class="item c">6</div>
+			<div class="item a">7</div>
+			<div class="item b">8</div>
+			<div class="item c">9</div>
+			<div class="item a">10</div>
+			<div class="item b">11</div>
+			<div class="item c">12</div> -->
+		</div>
+	</section>
+	<!-- //컨텐츠 영역 -->
+
+	<!-- 하단 영역 -->
+	@@include('static/include/footer.html')
+	<!-- //하단 영역 -->
+</body>
+</html>

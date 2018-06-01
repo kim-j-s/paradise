@@ -1,0 +1,71 @@
+@@include('static/include/head.html')
+<body>
+	<!-- 헤더영역 -->
+	@@include('static/include/header.html',{
+			"header":"SPECIAL OFFERS"
+		})
+	<!-- //헤더영역 -->
+
+	<!-- 컨텐츠 영역 -->
+	<section id="container">
+		<div class="offerSearch">
+			<div class="blink">검색 조건 대기 상태</div>
+			<div class="inputBox">
+				<input type="text" placeholder="그룹/법인/MICE 코드" class="inp">
+				<button class="inpSearch">검색</button>
+			</div>
+		</div>
+
+		<div class="spOfferWrap">
+			<div class="spOfferHeader">
+				<div class="spOfferThumb">
+					<img src="../static/images/sample/img_spoffer.jpg" alt="" />
+				</div>
+				<div class="spOfferTitle">
+					<strong>SCENT OF PARADISE</strong>
+					<span class="date">2018.05.01-2018.06.01</span>
+					<span class="price">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+				</div>
+			</div>
+			<div class="hashtag">#Hotel Paradise  #Art Space</div>
+			<p class="txt">어린이들의 천국, 파라다이스시티에서 우리 아이의 특별한 하루를 만들어 주세요.</p>
+			<div class="tblDiv btnTbl">
+				<div class="cellDiv">
+					<a href="#" class="btn ty3 cart">장바구니 담기</a>
+				</div>
+				<div class="cellDiv">
+					<a href="#" class="btn ty4">바로 구매</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="spOfferWrap">
+			<div class="spOfferHeader">
+				<div class="spOfferThumb">
+					<img src="../static/images/sample/img_spoffer.jpg" alt="" />
+				</div>
+				<div class="spOfferTitle">
+					<strong>SCENT OF PARADISE</strong>
+					<span class="date">2018.05.01-2018.06.01</span>
+					<span class="price">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+				</div>
+			</div>
+			<div class="hashtag">#Hotel Paradise  #Art Space</div>
+			<p class="txt">어린이들의 천국, 파라다이스시티에서 우리 아이의 특별한 하루를 만들어 주세요.</p>
+			<div class="tblDiv btnTbl">
+				<div class="cellDiv">
+					<a href="#" class="btn ty3 cart">장바구니 담기</a>
+				</div>
+				<div class="cellDiv">
+					<a href="#" class="btn ty4">바로 구매</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //컨텐츠 영역 -->
+
+	<!-- 하단 영역 -->
+	@@include('static/include/footer.html')
+	<!-- //하단 영역 -->
+</body>
+</html>

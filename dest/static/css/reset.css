@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import url("lib/font.css");
+
+
+/* HTML Default */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; line-height:1.4em; box-sizing:border-box; font-weight:300;}
+article, aside, hgroup, header, footer, figure, figcaption, nav, section { display: block; }
+body {padding:0;margin:0;box-sizing:border-box; font-family: 'Noto Sans', sans-serif; font-size:14px; color:#666;}
+h1, h2, h3, h4, h5, h6 { font-weight:300; } 
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,q:before, q:after { content:''; }
+table { border-collapse:collapse; border-spacing:0; table-layout:fixed; width:100%;}
+button { margin:0; padding:0; border:0; font:inherit; color:inherit; background:transparent; overflow:visible; cursor:pointer; line-height:1; }
+a:link, a:visited, a:hover, a,active, a:focus { text-decoration:none; cursor:pointer; color:rgba(0,0,0,0.65);}
+legend, caption { display:none; }
+textarea { resize:vertical; font:inherit; overflow-y:auto; }
+input, select { color:inherit; font:inherit; vertical-align: middle; box-sizing:border-box;}
+address, i { font-style:normal; }
+table { border-collapse:collapse; table-layout:fixed; }
+img, select, input, button { vertical-align:middle; }
+em { font-style:normal; }
+input { font-family: 'Noto Sans', sans-serif;}
+
+html, body {height:100%;}
+
+
+/* placeholder */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(232,153,148,0.8);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #999;
+}
+
+
+.tl {text-align:left;}
+.tr {text-align:right;}
+.tc {text-align:center;}
+
+.fl { float:left;}
+.fr { float:right;}
+
+.clear { clear:both;}
+
+.vt { vertical-align:top;}
+.vm { vertical-align:middle;}
+.vtb { vertical-align:text-bottom;}
+
+.dpi { display:inline;}
+.dpb { display:block;}
+.dpib { display:inline-block;}
+.dpn { display:none;}
+
+.clearFixed:after { content:''; display:block; clear:both;}
+
+.ellipsis { overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.blind { overflow:hidden; position:absolute; top:0; left:0; width:0; height:0; font-size:0;}
+
+
+/* common class */
+.pt0 {padding-top:0 !important;}
+.pt13 {padding-top:13px !important;}
+.pt20 {padding-top:20px;}
+
+.pb7 {padding-bottom:7px !important;}
+
+.mt4 {margin-top:4px !important;}
+.mt8 {margin-top:8px !important;}
+.mt10 {margin-top:10px !important;}
+.mt14 {margin-top:14px !important;}
+.mt15 {margin-top:15px !important;}
+.mt18 {margin-top:18px !important;}
+.mt20 {margin-top:20px !important;}
+.mt32 {margin-top:32px !important;}
+
+.roboto {font-family:'Roboto'; font-weight:400;}

@@ -1,0 +1,44 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"회원가입"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<ol class="joinStep">
+				<li>
+					<span class="txt">약관동의</span>
+				</li>
+				<li>
+					<span class="txt on">본인인증</span>
+				</li>
+				<li>
+					<span class="txt">정보입력</span>
+				</li>
+				<li>
+					<span class="txt">가입완료</span>
+				</li>
+			</ol>
+			<p class="titleTxt"><span class="color">이메일 인증</span>을 통해 회원가입을 <span class="dpib">진행할 수 있습니다.</span></p>
+			<div class="tblDiv pt20">
+				<div class="cellDiv ty2">
+					<input type="text" placeholder="Paradise@paradise.com" class="inp" />
+				</div>
+				<div class="cellDiv ty2" style="width:90px;">
+					<a href="#" class="btn ty2">이메일 인증</a>
+				</div>
+			</div>
+			<dl class="notiTxt">
+				<dt>이메일 인증이란?</dt>
+				<dd>
+					입력하신 이메일로 보내 드린 인증 링크를 통해 회원가입을 진행할 수 있습니다. 인증 링크는 1일(24시간) 유효하며, 유효시간이 경과된 경우 이메일 인증을 재시도해 주시기 바랍니다.
+				</dd>
+			</dl>
+		</section>
+	</div>
+</body>
+</html>

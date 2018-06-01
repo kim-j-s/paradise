@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>파라다이스 시티</title>
+<link href="../static/css/reset.css" rel="stylesheet" />
+<link href="../static/css/common.css" rel="stylesheet" />
+<link href="../static/css/contents.css" rel="stylesheet" />
+<link href="../static/css/main.css" rel="stylesheet" />
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script type="text/javascript" src="../static/js/ui.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+<body>
+	<div class="layerfullWrap btnAdd">
+		<!-- 헤더영역 -->
+		<div id="layerHeader">
+			회원가입
+			<a href="#" class="layerCloseBtn"></a>
+		</div>
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<ol class="joinStep">
+				<li>
+					<span class="txt">약관동의</span>
+				</li>
+				<li>
+					<span class="txt">본인인증</span>
+				</li>
+				<li>
+					<span class="txt on">정보입력</span>
+				</li>
+				<li>
+					<span class="txt">가입완료</span>
+				</li>
+			</ol>
+
+			<div class="inpWrap">
+				<p class="infoTitle">아이디 및 비밀번호<span class="infoTitleSub1">* 필수입력 항목</span></p>
+
+				<label class="inpTitle" for="loginId">아이디 *</label>
+				<div class="inputBox alertAdd">
+					<input type="text" placeholder="Paradise@paradise.com" name="" id="loginId" class="inp" />
+					<button class="inpReset">초기화</button>
+					<!--
+					// 알람문구 표시 전에도 태그는 존재해야 간격이 정상적으로 표시됩니다.
+					<span class="joinNotice"></span>
+					-->
+					<span class="joinNotice">이메일을 ID로 사용합니다.</span>
+				</div>
+
+				<label class="inpTitle" for="loginPw">비밀번호 *</label>
+				<div class="inputBox alertAdd">
+					<input type="password" placeholder="8-16자, 영문&middot;숫자&middot;특수 포함" name="" id="loginPw" class="inp" />
+					<button class="inpReset">초기화</button>
+					<span class="joinNotice alert">비밀번호가 형식에 맞지 않습니다. (8~16자, 영문&middot;숫자&middot;특수 포함)</span>
+				</div>
+
+				<label class="inpTitle" for="loginPwChk">비밀번호 확인 *</label>
+				<div class="inputBox alertAdd">
+					<input type="password" name="" id="loginPwChk" class="inp inpError" />
+					<button class="inpReset">초기화</button>
+					<span class="joinNotice alert">비밀번호가 일치하지 않습니다.</span>
+				</div>
+			</div>
+
+			<div class="inpWrap">
+				<p class="infoTitle">기본정보<span class="infoTitleSub1">* 필수입력 항목</span></p>
+				<label class="inpTitle" for="nameKo">이름(국문) *</label>
+
+				<div class="tblDiv">
+					<div class="cellDiv">
+						<div class="inputBox alertAdd">
+							<input type="text" name="" id="nameKo" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+					</div>
+					<div class="cellDiv" style="width:80px;">
+						<select name="" id="" class="selectbox">
+							<option value="">성별</option>
+							<option value="">남</option>
+							<option value="">여</option>
+						</select>
+					</div>
+				</div>
+
+				<label class="inpTitle" for="nameEN">이름(영문) *</label>
+				<div class="tblDiv">
+					<div class="cellDiv">
+						<div class="inputBox alertAdd">
+							<input type="text" placeholder="First Name(이름)" name="" id="nameEN" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+					</div>
+					<div class="cellDiv">
+						<div class="inputBox alertAdd">
+							<input type="text" placeholder="Last Name(성)" name="" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+					</div>
+				</div>
+
+				<label class="inpTitle" for="birth">생년월일 *</label>
+				<div class="inputBox">
+					<input type="date" name="" id="birth" class="inp" onfocus="(this.type='date')" onblur="(this.type='text')" />
+					<button class="inpReset">초기화</button>
+				</div>
+
+				<label class="inpTitle" for="Phone">휴대폰 번호 *</label>
+				<div class="inputBox">
+					<div class="tblDiv">
+						<div class="cellDiv" style="width:65px;">
+							<select name="" id="Phone" class="selectbox" disabled="disabled">
+								<option value="">010</option>
+								<option value="">011</option>
+								<option value="">016</option>
+								<option value="">017</option>
+								<option value="">018</option>
+								<option value="">019</option>
+							</select>
+						</div>
+						<div class="cellDiv">
+							<div class="inputBox alertAdd">
+								<input type="tel" name="" class="inp" disabled="disabled" />
+								<button class="inpReset">초기화</button>
+							</div>
+						</div>
+					</div>
+					<!-- <span class="joinNotice alert">휴대폰번호를 정확히 입력해 주세요.</span> -->
+				</div>
+
+				<label class="inpTitle" for="address">주소 *</label>
+				<div class="inputBox addressInp">
+					<div class="tblDiv">
+						<div class="cellDiv">
+							<input type="text" id="address" class="inp" disabled="disabled" />
+						</div>
+						<div class="cellDiv" style="width:90px;">
+							<a href="#" class="btn ty3">우편번호 검색</a>
+						</div>
+					</div>
+					<div class="inputBox">
+						<input type="text" placeholder="기본주소" id="address1" class="inp" disabled="disabled" />
+					</div>
+					<div class="inputBox">
+						<input type="text" placeholder="상세주소 1" id="address2" class="inp" disabled="disabled" />
+						<button class="inpReset">초기화</button>
+					</div>
+					<div class="inputBox">
+						<input type="text" placeholder="상세주소 2" id="address3" class="inp" disabled="disabled" />
+						<button class="inpReset">초기화</button>
+					</div>
+				</div>
+				
+				<label class="inpTitle" for="eMail">이메일 *</label>
+				<div class="inputBox">
+					<div class="inputBox">
+						<input type="text" placeholder="Paradise@paradise.com" id="eMail" class="inp" />
+					</div>
+					<span class="joinNotice alert">이메일 형식이 올바르지 않습니다.</span>
+					<p class="txt">@daum.net, @hanmail.net 수신에 제한이 있을 수 있으니, 다른 이메일을 사용 바랍니다.</p>
+					<div class="checkbox mt10">
+						<input type="checkbox" id="idChk"><label for="idChk">아이디와 동일</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="inpWrap">
+				<p class="infoTitle">마케팅 정보 수신 동의<span class="infoTitleSub2">포인트/이벤트 소식을 전해드립니다.<br /> (예약 및 구매 관련 발송 내역은 제외)</span></p>
+				<div class="checkbox other">
+					<input type="checkbox" id="check"><label for="check">전체 동의</label>
+				</div>
+				<div class="box mt14">
+					<ul class="chkList1">
+						<li>
+							<div class="checkbox small">
+								<input type="checkbox" id="emailChk"><label for="emailChk">이메일</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox small">
+								<input type="checkbox" id="sms"><label for="sms">SMS</label>
+							</div>
+						</li>
+						<li>
+							<div class="checkbox small">
+								<input type="checkbox" id="phone"><label for="phone">휴대폰</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="inpWrap">
+				<p class="infoTitle">선택정보</p>
+
+				<label class="inpTitle" for="married">결혼기념일</label>
+				<div class="inputBox">
+					<input type="date" name="" id="married" class="inp" onfocus="(this.type='date')" onblur="(this.type='text')" />
+					<button class="inpReset">초기화</button>
+				</div>
+
+				<label class="inpTitle" for="job">직업</label>
+				<div class="inputBox">
+					<select name="" id="job" class="selectbox dpb">
+						<option value="">직업 선택</option>
+					</select>
+				</div>
+
+				<span class="inpTitle">관심분야</span>
+				<div class="inputBox">
+					<div class="box">
+						<ul class="chkList2">
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests1"><label for="interests1">휴양</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests2"><label for="interests2">레저</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests3"><label for="interests3">쇼핑</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests4"><label for="interests4">다이닝</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests5"><label for="interests5">스포츠</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests6"><label for="interests6">엔터테인먼트</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests7"><label for="interests7">인테리어</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests8"><label for="interests8">웨딩</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests9"><label for="interests9">육아</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests10"><label for="interests10">스파</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests11"><label for="interests11">음악</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests12"><label for="interests12">도서</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox small">
+									<input type="checkbox" id="interests13"><label for="interests13">패션</label>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+		<div class="footerBtn">
+			<a href="#" class="btn ty1">가입완료</a>
+		</div>
+		<!-- 버튼 활성화 -->
+		<!--
+		<div class="footerBtn on">
+			<a href="#" class="btn ty1">가입완료</a>
+		</div>
+		-->
+		<!--// 버튼 활성화 -->
+	</div>
+
+</body>
+</html>
