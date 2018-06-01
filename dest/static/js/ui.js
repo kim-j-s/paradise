@@ -356,3 +356,16 @@ $(function(){
 		}
 	});
 });
+
+// 티켓 클릭 이벤트
+$(function(){
+	var updating = false;
+	$('.ticketList > li').click(function() {
+		if ( !updating ) {
+			var inputID = $(this).find("label").attr("for");
+			updating = true;
+			$('#' + inputID).click();
+			updating = false;
+		}
+	});
+});

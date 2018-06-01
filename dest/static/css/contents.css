@@ -337,8 +337,10 @@
 /* 인원 설정 */
 .countList {}
 .countList li {position:relative; border-bottom:1px solid #e7e3e0}
-.countList .tit {display:table-cell; height:60px; vertical-align:middle; color:#333;}
+.countList .tit {display:table-cell; height:60px; padding-right:10px; vertical-align:middle; color:#333;}
 .countList .tit > small {display:block; font-size:12px; color:#9c836a; line-height:12px;}
+.countList .tit > em {display:block; padding-top:3px; font-size:11px; color:#e66045;}
+.countList .tit.counter {padding-right:115px;}
 .countList .countWrap {position:absolute; top:50%; right:0; margin-top:-12px; width:108px;}
 
 
@@ -363,7 +365,7 @@
 .slideList .slideDept2 {display:block; padding-top:6px;}
 .slideList .slideDept2.on {display:none;}
 .slideList .slideDept2 li {overflow:hidden;}
-.slideList .slideDept2 li + li {margin-top:7px;}
+.slideList .slideDept2 > li + li {margin-top:7px;}
 .slideList .slideDept2 .title {float:left; font-size:12px;}
 .slideList .slideDept2 .price {float:right; line-height:16px;}
 .slideList .slideDept2 .price .num {font-size:12px; font-weight:bold; color:#9c836a; font-family:'Roboto';}
@@ -405,7 +407,15 @@
 .settingCont:before {content:''; display:block; width:calc(100% + 32px); height:7px; margin-left:-16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 
 
-
+/* 티켓 리스트 */
+.ticketList {overflow:hidden;}
+.ticketList > li {float:left; width:50%; padding-right:4px; margin-top:12px; }
+.ticketList > li:nth-child(even) {padding-right:0; padding-left:4px;}
+.ticketList > li:nth-child(1), .ticketList > li:nth-child(2) {margin-top:0;}
+.ticketList > li .inner {padding:12px 8px 4px 8px; background:url(../images/common/bg_ticketList.gif) no-repeat right bottom; background-size:42px 35px; border:1px solid #857b71;}
+.ticketList > li .inner .ticketSelect {padding-bottom:20px;}
+.ticketList > li .inner .desc {position:relative; font-size:12px; padding-top:5px;}
+.ticketList > li .inner .desc:before {content:''; position:absolute; top:0; left:0; width:12px; border-bottom:1px solid #9d836a;}
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {

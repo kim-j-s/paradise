@@ -27,33 +27,40 @@
 								<span class="rst">통합 입장권(찜질방+풀)</span>
 							</div>
 							<div class="slideDept2 pt13">
-								<div class="ticketGallery">
-									<div class="ticket">
-										
-									</div>
-								</div>
+								<ul class="ticketList">
+									<li>
+										<div class="inner">
+											<div class="ticketSelect">
+												<div class="radioBox">
+													<input type="radio" id="ticket1" name="radio1"><label for="ticket1">통합 입장권</label>
+												</div>
+											</div>
+											<p class="desc">클럽</p>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<div class="ticketSelect">
+												<div class="radioBox">
+													<input type="radio" id="ticket2" name="radio1"><label for="ticket2">통합 입장권</label>
+												</div>
+											</div>
+											<p class="desc">클럽</p>
+										</div>
+									</li>
+									<li>
+										<div class="inner">
+											<div class="ticketSelect">
+												<div class="radioBox">
+													<input type="radio" id="ticket3" name="radio1"><label for="ticket3">통합 입장권</label>
+												</div>
+											</div>
+											<p class="desc">클럽</p>
+										</div>
+									</li>
+								</ul>
 							</div>
 						</li>
-
-<style type="text/css">
-.ticketGallery {}
-</style>
-
-<script type="text/javascript">
-$(function(){
-	$('.ticketGallery').bxSlider({
-		//auto: true,
-		slideWidth: 2500,
-		minSlides: 1.2,
-		maxSlides: 3,
-		slideMargin: 12,
-		moveSlides: 1,
-		pager: false,
-		controls: false
-	});
-});
-</script>
-
 						<li class="slideList other">
 							<div class="slideDept1">
 								<span class="title">날짜</span>
@@ -72,7 +79,7 @@ $(function(){
 							<div class="slideDept2">
 								<ul class="countList">
 									<li>
-										<span class="tit">남성 <small>(48,000 원)</small></span>
+										<span class="tit counter">남성 <small>(48,000 원)</small></span>
 										<div class="countWrap">
 											<span class="count">0</span>
 											<button class="countMinus"><span>감소</span></button>
@@ -80,7 +87,7 @@ $(function(){
 										</div>
 									</li>
 									<li>
-										<span class="tit">여성 <span class="subTxt">※여성고객 50%할인 이벤트</span> <small>(48,000 원)</small></span>
+										<span class="tit counter">여성 <small>(48,000 원)</small> <em>※여성고객 50%할인 이벤트</em></span>
 										<div class="countWrap">
 											<span class="count">0</span>
 											<button class="countMinus"><span>감소</span></button>
@@ -90,7 +97,6 @@ $(function(){
 								</ul>
 							</div>
 						</li>
-
 					</ul>
 
 					<div class="dimmedBtn mt20">
