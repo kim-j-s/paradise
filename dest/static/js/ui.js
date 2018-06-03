@@ -347,7 +347,6 @@ $(function(){
 	$('.slideList > .slideDept1').click(function(){
 		if ( !$(this).hasClass('on') )
 		{
-			console.log('진입');
 			$(this).addClass('on');
 			$(this).next('.slideDept2').slideUp(200);
 		} else {
@@ -376,8 +375,8 @@ $(function(){
 		slidesPerView: 'auto',
 		spaceBetween: 8,
 		pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
+			el: '.swiper-pagination',
+			type: 'fraction',
 		},
 	});
 });

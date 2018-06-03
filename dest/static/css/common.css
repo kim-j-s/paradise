@@ -8,6 +8,12 @@
 /* ==============================
  * header
  * ============================== */
+#headerWrap {position:relative; height:60px; background:#fff; text-align:center; line-height:60px; background:#ddd;}
+#headerWrap h1 {line-height:60px; font-size:17px; font-weight:bold; color:#111;}
+#headerWrap .cartBtn {position:absolute; top:21px; right:17px; width:20px; height:18px; text-indent:-9999px; background:url(../images/common/btn/btn_cart.png) no-repeat; background-size:100%;}
+#headerWrap .cartBtn span {position:absolute; top:-5px; right:-10px; width:22px; height:12px; line-height:12px; font-size:10px; color:#fff; text-align:center; text-indent:0; background:#9d836a; border-radius:4px;}
+#headerWrap .menuBtn {position:absolute; top:22px; left:17px; z-index:10; width:18px; height:15px; background:url(../images/common/btn/btn_menu.png) no-repeat; background-size:100%; text-indent:-9999px;}
+
 
 
 /* ==============================
