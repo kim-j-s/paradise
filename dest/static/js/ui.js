@@ -380,3 +380,20 @@ $(function(){
 		},
 	});
 });
+
+/* 구매 상품 목록 */
+$(function(){
+	$('.purchaseListTitle').click(function(){
+		//$(this).addClass('on');
+		if ( !$(this).hasClass('on'))
+		{
+			console.log('pick');
+			$(this).addClass('on');
+			$(this).next('.purchaseDetail').slideDown(200);
+		} else if ($(this).hasClass('on'))
+		{
+			$(this).removeClass('on');
+			$(this).next('.purchaseDetail').slideUp(200);
+		}
+	});
+});
