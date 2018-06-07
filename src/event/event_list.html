@@ -1,0 +1,54 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header_dept.html',{
+				"header":"CHROMA"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container" class="subHeader">
+			<h2 class="titleTxt">
+				<span class="color">파라다이스시티</span>에서 준비한<br /> 다양한 <span class="color">이벤트</span>를 만나보세요.
+			</h2>
+
+			<div class="eventListWrap">
+
+				<div class="eventListChange">
+					<button class="btnCalendarView">캘린더로 보기</button>
+					<button class="btnListView">리스트로 보기</button>
+				</div>
+				
+				<div class="tabWrap">
+					<ul class="tabList">
+						<li>
+							<button class="tit on">진행중 이벤트</button>
+						</li>
+						<li>
+							<button class="tit">종료된 이벤트</button>
+						</li>
+					</ul>
+					<div class="tabContent on">컨텐츠 내용1</div>
+					<div class="tabContent">컨텐츠 내용2</div>
+				</div>
+			</div>
+
+<style type="text/css">
+.eventListWrap {position:relative;}
+
+.eventListChange {padding:27px 0 10px 0; overflow:hidden;}
+.eventListChange > button {width:20px; height:20px; float:left; text-indent:-9999px; background:blue;}
+.eventListChange > button + button {margin-left:16px;}
+</style>
+
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

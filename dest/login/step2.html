@@ -23,7 +23,7 @@
 <![endif]-->
 </head>
 <body>
-	<div class="layerfullWrap btnAdd">
+	<div class="layerfullWrap"> <!-- 2018-06-07 클래스 제거 -->
 		<!-- 헤더영역 -->
 		<div id="layerHeader">
 			회원가입
@@ -33,126 +33,130 @@
 
 		<!-- 컨텐츠 영역 -->
 		<section id="layerContent">
-			<ol class="joinStep">
-				<li>
-					<span class="txt">약관동의</span>
-				</li>
-				<li>
-					<span class="txt on">본인인증</span>
-				</li>
-				<li>
-					<span class="txt">정보입력</span>
-				</li>
-				<li>
-					<span class="txt">가입완료</span>
-				</li>
-			</ol>
-			<p class="titleTxt"><span class="color">휴대폰</span> 또는 <span class="color">이메일 인증</span>을 통해 회원가입을 진행할 수 있습니다.</p>
-
-			<div class="tabWrap">
-				<ul class="tabList">
+			<div class="joinWrap"> <!-- 2018-06-07 구조변경 -->
+				<ol class="joinStep">
 					<li>
-						<button class="tit on">휴대폰 인증</button>
+						<span class="txt">약관동의</span>
 					</li>
 					<li>
-						<button class="tit">이메일 인증</button>
+						<span class="txt on">본인인증</span>
 					</li>
-				</ul>
-				<div class="tabContent on">
-					<div class="tblDiv">
-						<div class="cellDiv" style="width:65px;">
-							<select name="" id="" class="selectbox">
-								<option value="">010</option>
-								<option value="">011</option>
-								<option value="">016</option>
-								<option value="">017</option>
-								<option value="">018</option>
-								<option value="">019</option>
-							</select>
-						</div>
-						<div class="cellDiv">
-							<div class="inputBox">
-								<input type="tel" class="inp" />
-								<button class="inpReset">초기화</button>
-							</div>
-						</div>
-						<div class="cellDiv" style="width:90px;">
-							<a href="#" class="btn ty2">인증번호 요청</a>
-						</div>
-					</div>
-					<div class="inputBox single">
-						<input type="text" placeholder="인증 번호 입력" name="" id="" class="inp" disabled="disabled" />
-					</div>
+					<li>
+						<span class="txt">정보입력</span>
+					</li>
+					<li>
+						<span class="txt">가입완료</span>
+					</li>
+				</ol>
+				<p class="titleTxt"><span class="color">휴대폰</span> 또는 <span class="color">이메일 인증</span>을 통해 회원가입을 진행할 수 있습니다.</p>
 
-					<!-- 휴대전화 인증 요청 시 -->
-					<div class="tblDiv">
-						<div class="cellDiv" style="width:65px;">
-							<select name="" id="" class="selectbox">
-								<option value="">010</option>
-								<option value="">011</option>
-								<option value="">016</option>
-								<option value="">017</option>
-								<option value="">018</option>
-								<option value="">019</option>
-							</select>
-						</div>
-						<div class="cellDiv">
-							<div class="inputBox">
-								<input type="tel" class="inp" />
-								<button class="inpReset">초기화</button>
+				<div class="tabWrap">
+					<ul class="tabList">
+						<li>
+							<button class="tit on">휴대폰 인증</button>
+						</li>
+						<li>
+							<button class="tit">이메일 인증</button>
+						</li>
+					</ul>
+					<div class="tabContent on">
+						<div class="tblDiv">
+							<div class="cellDiv" style="width:65px;">
+								<select name="" id="" class="selectbox">
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+									<option value="">017</option>
+									<option value="">018</option>
+									<option value="">019</option>
+								</select>
+							</div>
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="tel" class="inp" />
+									<button class="inpReset">초기화</button>
+								</div>
+							</div>
+							<div class="cellDiv" style="width:90px;">
+								<a href="#" class="btn ty2">인증번호 요청</a>
 							</div>
 						</div>
-						<div class="cellDiv" style="width:90px;">
-							<a href="#" class="btn ty3">재전송</a>
+						<div class="inputBox single">
+							<input type="text" placeholder="인증 번호 입력" name="" id="" class="inp" disabled="disabled" />
 						</div>
-					</div>
-					<div class="inputBox single">
-						<input type="text" placeholder="인증 번호 입력" name="" id="" class="inp" />
-						<button class="inpReset count">초기화</button>
-						<span class="countdown">12:40</span>
-					</div>
-					<!--// 휴대전화 인증 요청 시 -->
 
-					<dl class="notiTxt">
-						<dt>휴대폰 인증이란?</dt>
-						<dd>
-							입력하신 휴대폰으로 인증 코드가 발송됩니다. 발송된 인증 코드를 입력하여 회원가입을 진행할 수 있습니다. 인증 코드의 유효기간은 5분이며, 유효기간이 경과된 경우 핸드폰 인증을 재시도해 주시기 바랍니다.
-						</dd>
-					</dl>
-				</div>
-				<div class="tabContent">
-					<div class="tblDiv">
-						<div class="cellDiv ty2">
-							<div class="inputBox">
-								<input type="tel" placeholder="Paradise@paradise.com" class="inp" />
-								<button class="inpReset">초기화</button>
+						<!-- 휴대전화 인증 요청 시 -->
+						<div class="tblDiv">
+							<div class="cellDiv" style="width:65px;">
+								<select name="" id="" class="selectbox">
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+									<option value="">017</option>
+									<option value="">018</option>
+									<option value="">019</option>
+								</select>
+							</div>
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="tel" class="inp" />
+									<button class="inpReset">초기화</button>
+								</div>
+							</div>
+							<div class="cellDiv" style="width:90px;">
+								<a href="#" class="btn ty3">재전송</a>
 							</div>
 						</div>
-						<div class="cellDiv ty2" style="width:90px;">
-							<a href="#" class="btn ty2">이메일 인증</a>
+						<div class="inputBox single">
+							<input type="text" placeholder="인증 번호 입력" name="" id="" class="inp" />
+							<button class="inpReset count">초기화</button>
+							<span class="countdown">12:40</span>
 						</div>
+						<!--// 휴대전화 인증 요청 시 -->
+
+						<dl class="notiTxt">
+							<dt>휴대폰 인증이란?</dt>
+							<dd>
+								입력하신 휴대폰으로 인증 코드가 발송됩니다. 발송된 인증 코드를 입력하여 회원가입을 진행할 수 있습니다. 인증 코드의 유효기간은 5분이며, 유효기간이 경과된 경우 핸드폰 인증을 재시도해 주시기 바랍니다.
+							</dd>
+						</dl>
 					</div>
-					<dl class="notiTxt">
-						<dt>이메일 인증이란?</dt>
-						<dd>
-							입력하신 이메일로 보내 드린 인증 링크를 통해 회원가입을 진행할 수 있습니다. 인증 링크는 1일(24시간) 유효하며, 유효시간이 경과된 경우 이메일 인증을 재시도해 주시기 바랍니다.
-						</dd>
-					</dl>
+					<div class="tabContent">
+						<div class="tblDiv">
+							<div class="cellDiv ty2">
+								<div class="inputBox">
+									<input type="tel" placeholder="Paradise@paradise.com" class="inp" />
+									<button class="inpReset">초기화</button>
+								</div>
+							</div>
+							<div class="cellDiv ty2" style="width:90px;">
+								<a href="#" class="btn ty2">이메일 인증</a>
+							</div>
+						</div>
+						<dl class="notiTxt">
+							<dt>이메일 인증이란?</dt>
+							<dd>
+								입력하신 이메일로 보내 드린 인증 링크를 통해 회원가입을 진행할 수 있습니다. 인증 링크는 1일(24시간) 유효하며, 유효시간이 경과된 경우 이메일 인증을 재시도해 주시기 바랍니다.
+							</dd>
+						</dl>
+					</div>
 				</div>
+
+				<!-- 2018-06-07 위치변경 -->
+				<div class="footerBtn">
+					<a href="#" class="btn ty1">다음</a>
+				</div>
+				<!-- 버튼 활성화 -->
+				<!--
+				<div class="footerBtn on">
+					<a href="#" class="btn ty1">다음</a>
+				</div>
+				-->
+				<!--// 버튼 활성화 -->
 			</div>
 
 		</section>
 		<!-- //컨텐츠 영역 -->
-		<div class="footerBtn">
-			<a href="#" class="btn ty1">다음</a>
-		</div>
-		<!-- 버튼 활성화 -->
-		<!--
-		<div class="footerBtn on">
-			<a href="#" class="btn ty1">다음</a>
-		</div>
-		-->
-		<!--// 버튼 활성화 -->
 	</div>
 
 </body>

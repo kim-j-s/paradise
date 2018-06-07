@@ -1,6 +1,6 @@
 @@include('static/include/head.html')
 <body>
-	<div class="layerfullWrap btnAdd">
+	<div class="layerfullWrap"> <!-- 2018-06-07 클래스 제거 -->
 		<!-- 헤더영역 -->
 		@@include('static/include/layer_header.html',{
 			"title":"회원가입"
@@ -9,64 +9,70 @@
 
 		<!-- 컨텐츠 영역 -->
 		<section id="layerContent">
-			<ol class="joinStep">
-				<li>
-					<span class="txt on">약관동의</span>
-				</li>
-				<li>
-					<span class="txt">본인인증</span>
-				</li>
-				<li>
-					<span class="txt">정보입력</span>
-				</li>
-				<li>
-					<span class="txt">가입완료</span>
-				</li>
-			</ol>
-			<p class="titleTxt"><span class="color">파라다이스 리워즈 멤버십</span> <span class="dpib">회원만을</span> <span class="dpib">위한 다양한 혜택과 서비스를</span> <span class="dpib">누려보세요.</span></p>
-			<div class="terms">
-				<div class="termAll">
-					<div class="checkbox other">
-						<input type="checkbox" name="" id="termAll" />
-						<label for="termAll">전체약관 동의</label>
+			<div class="joinWrap"> <!-- 2018-06-07 구조변경 -->
+
+				<ol class="joinStep">
+					<li>
+						<span class="txt on">약관동의</span>
+					</li>
+					<li>
+						<span class="txt">본인인증</span>
+					</li>
+					<li>
+						<span class="txt">정보입력</span>
+					</li>
+					<li>
+						<span class="txt">가입완료</span>
+					</li>
+				</ol>
+				<p class="titleTxt"><span class="color">파라다이스 리워즈 멤버십</span> <span class="dpib">회원만을</span> <span class="dpib">위한 다양한 혜택과 서비스를</span> <span class="dpib">누려보세요.</span></p>
+				<div class="terms">
+					<div class="termAll">
+						<div class="checkbox other">
+							<input type="checkbox" name="" id="termAll" />
+							<label for="termAll">전체약관 동의</label>
+						</div>
 					</div>
+					<ul>
+						<li>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="term1" />
+								<label for="term1">홈페이지 회원 이용 약관 <span>필수</span></label>
+							</div>
+							<a href="#">상세보기</a>
+						</li>
+						<li>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="term2" />
+								<label for="term2">필수 개인정보수집 및 이용에 대한<br /> 동의 <span>필수</span></label>
+							</div>
+							<a href="#">상세보기</a>
+						</li>
+						<li>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="term3" />
+								<label for="term3">Paradise Rewards 회원<br /> 이용약관 <span>필수</span></label>
+							</div>
+							<a href="#">상세보기</a>
+						</li>
+					</ul>
 				</div>
-				<ul>
-					<li>
-						<div class="checkbox">
-							<input type="checkbox" name="" id="term1" />
-							<label for="term1">홈페이지 회원 이용 약관 <span>필수</span></label>
-						</div>
-						<a href="#">상세보기</a>
-					</li>
-					<li>
-						<div class="checkbox">
-							<input type="checkbox" name="" id="term2" />
-							<label for="term2">필수 개인정보수집 및 이용에 대한<br /> 동의 <span>필수</span></label>
-						</div>
-						<a href="#">상세보기</a>
-					</li>
-					<li>
-						<div class="checkbox">
-							<input type="checkbox" name="" id="term3" />
-							<label for="term3">Paradise Rewards 회원<br /> 이용약관 <span>필수</span></label>
-						</div>
-						<a href="#">상세보기</a>
-					</li>
-				</ul>
+
+				<!-- 2018-06-07 위치변경 -->
+				<div class="footerBtn">
+					<a href="#" class="btn ty1">다음</a>
+				</div>
+				<!-- 버튼 활성화 -->
+				<!--
+				<div class="footerBtn on">
+					<a href="#" class="btn ty1">다음</a>
+				</div>
+				-->
+				<!--// 버튼 활성화 -->
+
 			</div>
 		</section>
 		<!-- //컨텐츠 영역 -->
-		<div class="footerBtn">
-			<a href="#" class="btn ty1">다음</a>
-		</div>
-		<!-- 버튼 활성화 -->
-		<!--
-		<div class="footerBtn on">
-			<a href="#" class="btn ty1">다음</a>
-		</div>
-		-->
-		<!--// 버튼 활성화 -->
 	</div>
 </body>
 </html>
