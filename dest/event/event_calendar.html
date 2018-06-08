@@ -50,9 +50,25 @@
 			<div class="eventListWrap">
 
 				<div class="eventListChange">
-					<button class="btnCalendarView" disabled="disabled">캘린더로 보기</button>
-					<button class="btnListView">리스트로 보기</button>
+					<button class="btnCalendarView">캘린더로 보기</button>
+					<button class="btnListView" disabled="disabled">리스트로 보기</button>
 				</div>
+
+				<div class="calendarPick">
+					<button class="prev"><span>이전 보기</span></button>
+					2018.9
+					<button class="next"><span>다음 보기</span></button>
+				</div>
+
+<style type="text/css">
+.calendarPick {position:relative; width:150px; padding:9px 0 10px 0; font-family:'Roboto'; font-weight:400; font-size:20px; color:#333; text-align:center; line-height:26px;}
+.calendarPick button {position:absolute; top:9px; width:26px; height:26px; border:1px solid #e7e3e0; border-radius:3px;}
+.calendarPick button span {position:absolute; text-indent:-9999px;}
+.calendarPick .prev {left:0;}
+.calendarPick .prev span {top:8px; left:9px; display:inline-block; width:5px; height:6px; border-right:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+.calendarPick .next {right:0;}
+.calendarPick .next span {top:8px; left:10px; display:inline-block; width:5px; height:6px; border-left:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+</style>
 				
 				<div class="tabWrap">
 					<ul class="tabList">
@@ -73,24 +89,6 @@
 							</div>
 						</div>
 
-						<ul class="listView">
-							<li class="listViewItem">
-								<a href="#">
-									<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
-									<strong>Duke Dumont at Intrigue Nightclub</strong>
-									<span class="date">2018.05.01- 2018.06.01</span>
-									<span class="desc dot">클럽 옥타곤의 페스티벌 OCTAFEST ! 국내 최대 실내 클럽에서의 레지던트 DJ의 스페셜 나잇</span>
-								</a>
-							</li>
-							<li class="listViewItem">
-								<a href="#">
-									<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
-									<strong>Duke Dumont at Intrigue Nightclub</strong>
-									<span class="date">2018.05.01- 2018.06.01</span>
-									<span class="desc dot">클럽 옥타곤의 페스티벌 OCTAFEST ! 국내 최대 실내 클럽에서의 레지던트 DJ의 스페셜 나잇</span>
-								</a>
-							</li>
-						</ul>
 
 					</div>
 					<div class="tabContent">컨텐츠 내용2</div>
