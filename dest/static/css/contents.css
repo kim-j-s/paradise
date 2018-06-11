@@ -47,7 +47,10 @@
 .selectbox {display:inline-block; width:100%; height:36px; padding-left:8px; border:1px solid #e7e3e0;}
 .selectbox {-webkit-appearance: none; -moz-appearance: none;appearance: none; background:#fff url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
 .selectbox::-ms-expand {display:none;}
-.selectbox:disabled {background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
+.selectbox:disabled {background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px; color:#999;}
+
+.textarea {width:100%; height:120px; padding:10px; border:1px solid #e7e3e0; color:#333; resize:none;}
+
 
  /* ==============================
  * content
@@ -71,11 +74,15 @@
 #container {position:relative; padding:0 16px;}
 #container:after {content:''; display:block; height:20px;}
 #container.none:after {content:none;}
-#container.subHeader {padding-top:60px;}
+/* #container.subHeader {padding-top:60px;} */
+#container.subHeader {}
+
+
 
 /* 레이어팝업 헤더 */
 #layerHeader {position:fixed; top:0; left:0; z-index:99; width:100%; height:60px; background:#fff; font-size:17px; font-weight:bold; color:#191919; text-align:center; line-height:60px;}
 .layerCloseBtn {position:absolute; top:22px; left:16px; width:15px; height:15px; background:url(../images/common/btn/btn_layerclose.gif) no-repeat; background-size:100%;}
+.snsBtn {position:absolute; top:21px; right:18px; width:17px; height:18px; background:url(../images/common/btn/btn_sns.png) no-repeat; background-size:100%; text-indent:-9999px;}
 
 
 /* 공통 탭 */
@@ -98,6 +105,8 @@
 .btn.ty3.big {font-size:14px;}
 .btn.ty4 {background:#9c836a; line-height:36px; font-size:12px; color:#fff;}
 .btn.ty4.big {font-size:14px;}
+.btn.ty4.big.more {display:inline-block; width:140px; font-size:14px;}
+.btn.ty4.big.more span {font-size:14px; font-weight:300;}
 .btn.ty5 {background:#fff; padding:5px 0 8px 0; border:1px solid #857b71;}
 .btn.ty5 > span {display:inline-block; padding-left:23px; background:url(../images/common/icon/icon_calendar.png) no-repeat left center; background-size:14px 15px; line-height:20px; font-size:14px; color:#333;}
 .btn.ty5.other {overflow:hidden; padding:9px 0;}
@@ -110,6 +119,7 @@
 .btn.ty7 .inner em {color:#9c836a;}
 .btn.ty7 .inner + .inner:before  {content:''; position:absolute; top:13px; left:0; height:12px; border-right:1px solid #e7e3e0;}
 .btn.ty8 {background:#262422; line-height:36px; font-size:14px; color:#fff;}
+.btn.ty8.big {line-height:50px; font-weight:normal; font-size:18px; color:#fff;}
 .btn.ty9 {display:inline-block; padding:0 8px; background:#fff; line-height:20px; font-size:12px; color:#9c836a; border:1px solid #9c836a;}
 .btn.ty10 {background:#fff; padding:5px 0 8px 0; border:1px solid #857b71;}
 .btn.ty10 > span {display:inline-block; padding-left:22px; background:url(../images/common/icon/icon_request.png) no-repeat left center; background-size:17px 16px; line-height:20px; font-size:14px; color:#333;}
@@ -137,6 +147,7 @@
 .tblDiv + .tblDiv {margin-top:20px;}
 .tblDiv {display:table; width:100%;}
 .tblDiv .cellDiv {position:relative; display:table-cell; padding-left:8px; vertical-align:top;}
+.tblDiv.half .cellDiv {padding:0;}
 .tblDiv.btnTbl .cellDiv {width:1000px;}
 .tblDiv .cellDiv:first-child {padding:0;}
 .tblDiv .cellDiv .inp {display:block; width:100%; box-sizing:border-box;}
@@ -204,9 +215,9 @@
 
 
 /* 로그인 */
-.titleTxt {font-size:20px; color:#999; letter-spacing:-1px; line-height:23px;}
+.titleTxt {padding:17px 0 0 0; font-size:20px; color:#999; letter-spacing:-1px; line-height:23px;}
 .titleTxt .color {color:#9d836a; line-height:23px;}
-.titleTxt.single {padding-top:7px; line-height:23px;}
+.titleTxt.single {padding-top:9px; line-height:23px;}
 
 .loginWrap {position:relative; min-height:100%; padding-bottom:80px;}
 .loginWrap .titleTxt {padding:25px 0 23px 0;}
@@ -270,11 +281,12 @@
 
 
 /* 회원가입 - 정보입력 */
-.inpWrap {padding-top:23px;}
+.inpWrap {position:relative; padding-top:23px;}
 .inpWrap + .inpWrap {position:relative; margin-top:20px; padding-top:25px;}
 .inpWrap + .inpWrap:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .inpWrap .infoTitle {position:relative; padding-bottom:13px; font-size:14px; font-weight:bold; color:#111;}
-.inpWrap .infoTitle .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;}
+/* .inpWrap .infoTitle .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;} */
+.inpWrap .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;}
 .inpWrap .infoTitle .infoTitleSub2 {display:block; font-size:10px; color:#999; line-height:13px; }
 
 .box {background:#f9f9f9; border:1px solid #e7e3e0;}
@@ -321,7 +333,7 @@
 
 /* 검색 소팅 */
 .searchSort {padding-bottom:8px; overflow:hidden;}
-.searchSort .selectbox {width:auto; height:27px; padding-right:25px; border:1px solid #fff;s}
+.searchSort .selectbox {width:auto; height:27px; padding-left:0; padding-right:25px; border:1px solid #fff;s}
 .searchSort .selectbox.sort1 {float:left; font-weight:bold; font-size:14px; color:#9c836a;}
 .searchSort .selectbox.sort2 { padding-right:15px; float:right; font-size:12px; color:#999; background:#fff url(../images/common/icon/bg_select2.png) no-repeat right center; background-size:8px 5px;}
 
@@ -347,7 +359,7 @@
 .itemListWrap .itemDetail {display:block; padding:13px 14px;}
 .itemListWrap .itemDetail strong {display:block; font-size:14px; font-weight:bold; color:#111; line-height:16px;}
 .itemListWrap .itemDetail .date {display:block; padding:2px 0 6px 0; font-size:12px; color:#333;}
-.itemListWrap .itemDetail .txt {height:36px; line-height:18px;}
+.itemListWrap .itemDetail .txt {display:block; height:36px; line-height:18px;}
 .itemListWrap .itemDetail .hashtag {display:block; padding-top:9px; font-size:12px; color:#9c836a; line-height:14px;}
 .itemListWrap .itemPrice {vertical-align:bottom;}
 .itemListWrap .itemPrice .price1 {font-weight:bold; color:#9c836a;}
@@ -665,7 +677,55 @@
 .listView .listViewItem .thumb {width:100%;}
 .listView .listViewItem strong {display:block; font-weight:bold; padding:11px 0 1px 0; color:#111; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 .listView .listViewItem .date {display:block; padding-bottom:8px; font-family:'Roboto'; font-size:12px; color:#333;}
-.listView .listViewItem .desc {height:36px; font-size:12px; color:#111; line-height:18px;}
+.listView .listViewItem .desc {display:block; height:36px; font-size:12px; color:#111; line-height:18px;}
+
+.calendarPick {position:relative; width:150px; padding:9px 0 10px 0; font-family:'Roboto'; font-weight:400; font-size:20px; color:#333; text-align:center; line-height:26px;}
+.calendarPick button {position:absolute; top:9px; width:26px; height:26px; border:1px solid #e7e3e0; border-radius:3px;}
+.calendarPick button span {position:absolute; text-indent:-9999px;}
+.calendarPick .prev {left:0;}
+.calendarPick .prev span {top:8px; left:9px; display:inline-block; width:5px; height:6px; border-right:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+.calendarPick .next {right:0;}
+.calendarPick .next span {top:8px; left:10px; display:inline-block; width:5px; height:6px; border-left:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
+
+.eventCalenderWrap {position:relative; left:-16px; width:calc(100% + 32px); border-top:1px solid #e8e5e2; border-bottom:1px solid #e8e5e2;}
+.eventCalenderDate {position:relative; padding:15px 0 20px 0;}
+.eventCalenderDate + .eventCalenderDate {border-top:1px solid #e8e5e2;}
+.eventCalenderDate .date {position:absolute; top:15px; left:22px; font-family:'Roboto'; font-weight:400;}
+.eventCalenderList {}
+.eventCalenderList .eventCalenderItem {position:relative; padding:0 20px 0 40px;}
+.eventCalenderList .eventCalenderItem + .eventCalenderItem {margin-top:11px;}
+.eventCalenderList .eventCalenderItem > a {display:block; overflow:hidden;}
+.eventCalenderList .eventCalenderItem > a .thumb {float:left; width:80px; height:45px;}
+.eventCalenderList .eventCalenderItem .txt {position:relative; top:-4px; display:block; padding-left:90px;}
+.eventCalenderList .eventCalenderItem .txt strong {display:block; width:100%; padding-bottom:5px; overflow:hidden; font-weight:bold; color:#111; text-overflow:ellipsis; white-space:nowrap; word-wrap:normal}
+.eventCalenderList .eventCalenderItem .txt .desc {display:block; font-size:12px; height:30px; line-height:15px;}
+
+.eventCalenderDate.past {background:#f9f9f9;}
+.eventCalenderDate.past .date {color:#999;}
+
+.eventCalenderDate.none {padding:0;}
+.eventCalenderDate.none .date {position:static; display:block; float:left; line-height:42px; padding-left:22px; font-weight:bold; color:#9d836a;}
+.eventCalenderDate.none .none {display:block; height:42px; text-indent:-9999px; background:url(../images/event/icon_none.png) no-repeat center center; background-size:8px 2px;}
+
+
+/* 이벤트 상세 */
+.eventDetailHeader {}
+.eventDetailHeader .date {display:block; padding:7px 0 0 0; font-weight:400; color:#999;}
+
+
+/* faq */
+.faqWrap {padding:11px 0 0 0;}
+.faqWrap .faqList {position:relative; border-bottom:1px solid #e7e3e0;}
+.faqWrap .faqList:before {content:''; position:absolute; top:20px; right:9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.faqWrap .faqList.on:before {content:''; position:absolute; top:20px; right:9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.faqWrap .faqList.brd {border:none;}
+.faqWrap .faqList .ask {padding:14px 0 12px 0; line-height:18px; width:calc(100% - 27px);}
+.faqWrap .faqList .ask strong {position:relative; display:block; padding:0 0 3px 21px; color:#9d836a;}
+.faqWrap .faqList .ask strong:before {content:''; position:absolute; top:3px; left:3px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 0; background-size:10px 24px;}
+.faqWrap .faqList .answer {position:relative; left:-16px; display:none; width:calc(100% + 32px); padding:17px 16px 18px 37px; background:#f9f9f9; 
+line-height:18px;}
+.faqWrap .faqList .answer:before {content:''; position:absolute; top:21px; left:19px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -12px; background-size:10px 24px;
+
 
 /* etc */
 .contReset {}

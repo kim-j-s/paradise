@@ -8,20 +8,31 @@
 /* ==============================
  * header
  * ============================== */
-#headerWrap {position:relative; z-index:1; height:60px; background:#fff; text-align:center; line-height:60px;}
+/* #headerWrap {position:relative; z-index:1; height:60px; background:#fff; text-align:center; line-height:60px;} */
+#headerWrap {position:relative; z-index:1; min-height:60px; background:#fff; text-align:center; line-height:60px;}
 #headerWrap h1 {line-height:60px; font-size:17px; font-weight:bold; color:#111;}
 #headerWrap .cartBtn {position:absolute; top:21px; right:17px; width:20px; height:18px; text-indent:-9999px; background:url(../images/common/btn/btn_cart.png) no-repeat; background-size:100%;}
 #headerWrap .cartBtn span {position:absolute; top:-5px; right:-12px; width:24px; height:12px; line-height:12px; font-size:10px; color:#fff; text-align:center; text-indent:0; background:#9d836a; border-radius:6px;}
 #headerWrap .menuBtn {position:absolute; top:22px; left:17px; z-index:10; width:18px; height:15px; background:url(../images/common/btn/btn_menu.png) no-repeat; background-size:100%; text-indent:-9999px;}
+#headerWrap .snsBtn {position:absolute; top:21px; right:17px; width:20px; height:18px; text-indent:-9999px; background:url(../images/common/btn/btn_cart.png) no-repeat; background-size:100%;}
 
-.headerFixed {position:absolute; top:60px; left:0; width:100%; background:#fff;}
-.headerFixed.fixed {position:fixed; top:0;}
-.headerFixed .now {position:relative; padding:0 16px; height:30px; line-height:30px; text-align:left; border-bottom:1px solid #cfcfcf;}
+
+.headerSubWrap {height:30px;}
+.headerFixed {background:#fff;}
+.headerFixed.fixed {position:fixed; top:0; left:0; width:100%;}
+.headerFixed .now {position:relative; padding:0 16px; height:30px; line-height:30px; text-align:left; border-bottom:1px solid #e7e3e0;}
 .headerFixed .now:before {content:''; position:absolute; top:50%; right:16px; margin-top:-3px; width:10px; height:6px; background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 0; background-size:10px 12px;}
 .headerFixed .now.on:before {background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 -6px; background-size:100%;}
-.headerSubLink {position:relative; display:none;}
-.headerSubLink li {padding:0 16px; border-bottom:1px solid #cfcfcf;}
-.headerSubLink li > a {display:block; line-height:30px; text-align:left;}
+.headerSubLink {position:relative; display:none; overflow:hidden;}
+.headerSubLink {
+	-webkit-box-shadow: 0 7px 10px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 7px 10px rgba(0,0,0,.1);
+	box-shadow: 0 7px 10px rgba(0,0,0,.1);
+}
+.headerSubLink li {float:left; width:50%; padding-left:15px;}
+.headerSubLink li:nth-child(even) {padding-left:0;}
+.headerSubLink li > a {display:block; line-height:40px; text-align:left; color:#333;}
+.headerSubLink li > .on {font-weight:bold; color:#9d836a;}
 
 
 /* ==============================

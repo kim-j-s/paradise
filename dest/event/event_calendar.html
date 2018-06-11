@@ -30,13 +30,21 @@
 		<a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
 		<a href="#" class="menuBtn">메뉴</a>
 
-		<div class="headerFixed">
-			<div class="now">EVENTS 1</div>
-			<ul class="headerSubLink">
-				<li><a href="#" class="on">EVENTS 1</a></li>
-				<li><a href="#">EVENTS 2</a></li>
-				<li><a href="#">EVENTS 3</a></li>
-			</ul>
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">EVENTS 1</div>
+				<ul class="headerSubLink">
+					<li><a href="#" class="on">OVERVIEW</a></li>
+					<li><a href="#">상품 소개</a></li>
+					<li><a href="#">이용 안내</a></li>
+					<li><a href="#">젝팟 스토리</a></li>
+					<li><a href="#">시설 안내</a></li>
+					<li><a href="#">맴버십</a></li>
+					<li><a href="#">게임 가이드</a></li>
+					<li><a href="#">고객지원</a></li>
+					<li><a href="#">이벤트</a></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 		<!-- //헤더영역 -->
@@ -60,43 +68,68 @@
 					<button class="next"><span>다음 보기</span></button>
 				</div>
 
-<style type="text/css">
-.calendarPick {position:relative; width:150px; padding:9px 0 10px 0; font-family:'Roboto'; font-weight:400; font-size:20px; color:#333; text-align:center; line-height:26px;}
-.calendarPick button {position:absolute; top:9px; width:26px; height:26px; border:1px solid #e7e3e0; border-radius:3px;}
-.calendarPick button span {position:absolute; text-indent:-9999px;}
-.calendarPick .prev {left:0;}
-.calendarPick .prev span {top:8px; left:9px; display:inline-block; width:5px; height:6px; border-right:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
-.calendarPick .next {right:0;}
-.calendarPick .next span {top:8px; left:10px; display:inline-block; width:5px; height:6px; border-left:5px solid #999; border-top:4px solid transparent; border-bottom:4px solid transparent;}
-</style>
-				
-				<div class="tabWrap">
-					<ul class="tabList">
-						<li>
-							<button class="tit on">진행중 이벤트</button>
-						</li>
-						<li>
-							<button class="tit">종료된 이벤트</button>
-						</li>
-					</ul>
-					<div class="tabContent event on">
-
-						<div class="searchWrap">
-							<div class="searchSort">
-								<select name="" id="" class="selectbox sort2">
-									<option value="">인기순</option>
-								</select>
-							</div>
-						</div>
-
-
+				<div class="eventCalenderWrap">
+					<div class="eventCalenderDate past">
+						<strong class="date">1</strong>
+						<ul class="eventCalenderList">
+							<li class="eventCalenderItem">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_thumb.jpg" alt="" />
+									<span class="txt">
+										<strong>Duke Dumont at Interesting</strong>
+										<span class="desc dot">동서양의 5가지 Station으로 구성된 Premium Night Club Premium Night Club</span>
+									</span>
+								</a>
+							</li>
+							<li class="eventCalenderItem">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_thumb.jpg" alt="" />
+									<span class="txt">
+										<strong>Duke Dumont at Interesting</strong>
+										<span class="desc dot">동서양의 5가지 Station으로 구성된 Premium Night Club</span>
+									</span>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<div class="tabContent">컨텐츠 내용2</div>
-				</div>
 
+					<div class="eventCalenderDate none">
+						<strong class="date">2</strong>
+						<span class="none">이벤트가 없습니다.</span>
+					</div>
+
+					<div class="eventCalenderDate">
+						<strong class="date">3</strong>
+						<ul class="eventCalenderList">
+							<li class="eventCalenderItem">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_thumb.jpg" alt="" />
+									<span class="txt">
+										<strong>Duke Dumont at Interesting</strong>
+										<span class="desc dot">동서양의 5가지 Station으로 구성된 Premium Night Club</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="eventCalenderDate">
+						<strong class="date">4</strong>
+						<ul class="eventCalenderList">
+							<li class="eventCalenderItem">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_thumb.jpg" alt="" />
+									<span class="txt">
+										<strong>Duke Dumont at Interesting</strong>
+										<span class="desc dot">동서양의 5가지 Station으로 구성된 Premium Night Club</span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<a href="#" class="btnMoreTxt">전체 이벤트 보기</a>
 			</div>
-
 		</section>
 		<!-- //컨텐츠 영역 -->
 

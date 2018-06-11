@@ -2,24 +2,24 @@
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept.html',{
+		@@include('static/include/header.html',{
 				"header":"CHROMA"
 			})
 		<!-- //헤더영역 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
-			<h2 class="titleTxt">
+			<h2 class="titleTxt single">
 				<span class="color">파라다이스시티</span>에서 준비한<br /> 다양한 <span class="color">이벤트</span>를 만나보세요.
 			</h2>
 
-			<div class="eventListWrap">
+			<div class="searchSort mt18">
+				<select name="" id="" class="selectbox sort1">
+					<option value="">ALL</option>
+				</select>
+			</div>
 
-				<div class="eventListChange">
-					<button class="btnCalendarView" disabled="disabled">캘린더로 보기</button>
-					<button class="btnListView">리스트로 보기</button>
-				</div>
-				
+			<div class="eventListWrap">
 				<div class="tabWrap">
 					<ul class="tabList">
 						<li>
@@ -66,7 +66,6 @@
 									<option value="">인기순</option>
 								</select>
 							</div>
-						</div>
 
 						<ul class="listView">
 							<li class="listViewItem">
@@ -86,10 +85,10 @@
 								</a>
 							</li>
 						</ul>
+
+						</div>
 					</div>
 				</div>
-
-				<a href="#" class="btnMoreTxt">전체 이벤트 보기</a>
 			</div>
 
 		</section>

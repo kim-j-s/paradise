@@ -451,3 +451,30 @@ $(function(){
 		}
 	});
 });
+
+/* faq */
+$(function(){
+	var faqList = $('.faqWrap > .faqList')
+	$(faqList).each(function(faq){
+		$(this).click(function(){
+			if ( $(this).hasClass('on') )
+			{
+				$(faqList).removeClass('on');
+				$(faqList).find('.answer').slideUp(200, function(){
+					$(faqList).eq(faq).removeClass('brd');
+				});
+			} else {
+				$(faqList).removeClass('on');
+				$(faqList).find('.answer').slideUp(200, function(){
+					$(faqList).removeClass('brd');
+				});
+
+				$(this).addClass('on');
+				$(this).find('.answer').slideDown(200, function(){
+					$(faqList).eq(faq).addClass('brd');
+				});
+			}
+
+		});
+	});
+});

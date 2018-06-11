@@ -24,6 +24,7 @@ var dest = 'dest/';
 gulp.task('include', function() {
 	return gulp
 		.src(['src/**/include/*.html'])
+		//.src(['!src/**/include/*.html'])
 		.pipe(fileinclude ({
 			prefix : '@@',
 			basepath : 'src/'
