@@ -6,7 +6,7 @@
  * ============================== */
 
 /* form태그 */
-.inp {border:1px solid #e7e3e0; padding:7px 29px 8px 8px; font-size:14px; color:#333; background:#fff;}
+.inp {height:36px; padding:7px 29px 8px 8px; border:1px solid #e7e3e0; font-size:14px; color:#333; background:#fff;}
 .inp.inpError {border:1px solid #e66045;}
 .inp:focus {outline:none; border:1px solid #9c836a;}
 .inp:disabled {background:#f9f9f9;}
@@ -74,9 +74,7 @@
 #container {position:relative; padding:0 16px;}
 #container:after {content:''; display:block; height:20px;}
 #container.none:after {content:none;}
-/* #container.subHeader {padding-top:60px;} */
 #container.subHeader {}
-
 
 
 /* 레이어팝업 헤더 */
@@ -191,7 +189,7 @@
 
 /* 뱃지 */
 .badgeWrap {background:#ddd; padding:5px 0;}
-.badge {position:relative; display:inline-block; padding-right:17px; color:#E66045 !important;}
+.badge {position:relative; display:inline-block; padding-right:17px; color:#E66045 !important; font-weight:bold !important; line-height:16px;}
 .badge * {color:#E66045 !important;}
 .badge:after {content:''; position:absolute; top:50%; right:0; margin-top:-6px; width:12px; height:12px; background:url(../images/common/icon/icon_badge.png) no-repeat right center; background-size:65px 52px;}
 .badge.rR:after {background-position:0 0;}
@@ -458,7 +456,7 @@
 .slideWrap.bill {padding:11px 0 12px 0; border-bottom:1px solid #e9e5e2;}
 
 .slideList .slideDept1 {display:table; position:relative; width:100%;}
-.slideList .slideDept1 .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; line-height:20px;}
+.slideList .slideDept1 .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; line-height:20px; color:#333;}
 .slideList .slideDept1 .title small {font-size:12px;}
 .slideList .slideDept1 .price {display:table-cell; vertical-align:middle; height:100%; text-align:right;}
 .slideList .slideDept1 .price .num {font-weight:bold; color:#9c836a; font-family:'Roboto';}
@@ -528,11 +526,14 @@
 .detailSettingWrap {position:relative;}
 .detailSettingWrap .detailHeader {padding:9px 0 0 0;}
 .detailSettingWrap .detailTitle {font-size:20px; padding-bottom:10px; font-weight:bold; color:#333; text-transform:uppercase}
-.detailSettingWrap .detailHeader .desc {font-size:12px; line-height:18px;}
+.detailSettingWrap .detailHeader .desc {font-size:12px; line-height:19px;}
 .detailSettingWrap .btnMore {position:absolute; top:16px; right:-2px; text-indent:0;}
 .detailSettingWrap .btnMore {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px;}
 .detailSettingWrap .btnMore:before {content:none;}
 .detailSettingWrap .btnMore:after {content:none;}
+
+.detailSettingWrap .detailHeader + .slideWrap {margin-top:16px; padding-top:12px; border-top:1px solid #e7e3e0;}
+.detailSettingWrap .detailHeader + .slideWrap .title {font-weight:300;}
 
 /* btnMoreTxt */
 
@@ -724,7 +725,16 @@
 .faqWrap .faqList .ask strong:before {content:''; position:absolute; top:3px; left:3px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 0; background-size:10px 24px;}
 .faqWrap .faqList .answer {position:relative; left:-16px; display:none; width:calc(100% + 32px); padding:17px 16px 18px 37px; background:#f9f9f9; 
 line-height:18px;}
-.faqWrap .faqList .answer:before {content:''; position:absolute; top:20px; left:19px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -12px; background-size:10px 24px;
+.faqWrap .faqList .answer:before {content:''; position:absolute; top:20px; left:19px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -12px; background-size:10px 24px;}
+
+
+/* 공지사항 */
+.noticeListWrap {padding:16px 0 0 0;}
+.noticeListWrap .noticeList {border-bottom:1px solid #e7e3e0;}
+.noticeListWrap .noticeList > a {display:block; padding:8px 22px 9px 0; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px;}
+.noticeListWrap .noticeList > a strong {display:block; padding-bottom:4px; font-size:12px; color:#9c836a;}
+.noticeListWrap .noticeList > a .desc {display:block; max-height:36px; line-height:18px;}
+.noticeListWrap .noticeList > a .date {display:block; padding-top:11px; font-size:11px; color:#999; line-height:14px;}
 
 
 /* etc */
