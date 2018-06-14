@@ -189,27 +189,28 @@
 
 /* 뱃지 */
 .badgeWrap {background:#ddd; padding:5px 0;}
-.badge {position:relative; display:inline-block; padding-right:17px; color:#E66045 !important; font-weight:bold !important; line-height:16px;}
-.badge * {color:#E66045 !important;}
-.badge:after {content:''; position:absolute; top:50%; right:0; margin-top:-6px; width:12px; height:12px; background:url(../images/common/icon/icon_badge.png) no-repeat right center; background-size:65px 52px;}
+.badge {position:relative; display:inline-block; padding-right:21px; color:#e66045 !important; font-weight:bold !important; line-height:16px;}
+.badge * {color:#e66045 !important;}
+.badge:after {content:''; position:absolute; top:50%; right:0; margin-top:-9px; width:16px; height:16px; background:url(../images/common/icon/icon_badge.png) no-repeat right center; background-size:88px 70px;}
+
 .badge.rR:after {background-position:0 0;}
-.badge.rP:after {background-position:-13px 0;}
-.badge.rG:after {background-position:-26px 0;}
+.badge.rP:after {background-position:-18px 0;}
+.badge.rG:after {background-position:-36px 0;}
 
-.badge.sO:after {background-position:0 -13px;}
-.badge.sR:after {background-position:-13px -13px;}
-.badge.sP:after {background-position:-26px -13px;}
-.badge.sG:after {background-position:-39px -13px;}
+.badge.sO:after {background-position:0 -18px;}
+.badge.sR:after {background-position:-18px -18px;}
+.badge.sP:after {background-position:-36px -18px;}
+.badge.sG:after {background-position:-54px -18px;}
 
-.badge.cR:after {background-position:0 -26px;}
-.badge.cP:after {background-position:-13px -26px;}
-.badge.cG:after {background-position:-26px -26px;}
-.badge.cPl:after {background-position:-39px -26px;}
-.badge.cD:after {background-position:-52px -26px;}
+.badge.cR:after {background-position:0 -54px;}
+.badge.cP:after {background-position:-18px -54px;}
+.badge.cG:after {background-position:-36px -54px;}
+.badge.cPl:after {background-position:-54px -54px;}
+.badge.cD:after {background-position:-72px -54px;}
 
-.badge.vipP:after {background-position:0 -39px;}
-.badge.vipD:after {background-position:-13px -39px;}
-.badge.vipB:after {background-position:-26px -39px;}
+.badge.vipP:after {background-position:0 -36px;}
+.badge.vipD:after {background-position:-18px -36px;}
+.badge.vipB:after {background-position:-36px -36px;}
 
 
 /* 로그인 */
@@ -721,11 +722,11 @@
 .faqWrap .faqList.on:before {content:''; position:absolute; top:20px; right:9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
 .faqWrap .faqList.brd {border:none;}
 .faqWrap .faqList .ask {padding:14px 0 12px 0; line-height:18px; width:calc(100% - 27px);}
-.faqWrap .faqList .ask strong {position:relative; display:block; padding:0 0 3px 21px; color:#9d836a;}
-.faqWrap .faqList .ask strong:before {content:''; position:absolute; top:3px; left:3px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 0; background-size:10px 24px;}
-.faqWrap .faqList .answer {position:relative; left:-16px; display:none; width:calc(100% + 32px); padding:17px 16px 18px 37px; background:#f9f9f9; 
+.faqWrap .faqList .ask strong {position:relative; display:block; padding:0 0 3px 22px; color:#9d836a;}
+.faqWrap .faqList .ask strong:before {content:''; position:absolute; top:3px; left:3px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 0; background-size:10px 27px;}
+.faqWrap .faqList .answer {position:relative; left:-16px; display:none; width:calc(100% + 32px); padding:17px 16px 18px 19px; background:#f9f9f9; 
 line-height:18px;}
-.faqWrap .faqList .answer:before {content:''; position:absolute; top:20px; left:19px; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -12px; background-size:10px 24px;}
+.faqWrap .faqList .answer:before {content:''; display:inline-block; width:15px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -14px; background-size:10px 27px;}
 
 
 /* 공지사항 */
