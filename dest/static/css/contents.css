@@ -44,7 +44,7 @@
 .ui-select-option:hover,
 .ui-select-option.selection{background:#f9f9f9;}
 
-.selectbox {display:inline-block; width:100%; height:36px; padding-left:8px; border:1px solid #e7e3e0;}
+.selectbox {display:inline-block; width:100%; height:36px; padding:0 24px 0 8px; border:1px solid #e7e3e0;}
 .selectbox {-webkit-appearance: none; -moz-appearance: none;appearance: none; background:#fff url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
 .selectbox::-ms-expand {display:none;}
 .selectbox:disabled {background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px; color:#999;}
@@ -269,7 +269,7 @@
 .joinStep .txt.on:before {background-position:center -16px;}
 .joinStep > li:nth-child(1) .txt:before {margin:0; width:calc(50% + 8px); left:0; background-position:right 0;}
 .joinStep > li:nth-child(1) .txt.on:before {background-position:right -16px;}
-.joinStep > li:nth-child(4) .txt:before {margin:0; width:calc(50% + 8px); right:0; background-position:left 0;}
+.joinStep > li:nth-child(4) .txt:before {margin:0; width:calc(50% + 8px); right:0; left:auto; background-position:left 0;}
 .joinStep > li:nth-child(4) .txt.on:before {background-position:left -16px;}
 
 .joinStep + .titleTxt {padding:29px 0 3px 0;}
@@ -317,7 +317,7 @@
 .terms {}
 .terms .termAll {padding:20px 0;}
 .terms ul {border-top:1px solid #e7e3e0;}
-.terms li {position:relative; padding:16px 0; border-bottom:1px solid #e7e3e0;}
+.terms li {position:relative; padding:16px 75px 16px 0; border-bottom:1px solid #e7e3e0;}
 .terms li a {position:absolute; top:16px; right:0; font-weight:400; color:#999;}
 .terms li span {position:relative; top:-1px; font-size:12px; color:#9d836a;}
 
@@ -393,7 +393,7 @@
 .spOfferWrap .spOfferTitle .desc {padding-top:4px; font-size:12px; line-height:13px;}
 .spOfferWrap .hashtag {display:block; padding:9px 0 6px 0; font-size:12px; color:#9c836a; line-height:15px;}
 .spOfferWrap .txt {padding-bottom:8px; color:#111;}
-.spOfferWrap.other {padding-bottom:20px; border-bottom:1px solid #e9e5e2;}
+.spOfferWrap.other {padding:0 0 20px 0; border-bottom:1px solid #e9e5e2;}
 .spOfferWrap.other .spOfferHeader {padding-bottom:12px;}
 .spOfferWrap.other .priceTxt {padding-bottom:5px; font-size:12px; color:#9c836a;}
 
@@ -474,7 +474,8 @@
 
 .slideList .slideDept2 {display:block; padding:6px 0 0 0;}
 .slideList .slideDept2.on {display:none;}
-.slideList .slideDept2 li {overflow:hidden;}
+.slideList .slideDept2 li {}
+.slideList .slideDept2 li:after {content:''; display:block; clear:both;}
 .slideList .slideDept2 .title {float:left; font-size:12px;}
 .slideList .slideDept2 .price {float:right; line-height:16px;}
 .slideList .slideDept2 .price .num {font-size:12px; font-weight:bold; color:#9c836a; font-family:'Roboto';}
@@ -514,6 +515,14 @@
 .slideWrap.dept .slideDept1.on:before {content:''; position:absolute; top:50%; right:0; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
 .slideWrap.dept.none .slideDept1:before {content:none;}
 .slideWrap.dept .slideDept1.none:before {content:none;}
+
+.slideWrap .slideList.other {padding:12px 0 13px 0;}
+.slideWrap .slideList.other + .slideList.other {margin-top:0;}
+.slideWrap .slideList.other.brd {border-bottom:1px solid #e7e3e0;}
+.slideWrap .slideList.other.etc {padding:0;}
+.slideWrap .slideList.other.etc.brd {border-bottom:none;}
+.slideWrap .slideList.other.final {padding:0;}
+.slideWrap.dept .slideDept1 {}
 
 /* 층 예약 결과 */
 .floorResult {position:relative; padding:21px 16px 0 16px;}

@@ -348,9 +348,11 @@ $(function(){
 		if ( !$(this).hasClass('on') )
 		{
 			$(this).addClass('on');
+			$(this).parent('li').addClass('brd');
 			$(this).next('.slideDept2').slideUp(200);
 		} else {
 			$(this).removeClass('on');
+			$(this).parent('li').removeClass('brd');
 			$(this).next('.slideDept2').slideDown(200);
 		}
 	});
@@ -384,10 +386,8 @@ $(function(){
 /* 구매 상품 목록 */
 $(function(){
 	$('.purchaseListTitle').click(function(){
-		//$(this).addClass('on');
 		if ( !$(this).hasClass('on'))
 		{
-			console.log('pick');
 			$(this).addClass('on');
 			$(this).next('.purchaseDetail').slideDown(200);
 		} else if ($(this).hasClass('on'))
@@ -438,13 +438,11 @@ $(function(){
 		if ( $(this).hasClass('on'))
 		{
 			var targetTxt = $(this).next('ul').find('.on').html();
-			console.log('1');
 			$(this).removeClass('on');
 			$(this).next('ul').slideUp(200);
 			$(this).html(targetTxt);
 		} else if (!$(this).hasClass('on'))
 		{
-			console.log('2');
 			$(this).html('');
 			$(this).addClass('on');
 			$(this).next('ul').slideDown(200);
