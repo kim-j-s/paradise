@@ -202,7 +202,6 @@ $(function(){
 
 // 인풋박스 초기화
 $(function(){
-	//cosole.log('x');
 	$('.inpReset').click(function(){
 		$(this).prev('.inp').val('');
 	});
@@ -381,6 +380,27 @@ $(function(){
 			type: 'fraction',
 		},
 	});
+});
+
+// 카드 갤러리
+$(function(){
+	var cardLength = $('.cardGallery').find('.swiper-slide').length;
+	console.log(cardLength);
+
+	if (cardLength == 1)
+	{
+		$('.cardGallery').addClass('single');
+	} else if (cardLength != 1)
+	{
+		var swiper = new Swiper('.cardGallery', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	}
 });
 
 /* 구매 상품 목록 */
