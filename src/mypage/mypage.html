@@ -91,9 +91,9 @@
 
 .promotionGallery {}
 .promotionGallery .swiper-slide > a {display:block;}
-.promotionBox {border:1px solid #e6e6e6;}
+.promotionBox {padding:14px 10px; border:1px solid #e6e6e6;}
 .promotionBox {background:url(../static/images/common/icon/icon_promotion.png) no-repeat right 20px bottom; background-size:38px 35px;}
-.promotionBox .txt {font-size:12px; line-height:15px;}
+.promotionBox .txt {width:100%; font-size:12px; line-height:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
 
 .mypageLinkList {border-bottom:1px solid #e7e3e0; padding-right:10px;}
@@ -166,6 +166,25 @@ $(function(){
 		<!-- 하단 영역 -->
 		@@include('static/include/footer.html')
 		<!-- //하단 영역 -->
+
+		<!-- barcode dimmed layer popup -->
+		<div class="dimmedLayer">
+			<div class="dimmedCont">
+				<div class="dimmedHeader">
+					<strong class="tit">오프라인 바코드</strong>
+				</div>
+				<div class="timeline">
+					<span class="remaining">남은 시간 : 2:20</span>
+					<a href="#" class="btn ty9">시간 연장</a>
+				</div>
+				<div class="barcodeImg">
+					<img src="../static/images/sample/img_barcode.gif" alt="" />
+				</div>
+				<a href="#" class="layerCloseBtn">닫기</a>
+			</div>
+		</div>
+		<!--// barcode dimmed layer popup -->
+
 	</div>
 </body>
 </html>

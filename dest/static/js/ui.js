@@ -172,7 +172,20 @@ $(function(){
 			$('.tabWrap').children('.tabContent').eq(tab).addClass('on');
 		});
 	});
+
+	var subTabList = $('.tabSubList > li').children('.tit');
+	$(subTabList).each(function(stab){
+		$(this).click(function(){
+			console.log(stab);
+			$(subTabList).removeClass('on');
+			$(this).addClass('on');
+			$('.tabSubListWrap').children('.tabSubContent').removeClass('on');
+			$('.tabSubListWrap').children('.tabSubContent').eq(stab).addClass('on');
+		});
+	});
+
 });
+
 
 // input type date placeholder
 $(function(){
@@ -494,5 +507,36 @@ $(function(){
 			}
 
 		});
+	});
+});
+
+
+/* mypage */
+/* barcode */
+$(function(){
+	$('.btnBarcode').click(function(){
+		$('body').css('height','auto');
+		var windHeight = $('body').height();
+		$('.dimmedLayer').css({'display':'block', 'height':windHeight});
+	});
+
+	$('.dimmedCont > .layerCloseBtn').click(function(){
+		$('body').css('height','100%');
+		$('.dimmedLayer').css('display','none');
+	});
+});
+
+
+/* graph gauge */
+$(function(){
+	var GraphVal1 = $('.pointGraph').find('.pointColor').html();
+	var GraphVal2 = $('.pointGraph').find('.next').html();
+	var GraphVal1num = GraphVal1.replace(/,/g, '');
+	var GraphVal2num = GraphVal2.replace(/,/g, '');
+	var MovingVal = GraphVal1num / GraphVal2num * 100;
+	$(window).load(function(){
+		$('.pointGraphBar > .bar').animate({
+			width:Math.floor(MovingVal) + '%'
+		},1000);
 	});
 });

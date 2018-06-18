@@ -1,0 +1,326 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"맴버십"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="tabWrap membership">
+				<ul class="tabList">
+					<li>
+						<button class="tit on">CASINO</button>
+					</li>
+					<li>
+						<button class="tit">CHROMA<br /> VIP</button>
+					</li>
+					<li>
+						<button class="tit">PARADISE<br /> SIGNATURE</button>
+					</li>
+					<li>
+						<button class="tit">PARADISE<br /> REWARDS</button>
+					</li>
+				</ul>
+
+				<!-- CASINO -->
+				<div class="tabContent">
+					<div class="tabSubListWrap">
+						<ul class="tabSubList">
+							<li>
+								<button class="tit on"><span>맴버십 등급</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>맴버십 쿠폰</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>맴버십 혜택</span></button>
+							</li>
+						</ul>
+						<!-- 맴버십 등급 -->
+						<div class="tabSubContent on">
+							<div class="membershipCont">
+								<div class="tc">
+									<div class="card">
+										<div class="cardClass">
+											<span class="cardTitle">CASINO POINT</span>
+										</div>
+										<span class="cardInfo1">RED</span>
+										<span class="cardInfo2">N.0000271272</span>
+									</div>
+								</div>
+								<div class="membershipCardInfo">
+									<div class="detail">
+										<span class="tit">보유 포인트</span>
+										<span class="detailInfo point">800,000</span>
+									</div>
+									<p class="txt">파라다이스시티 정책 변경 등의 사유로 등급은 자동 조절될 수 있습니다.</p>
+								</div>
+							</div>
+							<div class="membershipPromotion">
+								<strong>카지노 회원 전용 프로모션</strong>
+								기획 수정 중 - 디자인 변경 예정
+							</div>
+						</div>
+						<!--// 맴버십 등급 -->
+
+						<!-- 맴버십 쿠폰 -->
+						<div class="tabSubContent">
+							<div class="membershipCont">
+
+								<!-- PARADISE SIGNATURE 탭에서 발생 -->
+								<div class="selectDiv">
+									<select name="" id="" class="selectbox">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<!-- PARADISE SIGNATURE 탭에서 발생 -->
+
+								<p class="txt">멤버십 쿠폰 별 사용조건 및 제외기간, 기타 안내사항은 멤버십 안내 페이지를 참고하시기 바랍니다. </p>
+								<div class="go">
+									<a href="#" class="btnMoreTxt">바로가기</a>
+								</div>
+								<div class="table">
+									<table>
+										<caption>맴버십 쿠폰 정보</caption>
+										<colgroup>
+											<col style="" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:77px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="tl">맴버십 쿠폰</th>
+												<th>기준</th>
+												<th>제공</th>
+												<th>잔여</th>
+												<th class="tr">&nbsp;</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tl">객실 무료<br /> 업그레이드 이용권</td>
+												<td>-</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+											<tr>
+												<td class="tl">온 더 플레이트<br /> 조식 이용권</td>
+												<td><span class="pointColor">2</span>인</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!--// 맴버십 쿠폰 -->
+
+						<!-- 맴버십 혜택 -->
+						<div class="tabSubContent">
+							<div class="membershipCont">
+								<!-- PARADISE SIGNATURE 탭에서 발생 -->
+								<div class="selectDiv">
+									<select name="" id="" class="selectbox">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<!-- PARADISE SIGNATURE 탭에서 발생 -->
+								<ul class="benefitList">
+									<li class="park">
+										<div class="benefitDetail">
+											<strong class="tit">주차</strong>
+											<p class="detailTxt">
+												CASINO 주차장<br />
+												<em class="bold pointColor">무료이용</em>
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">시설 이용시</p>
+										</div>
+									</li>
+									<li class="shuttle">
+										<div class="benefitDetail">
+											<strong class="tit">셔틀</strong>
+											<p class="detailTxt">
+												파라다이스시티↔공항 셔틀버스 <em class="bold pointColor">무료이용</em>
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">모든 CASINO 등급</p>
+										</div>
+									</li>
+									<li class="entertainment">
+										<div class="benefitDetail">
+											<strong class="tit">엔터테이먼트</strong>
+											<p class="detailTxt">
+												호텔 수영장<br />
+												<em class="bold pointColor">50</em>% 할인
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">모든 CASINO 등급</p>
+										</div>
+									</li>
+									<li class="food">
+										<div class="benefitDetail">
+											<strong class="tit">식음</strong>
+											<p class="detailTxt">
+												호텔시설 식음업장<br />
+												이용 <em class="bold pointColor">15</em>% 할인
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">모든 CASINO 등급</p>
+										</div>
+									</li>
+									<li class="room">
+										<div class="benefitDetail">
+											<strong class="tit">숙박 및 객실</strong>
+											<p class="detailTxt">
+												호텔시설 식음업장<br />
+												이용 <em class="bold pointColor">15</em>% 할인
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">모든 CASINO 등급</p>
+										</div>
+									</li>
+									<li class="bene">
+										<div class="benefitDetail">
+											<strong class="tit">혜택</strong>
+											<p class="detailTxt">
+												호텔시설 식음업장<br />
+												이용 <em class="bold pointColor">15</em>% 할인
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt">모든 CASINO 등급</p>
+										</div>
+									</li>
+									<li class="acc">
+										<div class="benefitDetail">
+											<strong class="tit">적립 사용</strong>
+											<p class="detailTxt">
+												<em class="bold pointColor">2</em>% 포인트 적립
+											</p>
+										</div>
+										<div class="benefitCondition">
+											<p class="txt"><span class="pointColor">3,000</span>포인트 이용 보유 시</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--// 맴버십 혜택 -->
+					</div>
+				</div>
+				<!--// CASINO -->
+
+				<!-- CHROMA VIP -->
+				<div class="tabContent">CHROMA VIP</div>
+				<!--// CHROMA VIP -->
+
+				<!-- PARADISE SIGNATURE -->
+				<div class="tabContent">PARADISE SIGNATURE</div>
+				<!-- PARADISE SIGNATURE -->
+
+				<!-- PARADISE REWARDS -->
+				<div class="tabContent on">
+					<div class="tabSubListWrap">
+						<ul class="tabSubList">
+							<li>
+								<button class="tit on"><span>맴버십 등급</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>맴버십 쿠폰</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>맴버십 혜택</span></button>
+							</li>
+						</ul>
+						<!-- 맴버십 등급 -->
+						<div class="tabSubContent on">
+							<div class="membershipCont">
+								<div class="tc">
+									<div class="card">
+										<div class="cardClass">
+											<span class="cardTitle">CASINO POINT</span>
+										</div>
+										<span class="cardInfo1">RED</span>
+										<span class="cardInfo2">N.0000271272</span>
+									</div>
+								</div>
+								<div class="membershipCardInfo">
+									<div class="detail">
+										<span class="tit">누적 포인트</span>
+										<span class="detailInfo point">800,000</span>
+									</div>
+									<div class="detail">
+										<span class="tit">다음 승급까지 남은 포인트</span>
+										<span class="detailInfo point">200,000</span>
+									</div>
+								</div>
+								<div class="pointGraph purple">
+								<!--
+								Gold 등급 시 클래스 변경
+								<div class="pointGraph gold">
+								-->
+									<div class="pointGraphInfo">
+										<span class="colorName left">RED</span>
+										<span class="colorName right">PURPLE</span>
+										<span class="roboto">
+											<strong class="pointColor">800,000</strong> / <span class="next">1,000,000</span>
+										</span>
+									</div>
+									<div class="pointGraphBar">
+										<span class="bar"></span>
+									</div>
+									<p class="txt">
+										파라다이스시티 정책 변경 등의 사유로 등급은 자동 조절될 수 있습니다.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!--// 맴버십 등급 -->
+
+						<!-- 맴버십 쿠폰 -->
+						<div class="tabSubContent">
+							맴버십 쿠폰
+						</div>
+						<!--// 맴버십 쿠폰 -->
+
+						<!-- 맴버십 혜택 -->
+						<div class="tabSubContent">
+							맴버십 혜택
+						</div>
+						<!--// 맴버십 혜택 -->
+					</div>
+				</div>
+				<!--// PARADISE REWARDS -->
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+<style type="text/css">
+
+
+.table {}
+.table table {width:100%;}
+.table table th {text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:26px;}
+.table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-bottom:1px solid #e7e3e0;}
+</style>
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

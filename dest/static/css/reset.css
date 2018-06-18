@@ -44,9 +44,9 @@ html, body {height:100%;}
 }
 
 
-.tl {text-align:left;}
-.tr {text-align:right;}
-.tc {text-align:center;}
+.tl {text-align:left !important;}
+.tr {text-align:right !important;}
+.tc {text-align:center !important;}
 
 .fl { float:left;}
 .fr { float:right;}
@@ -99,6 +99,7 @@ html, body {height:100%;}
 .roboto {font-family:'Roboto'; font-weight:400;}
 
 .pointColor {color:#9d836a;}
+.point {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
 
 .dot {overflow:hidden;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {
