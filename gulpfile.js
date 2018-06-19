@@ -16,7 +16,6 @@ var fileCache = new FileCache();
 var ext_replace = require('gulp-ext-replace');			// 확장자 변환
 var fileSync = require('gulp-file-sync');				// 파일 싱크
 var fsync = require('gulp-files-sync');
-var beautifyCode = require('gulp-beautify-code');		// tab 정렬
 
 // 바라볼 경로를 변수화 지정
 var src = 'src/';
