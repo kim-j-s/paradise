@@ -173,14 +173,15 @@ $(function(){
 		});
 	});
 
-	var subTabList = $('.tabSubList > li').children('.tit');
-	$(subTabList).each(function(stab){
-		$(this).click(function(){
-			console.log(stab);
-			$(subTabList).removeClass('on');
-			$(this).addClass('on');
-			$('.tabSubListWrap').children('.tabSubContent').removeClass('on');
-			$('.tabSubListWrap').children('.tabSubContent').eq(stab).addClass('on');
+	var subTabList = $('.tabSubList');
+	$(subTabList).each(function(idx){
+		$(this).children('li').children('.tit').each(function(cnt){
+			$(this).click(function(){
+				$(subTabList).eq(idx).children('li').children('.tit').removeClass('on');
+				$(this).addClass('on');
+				$(subTabList).eq(idx).parent('.tabSubListWrap').children('.tabSubContent').removeClass('on');
+				$(subTabList).eq(idx).parent('.tabSubListWrap').children('.tabSubContent').eq(cnt).addClass('on');
+			});
 		});
 	});
 
@@ -397,23 +398,43 @@ $(function(){
 
 // 카드 갤러리
 $(function(){
-	var cardLength = $('.cardGallery').find('.swiper-slide').length;
-	console.log(cardLength);
 
-	if (cardLength == 1)
+	if ( !$('.cardGallery').hasClass('membership'))
 	{
-		$('.cardGallery').addClass('single');
-	} else if (cardLength != 1)
-	{
-		var swiper = new Swiper('.cardGallery', {
-			slidesPerView: 'auto',
-			spaceBetween: 12,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		});
+		var cardLength = $('.cardGallery').find('.swiper-slide').length;
+
+		if (cardLength == 1)
+		{
+			$('.cardGallery').addClass('single');
+		} else if (cardLength != 1)
+		{
+			var swiper = new Swiper('.cardGallery', {
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		}
 	}
+});
+
+// 카드 갤러리 - 맴버십
+$(function(){
+	var Memberswiper = new Swiper('.cardGallery.membership', {
+		slidesPerView: 'auto',
+		spaceBetween: 12,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		}
+	});
+
+	Memberswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+	  	$('.membershipCardInfo .signatureCardInfo').eq(idx).addClass('on').siblings().removeClass('on');
+	});
 });
 
 /* 구매 상품 목록 */
@@ -430,7 +451,6 @@ $(function(){
 		}
 	});
 });
-
 
 // 서브뎁스 슬라이드
 $(window).scroll(function(){
@@ -529,14 +549,61 @@ $(function(){
 
 /* graph gauge */
 $(function(){
-	var GraphVal1 = $('.pointGraph').find('.pointColor').html();
-	var GraphVal2 = $('.pointGraph').find('.next').html();
-	var GraphVal1num = GraphVal1.replace(/,/g, '');
-	var GraphVal2num = GraphVal2.replace(/,/g, '');
-	var MovingVal = GraphVal1num / GraphVal2num * 100;
-	$(window).load(function(){
+	$('.tabWrap.membership > .tabList').children('li').eq(3).click(function(){
+		var GraphVal1 = $('.pointGraph').find('.pointColor').html();
+		var GraphVal2 = $('.pointGraph').find('.next').html();
+		var GraphVal1num = GraphVal1.replace(/,/g, '');
+		var GraphVal2num = GraphVal2.replace(/,/g, '');
+		var MovingVal = GraphVal1num / GraphVal2num * 100;
 		$('.pointGraphBar > .bar').animate({
 			width:Math.floor(MovingVal) + '%'
 		},1000);
+	});
+});
+
+
+/* coupon */
+$(function(){
+	$(window).load(function(){
+		$('.couponList > li').each(function(){
+			outerBubbleH = $(this).outerHeight();
+			BubbleH = (outerBubbleH - 30) / 13;
+			Bubble_Val = Math.floor(BubbleH) * 13;
+			$(this).find('.bubble').height(Bubble_Val);
+			$(this).find('.bubble').css({'height':Bubble_Val, 'margin-top':-(Bubble_Val / 2)});
+		});
+	});
+});
+
+/* 이용문의 슬라이드 */
+$(function(){
+	slideTime = 300;
+	var inquiryList = $('.inquiryList > .inquiryItem');
+	$(inquiryList).click(function(idx){
+		var idx = $(inquiryList).index(this);
+		if ( $(this).hasClass('open') )
+		{
+			$('.inquiryItem').eq(idx).find('.txt').slideUp(slideTime);
+			$('.inquiryItem').eq(idx).find('.answer').slideUp(slideTime, function(){
+				$('.inquiryItem').eq(idx).find('.inquiryItemTitle').addClass('on');
+				$(inquiryList).eq(idx).removeClass('on open none');
+				console.log('닫기' + idx);
+			});
+			
+		} else {
+			$('.inquiryItem').not(this).find('.txt').slideUp(slideTime);
+			$('.inquiryItem').not(this).find('.answer').slideUp(slideTime);
+			$('.inquiryItem').not(this).find('.txt').slideUp(slideTime);
+			$('.inquiryItem').not(this).find('.answer').slideUp(slideTime, function(){
+				$('.inquiryItem').not(this).find('.inquiryItemTitle').addClass('on');
+				$(inquiryList).not(this).removeClass('on open none');
+			});
+			$('.inquiryItem').eq(idx).find('.txt').slideDown(slideTime);
+			$('.inquiryItem').eq(idx).find('.answer').slideDown(slideTime, function(){
+				$('.inquiryItem').eq(idx).find('.inquiryItemTitle').removeClass('on');
+				$(inquiryList).eq(idx).addClass('on open none');
+				console.log('열기' + idx);
+			});
+		}
 	});
 });

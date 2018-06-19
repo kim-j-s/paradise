@@ -81,6 +81,7 @@ html, body {height:100%;}
 
 .pb0 {padding-bottom:0 !important;}
 .pb7 {padding-bottom:7px !important;}
+.pb30 {padding-bottom:30px !important;}
 .pb70 {padding-bottom:70px !important;}
 
 .mt0 {margin-top:0 !important;}
@@ -97,9 +98,8 @@ html, body {height:100%;}
 .mt35 {margin-top:35px !important;}
 
 .roboto {font-family:'Roboto'; font-weight:400;}
-
 .pointColor {color:#9d836a;}
-.point {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
+.pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
 
 .dot {overflow:hidden;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {

@@ -93,6 +93,8 @@
 .tabWrap .tabContent {display:none; padding:20px 16px 0 16px;}
 .tabWrap .tabContent.on {display:block;}
 .tabWrap .tabContent.event {padding:12px 16px 0 16px;}
+.tabWrap.membership .tabContent {display:block; position:absolute; top:0; left:-9999px;}
+.tabWrap.membership .tabContent.on {position:static;}
 
 
 /* 공통 버튼 */
@@ -103,8 +105,8 @@
 .btn.ty3.big {font-size:14px;}
 .btn.ty4 {background:#9c836a; line-height:36px; font-size:12px; color:#fff;}
 .btn.ty4.big {font-size:14px;}
-.btn.ty4.big.more {display:inline-block; width:140px; font-size:14px;}
-.btn.ty4.big.more span {font-size:14px; font-weight:300;}
+.btn.ty4.big.more {display:inline-block; width:140px; font-size:14px; background:#fff; border:1px solid #9d836a;}
+.btn.ty4.big.more span {padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px; line-height:16px; font-size:14px; font-weight:300; color:#9d836a;}
 .btn.ty5 {background:#fff; padding:5px 0 8px 0; border:1px solid #857b71;}
 .btn.ty5 > span {display:inline-block; padding-left:23px; background:url(../images/common/icon/icon_calendar.png) no-repeat left center; background-size:14px 15px; line-height:20px; font-size:14px; color:#333;}
 .btn.ty5.other {overflow:hidden; padding:9px 0;}
@@ -127,7 +129,7 @@
 .footerBtn:before, .dimmedBtn:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:0.6}
 .footerBtn.on:before, .dimmedBtn.on:before {content:none;}
 .btnMore {text-indent:-9999px;}
-.btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;;}
+.btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;}
 .btnMore:after {content:''; position:absolute; top:7px; left:2px; width:12px; border-top:2px solid #111;}
 .btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 2px; background-size:6px 10px; line-height:16px;}
 .btnCalendarView {display:inline-block; width:20px; height:20px; text-indent:-9999px;}
@@ -172,6 +174,12 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .list.normal {}
 .list.normal li {padding-left:0;}
 .list.normal li:before {content:none;}
+
+/* 테이블 */
+.table {}
+.table table {width:100%;}
+.table table th {text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:26px;}
+.table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-bottom:1px solid #e7e3e0;}
 
 
 /* 공통 카운터 */
@@ -789,7 +797,7 @@ line-height:18px;}
 .cardGallery.single .swiper-slide {width:calc(100% - 16px); text-align:center;}
 .cardGalleryWrap .swiper-pagination {bottom:-38px;}
 .swiper-pagination-bullet {}
-.swiper-pagination-bullet {width:5px; height:5px; background:#e7e1dc; opacity:1;}
+.swiper-pagination-bullet {width:5px; height:5px; background:#e7e1dc; opacity:1; border-radius:50%;}
 .swiper-pagination-bullet-active {background:#9d836a;}
 
 
@@ -813,8 +821,12 @@ line-height:18px;}
 .membershipCardInfo {}
 .membershipCardInfo .detail {overflow:hidden; padding:17px 0 6px 0;}
 .membershipCardInfo .detail + .detail {padding-top:1px;}
-.membershipCardInfo .detail .tit {float:left; font-weight:bold; font-size:12px;}
+.membershipCardInfo .detail .tit {float:left; min-width:55px; font-weight:bold; font-size:12px;}
 .membershipCardInfo .detail .detailInfo {float:right;}
+.membershipCardInfo .detail .detailInfo2 {float:left; font-size:12px; color:#333;}
+.membershipCardInfo .detail .detailInfo2 .num {font-family:'Roboto'; font-weight:400; font-size:14px;}
+.membershipCardInfo .detail .detailInfo3 {float:left; font-size:12px;}
+.membershipCardInfo .detail .detailInfo3 .num {font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
 .membershipPromotion {position:relative; padding-top:25px; margin-top:20px;}
 .membershipPromotion:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .membershipPromotion > strong {display:block; font-weight:bold; color:#333;}
@@ -843,6 +855,12 @@ line-height:18px;}
 	background: linear-gradient(to right, #dc5b51 0%,#c69d5b 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc5b51', endColorstr='#c69d5b',GradientType=1 );
 }
+
+.cardGalleryWrap.membership .swiper-container {padding-bottom:20px;}
+.cardGalleryWrap.membership .swiper-pagination {bottom:-5px;}
+.signatureCardInfo {display:none;}
+.signatureCardInfo.on {display:block;}
+
 
 /* 맴버십 쿠폰 */
 .membershipCont .selectDiv + .txt {padding-top:18px;}
@@ -891,6 +909,56 @@ line-height:18px;}
 .benefitList > li .benefitCondition {padding:5px 0; background:#f9f9f9; font-size:11px; color:#999;}
 .benefitList > li .benefitCondition .txt {line-height:16px;}
 .membershipCont .selectDiv + .benefitList {margin-top:20px;}
+
+/* 맴버십 쿠폰 내역 */
+.couponTotal {overflow:hidden; padding:13px 0;}
+.couponTotal .couponName {float:left; font-weight:bold; color:#333; line-height:18px;}
+.couponTotal .couponCount {float:right; line-height:18px;}
+.couponHistory {margin-top:-10px;}
+.couponHistory li {overflow:hidden; border-bottom:1px solid #e7e3e0;}
+.couponHistory li .date {float:left; line-height:45px;}
+.couponHistory li .rst {float:right; font-size:12px; color:#5d88de; line-height:45px;}
+
+
+/* 쿠폰 */
+.tblDiv.coupon {padding:28px 0 12px 0;}
+.couponList {}
+.couponList > li {position:relative; padding:0 32px 0 0; overflow:hidden;}
+.couponList > li {}
+.couponList > li .bubble {position:absolute; top:50%; right:0; width:5px; height:80px; background:url(../images/mypage/bg_coupon_small.png) repeat-y right top; background-size:5px 13px;}
+.couponList > li:before {content:''; position:absolute; top:0; right:0; width:32px; height:100%; background:#f9f9f9; border:1px solid #e7e3e0; border-left:none; box-sizing:border-box;}
+.couponList > li + li {margin-top:12px;}
+.couponList > li dl {position:relative; padding:12px 0 16px 10px; background:#fff; border:1px solid #e7e3e0; border-right:1px dashed #e7e3e0;}
+.couponList > li dl:before {content:''; position:absolute; top:-6px; right:-7px; width:10px; height:10px; border:1px solid #e7e3e0; border-radius:50%; background:#fff;}
+.couponList > li dl:after {content:''; position:absolute; bottom:-6px; right:-7px; width:10px; height:10px; border:1px solid #e7e3e0; border-radius:50%; background:#fff;}
+.couponList > li .couponName {font-weight:bold; color:#333; line-height:18px;}
+.couponList .couponDetail .date {padding-top:3px; font-size:12px; color:#333;}
+.couponList .couponDetail .date .day {padding-right:8px; font-size:14px;}
+.couponList .couponDetail .sale {padding-top:10px; font-size:11px; color:#999;}
+.couponList .couponDetail .sale .per {padding-left:8px; font-size:20px; color:#e66045;}
+.couponList .couponDetail .txt {min-height:30px; padding-top:3px; font-size:12px; line-height:14px;}
+
+/* 이용문의 */
+.inquiryWrap {position:relative; padding-top:25px; margin-top:20px;}
+.inquiryWrap:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
+.inquiryItem {position:relative; padding:17px 0 0 0; border-bottom:1px solid #e7e3e0;}
+.inquiryItem:before {content:''; position:absolute; top:20px; right:9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.inquiryItem.on:before {content:''; position:absolute; top:20px; right:9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.inquiryItem.none {border-bottom:none;}
+.inquiryItem .tit {position:relative; display:block; padding:0 0 8px 16px; font-size:12px;}
+.inquiryItem .tit.on {color:#5d88de;}
+.inquiryItem .tit:before {content:''; position:absolute; top:2px; left:0; width:10px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 0; background-size:10px 27px;}
+.inquiryItem .btnUnderline {position:absolute; top:17px; right:35px;}
+.inquiryItem dl {padding-right:27px;}
+.inquiryItem dl dt {color:#333; line-height:20px;}
+.inquiryItem dl dt.on {width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.inquiryItem dl .txt {display:none; padding-top:2px; font-size:12px; line-height:18px;}
+.inquiryItem dl .txt .inquiryLocation {display:inline-block; padding:6px 9px 7px 9px; margin-top:17px; border:1px solid #e8e8e8; font-size:11px; color:#999;}
+.inquiryItem .date {padding:4px 0 15px 0; font-size:12px; color:#999;}
+.inquiryItem .answer {position:relative; top:0; left:-16px; display:none; width:calc(100% + 32px); padding:17px 16px; background:#f9f9f9;}
+.inquiryItem .answer .inner {position:relative; padding:0 0 0 16px; color:#333; line-height:18px;}
+.inquiryItem .answer .inner:before {content:''; position:absolute; top:2px; left:0; width:15px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -14px; background-size:10px 27px;}
+.inquiryItem .answer .inner .date {padding-bottom:0;}
 
 
 /* dimmed layer popup */
