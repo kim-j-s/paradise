@@ -19,6 +19,7 @@ input, select { color:inherit; font:inherit; vertical-align: middle; box-sizing:
 address, i { font-style:normal; }
 table { border-collapse:collapse; table-layout:fixed; }
 img, select, input, button { vertical-align:middle; }
+button {outline:none;}
 em { font-style:normal; }
 input { font-family: 'Noto Sans', sans-serif;}
 
@@ -100,6 +101,7 @@ html, body {height:100%;}
 .roboto {font-family:'Roboto'; font-weight:400;}
 .pointColor {color:#9d836a;}
 .pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
+.pointMark.red {background:url(../images/common/icon/icon_point_red.png) no-repeat right center; background-size:13px 13px;}
 
 .dot {overflow:hidden;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {

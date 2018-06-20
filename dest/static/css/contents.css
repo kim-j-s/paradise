@@ -26,6 +26,7 @@
 .checkbox input:checked + label:after { background-position:0 -16px;}
 .checkbox.other label {font-weight:bold; color:#333;}
 .checkbox.other label:after {content:''; display:block; position:absolute; top:2px; left:0; width:16px; height:16px; background:url('../images/common/icon/icon_checkbox2.gif') no-repeat 0 0; background-size:16px 32px;}
+.checkbox.small {padding-left:25px;}
 .checkbox.small label {font-size:12px; line-height:16px;}
 .checkbox.single {padding-left:0;}
 .checkbox.single label {display:inline-block; width:16px; height:16px;}
@@ -316,7 +317,6 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .inpWrap + .inpWrap {position:relative; margin-top:20px; padding-top:25px;}
 .inpWrap + .inpWrap:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .inpWrap .infoTitle {position:relative; padding-bottom:13px; font-size:14px; font-weight:bold; color:#111;}
-/* .inpWrap .infoTitle .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;} */
 .inpWrap .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;}
 .inpWrap .infoTitle .infoTitleSub2 {display:block; font-size:10px; color:#999; line-height:13px; }
 
@@ -327,6 +327,10 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .box .chkList2 li {float:left; width:30%; margin-bottom:13px;}
 .box .chkList2 li:nth-child(3n) {width:40%;}
 
+.facility {margin-bottom:17px; background:#f9f9f9; border:1px solid #e7e3e0;}
+.facility .facilityTop {padding:15px; border-bottom:1px solid #e7e3e0;}
+.facility .facilityList {padding:15px 0 8px 15px; overflow:hidden;}
+.facility .facilityList li {float:left; width:50%; margin-bottom:7px;}
 
 /* 회원가입 - 가입완료 */
 .joinComplete {padding:13px 0 0 0; font-size:14px; color:#333;}
@@ -417,8 +421,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .spOfferWrap .spOfferThumb {display:table-cell; width:116px}
 .spOfferWrap .spOfferThumb > img {width:100%; height:65px;}
 .spOfferWrap .spOfferTitle {display:table-cell; padding-left:12px; vertical-align:top;}
-.spOfferWrap .spOfferTitle strong {display:block; font-size:14px; font-weight:bold; color:#111;}
-.spOfferWrap .spOfferTitle .date {display:block; padding:1px 0 12px 0; font-family:'Roboto'; font-size:12px; color:#333;}
+.spOfferWrap .spOfferTitle strong {display:block; margin-top:-4px; font-size:14px; font-weight:bold; color:#111;}
+.spOfferWrap .spOfferTitle .date {display:block; padding:1px 0 00 0; font-family:'Roboto'; font-size:12px; color:#333;}
 .spOfferWrap .spOfferTitle .price {font-weight:bold; color:#9c836a;}
 .spOfferWrap .spOfferTitle .price .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
 .spOfferWrap .spOfferTitle .price + .wave {font-weight:bold; font-size:14px; color:#9c836a; font-family:'Roboto';}
@@ -428,6 +432,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .spOfferWrap.other {padding:0 0 20px 0; border-bottom:1px solid #e9e5e2;}
 .spOfferWrap.other .spOfferHeader {padding-bottom:12px;}
 .spOfferWrap.other .priceTxt {padding-bottom:5px; font-size:12px; color:#9c836a;}
+.itemState {padding:1px 0 3px 0; min-height:10px;}
+.itemState ul {overflow:hidden;}
+.itemState ul li {float:left; padding:1px 8px; font-size:10px; color:#fff; text-align:center; line-height:14px;}
+.itemState ul li.ty1 {background:#e66045;}
+.itemState ul li.ty2 {background:#857b71;}
 
 /* 달력 */
 .dateSetting {padding-top:16px; padding-bottom:14px; border-bottom:1px solid #e7e3e0;}
@@ -661,7 +670,6 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .purchaseItem .purchaseItemList li + li {margin-top:4px;}
 
 
-
 /* 상품 결제 */
 .payment {position:relative; padding:17px 0 20px 0;}
 .payment + .payment {padding:24px 0 20px 0;}
@@ -703,6 +711,14 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .paymentAgree {padding-top:15px;}
 .paymentAgree + .paymentAgree {padding-top:18px;}
 .paymentAgree .agreeTerms {height:80px; padding:13px 18px; margin-top:11px; background:#f9f9f9; border:1px solid #e7e3e0; font-size:12px; line-height:17px; overflow:auto;}
+
+
+/* 예약완료 */
+.resultDisplay {margin:27px 0 20px 0; padding:9px 10px; background:#f9f9f9; border:1px solid #e8e4e1;}
+.resultDisplay dl {overflow:hidden;}
+.resultDisplay dl dt {float:left; padding-right:7px; font-size:12px; line-height:22px;}
+.resultDisplay dl dd {float:left; font-size:12px; color:#9d836a; line-height:22px;}
+.resultDisplay dl dd .bold {font-size:14px;}
 
 
 /* 이벤트 페이지 */
@@ -959,6 +975,46 @@ line-height:18px;}
 .inquiryItem .answer .inner {position:relative; padding:0 0 0 16px; color:#333; line-height:18px;}
 .inquiryItem .answer .inner:before {content:''; position:absolute; top:2px; left:0; width:15px; height:12px; background:url(../images/common/icon/icon_qa.png) no-repeat 0 -14px; background-size:10px 27px;}
 .inquiryItem .answer .inner .date {padding-bottom:0;}
+
+/* 포인트 */
+.pointTotal {padding:12px 0 27px 0; overflow:hidden;}
+.pointTotal .pointName {float:left; font-weight:bold;}
+.pointTotal .pointRst {float:right; font-weight:bold; font-size:20px; color:#9c836a;}
+
+.pointDisplay ul {display:table; width:100%;}
+.pointDisplay li {display:table-cell; width:1000px; height:63px; text-align:center; vertical-align:middle;}
+.pointDisplay li button {position:relative; display:block; width:100%; height:63px; border:1px solid #e7e3e0; border-left:none;}
+.pointDisplay li:first-child button {border-left:1px solid #e7e3e0;}
+.pointDisplay li button.on:before {content:''; position:absolute; top:-1px; left:-1px; width:100%; height:100%; border:1px solid #9c836a;}
+.pointDisplay li button .tit {display:block; padding-bottom:1px; font-weight:normal; font-size:12px; color:#9c836a; line-height:16px;s}
+.pointDisplay li button .tit .cont {display:block;}
+.pointDisplay li button .pointMark {font-family:'Roboto'; font-weight:bold; color:#9c836a; padding-right:16px;}
+.pointDisplay li button .pointMark .num {font-family:'Roboto'; font-weight:bold; color:#9c836a; border-bottom:1px solid #9c836a;}
+
+.pointDate {padding:8px 0;}
+.pointDate .tblDiv .cellDiv {padding-left:16px;}
+.pointDate .tblDiv .cellDiv:first-child {padding-left:0;}
+.pointDate .tblDiv .cellDiv:nth-child(2) {position:relative;}
+.pointDate .tblDiv .cellDiv:nth-child(2):before {content:'~'; position:absolute; top:0; left:0; width:16px; line-height:36px; text-align:center;}
+
+.pointSearch {padding:20px 0 0 0;}
+.pointSearch .radioBox + .radioBox {margin-left:11px;}
+
+.pointHistoryWrap {}
+.pointHistory {padding:24px 0 0 0;}
+.pointHistory dt {font-family:'Roboto'; font-weight:bold; color:#333;}
+.pointHistoryList li {position:relative; padding:13px 0; border-bottom:1px solid #e7e3e0;}
+.pointHistoryList li .use {position:absolute; top:13px; right:0; font-size:12px;}
+.pointHistoryList li .date {padding:0 0 2px 0;font-size:12px; color:#333; line-height:16px;}
+.pointHistoryList li .detail {position:relative; padding-right:120px; line-height:18px;}
+.pointHistoryList li .detail .pointMark {position:absolute; top:3px; right:0;}
+.pointHistoryList li.ty1 .use {color:#9d836a;}
+.pointHistoryList li.ty1 .pointMark {color:#9c836a;}
+.pointHistoryList li.ty2 .use {color:#e66045;}
+.pointHistoryList li.ty2 .pointMark {color:#e66045;}
+.pointHistoryList li.ty3 .use {color:#999;}
+.pointHistoryList li.ty3 .pointMark {color:#999;}
+.pointHistoryWrap .pointNone {padding:50px 0; text-align:center;}
 
 
 /* dimmed layer popup */
