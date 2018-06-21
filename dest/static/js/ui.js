@@ -358,15 +358,20 @@ $(function(){
 // 결제 리스트 
 $(function(){
 	$('.slideList > .slideDept1').click(function(){
-		if ( !$(this).hasClass('on') )
+		if ( $(this).parent('li').parent('ul').hasClass('display') )
 		{
-			$(this).addClass('on');
-			$(this).parent('li').addClass('brd');
-			$(this).next('.slideDept2').slideUp(200);
+			return false;
 		} else {
-			$(this).removeClass('on');
-			$(this).parent('li').removeClass('brd');
-			$(this).next('.slideDept2').slideDown(200);
+			if ( !$(this).hasClass('on') )
+			{
+				$(this).addClass('on');
+				$(this).parent('li').addClass('brd');
+				$(this).next('.slideDept2').slideUp(200);
+			} else {
+				$(this).removeClass('on');
+				$(this).parent('li').removeClass('brd');
+				$(this).next('.slideDept2').slideDown(200);
+			}
 		}
 	});
 });
@@ -396,27 +401,24 @@ $(function(){
 	});
 });
 
-// 카드 갤러리
+/* 카드 갤러리 기본 */
 $(function(){
+	var cardLength = $('.mypageGallery').find('.swiper-slide').length;
+	console.log(cardLength);
 
-	if ( !$('.cardGallery').hasClass('membership'))
+	if (cardLength == 1)
 	{
-		var cardLength = $('.cardGallery').find('.swiper-slide').length;
-
-		if (cardLength == 1)
-		{
-			$('.cardGallery').addClass('single');
-		} else if (cardLength != 1)
-		{
-			var swiper = new Swiper('.cardGallery', {
-				slidesPerView: 'auto',
-				spaceBetween: 12,
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-			});
-		}
+		$('.mypageGallery').addClass('single');
+	} else if (cardLength != 1)
+	{
+		var swiper = new Swiper('.mypageGallery', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
 	}
 });
 
@@ -427,7 +429,7 @@ $(function(){
 		spaceBetween: 12,
 		pagination: {
 			el: '.swiper-pagination',
-			clickable: true,
+			clickable: true
 		}
 	});
 

@@ -43,7 +43,7 @@
 			<div class="memberShipCard">
 				<strong>맴버십</strong>
 				<div class="cardGalleryWrap">
-					<div class="swiper-container cardGallery">
+					<div class="swiper-container cardGallery mypageGallery">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<a href="#">
@@ -130,28 +130,6 @@
 .mypageLinkList > a .num.other .unit {font-weight:400; color:#666;}
 </style>
 
-<script type="text/javascript">
-// 카드 갤러리
-$(function(){
-	var cardLength = $('.cardGallery').find('.swiper-slide').length;
-	console.log(cardLength);
-
-	if (cardLength == 1)
-	{
-		$('.cardGallery').addClass('single');
-	} else if (cardLength != 1)
-	{
-		var swiper = new Swiper('.cardGallery', {
-			slidesPerView: 'auto',
-			spaceBetween: 12,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		});
-	}
-});
-</script>
 
 			<ul class="mypageLink">
 				<li class="mypageLinkList">
