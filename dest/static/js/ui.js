@@ -439,6 +439,14 @@ $(function(){
 	});
 });
 
+//membership - promotion
+$(function(){
+	var Promotionswiper = new Swiper('.promotionGallery', {
+		slidesPerView: 'auto',
+		spaceBetween: 12
+	});
+});
+
 /* 구매 상품 목록 */
 $(function(){
 	$('.purchaseListTitle').click(function(){

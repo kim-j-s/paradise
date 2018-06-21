@@ -1,0 +1,89 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"예약 내역"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="tabWrap">
+				<ul class="tabList">
+					<li>
+						<button class="tit on">OFFERS</button>
+					</li>
+					<li>
+						<button class="tit">DINE &amp; DRINK</button>
+					</li>
+				</ul>
+				<div class="tabContent on">
+					<div class="tabDisplay">
+						<ul>
+							<li>
+								<button class="on">
+									<strong class="tit">전체</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">5,000,000</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">사용</strong>
+									<span class="cont">
+										<span class="pointMark red">
+											<span class="num">5,000,000</span>
+										</span>
+									</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="pointDate">
+						<div class="tblDiv">
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tblDiv">
+						<div class="cellDiv">
+							<select name="" id="" class="selectbox">
+								<option value="">전체</option>
+							</select>
+						</div>
+						<div class="cellDiv" style="width:80px;">
+							<a href="#" class="btn ty3">조회</a>
+						</div>
+					</div>
+
+
+				</div>
+
+
+
+
+
+				<div class="tabContent">컨텐츠 내용2</div>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
