@@ -1,0 +1,372 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"예약 내역"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="tabWrap">
+				<ul class="tabList">
+					<li>
+						<button class="tit on">OFFERS</button>
+					</li>
+					<li>
+						<button class="tit">DINE &amp; DRINK</button>
+					</li>
+				</ul>
+				<!-- OFFERS -->
+				<div class="tabContent on">
+					<div class="tabDisplay">
+						<ul>
+							<li>
+								<button class="on">
+									<strong class="tit">
+										<span class="cell">전체</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">10</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">이용예정</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">이용완료<br />미이용</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">예약취소</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="pointDate">
+						<div class="tblDiv">
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tblDiv">
+						<div class="cellDiv">
+							<select name="" id="" class="selectbox">
+								<option value="">전체</option>
+								<option value="">예정</option>
+								<option value="">완료</option>
+								<option value="">취소</option>
+							</select>
+						</div>
+						<div class="cellDiv" style="width:80px;">
+							<a href="#" class="btn ty3">조회</a>
+						</div>
+					</div>
+
+					<div class="resultDisplay">
+						<a href="#">
+							<dl>
+								<dt>예약번호</dt>
+								<dd>
+									<span class="roboto bold">1003-0450-1110-0760</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>예약일시</dt>
+								<dd>
+									<span class="roboto bold">2018.06.20</span> (일)
+								</dd>
+							</dl>
+						</a>
+					</div>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">HOTEL + CIMER 패키지</a>
+							<small class="ty1">이용예정</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+							<div class="price">
+								<span class="roboto">500,000</span> 원
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">HOTEL + CIMER 패키지</a>
+							<small class="ty2">취소</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+							<div class="price">
+								<span class="roboto">500,000</span> 원
+							</div>
+						</dd>
+					</dl>
+
+					<div class="resultDisplay">
+						<a href="#">
+							<dl>
+								<dt>예약번호</dt>
+								<dd>
+									<span class="roboto bold">1003-0450-1110-0760</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>예약일시</dt>
+								<dd>
+									<span class="roboto bold">2018.06.20</span> (일)
+								</dd>
+							</dl>
+						</a>
+					</div>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">HOTEL + CIMER 패키지</a>
+							<small class="ty3">이용완료</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+							<div class="price">
+								<span class="roboto">500,000</span> 원
+							</div>
+						</dd>
+					</dl>
+
+					<div class="tc mt20 pb14">
+						<a href="#" class="btn ty4 big more"><span>더보기</span></a>
+					</div>
+
+					<dl class="notiTxt list mt15">
+						<dt class="point">유의사항</dt>
+						<dd>
+							<ul class="list">
+								<li>취소에 따른 환불정책 및 수수료는 상품마다 상이합니다. 자세한 내용은 각 OFFER를 확인해주세요.</li>
+								<li>얼리버드 및 특정 프로모션 상품은 예약취소가 불가능합니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!--// OFFERS -->
+
+				<!-- DINE & DRINK -->
+				<div class="tabContent">
+					<div class="tabDisplay">
+						<ul>
+							<li>
+								<button class="on">
+									<strong class="tit">
+										<span class="cell">전체</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">10</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">이용예정</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">이용완료<br />미이용</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+							<li>
+								<button>
+									<strong class="tit">
+										<span class="cell">예약취소</span>
+									</strong>
+									<span class="cont">
+										<span class="red">
+											<span class="num">2</span>
+										</span>
+									</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+
+					<div class="pointDate">
+						<div class="tblDiv">
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+							<div class="cellDiv">
+								<div class="inputBox">
+									<input type="date" name="" id="" class="inp date" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tblDiv">
+						<div class="cellDiv">
+							<select name="" id="" class="selectbox">
+								<option value="">전체</option>
+								<option value="">예정</option>
+								<option value="">완료</option>
+								<option value="">취소</option>
+							</select>
+						</div>
+						<div class="cellDiv" style="width:80px;">
+							<a href="#" class="btn ty3">조회</a>
+						</div>
+					</div>
+
+					<div class="resultDisplay">
+						<a href="#">
+							<dl>
+								<dt>예약번호</dt>
+								<dd>
+									<span class="roboto bold">1003-0450-1110-0760</span>
+								</dd>
+							</dl>
+							<dl>
+								<dt>예약일시</dt>
+								<dd>
+									<span class="roboto bold">2018.06.20</span> (일)
+								</dd>
+							</dl>
+						</a>
+					</div>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">DINE &amp; DRINK</a>
+							<small class="ty1">예약확정</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">DINE &amp; DRINK</a>
+							<small class="ty2">예약취소</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">DINE &amp; DRINK</a>
+							<small class="ty3">이용완료</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+						</dd>
+					</dl>
+
+					<dl class="offerItemInfo">
+						<dt>
+							<a href="#" class="line">DINE &amp; DRINK</a>
+							<small class="ty4">예약대기</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+						</dd>
+					</dl>
+
+					<div class="tc mt20 pb14">
+						<a href="#" class="btn ty4 big more"><span>더보기</span></a>
+					</div>
+
+					<dl class="notiTxt list mt15">
+						<dt class="point">유의사항</dt>
+						<dd>
+							<ul class="list">
+								<li>취소에 따른 환불정책 및 수수료는 상품마다 상이합니다. 자세한 내용은 각 OFFER를 확인해주세요.</li>
+								<li>얼리버드 및 특정 프로모션 상품은 예약취소가 불가능합니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- DINE & DRINK -->
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

@@ -82,6 +82,7 @@ html, body {height:100%;}
 
 .pb0 {padding-bottom:0 !important;}
 .pb7 {padding-bottom:7px !important;}
+.pb15 {padding-bottom:15px !important;}
 .pb30 {padding-bottom:30px !important;}
 .pb70 {padding-bottom:70px !important;}
 
@@ -90,6 +91,7 @@ html, body {height:100%;}
 .mt5 {margin-top:4px !important;}
 .mt8 {margin-top:8px !important;}
 .mt10 {margin-top:10px !important;}
+.mt11 {margin-top:11px !important;}
 .mt13 {margin-top:13px !important;}
 .mt14 {margin-top:14px !important;}
 .mt15 {margin-top:15px !important;}
@@ -100,11 +102,18 @@ html, body {height:100%;}
 .mt32 {margin-top:32px !important;}
 .mt35 {margin-top:35px !important;}
 
+.mb0 {margin-bottom:0 !important;}
+.mb30 {margin-bottom:80px !important;}
+
 .roboto {font-family:'Roboto'; font-weight:400;}
 .pointColor {color:#9d836a;}
+.pointColor2 {color:#e66045 !important;}
 .pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
 .pointMark.red {background:url(../images/common/icon/icon_point_red.png) no-repeat right center; background-size:13px 13px;}
 .notiRed {font-size:11px; color:#e66045;}
+
+.listNone {margin:90px 0 137px 0; padding-top:66px; text-align:center; color:#999; background:url(../images/common/icon/icon_list_none.png) no-repeat center top; background-size:47px 57px;}
+.listNone + * {margin-top:0 !important; padding-top:0 !important;}
 
 .dot {overflow:hidden;}
 @media screen and (-webkit-min-device-pixel-ratio:0) {

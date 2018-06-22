@@ -1,0 +1,93 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"로그인"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="loginWrap">
+				<p class="titleTxt"><span class="color">파라다이스시티</span>에 오신 것을 <span class="dpib">환영합니다.</span></p>
+
+				<div class="tabWrap pt0">
+					<ul class="tabList">
+						<li>
+							<button class="tit on">회원</button>
+						</li>
+						<li>
+							<button class="tit">비회원 <small>(예약확인)</small></button>
+						</li>
+					</ul>
+
+					<!-- 회원 -->
+					<div class="tabContent on">
+						<div class="inputBox">
+							<input type="text" placeholder="아이디" name="" id="loginId" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+						<div class="inputBox">
+							<input type="password" placeholder="비밀번호" name="" id="loginPw" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+						<div class="loginKeep">
+							<div class="checkbox">
+								<input type="checkbox" id="check"><label for="check">로그인 상태 유지</label>
+							</div>
+						</div>
+						<div class="dimmedBtn">
+							<a href="#" class="loginBtn">로그인</a>
+						</div>
+						<div class="loginFind">
+							<a href="#">아이디/비밀번호 찾기</a>
+						</div>
+					</div>
+					<!--// 회원 -->
+
+					<!-- 비회원 -->
+					<div class="tabContent">
+						<div class="inputBox">
+							<input type="text" placeholder="예약번호" name="" id="" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+						<div class="inputBox">
+							<input type="text" placeholder="이름" name="" id="" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+						<div class="tblDiv mt8">
+							<div class="cellDiv" style="width:65px;">
+								<select name="" id="" class="selectbox">
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+									<option value="">017</option>
+									<option value="">018</option>
+									<option value="">019</option>
+								</select>
+							</div>
+							<div class="cellDiv">
+								<input type="tel" class="inp">
+							</div>
+						</div>
+						<div class="dimmedBtn mt20">
+							<a href="#" class="loginBtn">예약내역조회</a>
+						</div>
+					</div>
+					<!--// 비회원 -->
+				</div>
+				
+				<div class="loginFooter">
+					<div class="cell">
+						회원가입으로 더 큰 혜택과 편리함을 누려보세요. 
+						<a href="#">회원가입</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+	</div>
+
+</body>
+</html>

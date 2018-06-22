@@ -1,0 +1,117 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"예약 내역 상세"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="resultDisplay mt8">
+				<dl>
+					<dt>예약번호</dt>
+					<dd>
+						<span class="roboto bold">1003-0450-1110-0760</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>예약일시</dt>
+					<dd>
+						<span class="roboto bold">2018.06.20</span> (일) <span class="roboto">14:43</span>
+					</dd>
+				</dl>
+			</div>
+
+			<dl class="offerResult mt20">
+				<dt class="offerResultTitle">예약상품 정보</dt>
+				<dd>
+					<dl class="offerItemInfo">
+						<dt>
+							<span class="line">HOTEL + CIMER 패키지</span>
+							<small class="ty4">예약대기</small>
+						</dt>
+						<dd>
+							<div class="date">
+								<span class="roboto">2018.06.20</span>(화) - <span class="roboto">2018.06.20</span>(수)
+							</div>
+							<ul class="optionList">
+								<li>
+									옵션내용
+								</li>
+								<li>
+									옵션내용
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</dd>
+			</dl>
+
+			<dl class="offerResult mt20">
+				<dt class="offerResultTitle">회원 정보</dt>
+				<dd>
+					<div class="table side">
+						<table>
+							<caption>회원정보</caption>
+							<tbody>
+								<tr>
+									<th scope="row">이름/영문</th>
+									<td>홍길동 / Hong Gil-Ding</td>
+								</tr>
+								<tr>
+									<th scope="row">휴대폰번호</th>
+									<td>010-1234-5678</td>
+								</tr>
+								<tr>
+									<th scope="row">이메일</th>
+									<td>abcd@abc.com</td>
+								</tr>
+								<tr>
+									<th scope="row">요청사항</th>
+									<td>
+										<ul class="request">
+											<li>
+												<strong class="tit">[객실 이용 문의]</strong>
+												객실은 언제마다 청소되나요?
+											</li>
+											<li>
+												<strong class="tit">[객실 이용 문의]</strong>
+												객실은 언제마다 청소되나요?
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</dd>
+			</dl>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 취소 / 환불 가능 -->
+		<div class="tblDiv btnTbl half">
+			<div class="cellDiv">
+				<a href="#" class="btn ty8 big">목록으로</a>
+			</div>
+			<div class="cellDiv">
+				<a href="#" class="btn ty1 big">예약취소</a>
+			</div>
+		</div>
+		<!--// 취소 / 환불 가능 -->
+
+		<!-- 취소 / 환불 불가 -->
+		<div>
+			<a href="#" class="btn ty8 big">목록으로</a>
+		</div>
+		<!--// 취소 / 환불 불가 -->
+
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
