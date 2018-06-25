@@ -1,0 +1,192 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"식음상세"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="normalSwiper fineSwipe">
+				<div class="item">
+					<img src="../static/images/sample/img_item.jpg" alt="" />
+				</div>
+				<div class="item">
+					<img src="../static/images/sample/img_item.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="detailTop mt11">
+				<h2 class="title">On The Plate</h2>
+				<p class="desc">밀라노의 감성으로 이탈리아 본연의 맛을 추구하는 Italian Gourment Restaurant</p>
+				<p class="detailDesc">
+					다섯개의 Station으로 구성된 프리미엄 뷔페 레스토랑 On The Plate 에서는 신선하면서도 질 좋은 식재료를 선별하여 요리 하나하나가 최고의 맛을 자랑합니다. 광동식 오리를 포함한 다채로운 전채요리에서부터 화려한 디저트 코너까지 세계 각국 동 ·서양 음식을 한자리에서 만끽할 수 있습니다.
+				</p>
+			</div>
+
+			<div class="offerResult">
+				<dl class="detailList">
+					<dt class="title">운영시간</dt>
+					<dd>
+						<div class="table side3">
+							<table>
+								<caption>회원정보</caption>
+								<tbody>
+									<tr>
+										<th scope="row">Breakfast</th>
+										<td>06:30~10:30</td>
+									</tr>
+									<tr>
+										<th scope="row">Lunch</th>
+										<td>12:00~15:00</td>
+									</tr>
+									<tr>
+										<th scope="row">요청사항</th>
+										<td>
+											<ul class="request">
+												<li>일~금 18:00~22:00</li>
+												<li>토요일 (1부) 17:00~19:00</li>
+												<li>(2부) 20:00~22:00</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="fs12 mt15">※ 쾌적한 이용을 위하여 조식뷔페 입장은 10:00까지로 제한됩니다.</p>
+					</dd>
+				</dl>
+
+				<dl class="detailList">
+					<dt class="title">좌석수</dt>
+					<dd>140 석 (프라이빗 룸 2실 / 각 8인석)</dd>
+				</dl>
+
+				<dl class="detailList">
+					<dt class="title">위치</dt>
+					<dd>
+						HOTEL PARADISE 1 층
+						<a href="#" class="btnMoreTxt">자세히 보기</a>
+					</dd>
+				</dl>
+
+				<dl class="detailList pb16">
+					<dt class="title">연락처</dt>
+					<dd>
+						999-999-9999
+					</dd>
+				</dl>
+			</div>
+
+			<div class="offerResult">
+				<dl class="detailList">
+					<dt class="title">서비스 정보</dt>
+					<dd>
+						테이블 내용
+						<a href="#" class="btnMoreTxt">쇠고기 유통이력 식별번호 보기</a>
+					</dd>
+				</dl>
+
+				<div class="tblDiv blink">
+					<div class="cellDiv">&nbsp;</div>
+					<div class="cellDiv">&nbsp;</div>
+					<div class="cellDiv">&nbsp;</div>
+				</div>
+
+				<dl class="notiTxt pt0 pb16">
+					<dt>안내사항</dt>
+					<dd>
+						<ul class="list">
+							<li>18년부터 주중(월~금),주말(토,일)로 진행됩니다.</li>
+							<li>공휴일 및 법정 휴일은 주말 요금이 적용됩니다.</li>
+							<li>12월과 스페셜 데이에는 운영 시간 및 가격이 변동 될 수 있습니다.</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="offerResult">
+				<div class="stationGallery">
+					<strong class="title">
+						스테이션 소개
+						<span class="counter">
+							<span class="now">1</span> / <span class="all"></span>
+						</span>						
+					</strong>
+				
+					<div class="swiper-container station">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide stationCont">
+								<a href="#" class="thumb">
+									<img src="../static/images/sample/img_room.jpg" alt="" />
+									<span class="desc">
+										<span class="txt">
+											GRAND PREMIEM DELUXE<br /> 682,000 <span class="umit">원 (1박)</span>
+										</span>
+									</span>
+								</a>
+							</div>
+				
+							<div class="swiper-slide stationCont">
+								<a href="#" class="thumb">
+									<img src="../static/images/sample/img_room.jpg" alt="" />
+									<span class="desc">
+										<span class="txt">
+											GRAND PREMIEM DELUXE<br /> 682,000 <span class="umit">원 (1박)</span>
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+						<span class="room swiper-pagination"></span>
+					</div>
+				</div>
+
+			</div>
+
+<style type="text/css">
+.stationCont {}
+.stationCont > a {display:block;}
+.stationCont > a > img {display:block; width:100%;}
+</style>
+
+<script type="text/javascript">
+/* 침대 객실 */
+$(function(){
+	var stationLng = $('.station').children('.swiper-wrapper').children('swiper-slide').length;
+	console.log('x' + stationLng);
+	var stationswiper = new Swiper('.station', {
+		slidesPerView: 'auto',
+		loop:true,
+		pagination: {
+			el: '.swiper-pagination',
+			//type: 'fraction',
+		},
+		
+	});
+
+	stationswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+	  	$('.membershipCardInfo .signatureCardInfo').eq(idx).addClass('on').siblings().removeClass('on');
+		console.log(idx);
+	});
+
+
+});
+
+
+</script>
+
+
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

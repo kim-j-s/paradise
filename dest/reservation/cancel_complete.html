@@ -1,15 +1,42 @@
-@@include('static/include/head.html')
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>파라다이스 시티</title>
+<link href="../static/css/lib/swiper.css" rel="stylesheet">
+<link href="../static/css/reset.css" rel="stylesheet" />
+<link href="../static/css/common.css" rel="stylesheet" />
+<link href="../static/css/contents.css" rel="stylesheet" />
+<link href="../static/css/main.css" rel="stylesheet" />
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script type="text/javascript" src="../static/js/ui.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
 <body>
-	<div id="wrap">
+	<div class="layerfullWrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header.html',{
-				"header":"예약취소"
-			})
+		<div id="layerHeader">
+			예약취소 완료
+			<a href="#" class="layerCloseBtn"></a>
+		</div>
 		<!-- //헤더영역 -->
 
 		<!-- 컨텐츠 영역 -->
-		<section id="container">
-			<dl class="offerItemInfo mt12">
+		<section id="layerContent">
+			<p class="titleTxt single">
+				<span class="color">예약취소</span>가 <span class="color">완료</span>되었습니다.
+			</p>
+			<dl class="offerItemInfo mt24">
 				<dt>
 					<span class="line">HOTEL + CIMER 패키지</span>
 					<small>이용예정</small>
@@ -103,66 +130,17 @@
 							</span>
 						</li>
 					</ul>
-					
 				</dd>
 			</dl>
 
-			<!-- 수수료 없을 시 비노출 -->
-			<div class="offerResult mt11">
-				<div class="payNotiAdd">
-					<strong class="title">결제 수수료</strong>
-					<span class="rst">
-						<span class="roboto pointColor2">200,000</span> 원
-					</span>
-				</div>
-				<p class="txt">※ 수수료 결제를 통해 환불이 진행됩니다.</p>
-			</div>
-			<!--// 수수료 없을 시 비노출 -->
-
-			<!-- 수수료 없을 시 비노출 -->
-			<dl class="offerResult">
-				<dt class="offerResultTitle">수수료 결제방법</dt>
-				<dd>
-					<div class="tblDiv">
-						<div class="cellDiv">
-							<div class="radioBox">
-								<input type="radio" id="radio1" name="radio"><label for="radio1">신용카드</label>
-							</div>
-						</div>
-						<div class="cellDiv">
-							<div class="radioBox">
-								<input type="radio" id="radio2" name="radio"><label for="radio2">계좌이체</label>
-							</div>
-						</div>
-					</div>
-				</dd>
-			</dl>
-			<!--// 수수료 없을 시 비노출 -->
-
-			<div class="offerResult mt20">
-				<div class="paymentAgree pt0">
-					<div class="checkbox">
-						<input type="checkbox" id="checkPerson" />
-						<label for="checkPerson">취소&middot;환불 수수료에 대한 동의 <span class="pointColor">(필수)</span></label>
-					</div>
-					<div class="agreeTerms">
-						약관내용
-					</div>
-				</div>
-			</div>
-
-			<div class="mt35">
-				<div class="dimmedBtn full">
-					<a href="#" class="btn ty1">예약취소</a>
+			<div class="mt24">
+				<div class="dimmedBtn full on">
+					<a href="#" class="btn ty1">완료</a>
 				</div>
 			</div>
 
 		</section>
 		<!-- //컨텐츠 영역 -->
-
-		<!-- 하단 영역 -->
-		@@include('static/include/footer.html')
-		<!-- //하단 영역 -->
 	</div>
 </body>
 </html>

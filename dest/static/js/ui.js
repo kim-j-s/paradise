@@ -617,3 +617,12 @@ $(function(){
 		}
 	});
 });
+
+
+/* fine swiper */
+$(function(){
+	$('.normalSwiper').bxSlider({
+		controls: false,
+		pager: true
+	});
+});
