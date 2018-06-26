@@ -299,8 +299,14 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 테이블 */
 .table {}
 .table table {width:100%;}
-.table table th {text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:26px;}
+.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:14px; vertical-align:bottom;}
+.table table th.roboto {padding-bottom:5px;}
 .table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-bottom:1px solid #e7e3e0;}
+.table table th .day1 {position:relative;}
+.table table th .day1:after {content:''; position:absolute; top:7px; right:-6px; border-top:1px solid #9d836a; width:3px;}
+.table table th .day {display:inline-block; text-align:left;}
+.table table th .day .top {position:relative;}
+.table table th .day .top:after {content:''; position:absolute; top:6px; right:-4px; border-top:1px solid #9d836a; width:3px;}
 
 .table.side table {table-layout:auto;}
 .table.side table th {width:50px; padding:3px 0 0 0; white-space:nowrap; text-align:left; border-bottom:none; line-height:normal; padding-right:11px; vertical-align:top;}
@@ -1158,13 +1164,14 @@ line-height:18px;}
 .fineItem .desc strong {display:block; padding-bottom:7px; font-weight:bold; color:#111; line-height:18px;}
 .fineItem .desc p {font-size:12px; line-height:18px;}
 
+.bxWrap {width:calc(100% + 32px); margin-left:-16px;}
 .fineSwipe {}
 .fineSwipe .item {}
 .fineSwipe .item > img {display:block; width:100%;}
 
 .detailTop {}
 .detailTop .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
-.detailTop .desc {padding:5px 0 13px 0;; font-size:12px; color:#333; line-height:16px; border-bottom:1px solid #e7e3e0;}
+.detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px; border-bottom:1px solid #e7e3e0;}
 .detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px;}
 
 .detailList {position:relative;}
@@ -1172,10 +1179,23 @@ line-height:18px;}
 .detailList .title {padding-bottom:6px; font-weight:bold; color:#333;}
 .detailList .dd {font-size:12px; line-height:16px;}
 .detailList .btnMoreTxt {position:absolute; top:0; right:0;}
+.detailList .btnMoreTxt.none {position:static;}
 
-.tblDiv.blink {}
-.tblDiv.blink .cellDiv {width:1000px; height:18px; background:#666;}
-.tblDiv.blink .cellDiv:nth-child(even) {background:#857b71;}
+.stationGallery {}
+.stationGallery .title {display:block;  font-weight:bold; color:#111;}
+.stationGallery .title + .station {margin-top:17px;}
+.stationGallery .title + .download {margin:9px 0 16px 0; overflow:hidden;}
+.stationGallery .title + .download .btn {float:left;}
+.stationGallery .title + .download .btn + .btn {margin-left:7px;}
+.stationGallery .title .counter {padding-left:7px;}
+.stationGallery .title .now {font-weight:bold; color:#333;}
+.stationGallery .title .all {color:#333;}
+.stationGallery .swiper-pagination {position:static; display:block; width:100%; text-align:center;}
+.stationCont {}
+.stationCont > a {display:block;}
+.stationCont > a > img {display:block; width:100%; padding-bottom:11px;}
+.stationCont .tit {display:block; font-weight:bold; color:#111;}
+.stationCont .txt {display:block; padding:5px 0 8px 0; font-size:12px; line-height:16px;}
 
 
 /* dimmed layer popup */

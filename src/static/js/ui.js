@@ -436,6 +436,7 @@ $(function(){
 	Memberswiper.on('slideChangeTransitionEnd', function () {
 	  	var idx = $('.swiper-pagination-bullet-active').index();
 	  	$('.membershipCardInfo .signatureCardInfo').eq(idx).addClass('on').siblings().removeClass('on');
+		console.log(idx);
 	});
 });
 
@@ -624,5 +625,21 @@ $(function(){
 	$('.normalSwiper').bxSlider({
 		controls: false,
 		pager: true
+	});
+});
+
+/* 스테이션 소개 */
+$(function(){
+	var stationLng = $('.stationCont').length;
+	$('.counter').children('.all').html(stationLng);
+	var stationswiper = new Swiper('.station', {
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+		},		
+	});
+	stationswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+		$('.now').html(idx + 1);
 	});
 });

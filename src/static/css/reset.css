@@ -80,6 +80,8 @@ html, body {height:100%;}
 .pt20 {padding-top:20px;}
 .pt26 {padding-top:26px !important;}
 
+.pl4 {padding-left:4px !important;}
+
 .pb0 {padding-bottom:0 !important;}
 .pb7 {padding-bottom:7px !important;}
 .pb15 {padding-bottom:15px !important;}
@@ -113,6 +115,7 @@ html, body {height:100%;}
 .roboto {font-family:'Roboto'; font-weight:400;}
 .pointColor {color:#9d836a;}
 .pointColor2 {color:#e66045 !important;}
+.pointColor3 {color:#999 !important;}
 .pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
 .pointMark.red {background:url(../images/common/icon/icon_point_red.png) no-repeat right center; background-size:13px 13px;}
 .notiRed {font-size:11px; color:#e66045;}
