@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<title>파라다이스 시티</title>
+<link href="../static/css/lib/swiper.css" rel="stylesheet">
+<link href="../static/css/reset.css" rel="stylesheet" />
+<link href="../static/css/common.css" rel="stylesheet" />
+<link href="../static/css/contents.css" rel="stylesheet" />
+<link href="../static/css/main.css" rel="stylesheet" />
+<script type="text/javascript" src="../static/js/common.js"></script>
+<script type="text/javascript" src="../static/js/ui.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		<header id="headerWrap">
+		<h1>ART COLLECTION</h1>
+		<a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
+		<a href="#" class="menuBtn">메뉴</a>
+	</header>
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt single">
+				<span class="color">아트테인먼트 파라다이스시티</span>에서 격이 다른 예술 작품을 만나보세요.
+			</p>
+			<div class="mt11">
+				<a href="#" class="btn ty9">아트맵 보기</a>
+			</div>
+
+			<div class="offerResult mt20">
+				<div class="searchSort">
+					<select name="" id="" class="selectbox sort1">
+						<option value="">ALL</option>
+					</select>
+					<select name="" id="" class="selectbox sort2">
+						<option value="">작품 이름순</option>
+					</select>
+				</div>
+
+				<div class="artGalleryWrap">
+					<div class="swiper-container artGallery">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide artCont">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+									<span class="desc">
+										<strong class="tit">Evening Bells (FIEROMOMD)</strong>
+										<span class="txt">
+											게오르그 비첼리그 1938
+										</span>
+									</span>
+								</a>
+							</div>
+							<div class="swiper-slide artCont">
+								<a href="#">
+									<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+									<span class="desc">
+										<strong class="tit">Evening Bells (FIEROMOMD)</strong>
+										<span class="txt">
+											게오르그 비첼리그 1938
+										</span>
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="counter">
+							<span class="now">1</span> /
+							<span class="all"></span>
+						</div>
+						<span class="swiper-pagination"></span>
+					</div>
+				</div>
+
+<style type="text/css">
+.artGalleryWrap {padding-bottom:24px;}
+.artGallery {position:relative;}
+.artGallery .counter {position:absolute; top:17px; right:0; z-index:5; width:40px; background:#fff; text-align:right;}
+.artGallery .counter .now {font-weight:bold; color:#333;}
+
+.artGallery .swiper-pagination {position:static; display:block; text-align:center;}
+
+.artCont {}
+.artCont > a {display:block;}
+.artCont > a .thumb {max-width:100%;}
+.artCont .desc .tit {display:block; padding:12px 40px 2px 0; font-weight:bold; color:#111;}
+.artCont .desc .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.artCont .desc .txt {display:block; font-size:11px; color:#999; line-height:14px;}
+.counter {}
+</style>
+
+<script type="text/javascript">
+/* 스테이션 소개 */
+$(function(){
+	var artContLng = $('.artCont').length;
+	console.log(artContLng);
+	$('.counter').children('.all').html(artContLng);
+	var artswiper = new Swiper('.artGallery', {
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+		},		
+	});
+	artswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+		$('.now').html(idx + 1);
+	});
+});
+
+$(window).load(function(){
+	counterTop();
+});
+
+$(window).resize(function(){
+	counterTop();
+});
+
+function counterTop() {
+	ImgH = $('.artCont').find('img').height();
+	$('.artGallery').find('.counter').css('top', ImgH + 12);
+}
+
+</script>
+
+
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		<footer id="footerWrap">
+		푸터내용
+	</footer>
+<style type="text/css">
+	footer {line-height:50px; background:#333; text-align:center; color:#fff;}
+</style>
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

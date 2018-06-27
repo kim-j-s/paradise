@@ -1,0 +1,149 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"식음예약"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="reservationTop">
+				<strong class="title">ON THE PLATE</strong>
+				<p class="place">
+					HOTEL PARADISE <span class="pointColor">1</span>F <br />
+					<a href="tel:0327292209" class="btnUnderline">032-729-2209</a>
+				</p>
+			</div>
+
+			<div class="inpWrap">
+				<label class="inpTitle" for="day">예약 날짜</label>
+				<div class="inputBox">
+					<input type="date" name="" id="day" class="inp" />
+					<button class="inpReset">초기화</button>
+				</div>
+
+				<label class="inpTitle" for="food">Lunch / Dinner</label>
+				<div class="inputBox">
+					<select name="" id="food" class="selectbox" disabled="disabled">
+						<option value="">선택</option>
+						<option value="">Lunch</option>
+						<option value="">Dinner</option>
+						<option value="">Dinner(예약마감)</option>
+					</select>
+				</div>
+
+				<label class="inpTitle" for="time">예약 시간</label>
+				<div class="inputBox">
+					<select name="" id="time" class="selectbox" disabled="disabled">
+						<option value="">선택</option>
+						<option value="">10:00</option>
+					</select>
+				</div>
+
+				<div class="tblDiv mt17">
+					<div class="cellDiv">
+						<label class="inpTitle" for="type1">성인</label>
+						<div class="inputBox">
+							<select name="" id="type1" class="selectbox">
+								<option value="">1인</option>
+							</select>
+						</div>
+					</div>
+					<div class="cellDiv">
+						<label class="inpTitle" for="type2">어린이</label>
+						<div class="inputBox">
+							<select name="" id="type2" class="selectbox">
+								<option value="">0인</option>
+							</select>
+						</div>
+					</div>
+					<div class="cellDiv">
+						<label class="inpTitle" for="type3">유아</label>
+						<div class="inputBox">
+							<select name="" id="type3" class="selectbox" disabled="disabled">
+								<option value="">0인</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<dl class="offerResult mt20">
+				<dt class="offerResultTitle">개인정보</dt>
+				<dd>
+					<div class="inpWrap pt0">
+						<label class="inpTitle" for="name">이름</label>
+						<div class="inputBox">
+							<input type="text" name="" id="name" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+
+						<label class="inpTitle" for="email">이메일</label>
+						<div class="inputBox">
+							<input type="text" placeholder="paradise@paradise.com" name="" id="email" class="inp" />
+							<button class="inpReset">초기화</button>
+						</div>
+
+						<label class="inpTitle" for="phone">휴대폰 번호</label>
+						<div class="inputBox">
+							<div class="tblDiv">
+								<div class="cellDiv" style="width:65px;">
+									<select name="" id="phone" class="selectbox">
+										<option value="">010</option>
+										<option value="">011</option>
+										<option value="">016</option>
+										<option value="">017</option>
+										<option value="">018</option>
+										<option value="">019</option>
+									</select>
+								</div>
+								<div class="cellDiv">
+									<input type="tel" class="inp" />
+								</div>
+							</div>
+						</div>
+
+						<label class="inpTitle" for="allergy">알러지 유무(선택)</label>
+						<div class="inputBox">
+							<select name="" id="allergy" class="selectbox">
+								<option value="">선택</option>
+							</select>
+						</div>
+
+						<label class="inpTitle" for="request">추가 요청사항(선택)</label>
+						<div class="inputBox">
+							<textarea name="" placeholder="베이비체어 및 어린이 세팅 요청 등" id="request" cols="30" rows="10" class="textarea"></textarea>
+						</div>
+					</div>
+					<dl class="notiTxt list mt11">
+						<dt class="point">유의사항</dt>
+						<dd>
+							<ul class="list">
+								<li>안전하고 편안한 이용을 위하여 튜브, 기타 물놀이 기구 사용 및 음식물 반입, 흡연, 오일 사용을 금하고 있습니다.</li>
+								<li>얼리버드 및 특정 프로모션 상품은 예약취소가불가능 합니다.</li>
+								<li>상세한 내용은 상품 상세 페이지를 확인하시기 바랍니다.</li>
+							</ul>
+						</dd>
+					</dl>
+				</dd>
+			</dl>
+
+			<div class="dimmedBtn full mt32">
+				<a href="#" class="btn ty1">예약신청</a>
+			</div>
+			<!-- 버튼 활성화 -->
+			<!--
+			<div class="dimmedBtn full mt32 on">
+				<a href="#" class="btn ty1">예약신청</a>
+			</div>
+			-->
+			<!--// 버튼 활성화 -->
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+		
+	</div>
+</body>
+</html>

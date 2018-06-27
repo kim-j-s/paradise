@@ -37,7 +37,8 @@ html, body {height:100%;}
 }
 :-ms-input-placeholder { /* IE 10+ */
   font-size:13px;
-  color: rgba(232,153,148,0.8);
+  /* color: rgba(153,153,153,0.1); */
+  color:red;
 }
 :-moz-placeholder { /* Firefox 18- */
   font-size:13px;
@@ -100,6 +101,7 @@ html, body {height:100%;}
 .mt13 {margin-top:13px !important;}
 .mt14 {margin-top:14px !important;}
 .mt15 {margin-top:15px !important;}
+.mt17 {margin-top:17px !important;}
 .mt18 {margin-top:18px !important;}
 .mt20 {margin-top:20px !important;}
 .mt24 {margin-top:24px !important;}

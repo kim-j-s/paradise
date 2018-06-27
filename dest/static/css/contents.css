@@ -292,6 +292,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .inputBox.alertAdd + .inputBox.alertAdd {margin-top:-1px;}
 .inputBox.alertAdd .joinNotice {min-height:18px;}
 .inputBox .inpReset {position:absolute; top:11px; right:9px; width:14px; height:14px; background:url(../images/common/btn/btn_iptreset.png) no-repeat; background-size:100%; text-indent:-9999px;}
+.inputBox .inpReset {display:none;}
+.inputBox input:active + .inpReset {display:block;}
+.inputBox input:focus + .inpReset {display:block;}
 .inputBox .inpReset.count {right:47px;}
 .inputBox .inpSearch {position:absolute; top:11px; right:8px; width:15px; height:15px; background:url(../images/common/btn/btn_search.png) no-repeat; background-size:100%; text-indent:-9999px;}
 
@@ -697,9 +700,10 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .cartOptionDetail .txt .num {color:#9c836a;}
 .cartOptionDetail .priceRstList {margin:0; padding-top:9px; border-top:1px solid #e8e5e2;}
 
-.cart.tblDiv {position:absolute; left:0; bottom:0; width:100%;}
-.cart.tblDiv .cellDiv {padding:0; width:50%;}
-.cart.tblDiv .btn {font-size:18px; line-height:50px;}
+.floating.tblDiv {position:absolute; left:0; bottom:0; z-index:10; width:100%;}
+.floating.tblDiv.fix {position:fixed;}
+.floating.tblDiv .cellDiv {padding:0; width:50%;}
+.floating.tblDiv .btn {font-size:18px; line-height:50px;}
 
 /* 카트 상품 없음 */
 .cartNone {padding:55px 0 25px 0;}
@@ -1171,8 +1175,8 @@ line-height:18px;}
 
 .detailTop {}
 .detailTop .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
-.detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px; border-bottom:1px solid #e7e3e0;}
-.detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px;}
+.detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
+.detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
 
 .detailList {position:relative;}
 .detailList + .detailList {margin-top:31px;}
@@ -1181,7 +1185,7 @@ line-height:18px;}
 .detailList .btnMoreTxt {position:absolute; top:0; right:0;}
 .detailList .btnMoreTxt.none {position:static;}
 
-.stationGallery {}
+.stationGallery {padding-bottom:32px;}
 .stationGallery .title {display:block;  font-weight:bold; color:#111;}
 .stationGallery .title + .station {margin-top:17px;}
 .stationGallery .title + .download {margin:9px 0 16px 0; overflow:hidden;}
@@ -1196,6 +1200,25 @@ line-height:18px;}
 .stationCont > a > img {display:block; width:100%; padding-bottom:11px;}
 .stationCont .tit {display:block; font-weight:bold; color:#111;}
 .stationCont .txt {display:block; padding:5px 0 8px 0; font-size:12px; line-height:16px;}
+
+.fineEvent {width:calc(100% + 32px); padding:28px 0 36px 16px; margin-left:-16px; background:#f9f9f9;}
+.fineEvent.single {padding:28px 0 36px 0; }
+.fineEvent.single .fineEventCont {width:100%; text-align:center; font-size:0;}
+.fineEvent.single .fineEventCont > a {display:inline-block; width:240px;}
+
+.fineEventCont {width:240px; background:#fff;}
+.fineEventCont > a {display:block; border:1px solid #e3e3e3;}
+.fineEventCont > a .thumb {display:block; width:100%; height:135px;}
+.fineEventCont > a .tit {display:block; padding:12px 12px 4px 12px; font-weight:bold; font-size:14px; color:#111; text-align:left;}
+.fineEventCont > a .desc {padding:0 12px 13px 12px; font-size:12px; line-height:18px; text-align:left;}
+
+.dineThumb {width:calc(100% + 32px); margin-left:-16px;}
+.dineThumb > img {width:100%;}
+
+.reservationTop {}
+.reservationTop .title {display:block; padding:5px 0 10px 0; font-weight:bold; font-size:20px; color:#333;}
+.reservationTop .place {}
+.reservationTop .place .btnUnderline {font-size:14px;}
 
 
 /* dimmed layer popup */

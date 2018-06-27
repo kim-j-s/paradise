@@ -1,0 +1,85 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"식음상세"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+
+			<div class="dineThumb">
+				<img src="../static/images/sample/img_item.jpg" alt="" />
+			</div>
+
+			<div class="detailTop mt11">
+				<h2 class="title">On The Plate</h2>
+				<p class="desc">밀라노의 감성으로 이탈리아 본연의 맛을 추구하는 Italian Gourment Restaurant</p>
+			</div>
+
+			<div class="offerResult">
+				<dl class="detailList">
+					<dt class="title">운영시간</dt>
+					<dd>
+						<div class="table side3">
+							<table>
+								<caption>운영시간 정보</caption>
+								<tbody>
+									<tr>
+										<th scope="row">Breakfast</th>
+										<td>06:30~10:30</td>
+									</tr>
+									<tr>
+										<th scope="row">Lunch</th>
+										<td>12:00~15:00</td>
+									</tr>
+									<tr>
+										<th scope="row">요청사항</th>
+										<td>
+											<ul class="request">
+												<li>일~금 18:00~22:00</li>
+												<li>토요일 (1부) 17:00~19:00</li>
+												<li>(2부) 20:00~22:00</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="fs12 mt15">※ 쾌적한 이용을 위하여 조식뷔페 입장은 10:00까지로 제한됩니다.</p>
+					</dd>
+				</dl>
+
+				<dl class="detailList">
+					<dt class="title">위치</dt>
+					<dd>
+						HOTEL PARADISE 1 층
+						<a href="#" class="btnMoreTxt">자세히 보기</a>
+					</dd>
+				</dl>
+
+				<dl class="detailList">
+					<dt class="title">연락처</dt>
+					<dd>
+						999-999-9999
+					</dd>
+				</dl>
+
+				<dl class="detailList">
+					<dt class="title">공식홈페이지</dt>
+					<dd>
+						<a href="http://www.dfdsf.com" target="_blink" class="btnUnderline">www.dfdsf.com</a>
+					</dd>
+				</dl>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

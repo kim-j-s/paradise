@@ -404,7 +404,6 @@ $(function(){
 /* 카드 갤러리 기본 */
 $(function(){
 	var cardLength = $('.mypageGallery').find('.swiper-slide').length;
-	console.log(cardLength);
 
 	if (cardLength == 1)
 	{
@@ -642,4 +641,21 @@ $(function(){
 	  	var idx = $('.swiper-pagination-bullet-active').index();
 		$('.now').html(idx + 1);
 	});
+});
+
+/* fine */
+$(function(){
+	var FineLength = $('.fineEventGallery').find('.swiper-slide').length;
+	console.log(FineLength);
+
+	if (FineLength == 1)
+	{
+		$('.fineEventGallery').parent('.fineEvent').addClass('single');
+	} else if (FineLength != 1)
+	{
+		var Fineswiper = new Swiper('.fineEventGallery', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+		});
+	}
 });
