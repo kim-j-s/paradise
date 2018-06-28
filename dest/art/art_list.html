@@ -45,9 +45,15 @@
 				<div class="searchSort">
 					<select name="" id="" class="selectbox sort1">
 						<option value="">ALL</option>
+						<option value="">회화</option>
+						<option value="">디지털아트</option>
+						<option value="">Theme 1</option>
+						<option value="">Theme 2</option>
+						<option value="">Theme 3</option>
 					</select>
 					<select name="" id="" class="selectbox sort2">
 						<option value="">작품 이름순</option>
+						<option value="">작가 이름순</option>
 					</select>
 				</div>
 
@@ -56,7 +62,11 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide artCont">
 								<a href="#">
-									<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+									<span class="thumb">
+										<div class="inner">
+											<img class="" src="../static/images/sample/img_item.jpg" alt="" />
+										</div>
+									</span>
 									<span class="desc">
 										<strong class="tit">Evening Bells (FIEROMOMD)</strong>
 										<span class="txt">
@@ -67,7 +77,11 @@
 							</div>
 							<div class="swiper-slide artCont">
 								<a href="#">
-									<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+									<span class="thumb">
+										<div class="inner">
+											<img class="" src="../static/images/sample/img_thumb.jpg" alt="" />
+										</div>
+									</span>
 									<span class="desc">
 										<strong class="tit">Evening Bells (FIEROMOMD)</strong>
 										<span class="txt">
@@ -85,57 +99,47 @@
 					</div>
 				</div>
 
-<style type="text/css">
-.artGalleryWrap {padding-bottom:24px;}
-.artGallery {position:relative;}
-.artGallery .counter {position:absolute; top:17px; right:0; z-index:5; width:40px; background:#fff; text-align:right;}
-.artGallery .counter .now {font-weight:bold; color:#333;}
+				<ul class="artList">
+					<li>
+						<a href="#">
+							<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+							<strong class="tit">Evening Bells (Feieromomd)</strong>
+							<span class="desc">게오르그 바젤리츠, 1938</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+							<strong class="tit">Evening Bells (Feieromomd)</strong>
+							<span class="desc">1938</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+							<strong class="tit">Evening Bells (Feieromomd)</strong>
+							<span class="desc">게오르그 바젤리츠, 1938, 게오르그 바젤리츠, 1938</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+							<strong class="tit">Evening Bells (Feieromomd)</strong>
+							<span class="desc">1938</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img class="thumb" src="../static/images/sample/img_item.jpg" alt="" />
+							<strong class="tit">Evening Bells (Feieromomd)</strong>
+							<span class="desc">게오르그 바젤리츠, 1938, 게오르그 바젤리츠, 1938</span>
+						</a>
+					</li>
+				</ul>
 
-.artGallery .swiper-pagination {position:static; display:block; text-align:center;}
-
-.artCont {}
-.artCont > a {display:block;}
-.artCont > a .thumb {max-width:100%;}
-.artCont .desc .tit {display:block; padding:12px 40px 2px 0; font-weight:bold; color:#111;}
-.artCont .desc .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.artCont .desc .txt {display:block; font-size:11px; color:#999; line-height:14px;}
-.counter {}
-</style>
-
-<script type="text/javascript">
-/* 스테이션 소개 */
-$(function(){
-	var artContLng = $('.artCont').length;
-	console.log(artContLng);
-	$('.counter').children('.all').html(artContLng);
-	var artswiper = new Swiper('.artGallery', {
-		slidesPerView: 'auto',
-		pagination: {
-			el: '.swiper-pagination',
-		},		
-	});
-	artswiper.on('slideChangeTransitionEnd', function () {
-	  	var idx = $('.swiper-pagination-bullet-active').index();
-		$('.now').html(idx + 1);
-	});
-});
-
-$(window).load(function(){
-	counterTop();
-});
-
-$(window).resize(function(){
-	counterTop();
-});
-
-function counterTop() {
-	ImgH = $('.artCont').find('img').height();
-	$('.artGallery').find('.counter').css('top', ImgH + 12);
-}
-
-</script>
-
-
+				<div class="tc mt20 mb50">
+					<a href="#" class="btn ty4 big more"><span>더보기</span></a>
+				</div>
 			</div>
 		</section>
 		<!-- //컨텐츠 영역 -->
