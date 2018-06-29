@@ -689,3 +689,17 @@ $(function(){
 		}
 	});
 });
+
+// input type date placeholder
+$(function(){
+	var InpDate = $('input[type=date]');
+	$(InpDate).on('change', function(e) {
+		if($(this).val()) {
+			$(this).prev('label').css('display','none');
+		}
+		if ( !$(this).val() )
+		{
+			$(this).prev('label').css('display','block');
+		}
+	});
+});
