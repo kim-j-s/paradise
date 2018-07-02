@@ -669,6 +669,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 객실 / 침대 */
 .swiper-container {width:100%; height:100%;}
 .roomGalleryCont {width:calc(100% + 16px); height:294px;}
+.roomGalleryCont .swiper-container {padding-right:16px;}
 .roomCont {width: 240px;}
 .roomCont .thumb {position:relative; display:block; height:240px; border:1px solid #857b71;}
 .roomCont .thumb > img {width:100%;}
@@ -877,7 +878,7 @@ line-height:18px;}
 
 /* card gallery */
 .cardGalleryWrap {width:calc(100% + 16px); text-align:center;}
-.cardGalleryWrap .swiper-container {padding-bottom:11px; overflow:visible;}
+.cardGalleryWrap .swiper-container {padding-bottom:11px; padding-right:16px; overflow:visible;}
 .cardGalleryWrap .swiper-container:after {content:''; display:block; clear:both;}
 .cardGallery .swiper-slide {width:225px;}
 .cardGallery .swiper-slide > a {display:block;}
@@ -964,7 +965,7 @@ line-height:18px;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc5b51', endColorstr='#c69d5b',GradientType=1 );
 }
 
-.cardGalleryWrap.membership .swiper-container {padding-bottom:20px;}
+.cardGalleryWrap.membership .swiper-container {padding-bottom:20px; padding-right:16px;}
 .cardGalleryWrap.membership .swiper-pagination {bottom:-5px;}
 .signatureCardInfo {display:none;}
 .signatureCardInfo.on {display:block;}
@@ -1207,7 +1208,8 @@ line-height:18px;}
 .stationCont .txt.other {padding:0 0 2px 0; font-size:11px; line-height:14px;}
 .stationCont .tag {display:block; padding:5px 0 9px 0; font-size:12px; color:#9c836a; line-height:14px;}
 
-.fineEvent {width:calc(100% + 32px); padding:28px 0 36px 16px; margin-left:-16px; background:#f9f9f9;}
+.fineEvent {width:calc(100% + 32px); padding:28px 0 36px 16px; margin-left:-16px; background:#f9f9f9; background:#ddd;}
+.fineEvent .swiper-container {padding-right:16px;}
 .fineEvent.single {padding:28px 0 36px 0; }
 .fineEvent.single .fineEventCont {width:100%; text-align:center; font-size:0;}
 .fineEvent.single .fineEventCont > a {display:inline-block; width:240px;}
