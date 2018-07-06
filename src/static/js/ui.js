@@ -454,12 +454,27 @@ $(function(){
 // 서브뎁스 슬라이드
 $(window).scroll(function(){
 	var htmlScroll = $('html, body').scrollTop();
+	var floatingTab = $('.floatingTab').length;
 	if ( htmlScroll > 60)
 	{
 		$('.headerFixed').addClass('fixed');
 	} else if (htmlScroll < 60 )
 	{
 		$('.headerFixed').removeClass('fixed');
+	}
+
+	if (floatingTab == 1)
+	{
+		console.log('작동');
+		if ( htmlScroll > 60)
+		{
+			$('.floatingTab').addClass('on');
+			$('.floatingTab').parent('.tabWrap').css('padding-top','41px');
+		} else if (htmlScroll < 60 )
+		{
+			$('.floatingTab').removeClass('on');
+			$('.floatingTab').parent('.tabWrap').css('padding-top','0');
+		}
 	}
 });
 
@@ -700,6 +715,51 @@ $(function(){
 		if ( !$(this).val() )
 		{
 			$(this).prev('label').css('display','block');
+		}
+	});
+});
+
+
+/* floating button */
+$(function(){
+	$('#wrap').scroll(function(){
+		var Top = $('#wrap').scrollTop();		
+		FloationEvent(Top);
+	});
+
+	$(window).resize(function(){
+		FloationEvent();
+	});
+
+	function FloationEvent(Top) {
+		var WinHeight = $(window).height();
+		var FloatingBtn = $('.floating').length;
+		var containerHeight = $('#container').height();
+
+		if (FloatingBtn >= 1)
+		{
+			if ( (containerHeight - Top) > (WinHeight - 110) )
+			{
+				$('#wrap').css('padding-bottom','50px');
+				$('.floating').css('position','absolute');
+			} else {
+				$('#wrap').css('padding-bottom','0');
+				$('.floating').css('position','static');
+			}
+		}		
+	}
+});
+
+// 맴버십 슬라이드
+$(function(){
+	var dlSlide = $('.dlSlide > .title');
+	$(dlSlide).click(function(){
+		if ( $(this).next('dd').css('display') == 'block' )
+		{
+			$(dlSlide).removeClass('on').next('dd').slideUp(300);
+		} else {
+			$(this).siblings().removeClass('on').next('dd').slideUp(300);
+			$(this).addClass('on').next('dd').slideDown(300);
 		}
 	});
 });

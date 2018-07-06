@@ -16,6 +16,7 @@ var fileCache = new FileCache();
 var ext_replace = require('gulp-ext-replace');			// 확장자 변환
 var fileSync = require('gulp-file-sync');				// 파일 싱크
 var fsync = require('gulp-files-sync');
+var prettyHtml = require('gulp-pretty-html');
 
 // 바라볼 경로를 변수화 지정
 var src = 'src/';
@@ -29,6 +30,9 @@ gulp.task('include', function() {
 			prefix : '@@',
 			basepath : 'src/'
 		}))
+		.pipe(prettyHtml({
+			indent_size: 4
+		}))
 		.pipe(gulp.dest('dest/'))
 		.pipe(browserSync.reload(
 			{stream: true}
@@ -41,6 +45,9 @@ gulp.task('html', function() {
 		.pipe(fileinclude ({
 			prefix : '@@',
 			basepath : 'src/'
+		}))
+		.pipe(prettyHtml({
+			indent_size: 4
 		}))
 		.pipe(gulp.dest('dest/'))
 		.pipe(browserSync.reload(

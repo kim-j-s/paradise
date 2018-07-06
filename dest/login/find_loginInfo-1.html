@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-<title>파라다이스 시티</title>
-<link href="../static/css/lib/swiper.css" rel="stylesheet">
-<link href="../static/css/reset.css" rel="stylesheet" />
-<link href="../static/css/common.css" rel="stylesheet" />
-<link href="../static/css/contents.css" rel="stylesheet" />
-<link href="../static/css/main.css" rel="stylesheet" />
-<script type="text/javascript" src="../static/js/common.js"></script>
-<script type="text/javascript" src="../static/js/ui.js"></script>
-<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>파라다이스 시티</title>
+    <link href="../static/css/lib/swiper.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
     <script type="text/javascript">
         document.createElement("header"); 
         document.createElement("nav"); 
@@ -22,87 +23,93 @@
     </script>
 <![endif]-->
 </head>
+
 <body>
-	<div class="layerfullWrap"> <!-- 2018-06-07 클래스 제거 -->
-		<!-- 헤더영역 -->
-		<div id="layerHeader">
-			아이디/비밀번호 찾기
-			<a href="#" class="layerCloseBtn"></a>
-		</div>
-		<!-- //헤더영역 -->
+    <div class="layerfullWrap">
+        <!-- 2018-06-07 클래스 제거 -->
+        <!-- 헤더영역 -->
+        <div id="layerHeader">
+            아이디/비밀번호 찾기
+            <a href="#" class="layerCloseBtn"></a>
+        </div>
+        <!-- //헤더영역 -->
 
-		<!-- 컨텐츠 영역 -->
-		<section id="layerContent">
-			<div class="joinWrap"> <!-- 2018-06-07 구조변경 -->
-				<p class="titleTxt single">인증을 통해 <span class="color">아이디, 비밀번호</span>를 <span class="dpib">찾을 수 있습니다.</span></p>
-				<div class="tabWrap">
-					<ul class="tabList">
-						<li>
-							<button class="tit on">아이디 찾기</button>
-						</li>
-						<li>
-							<button class="tit">비밀번호 찾기</button>
-						</li>
-					</ul>
-					<div class="tabContent on">
-						<div class="inputBox">
-							<input type="text" placeholder="이름" name="" id="" class="inp" />
-							<button class="inpReset">초기화</button>
-						</div>
-						<div class="tblDiv mt8">
-							<div class="cellDiv phone" style="width:65px;">
-								<select name="" id="" class="selectbox">
-									<option value="">010</option>
-									<option value="">011</option>
-									<option value="">016</option>
-									<option value="">017</option>
-									<option value="">018</option>
-									<option value="">019</option>
-								</select>
-							</div>
-							<div class="cellDiv phone">
-								<div class="inputBox">
-									<input type="tel" class="inp" />
-									<button class="inpReset">초기화</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="tabContent">
-						<div class="inputBox">
-							<input type="text" placeholder="아이디" name="" id="" class="inp" /> <!-- 2018-06-12 placeholder 변경 -->
-							<button class="inpReset">초기화</button>
-						</div>
-						<div class="inputBox mt8">
-							<input type="text" placeholder="이름" name="" id="" class="inp" />
-							<button class="inpReset">초기화</button>
-						</div>
-						<p class="cnipTxt">이메일 인증</p>
-						<div class="inputBox">
-							<input type="text" placeholder="Paradise@paradise.com" class="inp" />
-							<button class="inpReset">초기화</button>
-						</div>
-						<div class="checkbox mt10">
-							<input type="checkbox" id="idcheck"><label for="idcheck">아이디와 동일</label>
-						</div>
-					</div>
-				</div>
+        <!-- 컨텐츠 영역 -->
+        <section id="layerContent">
+            <div class="joinWrap">
+                <!-- 2018-06-07 구조변경 -->
+                <p class="titleTxt single">인증을 통해 <span class="color">아이디, 비밀번호</span>를 <span class="dpib">찾을 수 있습니다.</span></p>
+                <div class="tabWrap">
+                    <ul class="tabList">
+                        <li>
+                            <button class="tit on">아이디 찾기</button>
+                        </li>
+                        <li>
+                            <button class="tit">비밀번호 찾기</button>
+                        </li>
+                    </ul>
+                    <div class="tabContent on">
+                        <div class="inputBox">
+                            <input type="text" placeholder="이름" name="" id="" class="inp" />
+                            <button class="inpReset">초기화</button>
+                        </div>
+                        <div class="tblDiv mt8">
+                            <div class="cellDiv phone" style="width:65px;">
+                                <select name="" id="" class="selectbox">
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>
+                            </div>
+                            <div class="cellDiv phone">
+                                <div class="inputBox">
+                                    <input type="tel" class="inp" />
+                                    <button class="inpReset">초기화</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent">
+                        <div class="inputBox">
+                            <input type="text" placeholder="아이디" name="" id="" class="inp" />
+                            <!-- 2018-06-12 placeholder 변경 -->
+                            <button class="inpReset">초기화</button>
+                        </div>
+                        <div class="inputBox mt8">
+                            <input type="text" placeholder="이름" name="" id="" class="inp" />
+                            <button class="inpReset">초기화</button>
+                        </div>
+                        <p class="cnipTxt">이메일 인증</p>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Paradise@paradise.com" class="inp" />
+                            <button class="inpReset">초기화</button>
+                        </div>
+                        <div class="checkbox mt10">
+                            <input type="checkbox" id="idcheck">
+                            <label for="idcheck">아이디와 동일</label>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- 2018-06-07 위치 변경 -->
-				<div class="footerBtn">
-					<a href="#" class="btn ty1">확인</a>
-				</div>
-				<!-- 버튼 활성화 -->
-				<!--
+                <!-- 2018-06-07 위치 변경 -->
+                <div class="footerBtn">
+                    <a href="#" class="btn ty1">확인</a>
+                </div>
+                <!-- 버튼 활성화 -->
+                <!--
 				<div class="footerBtn on">
 					<a href="#" class="btn ty1">확인</a>
 				</div>
 				-->
-				<!--// 버튼 활성화 -->
-			</div>
-		</section>
-		<!-- //컨텐츠 영역 -->
-	</div>
+                <!--// 버튼 활성화 -->
+            </div>
+        </section>
+        <!-- //컨텐츠 영역 -->
+    </div>
 
 </body>
+
 </html>

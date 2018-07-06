@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>파라다이스 시티</title>
+    <link href="../static/css/lib/swiper.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+    <div class="layerfullWrap">
+        <!-- 헤더영역 -->
+        <div id="layerHeader">
+            OFFER
+            <a href="#" class="layerCloseBtn"></a>
+        </div>
+        <!-- //헤더영역 -->
+
+        <!-- 컨텐츠 영역 -->
+        <section id="layerContent">
+            <div class="state">
+                <div class="stateInfo">
+                    <strong class="name">SCENT OF PARADISE</strong>
+                    <span class="date roboto">2018.05.01- 2018.06.01</span>
+                    <div class="smallItemNoti">
+                        <span class="nt ty1">마감임박</span>
+                        <span class="nt ty2">웹회원전용</span>
+                        <span class="nt ty3">특가</span>
+                    </div>
+                </div>
+                <div class="stateProcess">
+                    <span class="process">진행중</span>
+                </div>
+            </div>
+
+            <div class="prodListWrap mt12">
+                <ul class="prodList">
+                    <li>
+                        <img src="../static/images/reservation/img_room.jpg" alt="" />
+                        <span class="txt">Room</span>
+                    </li>
+                    <li>
+                        <img src="../static/images/reservation/img_fitness.jpg" alt="" />
+                        <span class="txt">Fitness</span>
+                    </li>
+                    <li>
+                        <img src="../static/images/reservation/img_ps.jpg" alt="" />
+                        <span class="txt">Play Station</span>
+                    </li>
+                    <li>
+                        <img src="../static/images/reservation/img_jaum.jpg" alt="" />
+                        <span class="txt">Jaum Plensa<br /> 기획전</span>
+                    </li>
+                    <li>
+                        <img src="../static/images/reservation/img_cimer.jpg" alt="" />
+                        <span class="txt">CIMER<br /> 통합입장권</span>
+                    </li>
+                    <li>
+                        <img src="../static/images/reservation/img_swiming.jpg" alt="" />
+                        <span class="txt">Swiming pool</span>
+                    </li>
+                </ul>
+                <ul class="listStar mt5">
+                    <li>구성상품은 성인 2인 기준입니다.</li>
+                </ul>
+            </div>
+
+            <div class="upToWrap">
+                <div class="upTo">
+                    <div class="per">
+                        Up to <span class="roboto">25%</span>
+                    </div>
+                    <div class="price">
+                        <div class="cost">
+                            <span class="roboto">800,000</span> 원 <span class="wave">~</span>
+                        </div>
+                        <div class="sale">
+                            <span class="roboto">600,000</span> 원 <span class="bold wave">~</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list">
+                    <ul class="listStar mt5">
+                        <li class="tr">SIGNATURE 멤버십 가입 시 추가 10%할인</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <style type="text/css">
+                .prodListWrap {
+                    width: calc(100% + 32px);
+                    margin-left: -16px;
+                    padding: 12px 16px 10px 16px;
+                    background: #f9f9f9;
+                    border-top: 1px solid #e7e3e0;
+                }
+
+                .prodList {
+                    overflow: hidden;
+                    width: calc(100% + 8px);
+                }
+
+                .prodList>li {
+                    position: relative;
+                    float: left;
+                    width: 33.3%;
+                    padding-left: 8px;
+                    margin-top: 8px;
+                }
+
+                .prodList>li:nth-child(3n + 1) {
+                    padding-left: 0;
+                    width: calc(33.3% - 8px);
+                }
+
+                .prodList>li:nth-child(-n + 3) {
+                    margin-top: 0;
+                }
+
+                .prodList>li img {
+                    width: 100%;
+                }
+
+                .prodList>li span {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    transform: translate(-50%, -50%);
+                    font-size: 11px;
+                    color: #fff;
+                    text-align: center;
+                }
+
+                .upToWrap {
+                    width: calc(100% + 32px);
+                    margin-left: -16px;
+                    padding: 0 16px 18px 16px;
+                    background: #f9f9f9;
+                }
+
+                .upTo {
+                    display: table;
+                    width: 100%;
+                }
+
+                .upTo .per {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    border-top: 1px solid #e7e3e0;
+                    color: #e66045;
+                }
+
+                .upTo .per .roboto {
+                    font-size: 20px;
+                }
+
+                .upTo .price {
+                    display: table-cell;
+                    vertical-align: bottom;
+                    padding-top: 16px;
+                    text-align: right;
+                    border-top: 1px solid #e7e3e0;
+                }
+
+                .upTo .price .cost {
+                    font-size: 12px;
+                    color: #999;
+                    line-height: 18px;
+                }
+
+                .upTo .price .cost .roboto {
+                    position: relative;
+                    display: inline-block;
+                    font-size: 14px;
+                    margin-right: 3px;
+                }
+
+                .upTo .price .cost .roboto:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -2px;
+                    margin-top: -1px;
+                    width: calc(100% + 4px);
+                    border-top: 1px solid #999;
+                }
+
+                .upTo .price .sale {
+                    color: #767676;
+                    margin-top: -8px;
+                    line-height: 24px;
+                }
+
+                .upTo .price .sale .roboto {
+                    position: relative;
+                    top: 2px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: #9c836a;
+                }
+
+                .upTo .price .sale .bold {
+                    color: #9c836a;
+                }
+
+                .upTo .price .wave {
+                    display: inline-block;
+                    width: 10px;
+                    text-align: left;
+                }
+
+                .upToWrap .list {
+                    overflow: hidden;
+                }
+
+                .upToWrap .listStar {
+                    float: right;
+                }
+            </style>
+
+        </section>
+        <!-- //컨텐츠 영역 -->
+    </div>
+</body>
+
+</html>

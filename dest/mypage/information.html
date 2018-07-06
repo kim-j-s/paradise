@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-<title>파라다이스 시티</title>
-<link href="../static/css/lib/swiper.css" rel="stylesheet">
-<link href="../static/css/reset.css" rel="stylesheet" />
-<link href="../static/css/common.css" rel="stylesheet" />
-<link href="../static/css/contents.css" rel="stylesheet" />
-<link href="../static/css/main.css" rel="stylesheet" />
-<script type="text/javascript" src="../static/js/common.js"></script>
-<script type="text/javascript" src="../static/js/ui.js"></script>
-<!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <title>파라다이스 시티</title>
+    <link href="../static/css/lib/swiper.css" rel="stylesheet">
+    <link href="../static/css/reset.css" rel="stylesheet" />
+    <link href="../static/css/common.css" rel="stylesheet" />
+    <link href="../static/css/contents.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="../static/js/common.js"></script>
+    <script type="text/javascript" src="../static/js/ui.js"></script>
+    <!--[if lt IE 9]>
     <script type="text/javascript">
         document.createElement("header"); 
         document.createElement("nav"); 
@@ -22,348 +23,375 @@
     </script>
 <![endif]-->
 </head>
+
 <body>
-	<div id="wrap">
-		<!-- 헤더영역 -->
-		<header id="headerWrap">
-		<h1>회원정보 수정</h1>
-		<a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
-		<a href="#" class="menuBtn">메뉴</a>
-	</header>
-		<!-- //헤더영역 -->
+    <div id="wrap">
+        <!-- 헤더영역 -->
+        <header id="headerWrap">
+            <h1>회원정보 수정</h1>
+            <a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
+            <a href="#" class="menuBtn">메뉴</a>
+        </header>
+        <!-- //헤더영역 -->
 
-		<!-- 컨텐츠 영역 -->
-		<section id="container">
-			<div class="loginWrap">
-				<label class="inpTitle" for="loginId">아이디 *</label>
-				<div class="inputBox alertAdd">
-					<input type="text" placeholder="아이디" class="inp" id="loginId" disabled="disabled" value="heejun2018@reflexion.co.kr" />
-					<button class="inpReset">초기화</button>
-					<span class="joinNotice">이메일을 ID로 사용합니다.</span>
-				</div>
+        <!-- 컨텐츠 영역 -->
+        <section id="container">
+            <div class="loginWrap">
+                <label class="inpTitle" for="loginId">아이디 *</label>
+                <div class="inputBox alertAdd">
+                    <input type="text" placeholder="아이디" class="inp" id="loginId" disabled="disabled" value="heejun2018@reflexion.co.kr" />
+                    <button class="inpReset">초기화</button>
+                    <span class="joinNotice">이메일을 ID로 사용합니다.</span>
+                </div>
 
-				<label class="inpTitle" for="loginpw">비밀번호 *</label>
-				<div class="inputBox alertAdd">
-					<input type="password" placeholder="8-16자, 영문&middot;숫자&middot;특수 포함" class="inp" id="loginpw" />
-					<button class="inpReset">초기화</button>
-					<span class="joinNotice"></span>
-				</div>
+                <label class="inpTitle" for="loginpw">비밀번호 *</label>
+                <div class="inputBox alertAdd">
+                    <input type="password" placeholder="8-16자, 영문&middot;숫자&middot;특수 포함" class="inp" id="loginpw" />
+                    <button class="inpReset">초기화</button>
+                    <span class="joinNotice"></span>
+                </div>
 
-				<label class="inpTitle" for="loginpwR">비밀번호 확인 *</label>
-				<div class="inputBox alertAdd">
-					<input type="password" class="inp" id="loginpwR" />
-					<button class="inpReset">초기화</button>
-					<span class="joinNotice"></span>
-				</div>
+                <label class="inpTitle" for="loginpwR">비밀번호 확인 *</label>
+                <div class="inputBox alertAdd">
+                    <input type="password" class="inp" id="loginpwR" />
+                    <button class="inpReset">초기화</button>
+                    <span class="joinNotice"></span>
+                </div>
 
-				<div class="dimmedBtn">
-					<a href="#" class="btn ty4">비밀번호 수정</a>
-				</div>
+                <div class="dimmedBtn">
+                    <a href="#" class="btn ty4">비밀번호 수정</a>
+                </div>
 
-				<!-- 기본정보 -->
-				<div class="inpWrap">
-					<p class="infoTitle">기본정보<span class="infoTitleSub1">* 필수입력 항목</span></p>
-					<label class="inpTitle" for="nameKo">이름(국문) *</label>
+                <!-- 기본정보 -->
+                <div class="inpWrap">
+                    <p class="infoTitle">기본정보<span class="infoTitleSub1">* 필수입력 항목</span></p>
+                    <label class="inpTitle" for="nameKo">이름(국문) *</label>
 
-					<div class="tblDiv">
-						<div class="cellDiv">
-							<div class="inputBox alertAdd">
-								<input type="text" name="" id="nameKo" class="inp" disabled="disabled" value="홍길동" />
-								<button class="inpReset">초기화</button>
-							</div>
-						</div>
-						<div class="cellDiv" style="width:80px;">
-							<select name="" id="" class="selectbox" disabled="disabled">
-								<option value="">성별</option>
-								<option value="" selected="selected">Mr</option>
-								<option value="">Mrs</option>
-							</select>
-						</div>
-					</div>
+                    <div class="tblDiv">
+                        <div class="cellDiv">
+                            <div class="inputBox alertAdd">
+                                <input type="text" name="" id="nameKo" class="inp" disabled="disabled" value="홍길동" />
+                                <button class="inpReset">초기화</button>
+                            </div>
+                        </div>
+                        <div class="cellDiv" style="width:80px;">
+                            <select name="" id="" class="selectbox" disabled="disabled">
+                                <option value="">성별</option>
+                                <option value="" selected="selected">Mr</option>
+                                <option value="">Mrs</option>
+                            </select>
+                        </div>
+                    </div>
 
-					<label class="inpTitle" for="nameEN">이름(영문)</label>
-					<div class="tblDiv">
-						<div class="cellDiv">
-							<div class="inputBox alertAdd">
-								<input type="text" name="" id="nameEN" class="inp" disabled="disabled" value="길동" />
-								<button class="inpReset">초기화</button>
-							</div>
-						</div>
-						<div class="cellDiv">
-							<div class="inputBox alertAdd">
-								<input type="text" name="" class="inp" disabled="disabled" value="홍" />
-								<button class="inpReset">초기화</button>
-							</div>
-						</div>
-					</div>
+                    <label class="inpTitle" for="nameEN">이름(영문)</label>
+                    <div class="tblDiv">
+                        <div class="cellDiv">
+                            <div class="inputBox alertAdd">
+                                <input type="text" name="" id="nameEN" class="inp" disabled="disabled" value="길동" />
+                                <button class="inpReset">초기화</button>
+                            </div>
+                        </div>
+                        <div class="cellDiv">
+                            <div class="inputBox alertAdd">
+                                <input type="text" name="" class="inp" disabled="disabled" value="홍" />
+                                <button class="inpReset">초기화</button>
+                            </div>
+                        </div>
+                    </div>
 
-					<!-- 2018-06-29 마크업 수정 -->
-					<span class="inpTitle">생년월일 *</span>
-					<div class="inputBox date">
-						<input type="date" name="" id="birth" class="inp date" disabled="disabled" value="2018-06-21" />
-						<label class="inpTitle date" for="birth">생년월일 선택</label>
-					</div>
-					<!--// 2018-06-29 마크업 수정 -->
+                    <!-- 2018-06-29 마크업 수정 -->
+                    <span class="inpTitle">생년월일 *</span>
+                    <div class="inputBox date">
+                        <input type="date" name="" id="birth" class="inp date" disabled="disabled" value="2018-06-21" />
+                        <label class="inpTitle date" for="birth">생년월일 선택</label>
+                    </div>
+                    <!--// 2018-06-29 마크업 수정 -->
 
-					<label class="inpTitle" for="Phone">휴대폰 번호 *</label>
-					<div class="inputBox alertAdd">
-						<div class="tblDiv">
-							<div class="cellDiv" style="width:65px;">
-								<select name="" id="Phone" class="selectbox">
-									<option value="">010</option>
-									<option value="">011</option>
-									<option value="">016</option>
-									<option value="">017</option>
-									<option value="">018</option>
-									<option value="">019</option>
-								</select>
-							</div>
-							<div class="cellDiv">
-								<div class="inputBox alertAdd">
-									<input type="tel" name="" class="inp" />
-									<button class="inpReset">초기화</button>
-								</div>
-							</div>
-						</div>
-						<span class="joinNotice alert">휴대폰번호를 정확히 입력해 주세요.</span>
-					</div>
+                    <label class="inpTitle" for="Phone">휴대폰 번호 *</label>
+                    <div class="inputBox alertAdd">
+                        <div class="tblDiv">
+                            <div class="cellDiv" style="width:65px;">
+                                <select name="" id="Phone" class="selectbox">
+                                    <option value="">010</option>
+                                    <option value="">011</option>
+                                    <option value="">016</option>
+                                    <option value="">017</option>
+                                    <option value="">018</option>
+                                    <option value="">019</option>
+                                </select>
+                            </div>
+                            <div class="cellDiv">
+                                <div class="inputBox alertAdd">
+                                    <input type="tel" name="" class="inp" />
+                                    <button class="inpReset">초기화</button>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="joinNotice alert">휴대폰번호를 정확히 입력해 주세요.</span>
+                    </div>
 
-					<label class="inpTitle" for="address">주소 *</label>
-					<div class="inputBox addressInp">
-						<div class="tblDiv">
-							<div class="cellDiv">
-								<input type="text" id="address" class="inp" disabled="disabled" value="22301" />
-							</div>
-							<div class="cellDiv" style="width:90px;">
-								<a href="#" class="btn ty3">우편번호 검색</a>
-							</div>
-						</div>
-						<div class="inputBox">
-							<input type="text" id="address1" class="inp" disabled="disabled" value="강남동" />
-						</div>
-						<div class="inputBox">
-							<input type="text" id="address2" class="inp" disabled="disabled" value="강남1번지" />
-							<button class="inpReset">초기화</button>
-						</div>
-						<div class="inputBox">
-							<input type="text" id="address3" class="inp" disabled="disabled" value="301호" />
-							<button class="inpReset">초기화</button>
-						</div>
-					</div>
-					
-					<label class="inpTitle" for="eMail">이메일 *</label>
-					<div class="inputBox">
-						<div class="inputBox">
-							<input type="text" placeholder="Paradise@paradise.com" id="eMail" class="inp" />
-						</div>
-						<span class="joinNotice alert">이메일 형식이 올바르지 않습니다.</span>
-						<p class="txt">@daum.net, @hanmail.net 수신에 제한이 있을 수 있으니, 다른 이메일을 사용 바랍니다.</p>
-						<div class="checkbox mt10">
-							<input type="checkbox" id="idChk" checked="checked" /><label for="idChk">아이디와 동일</label>
-						</div>
-					</div>
-				</div>
-				<!--// 기본정보 -->
+                    <label class="inpTitle" for="address">주소 *</label>
+                    <div class="inputBox addressInp">
+                        <div class="tblDiv">
+                            <div class="cellDiv">
+                                <input type="text" id="address" class="inp" disabled="disabled" value="22301" />
+                            </div>
+                            <div class="cellDiv" style="width:90px;">
+                                <a href="#" class="btn ty3">우편번호 검색</a>
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="address1" class="inp" disabled="disabled" value="강남동" />
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="address2" class="inp" disabled="disabled" value="강남1번지" />
+                            <button class="inpReset">초기화</button>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="address3" class="inp" disabled="disabled" value="301호" />
+                            <button class="inpReset">초기화</button>
+                        </div>
+                    </div>
 
-				<!-- 마케팅 정보 수신 동의 -->
-				<div class="inpWrap">
-					<p class="infoTitle">마케팅 정보 수신 동의<span class="infoTitleSub2">포인트/이벤트 소식을 전해드립니다.<br /> (예약 및 구매 관련 발송 내역은 제외)</span></p>
-					<div class="checkbox other">
-						<input type="checkbox" id="check"><label for="check">전체 동의</label>
-					</div>
-					<div class="box mt14">
-						<ul class="chkList1">
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="emailChk"><label for="emailChk">이메일</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="sms"><label for="sms">SMS</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="phone"><label for="phone">휴대폰</label>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!--// 마케팅 정보 수신 동의 -->
+                    <label class="inpTitle" for="eMail">이메일 *</label>
+                    <div class="inputBox">
+                        <div class="inputBox">
+                            <input type="text" placeholder="Paradise@paradise.com" id="eMail" class="inp" />
+                        </div>
+                        <span class="joinNotice alert">이메일 형식이 올바르지 않습니다.</span>
+                        <p class="txt">@daum.net, @hanmail.net 수신에 제한이 있을 수 있으니, 다른 이메일을 사용 바랍니다.</p>
+                        <div class="checkbox mt10">
+                            <input type="checkbox" id="idChk" checked="checked" />
+                            <label for="idChk">아이디와 동일</label>
+                        </div>
+                    </div>
+                </div>
+                <!--// 기본정보 -->
 
-				<!-- 선택정보 -->
-				<div class="inpWrap">
-					<p class="infoTitle">선택정보</p>
+                <!-- 마케팅 정보 수신 동의 -->
+                <div class="inpWrap">
+                    <p class="infoTitle">마케팅 정보 수신 동의<span class="infoTitleSub2">포인트/이벤트 소식을 전해드립니다.<br /> (예약 및 구매 관련 발송 내역은 제외)</span></p>
+                    <div class="checkbox other">
+                        <input type="checkbox" id="check">
+                        <label for="check">전체 동의</label>
+                    </div>
+                    <div class="box mt14">
+                        <ul class="chkList1">
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="emailChk">
+                                    <label for="emailChk">이메일</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="sms">
+                                    <label for="sms">SMS</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="phone">
+                                    <label for="phone">휴대폰</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--// 마케팅 정보 수신 동의 -->
 
-					<!-- 2018-06-20 추가 -->
-					<span class="inpTitle">관련 정보 수신을 원하는 파라다이스시티 시설</span>
-					<div class="facility">
-						<div class="facilityTop">
-							<div class="checkbox small">
-								<input type="checkbox" id="facility"><label for="facility">전체</label>
-							</div>
-						</div>
-						<ul class="facilityList">
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility1"><label for="facility1">Hotel <br />/ Paradise</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility2"><label for="facility2">Hotel <br />/ Art Paradiso</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility3"><label for="facility3">Spa <br />/ Cimer</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility4"><label for="facility4">Club <br />/ Chroma</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility5"><label for="facility5">Theme Park <br />/ Wonderbox</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility6"><label for="facility6">Shopping<br />/ Plaza</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility7"><label for="facility7">Art Gallery <br />/ Art Space</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility8"><label for="facility8">Studio <br />/ Studio Paradise</label>
-								</div>
-							</li>
-							<!-- 국문 비노출(외국어 버전 Only) 중국 IP 접속 시 비노출 -->
-							<li>
-								<div class="checkbox small">
-									<input type="checkbox" id="facility9"><label for="facility9">Casino <br />/ Paradise Casino</label>
-								</div>
-							</li>
-							<!--// 국문 비노출(외국어 버전 Only) 중국 IP 접속 시 비노출 -->
-						</ul>
-					</div>
-					<!-- 2018-06-20 추가 -->
+                <!-- 선택정보 -->
+                <div class="inpWrap">
+                    <p class="infoTitle">선택정보</p>
 
-					<!-- 2018-06-29 마크업 수정 -->
-					<span class="inpTitle">결혼기념일</span>
-					<div class="inputBox date">
-						<input type="date" name="" id="married" class="inp date" />
-						<label class="inpTitle date" for="married">결혼기념일 선택</label>
-					</div>
-					<!--// 2018-06-29 마크업 수정 -->
+                    <!-- 2018-06-20 추가 -->
+                    <span class="inpTitle">관련 정보 수신을 원하는 파라다이스시티 시설</span>
+                    <div class="facility">
+                        <div class="facilityTop">
+                            <div class="checkbox small">
+                                <input type="checkbox" id="facility">
+                                <label for="facility">전체</label>
+                            </div>
+                        </div>
+                        <ul class="facilityList">
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility1">
+                                    <label for="facility1">Hotel <br />/ Paradise</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility2">
+                                    <label for="facility2">Hotel <br />/ Art Paradiso</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility3">
+                                    <label for="facility3">Spa <br />/ Cimer</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility4">
+                                    <label for="facility4">Club <br />/ Chroma</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility5">
+                                    <label for="facility5">Theme Park <br />/ Wonderbox</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility6">
+                                    <label for="facility6">Shopping<br />/ Plaza</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility7">
+                                    <label for="facility7">Art Gallery <br />/ Art Space</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility8">
+                                    <label for="facility8">Studio <br />/ Studio Paradise</label>
+                                </div>
+                            </li>
+                            <!-- 국문 비노출(외국어 버전 Only) 중국 IP 접속 시 비노출 -->
+                            <li>
+                                <div class="checkbox small">
+                                    <input type="checkbox" id="facility9">
+                                    <label for="facility9">Casino <br />/ Paradise Casino</label>
+                                </div>
+                            </li>
+                            <!--// 국문 비노출(외국어 버전 Only) 중국 IP 접속 시 비노출 -->
+                        </ul>
+                    </div>
+                    <!-- 2018-06-20 추가 -->
 
-					<label class="inpTitle" for="job">직업</label>
-					<div class="inputBox">
-						<select name="" id="job" class="selectbox dpb">
-							<option value="">직업 선택</option>
-						</select>
-					</div>
+                    <!-- 2018-06-29 마크업 수정 -->
+                    <span class="inpTitle">결혼기념일</span>
+                    <div class="inputBox date">
+                        <input type="date" name="" id="married" class="inp date" />
+                        <label class="inpTitle date" for="married">결혼기념일 선택</label>
+                    </div>
+                    <!--// 2018-06-29 마크업 수정 -->
 
-					<span class="inpTitle">관심분야</span>
-					<div class="inputBox">
-						<div class="box">
-							<ul class="chkList2">
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests1"><label for="interests1">휴양</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests2"><label for="interests2">레저</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests3"><label for="interests3">쇼핑</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests4"><label for="interests4">다이닝</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests5"><label for="interests5">스포츠</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests6"><label for="interests6">엔터테인먼트</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests7"><label for="interests7">인테리어</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests8"><label for="interests8">웨딩</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests9"><label for="interests9">육아</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests10"><label for="interests10">스파</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests11"><label for="interests11">음악</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests12"><label for="interests12">도서</label>
-									</div>
-								</li>
-								<li>
-									<div class="checkbox small">
-										<input type="checkbox" id="interests13"><label for="interests13">패션</label>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!--// 선택정보 -->
+                    <label class="inpTitle" for="job">직업</label>
+                    <div class="inputBox">
+                        <select name="" id="job" class="selectbox dpb">
+                            <option value="">직업 선택</option>
+                        </select>
+                    </div>
 
-				<div class="dimmedBtn full mt20">
-					<a href="#" class="btn ty1">딤드 풀버젼</a>
-				</div>
+                    <span class="inpTitle">관심분야</span>
+                    <div class="inputBox">
+                        <div class="box">
+                            <ul class="chkList2">
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests1">
+                                        <label for="interests1">휴양</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests2">
+                                        <label for="interests2">레저</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests3">
+                                        <label for="interests3">쇼핑</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests4">
+                                        <label for="interests4">다이닝</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests5">
+                                        <label for="interests5">스포츠</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests6">
+                                        <label for="interests6">엔터테인먼트</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests7">
+                                        <label for="interests7">인테리어</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests8">
+                                        <label for="interests8">웨딩</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests9">
+                                        <label for="interests9">육아</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests10">
+                                        <label for="interests10">스파</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests11">
+                                        <label for="interests11">음악</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests12">
+                                        <label for="interests12">도서</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox small">
+                                        <input type="checkbox" id="interests13">
+                                        <label for="interests13">패션</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--// 선택정보 -->
 
-				<a href="#" class="btn leave"><span>회원탈퇴</span></a>
-			</div>
-		</section>
-		<!-- //컨텐츠 영역 -->
+                <div class="dimmedBtn full mt20">
+                    <a href="#" class="btn ty1">딤드 풀버젼</a>
+                </div>
 
-		<!-- 하단 영역 -->
-		<footer id="footerWrap">
-		푸터내용
-	</footer>
-<style type="text/css">
-	footer {line-height:50px; background:#333; text-align:center; color:#fff;}
-</style>
-		<!-- //하단 영역 -->
-	</div>
+                <a href="#" class="btn leave"><span>회원탈퇴</span></a>
+            </div>
+        </section>
+        <!-- //컨텐츠 영역 -->
+
+        <!-- 하단 영역 -->
+        <footer id="footerWrap">
+            푸터내용
+        </footer>
+        <!-- //하단 영역 -->
+    </div>
 </body>
+
 </html>
