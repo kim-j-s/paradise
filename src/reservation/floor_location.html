@@ -9,7 +9,6 @@
 
 		<!-- 컨텐츠 영역 -->
 		<section id="layerContent" class="location">
-
 			<div class="tabWrap">
 				<ul class="tabList">
 					<li>
@@ -22,30 +21,110 @@
 						<button class="tit">3층</button>
 					</li>
 				</ul>
-				<div class="tabContent on">1층 지도</div>
-				<div class="tabContent">2층 지도</div>
-				<div class="tabContent">3층 지도</div>
+				<div class="tabContent pd0 on">
+					<div class="floorSetting">
+						<div class="map">
+							지도
+						</div>
+						<div class="inner">
+							<dl class="locationPrice">
+								<dt>가격</dt>
+								<dd>
+									<ul>
+										<li class="ty1"><span class="roboto">340,000</span> 원</li>
+										<li class="ty2"><span class="roboto">340,000</span> 원</li>
+										<li class="ty3"><span class="roboto">340,000</span> 원</li>
+										<li class="ty4"><span class="roboto">340,000</span> 원</li>
+									</ul>
+								</dd>
+							</dl>
+							<div class="add">
+								<select name="" id="" class="selectbox">
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+									<option value="">017</option>
+									<option value="">018</option>
+									<option value="">019</option>
+								</select>
+								<div class="mt8">
+									<a href="#" class="btn ty4 big">추가</a>
+								</div>
+							</div>
+						</div>
+						<div class="floorResult mt28">
+							<div class="floorAddList">
+								<strong class="tit">위치</strong>
+								<ul>
+									<li>
+										<div class="floor">
+											<span class="pointColor">1</span>층 <span class="pointColor">17</span>
+										</div>
+										<div class="price">
+											<span class="roboto">40,000</span> 원
+										</div>
+										<button class="del">Delete</button>
+									</li>
+									<li>
+										<div class="floor">
+											<span class="pointColor">2</span>층 <span class="pointColor">23</span>
+										</div>
+										<div class="price">
+											<span class="roboto">40,000</span> 원
+										</div>
+										<button class="del">Delete</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabContent pd0">2층 지도</div>
+				<div class="tabContent pd0">3층 지도</div>
 			</div>
 		</section>
 		<!-- //컨텐츠 영역 -->
 
-		<div class="floorResult">
+<style type="text/css">
+.floorSetting {}
+.floorSetting .map {height:225px; background:#333; color:#fff; text-align:center;}
+.floorSetting .inner {padding:12px 16px 0 16px;}
+.locationPrice {}
+.locationPrice dt {padding-bottom:7px; font-weight:bold; color:#333;}
+.locationPrice > dd ul {overflow:hidden;}
+.locationPrice > dd li {position:relative; float:left; width:50%; margin-top:5px; padding-left:20px;}
+.locationPrice > dd li:nth-child(-n + 2) {margin-top:0;}
+.locationPrice > dd li:before {content:''; position:absolute; top:6px; left:0; width:8px; height:8px; border-radius:50%; background:#5d88de;}
+.locationPrice > dd li.ty1:before {background:#5d88de;}
+.locationPrice > dd li.ty2:before {background:#e66045;}
+.locationPrice > dd li.ty3:before {background:#00adef;}
+.locationPrice > dd li.ty4:before {background:#9c836a;}
+.locationPrice + .add {margin-top:25px;}
 
-			<ul class="priceRstList">
-				<li>
-					<span class="title bold">위치</span>
-					<span class="txt">
-						<span class="num">1</span>층 <span class="num">28</span> / <span class="num">2</span>층 <span class="num">29</span> / <span class="num">3</span>층 <span class="num">14</span>
-					</span>
-				</li>
-				<li>
-					<span class="title bold">총 결제 금액</span>
-					<span class="price">
-						<span class="num">2,000,000</span><span class="unit">원</span>
-					</span>
+.floorAddList {}
+.floorAddList .tit {display:block;}
+.floorAddList > ul {padding:10px 0 15px 0;}
+.floorAddList > ul li {position:relative; padding-left:18px; overflow:hidden;}
+.floorAddList > ul li + li {margin-top:5px;}
+.floorAddList > ul li .floor {float:left;}
+.floorAddList > ul li .price {float:right;}
+.floorAddList > ul li .price .roboto {font-weight:bold; color:#9c836a;}
+.floorAddList > ul li .del {position:absolute; top:5px; left:0; display:inline-block; text-indent:-9999px; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
+
+.floorPrice {margin:0 16px; padding-top:3px; border-top:1px solid #e9e5e2;}
+
+
+</style>
+
+		<div class="floorPrice">
+			<ul class="slideWrap dept none display">
+				<li class="slideList final">
+					<div class="slideDept1">
+						<span class="title">총 결제 금액</span>
+						<span class="rst"><span class="finalPrice">200,000</span> <span class="unit">원</span></span>
+					</div>
 				</li>
 			</ul>
-
 		</div>
 
 		<div class="footerBtn">

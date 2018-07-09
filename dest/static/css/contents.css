@@ -71,7 +71,7 @@
 /* 전체 레이어 팝업 */
 .layerfullWrap {position:absolute; top:0; right:0; bottom:0; left:0; z-index:500; width:100%; height:100%; padding:60px 0 0 0;}
 .layerfullWrap.btnAdd {padding:60px 0 50px 0;}
-.layerfullWrap.floorLocation {padding:60px 0 129px 0;}
+.layerfullWrap.floorLocation {padding:60px 0 125px 0;}
 .layerfullWrap.floorZone {padding:60px 0 152px 0;}
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
 .layerfullWrap.btnAdd #layerContent {height:100%;}
@@ -162,6 +162,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .tblDiv .cellDiv {position:relative; display:table-cell; padding-left:8px; vertical-align:top;}
 .tblDiv.half .cellDiv {padding:0;}
 .tblDiv.btnTbl .cellDiv {width:50%;}
+.tblDiv.full {width:calc(100% + 32px); margin-left:-16px;}
 .tblDiv .cellDiv:first-child {padding:0;}
 .tblDiv .cellDiv .inp {display:block; width:100%; box-sizing:border-box;}
 .tblDiv .cellDiv select {position:relative; display:block; width:100%;}
@@ -188,16 +189,22 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .list.normal {}
 .list.normal li {padding-left:0;}
 .list.normal li:before {content:none;}
+.list.half {overflow:hidden;}
+.list.half > li {float:left; width:50%;}
+.list.half > li:nth-child(even) {width:calc(50% - 10px); margin-left:10px;}
 
-.list > li > .listBar {padding:6px 0 17px 0;}
-.list > li:last-child > .listBar {padding:6px 0 0 0;}
-
-.listBar > li {position:relative; padding-left:10px; font-size:12px; line-height:17px;}
-.listBar > li + li {margin-top:7px;}
-.listBar > li:before {content:''; position:absolute; top:7px; left:0; width:5px; border-top:1px solid #666;}
+.list > li > .listBar {padding:0 0 13px 0;}
+.listBar > li {position:relative; padding-left:8px; font-size:12px; color:#666; line-height:17px;}
+.listBar > li:before {content:''; position:absolute; top:7px; left:0; width:3px; border-top:1px solid #666;}
+.listBar > li.point {color:#e66045;}
+.listBar > li.point:before {border-top:1px solid #e66045;}
 
 .listStar > li {position:relative; padding-left:10px; font-size:11px; line-height:15px; color:#999;}
 .listStar > li:before {content:'*'; position:absolute; top:3px; left:0; font-size:11px; color:#999;}
+
+.introTxt {}
+.introTxt > dt {font-weight:bold; color:#333;}
+.introTxt > dd {font-size:12px; line-height:16px;}
 
 /* 공통 카운터 */
 .countWrap {position:relative; height:24px;}
@@ -811,19 +818,85 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 예약 투숙 */
-.state {display:table; width:100%; padding-top:8px;}
-.stateInfo {display:table-cell; vertical-align:top; width:100px; padding-right:9px; text-align:left; white-space:nowrap;}
+.state {padding-top:8px;}
+.stateInfo {}
 .stateInfo .name {display:block; font-weight:bold; color:#111; line-height:18px;}
 .stateInfo .date {display:block; padding:2px 0 3px 0; color:#333; line-height:18px;}
-.stateProcess {display:table-cell; vertical-align:top; padding-top:18px; text-align:left;}
-.stateProcess .process {position:relative; display:inline-block; padding-left:11px; font-size:12px; color:#999;}
-.stateProcess .process:before {content:''; position:absolute; top:50%; left:0; margin-top:-6px; height:12px; border-right:2px solid #e7e3e0;}
+.stateInfo .date .roboto {font-size:14px; color:#333;}
+.stateInfo .date .process {position:relative; top:-1px; display:inline-block; margin-left:5px; padding-left:11px; font-size:12px; color:#999;}
+.stateInfo .date .process:before {content:''; position:absolute; top:50%; left:0; margin-top:-6px; height:12px; border-right:2px solid #e7e3e0;}
 
 .smallItemNoti {overflow:hidden; font-size:0;}
 .smallItemNoti .nt {display:inline-block; padding:0 8px; font-size:10px; line-height:18px; text-align:center; color:#fff;}
 .smallItemNoti .ty1 {background:#e66045;}
 .smallItemNoti .ty2 {background:#857b71;}
 .smallItemNoti .ty3 {background:#9d836a;}
+
+.prodListWrap {width:calc(100% + 32px); margin-left:-16px; padding:12px 16px 10px 16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
+.prodList {overflow:hidden; width:calc(100% + 8px);}
+.prodList > li {float:left; width:33.3%; padding-left:8px; margin-top:8px;}
+.prodList > li:nth-child(3n + 1) {padding-left:0; width:calc(33.3% - 8px);}
+.prodList > li:nth-child(-n + 3) {margin-top:0;}
+.prodList > li .inner {position:relative;}
+.prodList > li .inner .thumb {position:relative;}
+.prodList > li .inner .thumb:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.4;}
+.prodList > li img {width:100%;}
+.prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:11px; color:#fff; text-align:center;}
+
+.upToWrap {width:calc(100% + 32px); margin-left:-16px; padding:0 16px 18px 16px; background:#f9f9f9;}
+.upTo {display:table; width:100%;}
+.upTo .per {display:table-cell; vertical-align:bottom; border-top:1px solid #e7e3e0; color:#e66045;}
+.upTo .per .roboto {font-size:20px;}
+.upTo .price {display:table-cell; vertical-align:bottom; padding-top:16px; text-align:right; border-top:1px solid #e7e3e0;}
+.upTo .price .cost {font-size:12px; color:#999; line-height:18px;}
+.upTo .price .cost .roboto {position:relative; display:inline-block; font-size:14px; margin-right:3px;}
+.upTo .price .cost .roboto:after {content:''; position:absolute; top:50%; left:-2px; margin-top:-1px; width:calc(100% + 4px); border-top:1px solid #999;}
+.upTo .price .sale {color:#767676; margin-top:-8px; line-height:24px;}
+.upTo .price .sale .roboto {position:relative; top:2px; font-weight:bold; font-size:20px; color:#9c836a;}
+.upTo .price .sale .bold {color:#9c836a;}
+.upTo .price .wave {display:inline-block; width:10px; text-align:left;}
+.upToWrap .list {overflow:hidden;}
+.upToWrap .listStar {float:right;}
+
+.prodIntro {}
+.prodIntro > img {display:block; width:100%;}
+.prodIntroInfo dt {padding:13px 0 7px 0; font-weight:bold; color:#111; line-height:18px;}
+.prodIntroInfo dd {font-size:12px; line-height:16px;}
+.upToWrap + .prodIntro {margin-top:16px;}
+.state + .prodIntro {margin-top:12px;}
+
+.singleSlide {}
+.singleSlide + .singleSlide {margin-top:18px;}
+.singleSlide .title {display:table; width:100%; padding-right:17px;}
+.singleSlide .title .thumb {display:table-cell; width:116px;}
+.singleSlide .title .thumb img {width:100%; height:65px;}
+.singleSlide .title.etc {display:block;  padding-right:0;}
+.singleSlide .title.etc .thumb {display:block; width:auto; padding-bottom:13px;}
+.singleSlide .title.etc .thumb img {width:100%; height:auto;}
+.singleSlide .title .text {position:relative; display:table-cell; vertical-align:top; padding-left:12px;}
+.singleSlide .title .text:before {content:''; position:absolute; top:2px; right:-9px; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.singleSlide .title .text.on:before {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.singleSlide .title.etc .text:before {right:8px;}
+.singleSlide .title.etc .text {display:block; padding-left:0;}
+.singleSlide .title .text strong {display:block; padding-bottom:2px; margin-top:-3px; font-weight:bold; color:#333; line-height:18px;}
+.singleSlide .title.etc .text strong {margin-top:0;}
+.singleSlide .title .text .desc {display:block; font-size:12px; line-height:18px;}
+.singleSlide .content {display:none; padding:9px 0 0 0;}
+.singleSlide .content .txt {font-size:12px; line-height:16px;}
+.singleSlide .content .txt + .listStar {margin-top:7px;}
+.singleSlide .content .list + .listStar {margin-top:9px;}
+
+.tariff {padding:10px; background:#f9f9f9; border:1px solid #e9e5e2;}
+.tariffList {margin-top:4px; padding:11px 10px 11px 0; background:#fff; border:1px solid #e9e5e2;}
+.tariffList > li {overflow:hidden;}
+.tariffList > li + li {margin-top:12px;}
+.tariffList > li .date {float:left; font-size:0;}
+.tariffList > li .date .roboto {display:inline-block; width:27px; text-align:right; font-weight:bold; font-size:14px;}
+.tariffList > li .date .day {padding-left:10px; font-weight:400; font-size:14px;}
+.tariffList > li .date.sat {color:#5164b9;}
+.tariffList > li .date.sun {color:#e66045;}
+.tariffList > li .price {float:right; font-size:12px;}
+.tariffList > li .price .roboto {font-weight:bold; font-size:14px; color:#9d836a;}
 
 
 /* 이벤트 페이지 */
@@ -1292,11 +1365,11 @@ line-height:18px;}
 .artBanner .thumb .inner {display:table-cell; width:100%; height:180px; background:#222; text-align:center; vertical-align:middle; }
 .artBanner .thumb .inner img {max-width:100%; max-height:100%;}
 
-
 .dlSlide {}
 .dlSlide .title {position:relative; padding:12px 0 14px 0; font-weight:bold; color:#333; border-bottom:1px solid #e7e3e0; line-height:18px;}
 .dlSlide .title:before {content:''; position:absolute; top:50%; right:0; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
 .dlSlide .title.on:before {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.dlSlide .title.etc {border-bottom:none;}
 .dlSlide > dd {display:none; padding:4px 0 24px 0;}
 
 .membershipClass {}
@@ -1307,6 +1380,15 @@ line-height:18px;}
 .membershipClass .subTxt2 {padding:3px 0 5px 0;font-size:12px;}
 .membershipClass .desc {padding:13px 0 4px 0; margin-top:7px; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
 
+/* sbu */
+.artSpaceIntro {width:calc(100% + 32px); margin:20px 0 0 -16px;}
+.artSpaceIntro > img {display:block; width:100%; padding-bottom:13px;}
+.artSpaceIntro > .inner {margin:0 16px; padding-bottom:20px; border-bottom:1px solid #e7e3e0;}
+.artSpaceRoom {margin-top:20px;}
+.artSpaceRoom + .artSpaceRoom {margin-top:36px;}
+.artSpaceRoom > img {display:block; width:100%; padding-bottom:13px;}
+
+
 
 /* 신청 완료 */
 .complete {position:relative; display:table; width:100%; height:100%; padding-bottom:36px;}
@@ -1314,6 +1396,7 @@ line-height:18px;}
 .complete .txt {padding-top:60px; background:url(../images/common/icon/icon_complete.png) no-repeat center top; background-size:43px 43px;}
 .complete .txt {text-align:center;}
 .complete .footerBtn {bottom:36px;}
+
 
 /* dimmed layer popup */
 .dimmedLayer {position:absolute; top:0; right:0; bottom:0; left:0; z-index:600; text-align:center; background-color:rgba(0, 0, 0, 0.6); display:none;}

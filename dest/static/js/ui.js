@@ -763,3 +763,18 @@ $(function(){
 		}
 	});
 });
+
+// 예약 투숙
+$(function(){
+	var singleSlide = $('.singleSlide > .title');
+	$(singleSlide).click(function(){
+		if ( $(this).next('.content').css('display') == 'block')
+		{
+			$(this).find('.text').removeClass('on');
+			$(this).next('.content').slideUp(300);
+		} else {
+			$(this).find('.text').addClass('on');
+			$(this).next('.content').slideDown(300);
+		}
+	});
+});
