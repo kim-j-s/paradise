@@ -1,0 +1,59 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"카지노 맴버십 매칭하기"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="joinWrap">
+				<div class="inpWrap pt36">
+					<span class="infoTitleSub1 matching">* 필수입력 항목</span>
+
+					<label class="inpTitle" for="passport">여권번호 *</label>
+					<div class="inputBox alertAdd">
+						<input type="text" placeholder="여권번호를 입력해주세요." name="" id="passport" class="inp" />
+						<button class="inpReset">초기화</button>
+						<span class="joinNotice alert">일치하는 여권번호의 회원이 존재하지 않습니다.</span>
+					</div>
+
+					<label class="inpTitle" for="loginPw">카지노 고객번호 *</label>
+					<div class="inputBox alertAdd">
+						<input type="password" placeholder="카지노 고객번호를 입력해주세요." name="" id="loginPw" class="inp" />
+						<button class="inpReset">초기화</button>
+						<span class="joinNotice alert">일치하는 여권번호의 회원이 존재하지 않습니다.</span>
+					</div>
+				</div>
+
+				<dl class="notiTxt list pt10">
+					<dt>혜택 안내</dt>
+					<dd>
+						<ul class="list">
+							<li>파라다이스시티의 각종 이벤트 소식과 e-Newsletter 수신</li>
+							<li>편리한 ONE-STOP 온라인 예약내역 관리</li>
+							<li>다양한 온라인 이벤트 참여</li>
+						</ul>
+					</dd>
+				</dl>
+
+				<div class="footerBtn">
+					<a href="#" class="btn ty1">매칭하기</a>
+				</div>
+				<!-- 버튼 활성화 -->
+				<!--
+				<div class="footerBtn on">
+					<a href="#" class="btn ty1">매칭하기</a>
+				</div>
+				-->
+				<!--// 버튼 활성화 -->
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+	</div>
+
+</body>
+</html>

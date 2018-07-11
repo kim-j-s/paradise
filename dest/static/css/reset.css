@@ -81,10 +81,12 @@ html, body {height:100%;}
 .pt3 {padding-top:3px !important;}
 .pt8 {padding-top:8px !important;}
 .pt9 {padding-top:9px !important;}
+.pt10 {padding-top:10px !important;}
 .pt13 {padding-top:13px !important;}
 .pt17 {padding-top:17px !important;}
-.pt20 {padding-top:20px;}
+.pt20 {padding-top:20px !important;}
 .pt26 {padding-top:26px !important;}
+.pt36 {padding-top:36px !important;}
 
 .pl4 {padding-left:4px !important;}
 
@@ -127,7 +129,7 @@ html, body {height:100%;}
 
 .wd100per {width:100%;}
 
-.fs12 {font-size:12px !important; line-height:16px;}
+.fs12 {font-size:12px !important; line-height:16px !important;}
 
 .roboto {font-family:'Roboto'; font-weight:400;}
 .pointColor {color:#9d836a;}
@@ -145,7 +147,7 @@ html, body {height:100%;}
 .colorDiamond {color:#999 !important;}
 .colorBlack {color:#333 !important;}
 
-
+.fullWidth {width:calc(100% + 32px); margin-left:-16px;}
 .listNone {margin:90px 0 137px 0; padding-top:66px; text-align:center; color:#999; background:url(../images/common/icon/icon_list_none.png) no-repeat center top; background-size:47px 57px;}
 .listNone + * {margin-top:0 !important; padding-top:0 !important;}
 

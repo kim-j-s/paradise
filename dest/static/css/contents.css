@@ -157,13 +157,14 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 공통 입력 필드 */
-.tblDiv + .tblDiv {margin-top:20px;}
 .tblDiv {display:table; width:100%;}
-.tblDiv .cellDiv {position:relative; display:table-cell; padding-left:8px; vertical-align:top;}
-.tblDiv.half .cellDiv {padding:0;}
+.tblDiv + .tblDiv {margin-top:20px;}
+.tblDiv .cellDiv {position:relative; display:table-cell; padding-left:4px; vertical-align:top;}
 .tblDiv.btnTbl .cellDiv {width:50%;}
+.tblDiv.half .cellDiv {padding:0;}
+.tblDiv.half .cellDiv:first-child {padding:0;}
 .tblDiv.full {width:calc(100% + 32px); margin-left:-16px;}
-.tblDiv .cellDiv:first-child {padding:0;}
+.tblDiv .cellDiv:first-child {padding:0 4px 0 0;}
 .tblDiv .cellDiv .inp {display:block; width:100%; box-sizing:border-box;}
 .tblDiv .cellDiv select {position:relative; display:block; width:100%;}
 .tblDiv + .inputBox.single {margin-top:8px;}
@@ -205,6 +206,15 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .introTxt {}
 .introTxt > dt {font-weight:bold; color:#333;}
 .introTxt > dd {font-size:12px; line-height:16px;}
+
+.txtContent {padding-top:20px; border-top:1px solid #e7e3e0;}
+.txtContent.none {padding:0; border:none;}
+.txtContent + .txtContent {padding-top:36px; border:none;}
+.txtContent .thumb {width:100%;}
+.txtContent .tit {display:block; font-weight:bold; font-size:14px; line-height:18px; color:#333;}
+.txtContent .desc {padding:7px 0 0 0; font-size:12px; line-height:16px;}
+.txtContent .thumb + .tit {padding:13px 0 0 0;}
+.txtContent .thumb + .desc {padding:13px 0 0 0;}
 
 /* 공통 카운터 */
 .countWrap {position:relative; height:24px;}
@@ -337,7 +347,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .table.side table {table-layout:auto;}
 .table.side table th {width:30px; padding:3px 0 0 0; white-space:nowrap; text-align:left; border-bottom:none; line-height:normal; padding-right:11px; vertical-align:top;}
-.table.side table td {padding:3px 0; text-align:left; font-size:14px; line-height:normal; border-bottom:none; vertical-align:top;}
+.table.side table td {padding:3px 0; text-align:left; font-size:12px; line-height:normal; border-bottom:none; vertical-align:top;}
 
 .table.side2 {}
 .table.side2 table {table-layout:auto;}
@@ -347,8 +357,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .table.side3 {}
 .table.side3 table {table-layout:auto;}
-.table.side3 table th {width:30px; padding:4px 17px 0 0; font-size:12px; color:#666; white-space:nowrap; border:none; text-align:left; vertical-align:top; line-height:14px;}
-.table.side3 table td {padding:3px 5px 2px 0; font-size:12px; border:none; text-align:left; vertical-align:top; line-height:14px;}
+.table.side3 table th {width:30px; padding:4px 15px 0 0; font-size:12px; color:#666; white-space:nowrap; border:none; text-align:left; vertical-align:top; line-height:14px;}
+.table.side3 table td {padding:4px 5px 2px 0; font-size:12px; border:none; text-align:left; vertical-align:top; line-height:14px;}
 
 .table.side4 {background:#f9f9f9; border:2px solid #e7e3e0;}
 .table.side4 table {table-layout:auto;}
@@ -399,6 +409,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .inpWrap + .inpWrap:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .inpWrap .infoTitle {position:relative; padding-bottom:13px; font-size:14px; font-weight:bold; color:#111;}
 .inpWrap .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e66045;}
+.inpWrap .infoTitleSub1.matching {top:17px;}
 .inpWrap .infoTitle .infoTitleSub2 {display:block; padding-top:3px; font-size:12px; color:#666; line-height:16px; }
 
 .box {background:#f9f9f9; border:1px solid #e7e3e0;}
@@ -910,11 +921,14 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .listView {}
 .listView .listViewItem {}
 .listView .listViewItem + .listViewItem {padding-top:24px;}
-.listView .listViewItem a {display:block;}
+.listView .listViewItem a {position:relative; display:block;}
 .listView .listViewItem .thumb {width:100%;}
 .listView .listViewItem strong {display:block; font-weight:bold; padding:11px 0 1px 0; color:#111; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
 .listView .listViewItem .date {display:block; padding-bottom:8px; font-family:'Roboto'; font-size:12px; color:#333;}
 .listView .listViewItem .desc {display:block; height:36px; font-size:12px; color:#111; line-height:18px;}
+.listView .listViewItem .type {position:absolute; top:0; left:0; overflow:hidden;}
+.listView .listViewItem .type > * {float:left;}
+.listView .listViewItem .type .ty1 {padding:0 9px; background:#9c836a; font-weight:bold; font-size:10px; color:#fff; line-height:25px;}
 
 .calendarPick {position:relative; width:150px; padding:9px 0 10px 0; font-family:'Roboto'; font-weight:400; font-size:20px; color:#333; text-align:center; line-height:26px;}
 .calendarPick button {position:absolute; top:9px; width:26px; height:26px; border:1px solid #e7e3e0; border-radius:3px;}
@@ -1383,11 +1397,57 @@ line-height:18px;}
 /* sbu */
 .artSpaceIntro {width:calc(100% + 32px); margin:20px 0 0 -16px;}
 .artSpaceIntro > img {display:block; width:100%; padding-bottom:13px;}
-.artSpaceIntro > .inner {margin:0 16px; padding-bottom:20px; border-bottom:1px solid #e7e3e0;}
-.artSpaceRoom {margin-top:20px;}
-.artSpaceRoom + .artSpaceRoom {margin-top:36px;}
-.artSpaceRoom > img {display:block; width:100%; padding-bottom:13px;}
+.artSpaceIntro > .inner {margin:0 16px; padding-bottom:20px;}
 
+.help {display:table; width:100%; margin-top:27px;}
+.help + .help {margin-top:25px;}
+.help a {position:relative; display:table-cell; width:50%; padding:60px 11px 37px 15px;}
+.help a:before {content:''; position:absolute; top:0; right:0; width:calc(100% - 4px); height:100%; border:1px solid #e7e3e0; box-sizing:border-box;}
+.help a:first-child {padding:60px 15px 37px 11px;}
+.help a:first-child:before {right:auto; left:0;}
+.help a:after {content:''; position:absolute; top:11px; left:50%; margin-left:-22px; width:44px; height:44px; 
+background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 176px;}
+.help a.ty1:after {background-position:0 0;}
+.help a.ty2:after {background-position:0 -44px;}
+.help a.ty3:after {background-position:0 -88px;}
+.help a.ty4:after {background-position:0 -132px;}
+.help .tit {display:block; padding-bottom:8px; font-weight:bold; font-size:12px; text-align:center;}
+.help .desc {font-size:11px; line-height:13px;}
+.help .go {position:absolute; bottom:8px; left:0; width:100%; text-align:center;}
+
+.contact {background:#f9f9f9; padding:16px 16px 20px 16px;}
+.contact li {font-size:12px; color:#999;}
+.contact li + li {margin-top:3px;}
+.contact li a {display:inline-block; font-size:12px; color:#666; border-bottom:1px solid #666;}
+
+
+.casinoList {}
+.casinoList li {position:relative; min-height:58px; padding:0 0 14px 60px; border-bottom:1px solid #e7e3e0;}
+.casinoList li + li {margin-top:18px;}
+.casinoList li .tit {display:block; padding:3px 0; font-weight:bold; font-size:12px;}
+.casinoList li .desc {font-size:12px;}
+
+.casinoList.step li {padding:0 18px 14px 60px;}
+.casinoList.step li:after {content:''; position:absolute; top:8px; right:0; width:9px; height:6px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.casinoList.step li.on:after {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.casinoList.step li .desc {display:none;}
+
+.casinoList li:before {content:''; position:absolute; top:0; left:0; width:44px; height:44px;}
+.casinoList.info li:before {background:url(../images/casino/casino_rules.png) no-repeat; background-size:44px 132px;}
+.casinoList.info li.ty1:before {background-position:0 0;}
+.casinoList.info li.ty2:before {background-position:0 -44px;}
+.casinoList.info li.ty3:before {background-position:0 -88px;}
+.casinoList.step li:before {background:url(../images/casino/casino_step.png) no-repeat; background-size:44px 220px;}
+.casinoList.step li.ty1:before {background-position:0 0;}
+.casinoList.step li.ty2:before {background-position:0 -44px;}
+.casinoList.step li.ty3:before {background-position:0 -88px;}
+.casinoList.step li.ty4:before {background-position:0 -132px;}
+.casinoList.step li.ty5:before {background-position:0 -176px;}
+.casinoList.etiquette li:before {background:url(../images/casino/casino_etiquette.png) no-repeat; background-size:44px 176px;}
+.casinoList.etiquette li.ty1:before {background-position:0 0;}
+.casinoList.etiquette li.ty2:before {background-position:0 -44px;}
+.casinoList.etiquette li.ty3:before {background-position:0 -88px;}
+.casinoList.etiquette li.ty4:before {background-position:0 -132px;}
 
 
 /* 신청 완료 */

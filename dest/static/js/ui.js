@@ -778,3 +778,17 @@ $(function(){
 		}
 	});
 });
+
+// 카지노 - 이용방법
+$(function(){
+	$('.casinoList.step > li').click(function(){
+		if ( $(this).children('.desc').css('display') == 'block')
+		{
+			$(this).removeClass('on');
+			$(this).children('.desc').slideUp(300);
+		} else {
+			$(this).addClass('on');
+			$(this).children('.desc').slideDown(300);
+		}
+	});
+});

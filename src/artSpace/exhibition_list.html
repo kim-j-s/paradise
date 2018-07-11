@@ -1,0 +1,47 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header_dept_artspace.html',{
+				"header":"ART SPACE"
+			})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt"><span class="color">파라다이스시티</span>에서 준비된 다양한 <span class="color">이벤트</span>를 만나보세요.</p>
+
+			<ul class="listView mt28">
+				<li class="listViewItem">
+					<a href="#">
+						<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+						<div class="type">
+							<span class="ty1">기획전</span>
+						</div>
+						<strong>SECRET EVENT</strong>
+						<span class="date">2018.05.01- 2018.06.01</span>
+						<span class="desc dot">파라다이스시티에서 제공하는 당신만을 위한 최고의 휴식 Summer Paradise Cocktail과 함께</span>
+					</a>
+				</li>
+				<li class="listViewItem">
+					<a href="#">
+						<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+						<div class="type">
+							<span class="ty1">상설전</span>
+						</div>
+						<strong>SECRET EVENT</strong>
+						<span class="date">2018.05.01- 2018.06.01</span>
+						<span class="desc dot">파라다이스시티에서 제공하는 당신만을 위한 최고의 휴식 Summer Paradise Cocktail과 함께</span>
+					</a>
+				</li>
+			</ul>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
