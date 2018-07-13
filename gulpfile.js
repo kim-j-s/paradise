@@ -128,7 +128,6 @@ gulp.task('browserSync', function() {
 	gulp.watch('src/**/*.js', ['script']);
 	gulp.watch('src/**/include/*.html', ['include']);
 	
-	
 });
 
 gulp.task('default', ['include', 'html', 'style', 'images', 'script', 'browserSync']);

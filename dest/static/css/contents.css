@@ -117,6 +117,7 @@
 .btn.ty4.big.more {display:inline-block; width:140px; font-size:14px; background:#fff; border:1px solid #9d836a;}
 .btn.ty4.big.more span {padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px; line-height:16px; font-size:14px; font-weight:300; color:#9d836a;}
 .btn.ty5 {background:#fff; padding:5px 0 8px 0; border:1px solid #857b71;}
+.btn.ty5.etc {padding:3px 0 6px 0; border:1px solid #e7e3e0;}
 .btn.ty5 > span {display:inline-block; padding-left:23px; background:url(../images/common/icon/icon_calendar.png) no-repeat left center; background-size:14px 15px; line-height:20px; font-size:14px; color:#333;}
 .btn.ty5.other {overflow:hidden; padding:9px 0;}
 .btn.ty5.other > span {float:left; width:50%; padding-left:0; background:none; text-align:center;}
@@ -159,16 +160,23 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 공통 입력 필드 */
 .tblDiv {display:table; width:100%;}
 .tblDiv + .tblDiv {margin-top:20px;}
-.tblDiv .cellDiv {position:relative; display:table-cell; padding-left:4px; vertical-align:top;}
+.tblDiv .cellDiv {position:relative; display:table-cell; padding:0 4px; vertical-align:top;}
+.tblDiv .cellDiv.middle {vertical-align:middle;}
 .tblDiv.btnTbl .cellDiv {width:50%;}
 .tblDiv.half .cellDiv {padding:0;}
 .tblDiv.half .cellDiv:first-child {padding:0;}
 .tblDiv.full {width:calc(100% + 32px); margin-left:-16px;}
 .tblDiv .cellDiv:first-child {padding:0 4px 0 0;}
+.tblDiv .cellDiv:last-child {padding:0 0 0 4px;}
+.tblDiv.half .cellDiv:last-child {padding:0;}
 .tblDiv .cellDiv .inp {display:block; width:100%; box-sizing:border-box;}
 .tblDiv .cellDiv select {position:relative; display:block; width:100%;}
 .tblDiv + .inputBox.single {margin-top:8px;}
 .tblDiv + .inpTitle {margin-top:17px;}
+.tblDiv.time .cellDiv:first-child {padding:0 4px 0 0;}
+.tblDiv.time .cellDiv {padding:0 8px 0 4px;}
+.tblDiv.time .cellDiv:last-child {padding:0 0 0 8px;}
+.tblDiv.time .cellDiv:last-child:before {content:':'; position:absolute; top:0; left:-8px; width:16px; text-align:center; line-height:36px;}
 
 
 /* 공통 안내문 */
@@ -209,8 +217,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .txtContent {padding-top:20px; border-top:1px solid #e7e3e0;}
 .txtContent.none {padding:0; border:none;}
-.txtContent + .txtContent {padding-top:36px; border:none;}
-.txtContent .thumb {width:100%;}
+.txtContent + .txtContent {padding-top:30px; border:none;}
+.txtContent .thumb {width:100%; padding-top:6px;}
 .txtContent .tit {display:block; font-weight:bold; font-size:14px; line-height:18px; color:#333;}
 .txtContent .desc {padding:7px 0 0 0; font-size:12px; line-height:16px;}
 .txtContent .thumb + .tit {padding:13px 0 0 0;}
@@ -310,6 +318,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .loginWrap.cart .loginFooter.two .cell a {display:inline-block; font-weight:normal; color:#666; border-bottom:1px solid #666;}
 
 .inpTitle {display:block; color:#9c836a; line-height:18px; font-size:12px;}
+.inpTitle > .txt {display:block; padding-bottom:3px; font-size:12px; color:#666; line-height:16px; word-break:break-all;}
 
 .inputBox {position:relative; z-index:1;}
 .inputBox + .inputBox {margin-top:17px;}
@@ -370,8 +379,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .request li {font-size:14px;}
 .request li + li {padding-top:5px;}
 .request li .tit {font-weight:700; font-size:12px;}
-.table.side3 .request li {font-size:12px;}
-.table.side3 .request li + li {padding-top:3px;}
+.table .request li {font-size:12px;}
+.table .request li + li {padding-top:3px;}
 
 /* bxslide option */
 .bx-pager {margin-top:12px; text-align:center; font-size:0;}
@@ -492,9 +501,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .itemListWrap .itemPrice .price2 + .wave {font-size:12px; color:#999; font-family:'Roboto';}
 .itemListWrap .itemPrice .unit {font-size:12px;}
 .itemListWrap .itemPrice .pricePer {font-size:12px; color:#e66045;}
-.itemListWrap .itemBtnWrap {overflow:hidden;}
-.itemListWrap .itemBtnWrap .itemBtn {float:left; width:50%;}
-.itemListWrap .itemBtnWrap .itemBtn:nth-child(2) {padding-left:1px;}
+.itemListWrap .itemBtnWrap {padding:2px 12px 12px 12px; overflow:hidden;}
+.itemListWrap .itemBtnWrap .itemBtn {float:left; width:50%; padding-right:4px;}
+.itemListWrap .itemBtnWrap .itemBtn:nth-child(2) {padding:0 0 0 4px;}
 .itemListWrap .item.soldout {}
 .itemListWrap .item.soldout .itemThumb:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#9d836a; opacity:0.8;}
 .itemListWrap .item.soldout .itemThumb:after {content:'SOLD OUT'; position:absolute; top:50%; left:0; z-index:3; display:block; width:100%; height:100%; margin-top:-8px; text-align:center; font-weight:bold; color:#fff; line-height:16px;}
@@ -1287,6 +1296,7 @@ line-height:18px;}
 .fineList li {border:1px solid #e9e9e9;}
 .fineList li + li {margin-top:15px;}
 .fineList li .ele {display:block;}
+.fineList li .btnBox {padding:0 12px 12px 12px;}
 .fineItem {}
 .fineItem > img {display:block; width:100%;}
 .fineItem .desc {padding:12px;}
@@ -1448,6 +1458,23 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .casinoList.etiquette li.ty2:before {background-position:0 -44px;}
 .casinoList.etiquette li.ty3:before {background-position:0 -88px;}
 .casinoList.etiquette li.ty4:before {background-position:0 -132px;}
+
+/* cimer */
+.cimerStep {}
+.cimerStep > li {position:relative; padding:13px 0 14px 40px; font-size:12px; border-bottom:1px solid #e7e3e0;}
+.cimerStep > li:before {content:''; position:absolute; top:17px; left:0; width:23px; height:21px; background:url(../images/cimer/bg_step.png) no-repeat; background-size:23px 189px;}
+.cimerStep > li.ty1:before {background-position:0 0;}
+.cimerStep > li.ty2:before {background-position:0 -21px;}
+.cimerStep > li.ty3:before {background-position:0 -42px;}
+.cimerStep > li.ty4:before {background-position:0 -63px;}
+.cimerStep > li.ty5:before {background-position:0 -84px;}
+.cimerStep > li.ty6:before {background-position:0 -105px;}
+.cimerStep > li.ty7:before {background-position:0 -126px;}
+.cimerStep > li.ty8:before {background-position:0 -147px;}
+.cimerStep > li.ty9:before {background-position:0 -168px;}
+
+.cimerStep > li dt {font-weight:bold; padding-bottom:3px;}
+.cimerStep > li dd .notiRed {padding-top:7px;}
 
 
 /* 신청 완료 */
