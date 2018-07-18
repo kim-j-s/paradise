@@ -2,10 +2,20 @@
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept_cimer.html',{
-				"header":"CIMER"
-			})
+		@@include('static/include/header.html',{
+			"header":"CIMER"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">시설안내</div>
+				<ul class="headerSubLink">
+					<li><a href="#" class="on">시설안내</a></li>
+					<li><a href="#">이용안내</a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
@@ -37,13 +47,17 @@
 			</div>
 
 			<div class="txtContent none mt16">
-				<strong class="tit">Dine &amp; Drink</strong>
-				<p class="desc">내 몸의 휴식을 위한 생과일쥬스부터 세계인의 입맛을 사로잡은 모던한식까지 씨메르 고객들의 즐겁고 건강한 먹거리를 위한 6가지의 업장이 운영되고 있습니다. 세계인이 열광하는 한국 전통의 K-Food부터 다양한 나라의 시그니처 푸드를 선보이는 F&B시설 6개 업장이 운영되고 있습니다.</p>
+				<dl>
+					<dt class="tit">Dine &amp; Drink</dt>
+					<dd class="desc">내 몸의 휴식을 위한 생과일쥬스부터 세계인의 입맛을 사로잡은 모던한식까지 씨메르 고객들의 즐겁고 건강한 먹거리를 위한 6가지의 업장이 운영되고 있습니다. 세계인이 열광하는 한국 전통의 K-Food부터 다양한 나라의 시그니처 푸드를 선보이는 F&B시설 6개 업장이 운영되고 있습니다.</dd>
+				</dl>
 			</div>
 
 			<div class="txtContent">
-				<strong class="tit">이용시간</strong>
-				<p class="desc">운영시간은 각 시설별 상이하며, 현장 상황에 따라 변경될 수 있습니다.</p>
+				<dl>
+					<dt class="tit">이용시간</dt>
+					<dd class="desc">운영시간은 각 시설별 상이하며, 현장 상황에 따라 변경될 수 있습니다.</dd>
+				</dl>
 			</div>
 
 			<dl class="offerResult mt20">
@@ -55,7 +69,9 @@
 						<dd style="display:block;">
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd02.jpg" alt="" />
-								<p class="desc">한 공간에서 즐길수 있는 다양한 메뉴로 든든하고 맛있는 한끼를 즐길 수 있습니다.</p>
+								<dl>
+									<dd class="desc">한 공간에서 즐길수 있는 다양한 메뉴로 든든하고 맛있는 한끼를 즐길 수 있습니다.</dd>
+								</dl>
 								<p class="notiRed">JJIMJIL SPA 이용권 구매 고객은 이용이 불가합니다.<br /> (1F Aqua Spa Zone에 위치)</p>
 							</div>
 							<div class="table side mt11">
@@ -80,7 +96,9 @@
 						<dd>
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd03.jpg" alt="" />
-								<p class="desc">라스베가스의 스포츠바처럼 에너지 넘치는 분위기에서 스포츠 경기를 관람할 수 있는 곳입니다.</p>
+								<dl>
+									<dd class="desc">라스베가스의 스포츠바처럼 에너지 넘치는 분위기에서 스포츠 경기를 관람할 수 있는 곳입니다.</dd>
+								</dl>
 								<p class="notiRed">JJIMJIL SPA 이용권 구매 고객은 이용이 불가합니다.<br /> (1F Aqua Spa Zone에 위치)</p>
 							</div>
 							<div class="table side mt11">
@@ -105,7 +123,9 @@
 						<dd>
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd04.jpg" alt="" />
-								<p class="desc">라스베가스의 스포츠바처럼 에너지 넘치는 분위기에서 스포츠 경기를 관람할 수 있는 곳입니다.</p>
+								<dl>
+									<dd class="desc">라스베가스의 스포츠바처럼 에너지 넘치는 분위기에서 스포츠 경기를 관람할 수 있는 곳입니다.</dd>
+								</dl>
 								<p class="notiRed">2F JJIMJIL SPA Zone에서만 이용가능합니다.</p>
 							</div>
 							<div class="table side mt11">
@@ -130,7 +150,9 @@
 						<dd>
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd05.jpg" alt="" />
-								<p class="desc">직접 착즙하여 제공되는 신선한 과일주스, 건강한 드링크를 즐기실 수 있습니다.</p>
+								<dl>
+									<dd class="desc">직접 착즙하여 제공되는 신선한 과일주스, 건강한 드링크를 즐기실 수 있습니다.</dd>
+								</dl>
 								<p class="notiRed">2F JJIMJIL SPA Zone에서만 이용가능합니다.</p>
 							</div>
 							<div class="table side mt11">
@@ -155,7 +177,9 @@
 						<dd>
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd06.jpg" alt="" />
-								<p class="desc">한국 찜질방 스낵을 24시간 즐기실 수 있습니다.</p>
+								<dl>
+									<dd class="desc">한국 찜질방 스낵을 24시간 즐기실 수 있습니다.</dd>
+								</dl>
 							</div>
 							<div class="table side mt11">
 								<table>
@@ -183,7 +207,9 @@
 						<dd class="pb0">
 							<div class="txtContent none">
 								<img class="pt12 thumb" src="../static/images/cimer/img_dnd07.jpg" alt="" />
-								<p class="desc">인피니티 바8만의 특별한 분위기에서 은은한 뮤직과 함께 한 잔의 여유를 즐기실 수 있습니다.</p>
+								<dl>
+									<dd class="desc">인피니티 바8만의 특별한 분위기에서 은은한 뮤직과 함께 한 잔의 여유를 즐기실 수 있습니다.</dd>
+								</dl>
 								<p class="notiRed">JJIMJIL SPA 이용권 구매 고객은 이용이 불가합니다.<br /> (1F Aqua Spa Zone에 위치)</p>
 							</div>
 							<div class="table side mt11">

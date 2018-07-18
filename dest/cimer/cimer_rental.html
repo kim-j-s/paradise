@@ -31,22 +31,22 @@
             <h1>CIMER</h1>
             <a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
             <a href="#" class="menuBtn">메뉴</a>
-
-            <div class="headerSubWrap">
-                <div class="headerFixed">
-                    <div class="now">시설안내</div>
-                    <ul class="headerSubLink">
-                        <li>
-                            <a href="#" class="on">시설안내</a>
-                        </li>
-                        <li>
-                            <a href="#">이용안내</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </header>
         <!-- //헤더영역 -->
+
+        <div class="headerSubWrap">
+            <div class="headerFixed">
+                <div class="now">시설안내</div>
+                <ul class="headerSubLink">
+                    <li>
+                        <a href="#" class="on">시설안내</a>
+                    </li>
+                    <li>
+                        <a href="#">이용안내</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <!-- 컨텐츠 영역 -->
         <section id="container">
@@ -78,8 +78,10 @@
             </div>
 
             <div class="txtContent none mt16">
-                <strong class="tit">대여시설</strong>
-                <p class="desc">씨메르에서의 하루를 여유롭고 편안하게 보낼 수 있는 쾌적하고 아늑한 휴게시설입니다.</p>
+                <dl>
+                    <dt class="tit">대여시설</dt>
+                    <dd class="desc">씨메르에서의 하루를 여유롭고 편안하게 보낼 수 있는 쾌적하고 아늑한 휴게시설입니다.</dd>
+                </dl>
             </div>
 
             <div class="tabWrap mt35">
@@ -94,15 +96,13 @@
 
                 <!-- SUN BED -->
                 <div class="tabContent pt0 on">
-                    <div class="artSpaceIntro mt0">
-                        <img src="../static/images/artSpace/img_intro.jpg" alt="">
-                        <div class="inner">
-                            <div class="txtContent none">
-                                <p class="desc">실내, 외에 배치된 썬베드에서 씨메르 및 파라다이스 시티 .전체를 조망하며 여유로운 휴식을 취하실 수 있습니다</p>
-                            </div>
-                            <div class="mt18">
-                                <a href="#" class="btn ty4 big">예약하기</a>
-                            </div>
+                    <div class="txtContent none">
+                        <img class="thumb fullWidth" src="../static/images/artSpace/img_intro.jpg" alt="">
+                        <dl>
+                            <dd class="desc">실내, 외에 배치된 썬베드에서 씨메르 및 파라다이스 시티 .전체를 조망하며 여유로운 휴식을 취하실 수 있습니다.</dd>
+                        </dl>
+                        <div class="mt18">
+                            <a href="#" class="btn ty4 big">예약하기</a>
                         </div>
                     </div>
                 </div>
@@ -110,45 +110,49 @@
 
                 <!-- CABANA -->
                 <div class="tabContent pt0">
-                    <div class="artSpaceIntro mt0">
-                        <img src="../static/images/artSpace/img_intro.jpg" alt="">
-                        <div class="inner">
-                            <div class="txtContent none">
-                                <p class="desc">실내, 외에 배치된 썬베드에서 씨메르 및 파라다이스 시티 .전체를 조망하며 여유로운 휴식을 취하실 수 있습니다</p>
-                            </div>
-                            <div class="mt18">
-                                <a href="#" class="btn ty4 big">예약하기</a>
-                            </div>
+                    <div class="txtContent none">
+                        <img class="thumb fullWidth" src="../static/images/artSpace/img_intro.jpg" alt="">
+                        <dl>
+                            <dd class="desc">실내, 외에 배치된 썬베드에서 씨메르 및 파라다이스 시티 .전체를 조망하며 여유로운 휴식을 취하실 수 있습니다.</dd>
+                        </dl>
+                        <div class="mt18">
+                            <a href="#" class="btn ty4 big">예약하기</a>
                         </div>
                     </div>
                 </div>
                 <!--// CABANA -->
             </div>
 
-            <div class="txtContent">
-                <strong class="tit">요금</strong>
-                <div class="table side3 mt4">
-                    <table>
-                        <caption>Infomation</caption>
-                        <tbody>
-                            <tr>
-                                <th scope="row">주중</th>
-                                <td>30,000 ~ 70,000 원</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">주말/공휴일</th>
-                                <td>50,000 ~ 100,000 원</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div class="txtContent mt20">
+                <dl>
+                    <dt class="tit">요금</dt>
+                    <dd>
+                        <div class="table side3 mt4">
+                            <table>
+                                <caption>Infomation</caption>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">주중</th>
+                                        <td>30,000 ~ 70,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">주말/공휴일</th>
+                                        <td>50,000 ~ 100,000 원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                </dl>
                 <p class="notiRed mt11">이용 시간 초과 시 1시간 당 추가 요금 1만원씩 부과됩니다.</p>
                 <p class="fs12">※ 씨메르 풀파티 시 휴게시설 요금과 상이합니다.</p>
             </div>
 
             <div class="txtContent">
-                <strong class="tit">이용시간</strong>
-                <p class="desc">Aqua Spa Zone 운영 시간 내 4시간<br /> (주중 10:00 ~ 19:00, 주말/공휴일 10:00 ~ 22:00)</p>
+                <dl>
+                    <dt class="tit">이용시간</dt>
+                    <dd class="desc">Aqua Spa Zone 운영 시간 내 4시간<br /> (주중 10:00 ~ 19:00, 주말/공휴일 10:00 ~ 22:00)</dd>
+                </dl>
             </div>
 
             <dl class="notiTxt pt30">

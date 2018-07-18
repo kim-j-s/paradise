@@ -1,11 +1,30 @@
 @@include('static/include/head.html')
 <body>
 	<div id="wrap">
+		<!-- 2018-07-18 수정 -->
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept.html',{
-				"header":"CHROMA"
-			})
+		@@include('static/include/header.html',{
+			"header":"CHROMA"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">OVERVIEW</div>
+				<ul class="headerSubLink">
+					<li><a href="#" class="on">OVERVIEW</a></li>
+					<li><a href="#">상품 소개</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#">젝팟 스토리</a></li>
+					<li><a href="#">시설안내</a></li>
+					<li><a href="#">맴버십</a></li>
+					<li><a href="#">게임가이드</a></li>
+					<li><a href="#">고객지원</a></li>
+					<li><a href="#">이벤트</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// 2018-07-18 수정 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">

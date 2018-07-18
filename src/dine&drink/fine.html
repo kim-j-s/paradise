@@ -1,56 +1,108 @@
 @@include('static/include/head.html')
 <body>
 	<div id="wrap">
+		<!-- 2018-07-18 수정 -->
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept_dine.html',{
-				"header":"DINE &amp; DRINK"
-			})
+		@@include('static/include/header.html',{
+			"header":"DINE &amp; DRINK"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">FINE DINE &amp; DRINK</div>
+				<ul class="headerSubLink">
+					<li><a href="#" class="on">FINE DINE &amp; DRINK</a></li>
+					<li><a href="#">CASUAL DINE &amp; DRINK</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// 2018-07-18 수정 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container" class="subHeader">
-			<div class="searchSort mt8">
-				<select name="" id="" class="selectbox sort1">
-					<option value="">ALL</option>
-				</select>
-			</div>
+			<div class="tabWrap">
+				<ul class="tabList etc">
+					<li>
+						<button class="tit on">HOTEL PARADISE</button>
+					</li>
+					<li>
+						<button class="tit">HOTEL ART PARADISE</button>
+					</li>
+				</ul>
 
-			<div class="tblDiv">
-				<div class="cellDiv">
-					<div class="radioBox">
-						<input type="radio" id="radio1" name="radio" checked="checked" /><label for="radio1">레스토랑</label>
+				<!-- HOTEL PARADISE -->
+				<div class="tabContent pt0 on">
+					<div class="searchSort mt12">
+						<select name="" id="" class="selectbox sort1">
+							<option value="">ALL</option>
+						</select>
+					</div>
+
+					<ul class="fineList pt0">
+						<li>
+							<a href="#">
+								<div class="txtContent none">
+									<img class="thumb" src="../static/images/sample/img_fine01.jpg" alt="" />
+									<dl>
+										<dt class="tit">On The Plate</dt>
+										<dd class="desc">유럽, 뉴욕, 상해의 최신 Trend를 반영, 다섯가지 Station으로 구성된 Premium Buffet Restaurant</dd>
+									</dl>
+								</div>
+							</a>
+							<div class="btnBox">
+								<a href="#" class="btn ty4 big">예약하기</a>
+							</div>
+						</li>
+					</ul>
+
+					<!-- 목록 없음 -->
+					<p class="listNone">목록이 없습니다.</p>
+					<!--/// 목록 없음 -->
+
+					<!-- 리스트 10개 이상 시 노출 -->
+					<div class="tc mt20 pb30">
+						@@include('static/include/btn_more.html')
 					</div>
 				</div>
-				<div class="cellDiv">
-					<div class="radioBox">
-						<input type="radio" id="radio2" name="radio" /><label for="radio2">카페 &amp; 바</label>
+				<!--// HOTEL PARADISE -->
+
+				<!-- HOTEL ART PARADISE -->
+				<div class="tabContent pt0">
+					<div class="searchSort mt12">
+						<select name="" id="" class="selectbox sort1">
+							<option value="">ALL</option>
+						</select>
+					</div>
+
+					<ul class="fineList pt0">
+						<li>
+							<a href="#">
+								<div class="txtContent none">
+									<img class="thumb" src="../static/images/sample/img_fine01.jpg" alt="" />
+									<dl>
+										<dt class="tit">On The Plate</dt>
+										<dd class="desc">유럽, 뉴욕, 상해의 최신 Trend를 반영, 다섯가지 Station으로 구성된 Premium Buffet Restaurant</dd>
+									</dl>
+								</div>
+							</a>
+							<div class="btnBox">
+								<a href="#" class="btn ty4 big">예약하기</a>
+							</div>
+						</li>
+					</ul>
+
+					<!-- 목록 없음 -->
+					<p class="listNone">목록이 없습니다.</p>
+					<!--/// 목록 없음 -->
+
+					<!-- 리스트 10개 이상 시 노출 -->
+					<div class="tc mt20 pb30">
+						@@include('static/include/btn_more.html')
 					</div>
 				</div>
-			</div>
-
-			<ul class="fineList">
-				<li>
-					<div class="fineItem">
-						<img src="../static/images/sample/img_item.jpg" alt="" />
-						<div class="desc">
-							<strong>On The Plate</strong>
-							<p>유럽, 뉴욕, 상해의 최신 Trend를 반영, 다섯가지 Station으로 구성된 Premium Buffet Restaurant</p>
-						</div>
-					</div>
-					<div class="btnBox">
-						<a href="#" class="btn ty4 big">예약하기</a>
-					</div>
-				</li>
-			</ul>
-
-			<!-- 목록 없음 -->
-			<p class="listNone">목록이 없습니다.</p>
-			<!--/// 목록 없음 -->
-
-			<!-- 리스트 10개 이상 시 노출 -->
-			<div class="tc mt20 pb30">
-				@@include('static/include/btn_more.html')
-			</div>
+				<!--// HOTEL ART PARADISE -->
+			</div>			
 
 		</section>
 		<!-- //컨텐츠 영역 -->

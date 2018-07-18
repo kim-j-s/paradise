@@ -1,11 +1,23 @@
 @@include('static/include/head.html')
 <body>
 	<div id="wrap">
+		<!-- 2018-07-18 수정 -->
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept_dine.html',{
-				"header":"DINE &amp; DRINK"
-			})
+		@@include('static/include/header.html',{
+			"header":"DINE &amp; DRINK"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">CASUAL DINE &amp; DRINK</div>
+				<ul class="headerSubLink">
+					<li><a href="#">FINE DINE &amp; DRINK</a></li>
+					<li><a href="#" class="on">CASUAL DINE &amp; DRINK</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// 2018-07-18 수정 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container" class="subHeader">
@@ -14,7 +26,6 @@
 					<option value="">ALL</option>
 				</select>
 			</div>
-
 
 			<ul class="dineList">
 				<li>

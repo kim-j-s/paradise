@@ -647,7 +647,7 @@ $(function(){
 	});
 	stationswiper.on('slideChangeTransitionEnd', function () {
 	  	var idx = $('.swiper-pagination-bullet-active').index();
-		$('.now').html(idx + 1);
+		$('.counter').find('.now').html(idx + 1);
 	});
 });
 
@@ -791,4 +791,14 @@ $(function(){
 			$(this).children('.desc').slideDown(300);
 		}
 	});
+});
+
+// floor
+$(function(){
+	var floorSwipeLng = $('.floorSwipe').find('.item').length;
+	floorSwipeLng = floorSwipeLng - 2;
+	for (var i = 0 ;i < floorSwipeLng ; i++)
+	{
+		$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
+	}
 });

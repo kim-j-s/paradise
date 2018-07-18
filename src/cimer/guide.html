@@ -2,15 +2,25 @@
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept_cimer.html',{
-				"header":"CIMER"
-			})
+		@@include('static/include/header.html',{
+			"header":"CIMER"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">이용안내</div>
+				<ul class="headerSubLink">
+					<li><a href="#">시설안내</a></li>
+					<li><a href="#" class="on">이용안내</a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
 			<p class="titleTxt">
-				<span class="color">파라다이스시티</span>에서 준비된 다양한 <span class="color">이벤트</span>를 만나보세요.
+				<span class="color">파라다이스시티 씨메르</span> 이용에 대한 안내입니다.
 			</p>
 
 			<div class="tabWrap">
@@ -29,7 +39,6 @@
 				<!-- 이용방법 -->
 				<div class="tabContent pt5 on">
 					<dl class="dlSlide">
-
 						<dt class="title on">이용안내</dt>
 						<dd style="display:block;">
 							<ul class="list">
@@ -42,7 +51,6 @@
 								<li>씨메르는 정기적으로 1층과 2층의 남녀락카룸이 변경되어 운영되니, 공지사항을 확인하여 주시기 바랍니다.</li>
 							</ul>
 						</dd>
-
 						<dt class="title">이용절차</dt>
 						<dd class="pb0">
 							<ol class="cimerStep">
@@ -129,35 +137,221 @@
 							</ol>
 						</dd>
 					</dl>
-
+					<dl class="notiTxt mt16">
+						<dt>안내사항</dt>
+						<dd>
+							<ul class="list">
+								<li>수질유지, 화재예방 및 쾌적한 환경유지를 위하여 음식물 및 반입 불가능 품목에 대해 반입을 금지하고 있습니다.
+									<ul class="listBar">
+										<li>반입가능 품목 : 물, 환자를 위한 특별식 (플라스틱 밀폐 용기에 보관한 경우)</li>
+										<li>반입 불가능 품목 : 주류, 빵, 과자류 등 모든 음식물, 유리병, 버너, 과도 등 위험물, 기타 (돗자리, 텐트, 그늘막)</li>
+									</ul>
+								</li>
+							</ul>
+						</dd>
+					</dl>
 				</div>
 				<!--// 이용방법 -->
 
 				<!-- 입장권 및 요금 -->
-				<div class="tabContent on">
-					입장권 및 요금
+				<div class="tabContent pt0">
+					<div class="txtContent none mt17">
+						<dl>
+							<dt class="tit">이용안내</dt>
+							<dd class="desc">씨메르 입장 및 이용 가능한 입장권은 아쿠아스파권, 찜질스파권, 풀파티입장권 총 3가지로 연령 및 시즌에 따라 상이한 요금이 부과됩니다.</dd>
+						</dl>
+					</div>
+
+					<ul class="fineList">
+						<li>
+							<div class="txtContent none">
+								<img class="thumb" src="../static/images/cimer/img_cimer01.jpg" alt="" />
+								<dl>
+									<dt class="tit">아쿠아 스파권</dt>
+									<dd class="desc">씨메르 1F, 2F, 3F에 위치한 AQUA SPA ZONE 및 JJIMJIL SPA ZONE을 포함한 전 시설을 이용할 수 있는 입장권입니다.</dd>
+								</dl>
+								<div class="table side mt10">
+									<table>
+										<caption>Information</caption>
+										<tbody>
+											<tr>
+												<th scope="row">수심</th>
+												<td>0.6 m</td>
+											</tr>
+											<tr>
+												<th scope="row">이용시간</th>
+												<td>
+													<ul class="request">
+														<li>10:00 ~19:00 (주중)</li>
+														<li>10:00~22:00 (주말/공휴일)</li>
+													</ul>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="btnBox">
+								<a href="#" class="btn ty4 big">구매하기</a>
+							</div>
+						</li>
+						<li>
+							<div class="txtContent none">
+								<img class="thumb" src="../static/images/cimer/img_cimer02.jpg" alt="" />
+								<dl>
+									<dt class="tit">찜질 스파권</dt>
+									<dd class="desc">씨메르 2F, 3F에 위치한 JJIMJIL SPA ZONE 전 시설을 이용할 수 있는 입장권입니다.</dd>
+								</dl>
+								<div class="table side mt10">
+									<table>
+										<caption>Information</caption>
+										<tbody>
+											<tr>
+												<th scope="row">이용시간</th>
+												<td>4시간</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="btnBox">
+								<a href="#" class="btn ty4 big">구매하기</a>
+							</div>
+						</li>
+						<li>
+							<div class="txtContent none">
+								<img class="thumb" src="../static/images/cimer/img_cimer02.jpg" alt="" />
+								<dl>
+									<dt class="tit">심야권</dt>
+									<dd class="desc">심야 시간(0시~5시)의 경우, 일괄 심야 추가 요금이 적용됩니다.</dd>
+								</dl>
+							</div>
+							<div class="btnBox">
+								<a href="#" class="btn ty4 big">구매하기</a>
+							</div>
+						</li>
+					</ul>
+
+					<div class="txtContent none mt33">
+						<dl>
+							<dt class="tit">입장권 요금표</dt>
+							<dd>
+								<div class="table mt9">
+									<table>
+										<caption>Information</caption>
+										<colgroup>
+											<col style="width:90px;" />
+											<col style="width:60px;">
+											<col style="" />
+											<col style="" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" colspan="2" class="tl">구분</th>
+												<th scope="col" class="tl">대인(금액)</th>
+												<th scope="col" class="tr">소인(금액)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="2" class="tl">아쿠아스파권</td>
+												<td class="tl pl4 pointColor3">하계 극성수기</td>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td class="tl pl4 pointColor3">평수기</td>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td rowspan="2" class="tl">찜질스파권</td>
+												<td class="tl pl4 pointColor3">주중</td>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td class="tl pl4 pointColor3">주말</td>
+												<td class="tl">30,000 원</td>
+												<td class="tr">30,000 원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+					</div>
+
+					<dl class="notiTxt list mt16">
+						<dt>입장권 구매안내</dt>
+						<dd>
+							<ul class="list">
+								<li>청소년은 만 10세 ~ 19세(고등학생)이며 만 19세이상은 대인 요금이 적용됩니다.</li>
+								<li>미성년자의 경우 오후 3시까지 입장이 가능하며 오후 7시까지만 이용 가능합니다.</li>
+								<li>아쿠아스파권은 기본 찜질복 대여가 포함된 금액으로 6시간 이용기준이며, 추가이용 시 시간당 5,000원이 부과됩니다.</li>
+								<li>찜질스파권은 기본 찜질복 대여가 포함된 금액으로 4시간 이용기준이며, 추가이용 시 시간당 5,000원이 부과됩니다.</li>
+								<li>심야시간 (0-5시) 에는 기본 입장요금에 15,000원을 추가하여 이용가능하며, 규정시간 외 추가 이용시 시간당 5,000이 부과됩니다.</li>
+								<li>락카가 예약되는 것이 아니므로 현장 상황에 따라 입장 지연 및 제한이 있을 수 있습니다.</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<div class="txtContent none mt30">
+						<dl>
+							<dt class="tit">선베드&amp;카바나 요금표</dt>
+							<dd>
+								<div class="table mt9">
+									<table>
+										<caption>Information</caption>
+										<colgroup>
+											<col style="width:90px;" />
+											<col style="" />
+											<col style="" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="tl">구분</th>
+												<th scope="col" class="tl">주중</th>
+												<th scope="col" class="tr">주말/공휴일</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="2" class="tl">선베드</td>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td rowspan="2" class="tl">카바나</td>
+												<td class="tl">20,000 원</td>
+												<td class="tr">20,000 원</td>
+											</tr>
+											<tr>
+												<td class="tl">30,000 원</td>
+												<td class="tr">30,000 원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</dd>
+						</dl>
+						<p class="notiRed mt9">이용 시간 초과 시 1시간 당 추가 요금 5만원 씩 부과됩니다.</p>
+					</div>
+
 				</div>
 				<!--// 입장권 및 요금 -->
 
 				<!-- 단체 및 제휴할인 -->
-				<div class="tabContent on">
+				<div class="tabContent">
 					단체 및 제휴할인
 				</div>
 				<!--// 단체 및 제휴할인 -->
 
 			</div>
-
-			<dl class="notiTxt pt10">
-				<dt>안내사항</dt>
-				<dd>
-					<ul class="list">
-						<li>감기에 걸렸거나 전신 쇠약 증세가 있으신 분은 시설 이용이 제한됩니다.</li>
-						<li>수축기 혈압이 180mmHg 이상인 분 및 노약자, 임산부, 고열환자 및 중증 심장병 환자는 시설 이용이 제한됩니다.</li>
-						<li>출혈을 많이 한 분 술을 마신 후 2시간 이내인 분은 이용이 제한됩니다.</li>
-						<li>백내장이 우려되거나 안면홍조증 환자인 분은 이용이 제한됩니다.</li>
-					</ul>
-				</dd>
-			</dl>
 
 		</section>
 		<!-- //컨텐츠 영역 -->

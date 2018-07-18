@@ -2,10 +2,24 @@
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header_dept_artspace.html',{
-				"header":"ART SPACE"
-			})
+		@@include('static/include/header.html',{
+			"header":"ART SPACE"
+		})
 		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">EVENTS</div>
+				<ul class="headerSubLink">
+					<li><a href="#">갤러리 소개</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#" class="on">EVENTS</a></li>
+					<li><a href="#">지난 전시</a></li>
+					<li><a href="#">프레스룸</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">

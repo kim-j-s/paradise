@@ -96,10 +96,6 @@ gulp.task('script', function() {
 gulp.task('fonts', function() {
 	return gulp
 		.src(['src/**/*.+(eot|oft|woff|woff2)'])
-		.pipe(fileinclude ({
-			prefix : '@@',
-			basepath : 'src/'
-		}))
 		.pipe(gulp.dest('dest/'))
 		.pipe(browserSync.reload(
 			{stream: true}
