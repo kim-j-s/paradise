@@ -182,8 +182,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 공통 안내문 */
 .notiTxt {padding-top:15px;}
-.notiTxt dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
-.notiTxt dd {line-height:24px;}
+.notiTxt > dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
+.notiTxt > dd {line-height:24px;}
 
 .notiTxt.list dt {padding:0; background:none;}
 .notiTxt.list dt.point {color:#e66045;}
@@ -228,6 +228,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent .thumb + dl > .tit {padding:12px 0 0 0;}
 .txtContent .btnMoreTxt {position:absolute; top:20px; right:0;}
 .txtContent.t36 .btnMoreTxt {top:36px;}
+.txtContent > .link {display:block;}
 
 
 /* 공통 카운터 */
@@ -394,8 +395,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .table .request li + li {padding-top:3px;}
 
 .infoDetail {font-size:0; overflow:hidden;}
-.infoDetail > dt {float:left; width:70px; font-size:12px; line-height:17px; clear:both;}
-.infoDetail > dd {float:left; font-size:12px; line-height:17px;}
+.infoDetail > dt {float:left; width:70px; font-size:12px; line-height:20px; clear:both;}
+.infoDetail > dd {float:left; font-size:12px; line-height:20px;}
 
 /* bxslide option */
 .bx-pager {margin-top:12px; text-align:center; font-size:0;}
@@ -532,36 +533,36 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .itemListWrap {}
 .itemListWrap .item {border:1px solid #e9e9e9;}
 .itemListWrap .item > a {display:block;}
-.itemListWrap .itemThumb {position:relative; display:block;}
-.itemListWrap .itemThumb > img {width:100%;}
-.itemListWrap .itemDetail {display:block; padding:13px 14px;}
-.itemListWrap .itemDetail strong {display:block; font-size:14px; font-weight:bold; color:#111; line-height:16px;}
-.itemListWrap .itemDetail .date {display:block; padding:2px 0 6px 0; font-size:12px; color:#333;}
-.itemListWrap .itemDetail .txt {display:block; height:36px; line-height:18px;}
-.itemListWrap .itemDetail .hashtag {display:block; padding-top:9px; font-size:12px; color:#9c836a; line-height:14px;}
-.itemListWrap .itemPrice {vertical-align:bottom;}
-.itemListWrap .itemPrice .price1 {font-weight:bold; color:#9c836a;}
-.itemListWrap .itemPrice .price1 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
-.itemListWrap .itemPrice .price1 + .wave {font-weight:bold; font-size:14px; color:#9c836a; font-family:'Roboto';}
-.itemListWrap .itemPrice .price2 {font-size:12px; color:#999; text-decoration:line-through;}
-.itemListWrap .itemPrice .price2 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#999;}
-.itemListWrap .itemPrice .price2 + .wave {font-size:12px; color:#999; font-family:'Roboto';}
-.itemListWrap .itemPrice .unit {font-size:12px;}
-.itemListWrap .itemPrice .pricePer {font-size:12px; color:#e66045;}
-.itemListWrap .itemBtnWrap {padding:2px 12px 12px 12px; overflow:hidden;}
-.itemListWrap .itemBtnWrap .itemBtn {float:left; width:50%; padding-right:4px;}
-.itemListWrap .itemBtnWrap .itemBtn:nth-child(2) {padding:0 0 0 4px;}
+.itemThumb {position:relative; display:block;}
+.itemThumb > img {width:100%;}
+.itemPrice {vertical-align:bottom;}
+.itemPrice .price1 {font-weight:bold; color:#9c836a;}
+.itemPrice .price1 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
+.itemPrice .price1 + .wave {font-weight:bold; font-size:14px; color:#9c836a; font-family:'Roboto';}
+.itemPrice .price2 {font-size:12px; color:#999; text-decoration:line-through;}
+.itemPrice .price2 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#999;}
+.itemPrice .price2 + .wave {font-size:12px; color:#999; font-family:'Roboto';}
+.itemPrice .unit {font-size:12px;}
+.itemPrice .pricePer {font-size:12px; color:#e66045;}
 .itemListWrap .item.soldout {}
 .itemListWrap .item.soldout .itemThumb:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#9d836a; opacity:0.8;}
 .itemListWrap .item.soldout .itemThumb:after {content:'SOLD OUT'; position:absolute; top:50%; left:0; z-index:3; display:block; width:100%; height:100%; margin-top:-8px; text-align:center; font-weight:bold; color:#fff; line-height:16px;}
 .itemListWrap .item.soldout .itemBtnWrap {position:relative;}
 .itemListWrap .item.soldout .itemBtnWrap:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; opacity:0.6;}
-.itemListWrap .itemNoti {position:absolute; top:0; left:0; z-index:1;}
-.itemNoti {overflow:hidden;}
+
+.itemDetail {display:block; padding:13px 14px;}
+.itemDetail strong {display:block; font-size:14px; font-weight:bold; color:#111; line-height:16px;}
+.itemDetail .date {display:block; padding:2px 0 6px 0; font-size:12px; color:#333;}
+.itemDetail .txt {display:block; height:36px; line-height:18px;}
+.itemDetail .hashtag {display:block; padding-top:9px; font-size:12px; color:#9c836a; line-height:14px;}
+.itemNoti {position:absolute; top:0; left:0; z-index:1; overflow:hidden;}
 .itemNoti .nt {float:left; line-height:25px; font-weight:bold; font-size:10px; color:#fff; text-align:center; padding:0 8px;}
 .itemNoti .ty1 {background:#e66045;}
 .itemNoti .ty2 {background:#857b71;}
 .itemNoti .ty3 {background:#9d836a;}
+.itemBtnWrap {padding:2px 12px 12px 12px; overflow:hidden;}
+.itemBtnWrap .itemBtn {float:left; width:50%; padding-right:4px;}
+.itemBtnWrap .itemBtn:nth-child(2) {padding:0 0 0 4px;}
 
 /* special Offer */
 .spOfferWrap {padding-top:20px;}
@@ -1352,7 +1353,7 @@ line-height:18px;}
 .detailTop .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
 .detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
 .detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
-
+.detailTop .title + .detailDesc {padding:13px 0 0 0; border-top:none;}
 .detailList {position:relative;}
 .detailList + .detailList {margin-top:31px;}
 .detailList .title {padding-bottom:6px; font-weight:bold; color:#333;}
@@ -1387,7 +1388,7 @@ line-height:18px;}
 .fineEventCont > a {display:block; border:1px solid #e3e3e3;}
 .fineEventCont > a .thumb {display:block; width:100%; height:135px;}
 .fineEventCont > a .tit {display:block; padding:12px 12px 4px 12px; font-weight:bold; font-size:14px; color:#111; text-align:left;}
-.fineEventCont > a .desc {padding:0 12px 13px 12px; font-size:12px; line-height:18px; text-align:left;}
+.fineEventCont > a .desc {height:32px; padding:0 12px; margin-bottom:13px; font-size:12px; line-height:16px; text-align:left;}
 
 .dineThumb {width:calc(100% + 32px); margin-left:-16px;}
 .dineThumb > img {width:100%;}
@@ -1539,17 +1540,23 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType1 .swiper-pagination {position:static; padding-left:8px;}
 .swipeType1 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
 .swipeType1 .swiper-container {padding-right:16px;}
+.swipeType1 .swiper-pagination {display:none;}
+.swipeType1 .counter {padding-left:7px;}
+.swipeType1 .counter .now {font-weight:bold;}
+.swipeType1 > dl > .tit {padding-bottom:10px;}
 
 .galleryInner {}
 .galleryInner.etc {padding:0 12px;}
 .galleryInner > img {width:100%;}
 .galleryInner.etc > img {width:calc(100% + 24px); margin-left:-12px;}
 .galleryInner .tit {display:block; font-weight:bold; color:#111; line-height:18px;}
+.galleryInner .date {display:block; padding:2px 0 6px 0; font-size:12px; color:#333;}
 .galleryInner .desc {font-size:12px; line-height:16px;}
 .galleryInner > img + .tit {padding:12px 0 0 0;}
 .galleryInner > .tit + .desc {padding:7px 0 0 0;}
 .galleryInner > .tit + .list {padding:8px 0 14px 0;}
 .galleryInner > .desc + .list {padding:9px 0 14px 0;}
+.galleryInner > .desc.dot {height:32px;}
 
 .Type1 .swiper-slide {width:240px; border:1px solid #e6e6e6;}
 .swiper-slide > a {display:block;}

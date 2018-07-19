@@ -637,7 +637,7 @@ $(function(){
 $(function(){
 	$(window).load(function(){
 		var stationLng = $('.stationCont').length;
-		$('.counter').find('.all').html(stationLng);
+		$('.stationGallery').find('.all').html(stationLng);
 	});
 	var stationswiper = new Swiper('.station', {
 		slidesPerView: 'auto',
@@ -670,7 +670,7 @@ $(function(){
 // 스테이션 소개
 $(function(){
 	var artContLng = $('.artCont').length;
-	$('.counter').children('.all').html(artContLng);
+	$('.artGalleryWrap').find('.all').html(artContLng);
 	var artswiper = new Swiper('.artGallery', {
 		slidesPerView: 'auto',
 		pagination: {
@@ -679,7 +679,7 @@ $(function(){
 	});
 	artswiper.on('slideChangeTransitionEnd', function () {
 	  	var idx = $('.swiper-pagination-bullet-active').index();
-		$('.now').html(idx + 1);
+		$('.artGalleryWrap').find('.now').html(idx + 1);
 	});
 });
 
@@ -801,4 +801,42 @@ $(function(){
 	{
 		$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
 	}
+});
+
+
+// multi Swipe
+$(function(){
+	$(window).load(function(){
+		$('.swipeType1').each(function(h){
+			var swType1H = $(this).find('.Type1').height();
+			var swType1Lng = $(this).find('.swiper-slide').length;
+			$(this).find('.swiper-slide').height(swType1H);	
+			$(this).find('.all').html(swType1Lng);
+		});
+	});
+
+	var sliders = [];
+	$('.Type1').each(function(index, element){
+
+		$(this).addClass('s'+index);
+		var slider = new Swiper('.s'+index, {
+			slidesPerView: 'auto',
+			spaceBetween: 8,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+			onSlideChangeEnd:function(swipe){
+				console.log(geSlideDataIndex(swipe))
+			},
+		});
+		sliders.push(slider);
+	});
+
+	$('.swiper-pagination-current').each(function(i){
+		$(this).on('DOMSubtreeModified', function(){
+			PagerNum = $(this).html();
+			$('.swipeType1').eq(i).find('.now').html(PagerNum);
+		});
+	});
 });
