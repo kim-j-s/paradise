@@ -208,6 +208,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .listBar > li:before {content:''; position:absolute; top:7px; left:0; width:3px; border-top:1px solid #666;}
 .listBar > li.point {color:#e66045;}
 .listBar > li.point:before {border-top:1px solid #e66045;}
+.listBar.etc > li {font-size:14px; line-height:18px;}
+.listBar.etc > li:before {top:10px;}
+.listBar.etc > li + li {margin-top:4px;}
 
 .listStar > li {position:relative; padding-left:10px; font-size:11px; line-height:15px; color:#999;}
 .listStar > li:before {content:'*'; position:absolute; top:3px; left:0; font-size:11px; color:#999;}
@@ -380,12 +383,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .table.side3 table th {width:30px; padding:4px 15px 0 0; font-size:12px; color:#666; white-space:nowrap; border:none; text-align:left; vertical-align:top; line-height:14px;}
 .table.side3 table td {padding:4px 5px 2px 0; font-size:12px; border:none; text-align:left; vertical-align:top; line-height:14px;}
 
-.table.side4 {padding:5px 0; background:#f9f9f9; border:2px solid #e7e3e0;}
+.table.side4 {padding:5px 0; background:#f9f9f9; border:1px solid #e7e3e0;}
 .table.side4 table {table-layout:auto;}
-.table.side4 table th {width:30px; padding:8px 0 8px 15px; font-weight:bold; font-size:11px; color:#666; white-space:nowrap; text-align:left; vertical-align:middle; line-height:14px;}
-/* .table.side4 table tr:first-child th, .table.side4 table tr:first-child td {border:none;} */
+.table.side4 table th {width:30px; padding:8px 0 8px 15px; font-weight:bold; font-size:11px; color:#666; white-space:nowrap; text-align:left; vertical-align:top; line-height:14px;}
 .table.side4 table tr th, .table.side4 table tr td {border:none;}
-.table.side4 table td {padding:8px 5px 8px 0; font-size:11px; border-top:1px solid #e7e3e0; border-bottom:none; text-align:left; vertical-align:middle; line-height:14px;}
+.table.side4 table td {padding:8px 5px 8px 0; font-size:11px; border-top:1px solid #e7e3e0; border-bottom:none; text-align:left; vertical-align:top; line-height:14px;}
 
 .request {}
 .request li {font-size:14px;}
@@ -648,8 +650,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .slideWrap.bill {padding:11px 0 12px 0; border-bottom:1px solid #e9e5e2;}
 
 .slideList .slideDept1 {display:table; position:relative; width:100%;}
-.slideList .slideDept1 .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; line-height:20px; color:#333;}
-.slideList .slideDept1 .title small {font-size:12px;}
+.slideList .slideDept1 > .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; line-height:20px;}
+.slideList .slideDept1 > .title small {font-size:12px;}
 .slideList .slideDept1 .price {display:table-cell; vertical-align:middle; height:100%; text-align:right;}
 .slideList .slideDept1 .price .num {font-weight:bold; color:#9c836a; font-family:'Roboto';}
 .slideList .slideDept1 .price .unit {position:relative; top:-1px; display:inline-block; padding-left:3px; font-size:12px; font-family:'Roboto';}
@@ -677,10 +679,10 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 최종 금액 표기 */
-.slideList.final .slideDept1 .title {font-size:14px; color:#666;}
-.slideList.final .slideDept1 {padding:20px 16px 21px 0;}
-.slideList.final .slideDept2 {padding:12px 16px 15px 0; border-top:1px solid #e7e3e0;}
-.slideList.final .slideDept2 li + li {margin-top:8px;}
+.slideList.final > .slideDept1 > .title {font-size:14px; color:#666;}
+.slideList.final > .slideDept1 {padding:20px 16px 21px 0;}
+.slideList.final > .slideDept2 {padding:12px 16px 15px 0; border-top:1px solid #e7e3e0;}
+.slideList.final > .slideDept2 li + li {margin-top:8px;}
 .slideList.none {}
 
 /* 슬라이드 리스트 단순 표기용 */
@@ -690,6 +692,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .slideWrap.dept.display .slideDept2 {padding-right:0;}
 
 /* 금액 단순 표기  */
+.priceRstList {}
 .priceRstList li {overflow:hidden;}
 .priceRstList > li + li {margin-top:7px;}
 .priceRstList .title {float:left; font-size:12px;}
@@ -1097,6 +1100,20 @@ line-height:18px;}
 .membershipCont {}
 .membershipCont .txt {font-size:11px; line-height:13px; color:#999;}
 
+.leaveApply {position:relative; display:table; width:100%; height:100%; padding:0 0 160px 0;}
+.leaveApply > .inner {display:table-cell; vertical-align:middle;}
+.leaveCommit {position:absolute; bottom:0; left:0; display:table; height:160px; padding:0 16px; border-top:1px solid #e7e3e0; background:#f9f9f9;}
+.leaveCommit > .inner {display:table; width:100%;}
+.leaveCommit > .inner p {display:table-cell; vertical-align:middle; height:90px; color:#333; line-height:18px; text-align:center;}
+.leaveq {padding:25px 0 45px 0; font-size:11px; color:#333; vertical-align:top; text-align:center;}
+.leaveq > a {margin:0 5px;}
+
+.payApp {margin-top:16px;}
+.payApp .info {padding-bottom:7px; overflow:hidden;}
+.payApp .info .date {float:left; color:#333;}
+.payApp .info .txt {float:right; font-size:12px; color:#333;}
+.payApp .info .txt.etc {color:#5d88de;}
+
 /* 맴버십 등급 */
 .membershipCardInfo {}
 .membershipCardInfo .detail {overflow:hidden; padding:17px 0 6px 0;}
@@ -1194,7 +1211,8 @@ line-height:18px;}
 .membershipCont .selectDiv + .benefitList {margin-top:20px;}
 
 /* 맴버십 쿠폰 내역 */
-.couponTotal {overflow:hidden; padding:13px 0;}
+.couponTotal {width:calc(100% + 32px); padding:12px 16px; margin-left:-16px; overflow:hidden; border-bottom:1px solid #e7e3e0;}
+
 .couponTotal .couponName {float:left; font-weight:bold; color:#333; line-height:18px;}
 .couponTotal .couponCount {float:right; line-height:18px;}
 .couponHistory {margin-top:-10px;}
@@ -1248,8 +1266,11 @@ line-height:18px;}
 .pointTotal .pointName {float:left; font-weight:bold;}
 .pointTotal .pointRst {float:right; font-weight:bold; font-size:20px; color:#9c836a;}
 
+.tabDisplay {}
 .tabDisplay ul {display:table; width:100%;}
 .tabDisplay li {display:table-cell; width:1000px; height:70px; text-align:center; vertical-align:middle; border:1px solid #e7e3e0; border-left:none;}
+.tabDisplay.ty3 li {width:33.3%;}
+.tabDisplay.ty4 li {width:25%;}
 .tabDisplay li button {position:relative; display:block; width:100%; height:70px; }
 .tabDisplay li:first-child button {border-left:1px solid #e7e3e0;}
 .tabDisplay li button.on:before {content:''; position:absolute; top:-1px; left:-1px; width:100%; height:100%; border:1px solid #9c836a;}
@@ -1271,17 +1292,17 @@ line-height:18px;}
 .pointHistoryWrap {}
 .pointHistory {padding:24px 0 0 0;}
 .pointHistory dt {font-family:'Roboto'; font-weight:bold; color:#333;}
-.pointHistoryList li {position:relative; padding:13px 0; border-bottom:1px solid #e7e3e0;}
-.pointHistoryList li .use {position:absolute; top:13px; right:0; font-size:12px;}
-.pointHistoryList li .date {padding:0 0 2px 0;font-size:12px; color:#333; line-height:16px;}
-.pointHistoryList li .detail {position:relative; padding-right:120px; line-height:18px;}
-.pointHistoryList li .detail .pointMark {position:absolute; top:3px; right:0;}
-.pointHistoryList li.ty1 .use {color:#9d836a;}
-.pointHistoryList li.ty1 .pointMark {color:#9c836a;}
-.pointHistoryList li.ty2 .use {color:#e66045;}
-.pointHistoryList li.ty2 .pointMark {color:#e66045;}
-.pointHistoryList li.ty3 .use {color:#999;}
-.pointHistoryList li.ty3 .pointMark {color:#999;}
+.pointHistoryList > li {position:relative; padding:13px 0; border-bottom:1px solid #e7e3e0;}
+.pointHistoryList > li .use {position:absolute; top:13px; right:0; font-size:12px;}
+.pointHistoryList > li .date {padding:0 0 2px 0;font-size:12px; color:#333; line-height:16px;}
+.pointHistoryList > li .detail {position:relative; padding-right:120px; line-height:18px;}
+.pointHistoryList > li .detail .pointMark {position:absolute; top:3px; right:0;}
+.pointHistoryList > li.ty1 .use {color:#9d836a;}
+.pointHistoryList > li.ty1 .pointMark {color:#9c836a;}
+.pointHistoryList > li.ty2 .use {color:#e66045;}
+.pointHistoryList > li.ty2 .pointMark {color:#e66045;}
+.pointHistoryList > li.ty3 .use {color:#999;}
+.pointHistoryList > li.ty3 .pointMark {color:#999;}
 .pointHistoryWrap .pointNone {padding:50px 0; text-align:center;}
 
 
@@ -1295,6 +1316,7 @@ line-height:18px;}
 .offerItemInfo + .offerItemInfo {border-top:none;}
 .offerItemInfo > dt {font-weight:bold; font-size:12px; color:#333;}
 .offerItemInfo > dt .line {display:inline-block; font-weight:bold; font-size:14px; color:#333; border-bottom:1px solid #333;}
+.offerItemInfo > dt .line.none {border-bottom:none;}
 .offerItemInfo > dt small {position:absolute; top:11px; right:10px; font-size:11px; color:#333;}
 .offerItemInfo > dt small.ty1 {color:#333;}
 .offerItemInfo > dt small.ty2 {color:#e66045;}
@@ -1511,6 +1533,8 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 .cimerStep > li dt {font-weight:bold; padding-bottom:3px;}
 .cimerStep > li dd .notiRed {padding-top:7px;}
+
+.mapImg {width:calc(100% + 32px); margin-left:-16px;}
 
 
 /* 신청 완료 */

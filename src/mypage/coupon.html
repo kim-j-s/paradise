@@ -12,18 +12,15 @@
 			<p class="titleTxt">
 				회원님이 <span class="color">보유한 쿠폰</span>을<br /> 확인하실 수 있습니다.
 			</p>
-			<div class="tblDiv coupon">
-				<div class="cellDiv">
-					<div class="radioBox">
-						<input type="radio" id="coupon1" name="coupon" checked="checked" /><label for="coupon1">최신순</label>
-					</div>
-				</div>
-				<div class="cellDiv">
-					<div class="radioBox">
-						<input type="radio" id="coupon2" name="coupon" /><label for="coupon2">마감순</label>
-					</div>
-				</div>
+
+			<!-- 2018-07-20 수정 -->
+			<div class="searchSort mt18">
+				<select name="" id="" class="selectbox sort2">
+					<option value="">최신순</option>
+					<option value="">유효기간 순</option>
+				</select>
 			</div>
+			<!--// 2018-07-20 수정 -->
 
 			<ul class="couponList">
 				<li>
@@ -36,7 +33,7 @@
 									<span class="roboto">23:59</span> 까지
 								</li>
 								<li class="sale">
-									CIMER 모든 상품
+									할인율		<!-- 2018-07-20 문구 수정 -->
 									<span class="roboto per">50%</span>
 								</li>
 								<li class="txt">
@@ -58,7 +55,7 @@
 									<span class="roboto">23:59</span> 까지
 								</li>
 								<li class="sale">
-									CIMER 모든 상품
+									할인율		<!-- 2018-07-20 문구 수정 -->
 									<span class="roboto per">50%</span>
 								</li>
 								<li class="txt">
@@ -77,15 +74,18 @@
 				@@include('static/include/btn_more.html')
 			</div>
 
+			<!-- 2018-07-20 수정 -->
 			<dl class="notiTxt list">
 				<dt class="point">유의사항</dt>
 				<dd>
 					<ul class="list">
-						<li>유의 사항 내용</li>
-						<li>유의 사항 내용</li>
+						<li>쿠폰은 1개 상품 당 1개씩 적용할 수 있습니다.</li>
+						<li>유효기간이 지난 쿠폰은 사용하실 수 없으며, 재발급되지 않습니다.</li>
 					</ul>
 				</dd>
 			</dl>
+			<!--// 2018-07-20 수정 -->
+
 
 		</section>
 		<!-- //컨텐츠 영역 -->

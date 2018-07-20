@@ -6,14 +6,14 @@
 				"header":"포인트"
 			})
 		<!-- //헤더영역 -->
-
+		
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
 			<div class="pointTotal">
 				<strong class="pointName">사용 가능 포인트</strong>
 				<span class="roboto pointRst pointMark">5,000,000</span>
 			</div>
-			<div class="tabDisplay">
+			<div class="tabDisplay ty3">		<!-- 2018-07-20 수정 -->
 				<ul>
 					<li>
 						<button class="on">
@@ -78,10 +78,10 @@
 			</div>
 			<div class="pointSearch">
 				<div class="radioBox">
-					<input type="radio" id="point1" name="point"><label for="point1">전체</label>
+					<input type="radio" id="point1" name="point" checked="checked" /><label for="point1">전체</label>
 				</div>
 				<div class="radioBox">
-					<input type="radio" id="radio2" name="point"><label for="radio2">CASINO MEMBERSHIP</label>
+					<input type="radio" id="radio2" name="point" /><label for="radio2">CASINO MEMBERSHIP</label>
 				</div>
 			</div>
 
@@ -96,12 +96,29 @@
 								<div class="date">
 									<span class="roboto">2018.06.20</span> (수) <span class="roboto">08:30</span>
 								</div>
+
+								<!-- 2018-07-20 수정 -->
 								<div class="detail">
-									HOTEL ART PARADISE<br /> 객실 외 <span class="pointColor">3</span>건
+									<ul class="listBar etc">
+										<li>
+											HOTEL ART PARADISE<br />
+											객실 <span class="bold pointColor">30,000</span> P
+										</li>
+										<li>
+											CIMER 입장권 <span class="bold pointColor">15,000</span> P
+										</li>
+										<li>
+											Art Space 입장권<br />
+											객실 <span class="bold pointColor">30,000</span> P
+										</li>
+									</ul>
+
 									<span class="pointMark">
 										+ 8,500,000
 									</span>
 								</div>
+								<!--// 2018-07-20 수정 -->
+
 							</li>
 							<!-- 적립 -->
 
@@ -111,12 +128,21 @@
 								<div class="date">
 									<span class="roboto">2018.06.20</span> (수) <span class="roboto">08:30</span>
 								</div>
+
+								<!-- 2018-07-20 수정 -->
 								<div class="detail">
-									HOTEL ART PARADISE<br /> 객실 외 <span class="pointColor">3</span>건
+									<ul class="listBar etc">
+										<li>
+											Hotel Paradise 객실
+										</li>
+									</ul>
+
 									<span class="pointMark">
-										+ 8,500,000
+										- 8,500,000
 									</span>
 								</div>
+								<!--// 2018-07-20 수정 -->
+
 							</li>
 							<!-- 사용 -->
 
@@ -126,12 +152,16 @@
 								<div class="date">
 									<span class="roboto">2018.06.20</span> (수) <span class="roboto">08:30</span>
 								</div>
+
+								<!-- 2018-07-20 수정 -->
 								<div class="detail">
-									HOTEL ART PARADISE
+									보유 기간 초과에 따른 소멸
 									<span class="pointMark">
-										+ 8,500,000
+										- 8,500,000
 									</span>
 								</div>
+								<!--// 2018-07-20 수정 -->
+
 							</li>
 							<!--// 소멸 -->
 						</ul>

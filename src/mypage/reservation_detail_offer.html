@@ -23,7 +23,7 @@
 							<tr>
 								<th scope="row">예약일시</th>
 								<td>
-									<span class="roboto bold">2018.06.20</span>
+									<span class="roboto bold">2018.06.20</span> (일) 14:43		<!-- 2018-07-20 수정 -->
 								</td>
 							</tr>
 						</tbody>
@@ -177,6 +177,18 @@
 										<span class="num">2,000,000</span><span class="unit">원</span>
 									</span>
 								</li>
+
+								<!-- 2018-07-20 추가 -->
+								<li>
+									<span class="title pointColor2">
+										CHROMA 입장권 10% 할인 쿠폰
+									</span>
+									<span class="price">
+										<span class="num">2,000,000</span><span class="unit">원</span>
+									</span>
+								</li>
+								<!--// 2018-07-20 추가 -->
+
 							</ul>
 						</li>
 						<li class="slideList price">
@@ -185,15 +197,74 @@
 								<span class="rst"><span class="num">200,000</span> <span class="unit">원</span></span>
 							</div>
 						</li>
+
+						<!-- 2018-07-20 추가 -->
+						<li class="slideList price">
+							<div class="slideDept1 none">
+								<span class="title">VAT</span>
+								<span class="rst"><span class="num">0</span> <span class="unit">원</span></span>
+							</div>
+						</li>
+						<li class="slideList price">
+							<div class="slideDept1 none">
+								<span class="title">포인트 사용</span>
+								<span class="rst"><span class="num">- 40,000</span> <span class="unit">원</span></span>
+							</div>
+						</li>
+						<!--// 2018-07-20 추가 -->
+
 					</ul>
+
+					<!-- 2018-07-20 수정 및 추가 -->
 					<ul class="slideWrap dept none display">
 						<li class="slideList final">
-							<div class="slideDept1">
+							<div class="slideDept1 pb0">
 								<span class="title">결제금액</span>
 								<span class="rst"><span class="finalPrice">200,000</span> <span class="unit">원</span></span>
 							</div>
+
+							<!-- case 1 -->
+							<ul class="priceRstList mt10">
+								<li>
+									<span class="title bold">적립예정포인트</span>
+									<span class="price">
+										<span class="num pointMark">200,000</span>
+									</span>
+								</li>
+							</ul>
+							<!--// case 1 -->
+
+							<!-- case 2 -->
+							<ul class="priceRstList mt10">
+								<li>
+									<span class="title bold">적립예정포인트</span>
+									<span class="price">
+										<span class="notiRed">적립 불가한 상품입니다.</span>
+									</span>
+								</li>
+							</ul>
+							<!--// case 2 -->
+
+							<!-- case 3 -->
+							<ul class="priceRstList mt10">
+								<li>
+									<span class="title bold">적립예정포인트</span>
+									<span class="price">
+										<span class="fs12 pointColor5">적립완료</span> <span class="num pointMark pl4">200,000</span>
+									</span>
+								</li>
+							</ul>
+							<!-- case 3 -->
+
+							<ul class="listBar mt6 pb17">
+								<li>적립불가 케이스 문구</li>
+								<li>적립시점 문구</li>
+							</ul>
+
 						</li>
 					</ul>
+					<!--// 2018-07-20 수정 및 추가 -->
+
 				</dd>
 			</dl>
 
@@ -243,14 +314,16 @@
 		</section>
 		<!-- //컨텐츠 영역 -->
 
+		<!-- 2018-07-20 수정 -->
 		<div class="tblDiv btnTbl half">
 			<div class="cellDiv">
-				<a href="#" class="btn ty8 big">목록으로</a>
+				<a href="#" class="btn ty8 big">예약취소</a>
 			</div>
 			<div class="cellDiv">
-				<a href="#" class="btn ty1 big">예약취소</a>
+				<a href="#" class="btn ty1 big">목록으로</a>
 			</div>
 		</div>
+		<!--// 2018-07-20 수정 -->
 
 
 		<!-- 하단 영역 -->
