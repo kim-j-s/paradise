@@ -361,7 +361,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .table table {width:100%;}
 .table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:14px; vertical-align:bottom;}
 .table table th.roboto {padding-bottom:5px;}
-.table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-bottom:1px solid #e7e3e0;}
+.table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-bottom:1px solid #e7e3e0; word-break:break-word;}
 .table table th .day1 {position:relative;}
 .table table th .day1:after {content:''; position:absolute; top:7px; right:-6px; border-top:1px solid #9d836a; width:3px;}
 .table table th .day {display:inline-block; text-align:left;}
@@ -620,10 +620,14 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .calendarDate li.last.fix:before {content:''; position:absolute; top:3px; right:50%; width:100%; height:24px; background:#e7e3e0;}
 .calendarDate li.first:after, .calendarDate li.last:after {content:''; position:absolute; top:50%; left:50%; z-index:1; margin-left:-12px; margin-top:-12px; width:24px; height:24px; background:#9d836a; border-radius:50%;}
 .calendarDate .range span {background:#e7e3e0;}
-.calendarDate .noDate {color:#999;}
 .calendarDate .today span {font-weight:bold; color:#9d836a;}
+
+.calendarDate .noDate {color:#999;}
 .calendarDate .noDateEx {color:#999;}
+.calendarDate .noEvent {color:#999;}
+.calendarDate .noEventDay {color:#999;}
 .calendarDate .blinkDate {background:#fff;}
+
 .calendarDate .blinkDate.noDateEx {background:#fff;}
 .calendarAllReset {position:fixed; top:20px; right:16px; z-index:101; font-size:14px; color:#9c836a;}
 
@@ -1064,16 +1068,22 @@ line-height:18px;}
 .swiper-pagination-bullet {width:5px; height:5px; background:#e7e1dc; opacity:1; border-radius:50%; outline:none;}
 .swiper-pagination-bullet-active {background:#9d836a;}
 
-.mypageCont {padding:17px 0 12px 0;}
-.mypageCont > strong {display:block; padding-bottom:13px; font-weight:bold; color:#333;}
 
-.promotionGallery {}
-.promotionGallery .swiper-slide {width:225px;}
-.promotionGallery .swiper-slide > a {display:block;}
+/* 프로모션 */
+.mypageCont {padding:33px 0 12px 0;}
+.mypageCont > strong {display:block; padding-bottom:13px; font-weight:bold; color:#333;}
 .promotionBox {padding:13px 12px 12px 12px; border:1px solid #e6e6e6;}
-.promotionBox {background:url(../images/common/icon/icon_promotion.png) no-repeat right 20px bottom; background-size:38px 35px;}
+.promotionBox {background:url(../static/images/common/icon/icon_promotion.png) no-repeat right 20px bottom; background-size:38px 35px;}
 .promotionBox .txt {width:100%; height:34px; font-size:12px; line-height:17px;}
 .promotionBox .date {padding-top:11px;  font-size:12px;}
+
+
+
+/* 프로모션 */
+
+
+
+
 
 .mypageLinkList {border-bottom:1px solid #e7e3e0; padding-right:10px;}
 .mypageLinkList > a {display:block; padding-right:22px; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px; overflow:hidden;}

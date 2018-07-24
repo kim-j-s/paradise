@@ -234,49 +234,176 @@ $(function(){
 	var CalendarFirst = 0;
 	var CalendarLast = 0;
 	var CalendarResetCnt = 0;
+	var addDayChk = 0;
 
 	$('.calendarDate > li').each(function(Calendar){
-		$(this).click(function(){
-			if ( !$(this).parent('.calendarDate').hasClass('single') )
+		if ( $(this).parent('.calendarDate').hasClass('eventCalendar') )
+		{
+			if ( $('.calendarDate').hasClass('eventCalendar') )
 			{
-				// 예약 불가능 날짜 선택
-				if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') )
+				$('.calendarDate > li').each(function(){
+					$(this).addClass('noEventDay eventDayChk');
+					if ( $(this).hasClass('blinkDate') || $(this).hasClass('eventDay') )
+					{
+						$(this).removeClass('noEventDay');
+					}
+					if ( $(this).hasClass('blinkDate') )
+					{
+						$(this).removeClass('eventDayChk');
+					}
+				});
+			}			
+
+		} else {
+			$(this).click(function(){
+				if ( !$(this).parent('.calendarDate').hasClass('single') )
 				{
-					return false;
+					// 예약 불가능 날짜 선택
+					if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') || $(this).hasClass('noEventDay'))
+					{
+						return false;
+					}
+
+					// 예약 범위 설정
+					if ( $(CalendarDate).hasClass('first') &&  CalendarResetCnt == 0)
+					{
+						$(CalendarDate).removeClass('range last');
+						$(this).addClass('last');
+						CalendarLast = Calendar;
+						calendarRange(CalendarFirst, CalendarLast);
+					} else {
+						if (CalendarResetCnt == 1)
+						{
+							$(CalendarDate).removeClass('first last range');
+							$(this).addClass('first');
+							calendarReset(Calendar);
+							CalendarResetCnt = 0;
+						} else {
+							$(this).addClass('first');
+							calendarReset(Calendar);
+						}
+					} 
+				} else if ( $(this).parent('.calendarDate').hasClass('single') )
+				{
+					// 예약 불가능 날짜 선택
+					if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') )
+					{
+						return false;
+					}
+					$(CalendarDate).removeClass('first');
+					$(this).addClass('first');
 				}
 
-				// 예약 범위 설정
-				if ( $(CalendarDate).hasClass('first') &&  CalendarResetCnt == 0)
+			});
+		}
+		
+	});
+
+	$('.eventDayChk').each(function(i){
+		$(this).on('click', function(){
+			if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') || $(this).hasClass('noEventDay'))
+			{
+				return false;
+			}
+
+			var eventClassChk = $(this).attr('class').split(' ')[1];
+			console.log(eventClassChk);
+			var eventClassChkLng = $("."+eventClassChk).length;
+			var eventClassidx = $("."+eventClassChk).index();
+
+			//console.log(eventClassidx);		
+
+			if ( addDayChk == 0 )
+			{
+				// 이벤트 시작 시 클릭 가능 한 범위 리셋 기능
+				$('.eventDayChk').addClass('noEventDay');
+				$(CalendarDate).each(function(){
+					if ( $(this).hasClass(eventClassChk) )
+					{
+						$(this).removeClass('noEventDay');
+					}
+				});
+
+				thisIndex = $("."+eventClassChk).index(this);
+				var EventExDay = eventClassChkLng - thisIndex;
+				$('.eventDayChk').eq(i + EventExDay).removeClass('noEventDay').addClass(eventClassChk + ' addDay');
+
+				console.log(i + ' , ' + thisIndex + ' , ' + EventExDay);
+
+				if ( $('.eventDayChk').hasClass('first') &&  CalendarResetCnt == 0)
 				{
-					$(CalendarDate).removeClass('range last');
+					$('.eventDayChk').removeClass('range last');
 					$(this).addClass('last');
-					CalendarLast = Calendar;
-					calendarRange(CalendarFirst, CalendarLast);
+					CalendarLast = i;
+					calendarRangeEx(CalendarFirst, CalendarLast);
+					console.log('동작체크 11 ' + i);
 				} else {
 					if (CalendarResetCnt == 1)
 					{
-						$(CalendarDate).removeClass('first last range');
+						$('.eventDayChk').removeClass('first last range');
 						$(this).addClass('first');
-						calendarReset(Calendar);
+						calendarResetEx(i);
 						CalendarResetCnt = 0;
+						console.log('동작체크 21');
 					} else {
 						$(this).addClass('first');
-						calendarReset(Calendar);
+						calendarResetEx(i);
+						console.log('동작체크 31 ' + i);
 					}
 				}
-			} else if ( $(this).parent('.calendarDate').hasClass('single') )
+				addDayChk++;
+			} else if ( addDayChk != 0)
 			{
-				// 예약 불가능 날짜 선택
-				if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') )
+				if ( $('.eventDayChk').hasClass('first') &&  CalendarResetCnt == 0)
 				{
-					return false;
+					$('.eventDayChk').removeClass('range last');
+					$(this).addClass('last');
+					CalendarLast = i;
+					calendarRangeEx(CalendarFirst, CalendarLast);
+					console.log('동작체크 1 ' + i);
+				} else {
+					if (CalendarResetCnt == 1)
+					{
+						$('.eventDayChk').removeClass('first last range');
+						$(this).addClass('first');
+						calendarResetEx(i);
+						CalendarResetCnt = 0;
+						console.log('동작체크 2');
+					} else {
+						$(this).addClass('first');
+						calendarResetEx(i);
+						console.log('동작체크 3 ' + i);
+					}
 				}
-				$(CalendarDate).removeClass('first');
-				$(this).addClass('first');
 			}
+
 		});
-		
 	});
+
+	// 달력 이벤트 예약
+	function calendarResetEx(i) {
+		CalendarFirst = i;
+		for (var max = 0 ; max < i; max++)
+		{
+			console.log(max);
+			$('.eventDayChk').eq(max).addClass('noEventDay');
+		}
+		$('.datepickStart').removeClass('dateFoucs');
+		$('.datepickArrive').addClass('dateFoucs');
+		$('.calendarDate').children('.first').removeClass('fix');
+		$('.calendarDate').children('.last').removeClass('fix');
+	}
+
+	// 달력 이벤트 값
+	function calendarRangeEx(f, l) {
+		for (var i = f + 1; i < l; i++ )
+		{
+			$('.eventDayChk').eq(i).addClass('range');
+		}
+		$('.calendarDate').children('.first').addClass('fix');
+		$('.calendarDate').children('.last').addClass('fix');
+	}
+
 
 	// 달력 초기화 버튼 - 전체
 	$('.calendarAllReset').click(function(){
@@ -284,6 +411,25 @@ $(function(){
 		$('.datepickArrive').removeClass('dateFoucs');
 		$('.datepickStart').addClass('dateFoucs');
 		CalendarResetCnt = 0;
+		addDayChk = 0;
+
+		$(CalendarDate).each(function(){
+			if ( $(this).hasClass('eventDay') )
+			{
+				$(this).removeClass('noEventDay');
+			}
+			if ( $(this).hasClass('eventDayEx'))
+			{
+				$(this).addClass('noEventDay').removeClass('eventDayEx');
+			}
+			if ( $(this).hasClass('addDay'))
+			{
+				$(this).addClass('noEventDay');
+			}
+		});
+
+		$('.eventCalendar').find('.addDay').removeClass().addClass('noEventDay eventDayChk');
+		
 	});
 
 	// 달력 초기화 - 가는날
@@ -321,6 +467,9 @@ $(function(){
 		$('.calendarDate').children('.first').removeClass('fix');
 		$('.calendarDate').children('.last').removeClass('fix');
 	}
+
+	
+
 });
 
 // 카운트
@@ -428,13 +577,6 @@ $(function(){
 	});
 });
 
-//membership - promotion
-$(function(){
-	var Promotionswiper = new Swiper('.promotionGallery', {
-		slidesPerView: 'auto',
-		spaceBetween: 12
-	});
-});
 
 /* 구매 상품 목록 */
 $(function(){
