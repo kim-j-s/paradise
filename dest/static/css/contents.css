@@ -1615,6 +1615,33 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 
 
+/*윤주미*/
+
+/*About Us*/
+.aboutUs{}
+.aboutUs > section + section{padding: 32px 0 0;}
+.aboutUs > section > img{display: block; width: 100%;}
+.aboutUs > section > img.logo{position: relative; border: 1px solid #a8927e;}
+.aboutUs > section p.title{margin: 15px 0 8px; font-size: 14px; line-height: 18px; font-weight: bold; color: #000;}
+.aboutUs > section p.desc{font-size: 12px; line-height: 18px;}
+.aboutUs .visual{position: relative;}
+.aboutUs .visual .textArea{position: absolute; left: 0; width: 100%;}
+.aboutUs .visual .textArea > *{color: #fff; text-shadow: 0px 0px 10px rgba(0,0,0,0.3)}
+.aboutUs .visual.top .textArea{bottom: 0; padding-bottom: 16px;}
+.aboutUs .visual.top p{font-size: 20px; line-height: 24px; font-weight: bold;}
+.aboutUs .visual.top p:after{content: ''; display: block; height: 1px; width: 20px; margin-top: 10px; background-color: #fff;}
+.aboutUs .visual.top span{display: block; font-weight: bold;}
+.aboutUs .visual.btm{margin-bottom: -20px;}
+.aboutUs .visual.btm .textArea{top: 50%; margin-top: -60px; text-align: center;}
+.aboutUs .visual.btm .textArea > img{display: block; width: 126px; margin: 8px auto 0;}
+.aboutUs .visual.btm p{text-align: center; font-size: 12px; line-height: 18px;}
+.aboutUs .visual.btm p:before{content: ''; display: block; height: 1px; width: 16px; margin: 0 auto 10px; background-color: #fff;}
+.aboutUs .visual + p.desc{margin-top: 13px;}
+.aboutUs > p.titleTxt > span > br{display: block;}
+.aboutUs > .topArea{margin: 25px 0 -55px;}
+
+
+
 
 
 
