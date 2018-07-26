@@ -1472,7 +1472,7 @@ line-height:18px;}
 
 .dlSlide {}
 .dlSlide .title {position:relative; padding:12px 0 14px 0; font-weight:bold; color:#333; border-bottom:1px solid #e7e3e0; line-height:18px;}
-.dlSlide .title:before {content:''; position:absolute; top:50%; right:0; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.dlSlide .title:before {content:''; position:absolute; top:50%; right:6px; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
 .dlSlide .title.on:before {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
 .dlSlide .title.etc {border-bottom:none;}
 .dlSlide > dd {display:none; padding:4px 0 24px 0;}
@@ -1644,7 +1644,24 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .roomList .galleryInner .desc{font-size: 14px; line-height: 18px;}
 .fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
 
+/*convention*/
+.convention .tabList > li .tit{font-size: 12px; line-height: 14px;}
+.convention h2{font-weight: bold; color: #111; font-size: 14px;}
+.convention p.desc{font-size: 12px; line-height: 18px;}
+.convention .listBar > li{word-break: keep-all;}
+.convention .table.side a.btnMoreTxt{float: right; margin-top: 1px; vertical-align: top;}
+.convention .txtContent2{padding-bottom: 8px;}
+.convention .txtContent2 > .tit{font-size: 12px; color: #333; font-weight: bold; margin: 10px 0 7px;}
 
+.convention .concept > ul{margin: 0 -4px; font-size: 0;}
+.convention .concept > ul li{display: inline-block; vertical-align: top; width: 50%; padding: 0 4px 15px;}
+.convention .concept .tit{font-size: 12px;}
+.convention .concept .desc{line-height: 18px;}
+
+.convention .venue .item{padding-bottom: 20px;}
+.convention .venue .title{position: relative; margin: 12px 0 10px; font-size: 14px; color: #000; font-weight: bold;}
+.convention .venue .title > a.btnMoreTxt{top: 2px;}
+.convention .venue .sub{font-size: 12px; line-height: 18px;}
 
 
 @media screen and (max-width:640px){
