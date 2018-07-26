@@ -144,7 +144,7 @@
 .btnMore {text-indent:-9999px;}
 .btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;}
 .btnMore:after {content:''; position:absolute; top:7px; left:2px; width:12px; border-top:2px solid #111;}
-.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 2px; background-size:6px 10px; line-height:16px;}
+.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 3px; background-size:6px 10px; line-height:16px;}
 .btnCalendarView {display:inline-block; width:20px; height:20px; text-indent:-9999px;}
 .btnCalendarView {background:url(../images/common/icon/icon_calendar2.png) no-repeat 0 0; background-size:20px 40px;}
 .btnCalendarView:disabled {background:url(../images/common/icon/icon_calendar2.png) no-repeat 0 -20px; background-size:20px 40px;}
@@ -182,7 +182,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 공통 안내문 */
 .notiTxt {padding-top:15px;}
-.notiTxt > dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
+.notiTxt > dt {padding-left:22px; margin-bottom: 4px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
 .notiTxt > dd {line-height:24px;}
 
 .notiTxt.list dt {padding:0; background:none;}
@@ -193,7 +193,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 공통 리스트 */
 .list {}
 .list > li {position:relative; padding-left:6px; font-size:12px; color:#666; line-height:18px;}
-.list > li:before {content:''; position:absolute; top:7px; left:0; width:2px; height:2px; background:#666;}
+.list > li:before {content:''; position:absolute; top:8px; left:0; width:2px; height:2px; background:#666; border-radius: 50%;}
 .list > li.point {position:relative; padding-left:6px; font-size:12px; color:#e66045;}
 .list > li.point:before {content:''; position:absolute; top:8px; left:0; width:2px; height:2px; background:#e66045;}
 .list.normal {}
@@ -313,7 +313,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 로그인 */
-.titleTxt {padding:17px 0 0 0; font-size:20px; color:#999; line-height:23px; word-break:keep-all;}
+.titleTxt {padding:17px 0 0 0; font-size:20px; color:#999; line-height:24px; word-break:keep-all;}
 .titleTxt .color {color:#9d836a; line-height:23px;}
 .titleTxt.single {padding-top:9px !important; line-height:23px;}
 .titleTxt br {display:none;}
@@ -1392,7 +1392,7 @@ line-height:18px;}
 .detailTop {}
 .detailTop .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
 .detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
-.detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
+.detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:18px; border-top:1px solid #e7e3e0;}
 .detailTop .title + .detailDesc {padding:13px 0 0 0; border-top:none;}
 .detailList {position:relative;}
 .detailList + .detailList {margin-top:31px;}
@@ -1498,7 +1498,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .help a.ty3:after {background-position:0 -88px;}
 .help a.ty4:after {background-position:0 -132px;}
 .help .tit {display:block; padding-bottom:8px; font-weight:bold; font-size:12px; text-align:center;}
-.help .desc {font-size:11px; line-height:13px;}
+.help .desc {font-size:11px; line-height:13px; text-align: center;}
 .help .go {position:absolute; bottom:8px; left:0; width:100%; text-align:center;}
 
 .contact {background:#f9f9f9; padding:16px 16px 20px 16px;}
@@ -1640,8 +1640,9 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .aboutUs > p.titleTxt > span > br{display: block;}
 .aboutUs > .topArea{margin: 25px 0 -55px;}
 
-
-
+.roomList .galleryInner .tit{font-size: 14px; line-height: 18px;}
+.roomList .galleryInner .desc{font-size: 14px; line-height: 18px;}
+.fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
 
 
 
