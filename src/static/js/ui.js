@@ -698,6 +698,17 @@ $(function(){
 		$('body').css('height','100%');
 		$('.dimmedLayer').css('display','none');
 	});
+
+	$(window).load(function(){
+		if ( $('.dimmedLayer').css('display') == 'block' )
+		{
+			console.log('z');
+			$('body').css('height','auto');
+			var windHeight = $('body').height();
+			$('.dimmedLayer').css({'display':'block', 'height':windHeight});
+		}
+	});
+
 });
 
 

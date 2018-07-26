@@ -100,11 +100,14 @@
 .tabList .tit.on {padding-bottom:1px; background:#fff; color:#9d836a; font-weight:bold; border-bottom:none;}
 .tabList .tit > small {position:relative; top:-1px; font-size:11px;}
 .tabList .tit.on > small {color:#9d836a;}
+.tabList.ty3 > li {width:33.3%;}
+.tabList.ty4 > li {width:25%;}
 .tabWrap .tabContent {display:none; padding:20px 16px 0 16px;}
 .tabWrap .tabContent.on {display:block;}
 .tabWrap .tabContent.event {padding:12px 16px 0 16px;}
 .tabWrap.membership .tabContent {position:absolute; top:0; left:-9999px; display:block; width:100%; height:100%;}
 .tabWrap.membership .tabContent.on {position:static;}
+
 
 
 /* 공통 버튼 */
@@ -184,6 +187,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .notiTxt {padding-top:15px;}
 .notiTxt > dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
 .notiTxt > dd {line-height:24px;}
+.notiTxt > dd.fs12 {padding-top:4px;}
 
 .notiTxt.list dt {padding:0; background:none;}
 .notiTxt.list dt.point {color:#e66045;}
@@ -232,6 +236,17 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent .btnMoreTxt {position:absolute; top:20px; right:0;}
 .txtContent.t36 .btnMoreTxt {top:36px;}
 .txtContent > .link {display:block;}
+.txtContent.bg {background:#f9f9f9;}
+
+.txtContent2 {}
+.txtContent2  + .txtContent2 {margin-top:11px;}
+.txtContent2 > .tit {font-weight:300; font-size:12px; color:#9c836a;}
+.txtContent2 > .desc {padding:5px 0 0 0; font-size:12px;}
+.txtContent2 > .desc + .desc {padding:6px 0 0 0;}
+
+.txtContent .txtContent2 > .tit {font-weight:300; font-size:12px; color:#9c836a; line-height:16px;}
+.txtContent .txtContent2 > .desc {padding:5px 0 0 0; font-size:12px;}
+.txtContent .txtContent2 > .desc + .desc {padding:6px 0 0 0;}
 
 
 /* 공통 카운터 */
@@ -1390,9 +1405,9 @@ line-height:18px;}
 .fineSwipe .item > img {display:block; width:100%;}
 
 .detailTop {}
-.detailTop .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
-.detailTop .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
-.detailTop .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
+.detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
+.detailTop > .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
+.detailTop > .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
 .detailTop .title + .detailDesc {padding:13px 0 0 0; border-top:none;}
 .detailList {position:relative;}
 .detailList + .detailList {margin-top:31px;}
@@ -1476,6 +1491,7 @@ line-height:18px;}
 .dlSlide .title.on:before {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
 .dlSlide .title.etc {border-bottom:none;}
 .dlSlide > dd {display:none; padding:4px 0 24px 0;}
+.dlSlide > dd > .txtContent2:first-child {margin-top:8px;}
 
 .membershipClass {}
 .membershipClass .name {display:block; font-size:11px;}
@@ -1567,6 +1583,19 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .complete .footerBtn {bottom:36px;}
 
 
+/* sbu */
+.visualTop {width:calc(100% + 32px); margin-left:-16px;}
+.visualTop .titleArea {position:relative;}
+.visualTop .titleArea > img {width:100%;}
+.visualTop .titleArea .txtArea {position:absolute; bottom:16px; left:16px; color:#fff;}
+.visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px;}
+.visualTop .titleArea .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px;}
+.visualTop .titleArea .txtArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.visualTop .desc {padding:13px 16px 0 16px; font-size:12px; line-height:16px;}
+
+.visualTop + .swipeType1 {margin-top:30px;}
+
+
 /* dimmed layer popup */
 .dimmedLayer {position:absolute; top:0; right:0; bottom:0; left:0; z-index:600; text-align:center; background-color:rgba(0, 0, 0, 0.6); display:none;}
 .dimmedCont {position:fixed; top:50%; left:50%; width:100%; padding:0 16px 40px 16px; background:#fff; transform: translate(-50%, -50%);}
@@ -1577,6 +1606,10 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .dimmedCont .timeline .ty9 {position:absolute; top:8px; right:0;}
 .dimmedCont .barcodeImg {}
 .dimmedCont .barcodeImg img {width:37%;}
+
+.dimmedCont.etc {width:calc(100% - 32px); padding:0 16px 20px 16px;}
+.dimmedCont.etc .dimmedHeader {padding:0; border:none;}
+.dimmedCont.etc .dimmedHeader .tit {padding:17px 0; background:none;}
 
 
 /* gallery */
@@ -1598,15 +1631,24 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .galleryInner .tit {display:block; font-weight:bold; color:#111; line-height:18px;}
 .galleryInner .date {display:block; padding:2px 0 6px 0; font-size:12px; color:#333;}
 .galleryInner .desc {font-size:12px; line-height:16px;}
+.galleryInner.etc .desc {font-size:12px; line-height:16px;}
 .galleryInner > img + .tit {padding:12px 0 0 0;}
 .galleryInner > .tit + .desc {padding:7px 0 0 0;}
 .galleryInner > .tit + .list {padding:8px 0 14px 0;}
 .galleryInner > .desc + .list {padding:9px 0 14px 0;}
 .galleryInner > .desc.dot {height:32px;}
+.galleryInner.etc2 {}
+.galleryInner.etc2 .desc {padding:12px 0 0 0; color:#333;}
 
 .Type1 .swiper-slide {width:240px; border:1px solid #e6e6e6;}
-.swiper-slide > a {display:block;}
+.Type1 .swiper-slide .thumb {height:135px;}
+.Type1.etc .swiper-slide {border:none;}
 
+
+.swiper-slide > a {display:block;}
+.txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
+.txtContent.moreAdd .btnMoreTxt {top:0; right:16px;}
+.fineEvent .btnMoreTxt {right:16px;}
 
 /* etc */
 .contReset {}
