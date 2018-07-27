@@ -1,0 +1,146 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"HOTEL PARADISE"
+			})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">부대시설</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">객실</a></li>
+					<li><a href="#">다이닝</a></li>
+					<li><a href="#" class="on">부대시설</a></li>
+					<li><a href="#">OFFERS</a></li>
+					<li><a href="#">EVENTS</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="bxWrap">
+				<div class="normalSwiper fineSwipe">
+					<div class="item">
+						<img class="thumb" src="../static/images/hotelParadise/img_facilities_sauna01.jpg" alt="" />
+					</div>
+					<div class="item">
+						<img class="thumb" src="../static/images/hotelParadise/img_facilities_sauna02.jpg" alt="" />
+					</div>
+					<div class="item">
+						<img class="thumb" src="../static/images/hotelParadise/img_facilities_sauna03.jpg" alt="" />
+					</div>
+					<div class="item">
+						<img class="thumb" src="../static/images/hotelParadise/img_facilities_sauna04.jpg" alt="" />
+					</div>
+					<div class="item">
+						<img class="thumb" src="../static/images/hotelParadise/img_facilities_sauna05.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<div class="detailTop mt11">
+				<h2 class="title">Sauna</h2>
+				<p class="desc">편안한 휴식을 즐길 수 있는 실내 사우나</p>
+				<p class="detailDesc">
+					고객의 동선을 고려한 여유로운 공간으로 디자인된 실내사우나는 자쿠지탕, 건/습식 사우나 등 다양한 시설과 세심한 서비스로 편안한 만족감을 드립니다.
+				</p>
+
+				<div class="mt8">
+					<a href="#" class="btn ty11 big">문의하기</a>
+				</div>
+			</div>
+
+			<div class="container pt13 mt20">
+				<div class="txtContent none mt12">
+					<dl>
+						<dt class="tit">운영시간</dt>
+						<dd class="desc">
+							06:00~22:00 (21:30까지 입장 가능)<br />
+							매월 두번째 수요일은 정기휴일입니다. 
+						</dd>
+					</dl>
+				</div>
+
+				<div class="txtContent t36">
+					<dl>
+						<dt class="tit">요금</dt>
+						<dd class="desc">
+							성인 50,000 원
+						</dd>
+					</dl>
+				</div>
+
+				<div class="txtContent t36">
+                    <dl>
+                        <dt class="tit">위치</dt>
+                        <dd class="desc">Hotel Paradise 3층</dd>
+                    </dl>
+                    <a href="#" class="btnMoreTxt">자세히 보기</a>
+                </div>
+
+				<div class="txtContent t36">
+                    <dl>
+                        <dt class="tit">연락처</dt>
+                        <dd class="desc">
+                            <a class="btnUnderline" href="tel:032-729-2209">032-729-2209</a>
+                        </dd>
+                    </dl>
+                </div>
+
+			</div>
+
+			<dl class="dlSlide mt18">
+				<dt class="title">안내사항</dt>
+				<dd>
+					<ul class="list">
+						<li>투숙객 전용 시설로 투숙 기간 內 이용 가능합니다. (1객실당 2인 기준)</li>
+						<li>분실 위험이 있는 귀중품은 데스크에 보관해주시기 바랍니다.</li>
+						<li>사우나는 17세(고등학생) 이상 고객에 한해 입장 가능합니다.</li>
+						<li>사우나 입장은 영업 종료시간 30분전까지 입니다.</li>
+						<li>고객의 안전을 위하여 음주 후 사우나 시설 이용은 제한될 수 있습니다.</li>
+						<li>휴대전화를 포함한 촬영 장비로 사우나 내에서의 촬영은 불가합니다.</li>
+					</ul>
+				</dd>
+			</dl>
+
+			<div class="fineEvent mt20">
+				<div class="swiper-container fineEventGallery">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide fineEventCont">
+							<a href="#">
+								<img class="thumb" src="../static/images/sample/img_room.jpg" alt="" />
+								<strong class="tit">Event 1</strong>
+								<span class="desc dot">
+									모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스
+								</span>
+							</a>
+						</div>
+						<div class="swiper-slide fineEventCont">
+							<a href="#">
+								<img class="thumb" src="../static/images/sample/img_room.jpg" alt="" />
+								<strong class="tit">Event 1</strong>
+								<span class="desc dot">
+									모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
