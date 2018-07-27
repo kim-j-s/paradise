@@ -18,7 +18,7 @@
 .inp[type="date"]::-webkit-inner-spin-button,
 .inp[type="date"]::-webkit-calendar-picker-indicator {
 	display: none;
-    -webkit-appearance: none;
+		-webkit-appearance: none;
 }
 /* input::-webkit-datetime-edit{ color: transparent; } */
 .inp.date:disabled {background:#f9f9f9; font-size:13px; color:#999;}
@@ -1205,9 +1205,9 @@ line-height:18px;}
 .benefitList > li {position:relative; float:left; width:calc(50% - 4px); height:148px; margin-top:12px; padding-top:38px; text-align:center; border:1px solid #e7e3e0;}
 .benefitList > li {
 	display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
 	flex-direction: column;
 }
 .benefitList > li:nth-child(even) {margin-left:8px;}
@@ -1223,19 +1223,19 @@ line-height:18px;}
 .benefitList > li .tit {display:block; padding-bottom:3px; text-align:center; font-size:12px; color:#9c836a;}
 .benefitList > li .benefitDetail {
 	display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
 	flex:1;
 	flex-direction:column;
 	-webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
 	 -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 }
 .benefitList > li .benefitDetail * {flex:none;}
 .benefitList > li .benefitDetail .detailTxt {padding:0 3px; line-height:18px;}
@@ -1681,10 +1681,21 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .aboutUs .visual + p.desc{margin-top: 13px;}
 .aboutUs > p.titleTxt > span > br{display: block;}
 .aboutUs > .topArea{margin: 25px 0 -55px;}
-
 .roomList .galleryInner .tit{font-size: 14px; line-height: 18px;}
 .roomList .galleryInner .desc{font-size: 14px; line-height: 18px;}
 .fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
+
+.itemList {margin: 0 -4px; font-size: 0; border: 0;}
+.itemList > li{display: inline-block; vertical-align: top; width: 50%; padding: 15px 4px 0; font-size: 12px;}
+.itemList > li img.thumb{width: 100%;}
+.itemList > li .tit{padding: 10px 0 5px; font-weight: bold; color: #333;}
+.itemList > li .desc{color: #666; line-height: 17.5px;}
+
+p.descText{font-size: 12px; line-height: 18px;}
+div.divTop{padding-top: 20px; border-top: 1px solid #e7e3e0;}
+div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
+img.fullImg{width: 100%;}
+
 
 /*convention*/
 .convention .tabList > li .tit{font-size: 12px; line-height: 14px;}
@@ -1694,16 +1705,16 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .convention .table.side a.btnMoreTxt{float: right; margin-top: 1px; vertical-align: top;}
 .convention .txtContent2{padding-bottom: 8px;}
 .convention .txtContent2 > .tit{font-size: 12px; color: #333; font-weight: bold; margin: 10px 0 7px;}
-
-.convention .concept > ul{margin: 0 -4px; font-size: 0;}
-.convention .concept > ul li{display: inline-block; vertical-align: top; width: 50%; padding: 0 4px 15px;}
-.convention .concept .tit{font-size: 12px;}
-.convention .concept .desc{line-height: 18px;}
-
 .convention .venue .item{padding-bottom: 20px;}
 .convention .venue .title{position: relative; margin: 12px 0 10px; font-size: 14px; color: #000; font-weight: bold;}
 .convention .venue .title > a.btnMoreTxt{top: 2px;}
 .convention .venue .sub{font-size: 12px; line-height: 18px;}
+.convention .party h2{color: #333; margin: 12px 0 6px;}
+
+/*Plaza*/
+.plazaWrap .tabList > li .tit{font-size: 12px; line-height: 14px;}
+.plazaWrap .tabContent > p.desc{font-size: 12px; line-height: 17.5px;}
+
 
 
 @media screen and (max-width:640px){
