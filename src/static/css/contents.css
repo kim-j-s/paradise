@@ -1691,8 +1691,20 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .itemList > li .tit{padding: 10px 0 5px; font-weight: bold; color: #333;}
 .itemList > li .desc{color: #666; line-height: 17.5px;}
 
+.itemList2{}
+.itemList2 > li{display: table; width: 100%;}
+.itemList2 > li + li{padding: 16px 0 0;}
+.itemList2 > li > *{display: table-cell; vertical-align: top;}
+.itemList2 .img{width: 116px;}
+.itemList2 .img > img{width: 100%;}
+.itemList2 .txtArea{padding:  0 0 0 12px;}
+.itemList2 .txtArea > *{display: block; width: 100%; line-height: 1;}
+.itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
+.itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
+.itemList2 .txtArea > .desc{font-size: 12px;}
+
 p.descText{font-size: 12px; line-height: 18px;}
-div.divTop{padding-top: 20px; border-top: 1px solid #e7e3e0;}
+div.divTop{border-top: 1px solid #e7e3e0;}
 div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
 img.fullImg{width: 100%;}
 
@@ -1714,6 +1726,16 @@ img.fullImg{width: 100%;}
 /*Plaza*/
 .plazaWrap .tabList > li .tit{font-size: 12px; line-height: 14px;}
 .plazaWrap .tabContent > p.desc{font-size: 12px; line-height: 17.5px;}
+
+.fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
+.fileDown > span{display: block; margin-top: 12px;}
+
+/*wonderbox*/
+.wonderWrap ul.list{}
+.wonderWrap ul.list li{margin-top: 1px;}
+.wonderWrap ul.listBar{padding-bottom: 2px;}
+.wonderWrap ul.listBar .point{text-indent: -16px; color: #666; margin-left: -3px; padding-left: 12px;}
+.wonderWrap ul.listBar .point:before{display: none;}
 
 
 
