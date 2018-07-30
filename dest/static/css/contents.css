@@ -1659,6 +1659,43 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 /*윤주미*/
 
+p.descText{font-size: 12px; line-height: 18px;}
+div.divTop{border-top: 1px solid #e7e3e0;}
+div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
+img.fullImg{width: 100%;}
+
+.fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
+.fileDown > span{display: block; margin-top: 12px;}
+
+.itemList {margin: 0 -4px; font-size: 0; border: 0;}
+.itemList > li{display: inline-block; vertical-align: top; width: 50%; padding: 15px 4px 0; font-size: 12px;}
+.itemList > li img.thumb{width: 100%;}
+.itemList > li .tit{padding: 10px 0 5px; font-weight: bold; color: #333;}
+.itemList > li .tit > span{display: block; color: #666; font-weight: normal; line-height: 17.5px;}
+.itemList > li .desc{color: #666; line-height: 17.5px;}
+.itemList > li .price{margin: 3px 0 0; color: #9c836a; font-size: 14px; font-weight: bold;}
+.itemList > li .price > span{display: inline-block; font-size: 12px; line-height: 19px; vertical-align: top;}
+
+.itemList2 > li{display: table; width: 100%;}
+.itemList2 > li + li{padding: 16px 0 0;}
+.itemList2 > li > *{display: table-cell; vertical-align: top;}
+.itemList2 .img{width: 116px;}
+.itemList2 .img > img{width: 100%;}
+.itemList2 .txtArea{padding:  0 0 0 12px;}
+.itemList2 .txtArea > *{display: block; width: 100%; line-height: 1;}
+.itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
+.itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
+.itemList2 .txtArea > .desc{font-size: 12px;}
+
+.timeTable .side3 table tbody tr > *{vertical-align: top; padding: 2px 0; line-height: 17px;}
+.timeTable .side3 table tbody tr > * > span{vertical-align: top; line-height: 17px;}
+.timeTable .side3 table tbody th{padding-right: 10px;}
+.timeTable .side3 table tbody th > span{display: inline-block; width: 22px;}
+.timeTable .side3 table tbody td > span{display: block; word-break: keep-all; line-height: 15px; padding: 1px 0 3px;}
+
+.indentList{margin: 8px 0 0;}
+.indentList > span{display: block; padding: 0 0 2px 15px; text-indent: -15px; font-size: 12px;  line-height: 17px; word-break: keep-all;}
+
 /*About Us*/
 .aboutUs{}
 .aboutUs > section + section{padding: 32px 0 0;}
@@ -1685,30 +1722,6 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .roomList .galleryInner .desc{font-size: 14px; line-height: 18px;}
 .fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
 
-.itemList {margin: 0 -4px; font-size: 0; border: 0;}
-.itemList > li{display: inline-block; vertical-align: top; width: 50%; padding: 15px 4px 0; font-size: 12px;}
-.itemList > li img.thumb{width: 100%;}
-.itemList > li .tit{padding: 10px 0 5px; font-weight: bold; color: #333;}
-.itemList > li .desc{color: #666; line-height: 17.5px;}
-
-.itemList2{}
-.itemList2 > li{display: table; width: 100%;}
-.itemList2 > li + li{padding: 16px 0 0;}
-.itemList2 > li > *{display: table-cell; vertical-align: top;}
-.itemList2 .img{width: 116px;}
-.itemList2 .img > img{width: 100%;}
-.itemList2 .txtArea{padding:  0 0 0 12px;}
-.itemList2 .txtArea > *{display: block; width: 100%; line-height: 1;}
-.itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
-.itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
-.itemList2 .txtArea > .desc{font-size: 12px;}
-
-p.descText{font-size: 12px; line-height: 18px;}
-div.divTop{border-top: 1px solid #e7e3e0;}
-div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
-img.fullImg{width: 100%;}
-
-
 /*convention*/
 .convention .tabList > li .tit{font-size: 12px; line-height: 14px;}
 .convention h2{font-weight: bold; color: #111; font-size: 14px;}
@@ -1727,15 +1740,37 @@ img.fullImg{width: 100%;}
 .plazaWrap .tabList > li .tit{font-size: 12px; line-height: 14px;}
 .plazaWrap .tabContent > p.desc{font-size: 12px; line-height: 17.5px;}
 
-.fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
-.fileDown > span{display: block; margin-top: 12px;}
-
 /*wonderbox*/
-.wonderWrap ul.list{}
 .wonderWrap ul.list li{margin-top: 1px;}
 .wonderWrap ul.listBar{padding-bottom: 2px;}
 .wonderWrap ul.listBar .point{text-indent: -16px; color: #666; margin-left: -3px; padding-left: 12px;}
 .wonderWrap ul.listBar .point:before{display: none;}
+
+/*chroma*/
+.chromaWrap .visualArea{/*height: 37.5vw; */min-height: 120px; padding: 10px; margin-top: -20px; background: #020d25 url(../images/chroma/chroma_visual.jpg) center center no-repeat; background-size: 100%; text-align: center;}
+.chromaWrap .visualArea > img{display: block; width: 76px; margin: 0 auto;}
+.chromaWrap .visualArea > p{margin: 6px 0 0; color: #fff;}
+.chromaWrap section{padding-top: 26px; padding-bottom: 20px;}
+.chromaWrap section .title{font-weight: bold; color: #000;}
+.chromaWrap section h2{margin-bottom: 15px;}
+.chromaWrap .facilityBox{padding-bottom: 30px;}
+.chromaWrap .facilityBox:last-child{padding-bottom: 0;}
+.chromaWrap .facilityBox h3{margin: 10px 0 8px;}
+.chromaWrap .floorMap{height: 160px; margin-bottom: 13px; background-color: #666;}
+.chromaWrap .timeTable > .table{margin: -10px 0 0;}
+
+/*픽토그램리스트*/
+.chromaInfo .pictoList > li:before{background:url(../images/chroma/bg_step.png) no-repeat; background-size:23px 115px;}
+.etiquette .pictoList > li:before{background:url(../images/chroma/bg_step_etiquette.png) no-repeat; background-size:23px 92px;}
+.pictoList > li {position:relative; padding:13px 0 14px 40px; font-size:12px; border-bottom:1px solid #e7e3e0;}
+.pictoList > li:before {content:''; position:absolute; top:15px; left:0; width:23px; height:23px;}
+.pictoList > li.ty1:before {background-position:0 0;}
+.pictoList > li.ty2:before {background-position:0 -23px;}
+.pictoList > li.ty3:before {background-position:0 -46px;}
+.pictoList > li.ty4:before {background-position:0 -69px;}
+.pictoList > li.ty5:before {background-position:0 -92px;}
+.pictoList > li dt {font-weight:bold; padding-bottom:3px;}
+.pictoList > li .desc{line-height: 17.5px;}
 
 
 
