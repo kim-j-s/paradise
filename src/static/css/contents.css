@@ -1860,19 +1860,20 @@ img.fullImg{width: 100%;}
 
 /*studio*/
 .studioWrap h2.title{color: #333; margin: 15px 0 4px;}
-.studioWrap dl.application{}
-.studioWrap dl.application > dt{font-size: 14px; font-weight: bold; color: #333;}
-.studioWrap dl.application > dd{margin: 6px 0 30px; font-size: 12px; line-height: 17.5px;}
-.studioWrap dl.application > dd:last-child{margin-bottom: 0;}
-.studioWrap dl.application > dd > p{line-height: 17.5px;}
-.studioWrap dl.application > dd > ul.listBar{margin: 1px 0 5px;}
-.studioWrap dl.application > dd > ul.list > li{padding-bottom: 2px; line-height: 17.5px;}
-.studioWrap dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
-.studioTable{margin: 10px 0 0;}
-.studioTable tbody td{border-right: 1px solid #e9e5e2; word-break: keep-all;}
-.studioTable tbody td:last-child{border-right: none;}
-.studioTable + p.addTxt{margin: 7px 0 0; font-size: 11px; text-align: right; color: #999; line-height: 13px;}
 
+.rentTable{margin: 10px 0 0;}
+.rentTable tbody td{border-right: 1px solid #e9e5e2; word-break: keep-all;}
+.rentTable tbody td:last-child{border-right: none;}
+
+.table > table + p.addTxt{margin: 7px 0 0; font-size: 11px; text-align: right; color: #999; line-height: 13px;}
+
+dl.application > dt{font-size: 14px; font-weight: bold; color: #333;}
+dl.application > dd{margin: 6px 0 30px; font-size: 12px; line-height: 17.5px;}
+dl.application > dd:last-child{margin-bottom: 0;}
+dl.application > dd > p{line-height: 17.5px;}
+dl.application > dd > ul.listBar{margin: 1px 0 5px;}
+dl.application > dd > ul.list > li{padding-bottom: 2px; line-height: 17.5px;}
+dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 
 @media screen and (max-width:640px){
