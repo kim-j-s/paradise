@@ -997,8 +997,16 @@ $(function(){
 	// Type2
 	$(window).load(function(){
 		$('.swipeType2').each(function(h){
-			var swType1Lng = $(this).find('.swiper-slide').length;
-			$(this).find('.all').html(swType1Lng);
+			var Bullet = "<span class='bullet'></span>";
+			var BulletMark = "<span></span>";
+			var swType2Lng = $(this).find('.swiper-slide').length;
+			$(this).find('.all').html(swType2Lng);
+			$(this).find('.swiper-pagination').after(Bullet);
+			for ( var i = 0; i <  swType2Lng; i++ )
+			{
+				$(this).find('.bullet').append(BulletMark);
+			}
+			$(this).find('.bullet').children('span').eq(0).addClass('on');
 		});
 	});
 
@@ -1013,9 +1021,6 @@ $(function(){
 				el: '.swiper-pagination',
 				type: 'fraction',
 			},
-			onSlideChangeEnd:function(swipe){
-				console.log(geSlideDataIndex(swipe))
-			},
 		});
 		sliders2.push(slider2);
 	});
@@ -1024,6 +1029,8 @@ $(function(){
 		$(this).find('.swiper-pagination-current').on('DOMSubtreeModified', function(){
 			PagerNum2 = $(this).html();
 			$('.swipeType2').eq(swipeType2).find('.now').html(PagerNum2);
+			$('.swipeType2').eq(swipeType2).find('.bullet').children('span').removeClass('on');
+			$('.swipeType2').eq(swipeType2).find('.bullet').children('span').eq(PagerNum2 - 1).addClass('on');
 		});
 	});
 

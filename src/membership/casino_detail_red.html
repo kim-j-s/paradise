@@ -1,0 +1,49 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"MEMBERSHIP 상세"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+
+			<div class="cardVisual">
+				@@include('static/include/card_box.html',{
+					"card":"img_cardimg4.jpg"
+				})
+			</div>
+
+			<div class="membershipClass">
+				<small class="name">CASINO POINT</small>
+				<strong class="color colorRed">RED</strong>
+				<p class="subTxt">멤버십 가입 시 기본 발급</p>
+			</div>
+
+			<div class="container pt13 mt14">
+				<dl class="dlSlide">
+                    <dt class="title on">호텔 시설 혜택</dt>
+                    <dd style="display:block;">
+                        <ul class="list">
+							<li>DINE&amp;DRINK 이용금액 15% 할인</li>
+							<li>수영장 50% 할인</li>
+							<li>Paradise City ↔ 공항 간 VIP Limousine 서비스</li>
+							<li>주차장 무료 이용</li>
+                        </ul>
+                    </dd>
+					<dt class="title">카지노 시설 혜택</dt>
+                    <dd>
+                        <ul class="list">
+							<li>가입 시 기념품 증정</li>
+                        </ul>
+                    </dd>
+				</dl>
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+	</div>
+</body>
+</html>
