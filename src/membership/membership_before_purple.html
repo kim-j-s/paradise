@@ -1,0 +1,172 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"이전 맴버십 혜택"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="cardVisual">
+				@@include('static/include/card_box.html',{
+					"card":"img_cardimg3.jpg"
+				})
+			</div>
+
+			<div class="membershipClass">
+				<small class="name">PARADISE SIGNATURE</small>
+				<strong class="color colorPurple">PURPLE</strong>
+				<p class="subTxt2">
+					파라다이스 호텔&amp;리조트의 식음업장 이용 특전 및 할인 혜택을 원하시는 고객님들을 위한<br />
+					STAYCATION IN PARADISE
+				</p>
+				<div class="table side2">
+					<table>
+						<tbody>
+							<tr>
+								<th scope="row" class="bold">유효기간</th>
+								<td class="roboto bold">
+									<span class="roboto bold">12</span> 개월 (1년)
+								</td>									
+							</tr>
+							<tr>
+								<th scope="row" class="bold">연회비</th>
+								<td>
+									<span class="roboto bold">450,000</span> 원 (VAT 포함)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="container mt20 pt13">
+				<dl class="dlSlide">
+
+					<dt class="title on">파라다이스 리워즈 포인트 적립 특전</dt>
+					<dd style="display:block;">
+						<ul class="list">
+							<li>적립된 포인트를 기준으로 상기 적립률이 적용됩니다.</li>
+							<li>추가 적립 포인트는 파라다이스 리워즈 등급에 따라 다르게 적용됩니다.</li>
+						</ul>
+
+						<div class="table mt4">
+							<table>
+								<colgroup>
+									<col style="width:25%;">
+									<col style="width:25%;">
+									<col style="width:25%;">
+									<col style="width:25%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">파라다이스 리워즈 레드</th>
+										<th scope="col">파라다이스 리워즈 퍼플</th>
+										<th scope="col">파라다이스 리워즈 골드</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>추가 적립율</td>
+										<td>
+											<span class="roboto pointColor">25</span>%
+										</td>
+										<td>
+											<span class="roboto pointColor">35</span>%
+										</td>
+										<td>
+											<span class="roboto pointColor">50</span>%
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</dd>
+					<dt class="title">객실 바우처 특전</dt>
+					<dd>
+						<ul class="list">
+							<li>디럭스 (Deluxe) 숙박권 1매
+								<ul class="listBar">
+									<li>사용 제외기간 : 토요일, 공휴일 전일, 극성수기(7/28 ~ 8/5, 12/24) 및 연말 연시(12/29 ~ 12/31)</li>
+									<li>객실 예약 상황에 따라 극성수기 및 연말연시에 객실 예약 요청이 가능하며, 이용 시 추가 요금(200,000원, VAT별도)이 부과됩니다.</li>
+								</ul>
+							</li>
+							<li>객실 <span class="pointColor">1</span>단계 업그레이드 이용권 <span class="pointColor">1</span>매
+								<ul class="listBar">
+									<li>사용 제외기간 : 토요일, 공휴일 전일, 극성수기(7/28 ~ 8/5, 12/24) 및 연말 연시(12/29 ~ 12/31)</li>
+									<li>코너 스위트(Corner Suite) 까지의 업그레이드에 한하며, 최대 1박에 한하여 적용됩니다.</li>
+									<li>객실 상황에 따라 이용이 제한될 수 있습니다.</li>
+									<li>객실 예약실을 통하여 직접 예약하신 경우에 사용 가능합니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+					<dt class="title">식음 바우처 특전</dt>
+					<dd>
+						<ul class="list">
+							<li>온 더 플레이트 (뷔페 레스토랑) 조식 <span class="pointColor">2</span>인 이용권 <span class="pointColor">1</span>매
+								<ul class="listBar">
+									<li>사용 제외기간 : 공휴일, 극성수기(7/28~8/5, 12/24) 및 연말 연시(12/29~31)</li>
+									<li>바우처를 제외한 금액에 대해서는 할인 또는 적립률이 적용되며, 특별행사 시, 추가요금이 발생할 수 있습니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+					<dt class="title">기타 바우처 특전</dt>
+					<dd>
+						<ul class="list">
+							<li>장기 주차 <span class="pointColor">1</span>주일 이용권 <span class="pointColor">1</span>매
+								<ul class="listBar">
+									<li>최초 입차 후, 최대 1주일(168시간) 주차가 가능하며, 7일(168시간) 이후 1일 당 24,000원의 주차료가 발생합니다.</li>
+								</ul>
+							</li>
+							<li>사우나 무료 이용권 <span class="pointColor">2</span>매
+								<ul class="listBar">
+									<li>본 이용권은 1인당 1매 사용 가능하며, 객실 투숙 시에만 이용이 가능합니다.</li>
+									<li>17세 이상 사우나 입장이 가능합니다.</li>
+								</ul>
+							</li>
+							<li>수영장 <span class="pointColor">2</span>인 무료 이용권 <span class="pointColor">2</span>매
+								<ul class="listBar">
+									<li>사용 제외 기간 : 주말, 극성수기(7/28~8/5) 및 연말연시(12/29~31)</li>
+									<li>수영장 퇴장 후 재입장은 불가능합니다.</li>
+									<li>최소 3일전 멤버십 데스크를 통해 예약 시 이용이 가능하며, 시설 상황에 따라 이용이 제한될 수 있습니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+
+					<dt class="title">기타 혜택</dt>
+					<dd>
+						<ul class="list">
+							<li>파라다이스 호텔 부산 식음업장 <span class="pointColor">10</span>% 할인 혜택
+								<ul class="listBar">
+									<li>실물 카드 제시 시에만 할인 혜택이 적용됩니다.</li>
+									<li>이용 약관은 변동될 수 있으며, 변경될 내용은 호텔 멤버십 데스크(1833-8330)를 통해 확인이 가능합니다.</li>
+								</ul>
+							</li>
+							<li>더 스파 앳 파라다이스 <span class="pointColor">20</span>% 할인 혜택
+								<ul class="listBar">
+									<li>실물 카드 제시 시에만 할인 혜택이 적용됩니다.</li>
+									<li>이용 약관은 변동될 수 있으며, 변경될 내용은 호텔 멤버십 데스크(1833-8330)를 통해 확인이 가능합니다.</li>
+								</ul>
+							</li>
+							<li>임페리얼트레저 <span class="pointColor">10</span>% 할인혜택
+								<ul class="listBar">
+									<li>실물 카드 제시 시에만 할인 혜택이 적용됩니다.</li>
+									<li>이용 약관은 변동될 수 있으며, 변경될 내용은 호텔 멤버십 데스크(1833-8330)를 통해 확인이 가능합니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+	</div>
+</body>
+</html>
