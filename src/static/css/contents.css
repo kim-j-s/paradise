@@ -1719,13 +1719,15 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 /*윤주미*/
 
+h2.title{font-size: 14px; font-weight: bold; color: #111;}
 p.descText{font-size: 12px; line-height: 18px;}
 div.divTop{border-top: 1px solid #e7e3e0;}
 div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
 img.fullImg{width: 100%;}
 
 .fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
-.fileDown > span{display: block; margin-top: 12px;}
+.fileDown > span{display: block; margin-top: 10px;}
+.fileDown > span > .btn{margin: 0 3px 0 0;}
 
 .itemList {margin: 0 -4px; font-size: 0; border: 0;}
 .itemList > li{display: inline-block; vertical-align: top; width: 50%; padding: 15px 4px 0; font-size: 12px;}
@@ -1755,6 +1757,8 @@ img.fullImg{width: 100%;}
 
 .indentList{margin: 8px 0 0;}
 .indentList > span{display: block; padding: 0 0 2px 15px; text-indent: -15px; font-size: 12px;  line-height: 17px; word-break: keep-all;}
+
+.btnGroup > a:last-child{margin-left: 3px; background-color: #9c836a; color: #fff;}
 
 /*About Us*/
 .aboutUs{}
@@ -1832,10 +1836,7 @@ img.fullImg{width: 100%;}
 .pictoList > li dt {font-weight:bold; padding-bottom:3px;}
 .pictoList > li .desc{line-height: 17.5px;}
 
-
 /*artist view*/
-h2.title{font-size: 14px; font-weight: bold; color: #111;}
-
 .artistWrap{}
 .artistWrap .title{margin: 0 0 5px;}
 .artistWrap .title > span{display: block; margin: 4px 0 0; color: #9c836a;}
@@ -1857,7 +1858,20 @@ h2.title{font-size: 14px; font-weight: bold; color: #111;}
 .photoList .thumb{width: 100%;}
 .photoList .desc{position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; font-size: 12px; font-weight: bold; color: #fff;}
 
-
+/*studio*/
+.studioWrap h2.title{color: #333; margin: 15px 0 4px;}
+.studioWrap dl.application{}
+.studioWrap dl.application > dt{font-size: 14px; font-weight: bold; color: #333;}
+.studioWrap dl.application > dd{margin: 6px 0 30px; font-size: 12px; line-height: 17.5px;}
+.studioWrap dl.application > dd:last-child{margin-bottom: 0;}
+.studioWrap dl.application > dd > p{line-height: 17.5px;}
+.studioWrap dl.application > dd > ul.listBar{margin: 1px 0 5px;}
+.studioWrap dl.application > dd > ul.list > li{padding-bottom: 2px; line-height: 17.5px;}
+.studioWrap dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
+.studioTable{margin: 10px 0 0;}
+.studioTable tbody td{border-right: 1px solid #e9e5e2; word-break: keep-all;}
+.studioTable tbody td:last-child{border-right: none;}
+.studioTable + p.addTxt{margin: 7px 0 0; font-size: 11px; text-align: right; color: #999; line-height: 13px;}
 
 
 

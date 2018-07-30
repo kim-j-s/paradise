@@ -1,0 +1,74 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":"STUDIO PARADISE"
+		})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">고객지원</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">시설안내</a></li>
+					<li><a href="#">대관안내</a></li>
+					<li><a href="#">이벤트/대관현황</a></li>
+					<li><a href="#" class="on">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt"><span class="color">스튜디오 파라다이스 고객센터</span>는 <br class="dpib"><span class="color">연중 무휴 24시간</span> 운영됩니다.</p>
+
+			<div class="help">
+				<a href="#" class="ty1">
+					<strong class="tit">공지사항</strong>
+					<p class="desc">스튜디오 파라다이스의 다양한 소식을 확인해 보세요.</p>
+					<div class="go">
+						<span class="btnMoreTxt">바로가기</span>
+					</div>
+				</a>
+				<a href="#" class="ty2">
+					<strong class="tit">오시는 길</strong>
+					<p class="desc">파라다이스시티로 오시는 길을 소개합니다. 가까운 주차장도 확인하세요.</p>
+					<div class="go">
+						<span class="btnMoreTxt">바로가기</span>
+					</div>
+				</a>
+			</div>
+			<div class="help">
+				<a href="#" class="ty3">
+					<strong class="tit">FAQ</strong>
+					<p class="desc">자주 문의하는 질문에 대한 답변을 확인하실 수 있습니다.</p>
+					<div class="go">
+						<span class="btnMoreTxt">바로가기</span>
+					</div>
+				</a>
+				<a href="#" class="ty4">
+					<strong class="tit">이용문의</strong>
+					<p class="desc">궁금하신 점은 무엇이든 물어보세요.</p>
+					<div class="go">
+						<span class="btnMoreTxt">바로가기</span>
+					</div>
+				</a>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<div class="contact">
+			<ul>
+				<li>STUDIO PARADISE 전화문의: <a class="roboto" href="tel:032-000-0000">032-000-0000</a></li>
+				<li>E-mail: <a class="roboto" href="mailto:p-city@pradian.com">p-city@pradian.com</a></li>
+			</ul>
+		</div>
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
