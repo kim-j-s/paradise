@@ -1738,10 +1738,10 @@ img.fullImg{width: 100%;}
 
 .itemList2 > li{display: table; width: 100%;}
 .itemList2 > li + li{padding: 16px 0 0;}
-.itemList2 > li > *{display: table-cell; vertical-align: top;}
-.itemList2 .img{width: 116px;}
+.itemList2 > li > a{display: table; width: 100%;}
+.itemList2 .img{display: table-cell; vertical-align: top; width: 116px;}
 .itemList2 .img > img{width: 100%;}
-.itemList2 .txtArea{padding:  0 0 0 12px;}
+.itemList2 .txtArea{display: table-cell; vertical-align: top; padding:  0 0 0 12px;}
 .itemList2 .txtArea > *{display: block; width: 100%; line-height: 1;}
 .itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
 .itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
@@ -1831,6 +1831,33 @@ img.fullImg{width: 100%;}
 .pictoList > li.ty5:before {background-position:0 -92px;}
 .pictoList > li dt {font-weight:bold; padding-bottom:3px;}
 .pictoList > li .desc{line-height: 17.5px;}
+
+
+/*artist view*/
+h2.title{font-size: 14px; font-weight: bold; color: #111;}
+
+.artistWrap{}
+.artistWrap .title{margin: 0 0 5px;}
+.artistWrap .title > span{display: block; margin: 4px 0 0; color: #9c836a;}
+.artistWrap .carrer .side3 .roboto{color: #333; font-weight: 600;}
+.artistWrap .carrer .side3 table th{padding-right: 12px;}
+.artistWrap .carrer .side3 table td{padding-bottom: 6px;}
+.artistWrap .albumList{margin: 0 -8px; font-size: 0;}
+.artistWrap .albumList > li{display: inline-block; width: 101px; padding: 10px 8px; vertical-align: top; text-align: center;}
+.artistWrap .albumList .img{width: 80px; margin: 0 auto;}
+.artistWrap .albumList .img > img{width: 100%;}
+.artistWrap .albumList .txt{width: 100%; margin: 6px 0 0; font-size: 12px; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
+
+/*PHOTOS & VIDEOS*/
+.photoList{padding: 0 0 10px;}
+.photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 600; margin-bottom: 4px;}
+.photoList ul li{position: relative; margin: 0 0 8px;}
+.photoList ul li a{display: block;}
+.photoList ul li.video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
+.photoList .thumb{width: 100%;}
+.photoList .desc{position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; font-size: 12px; font-weight: bold; color: #fff;}
+
+
 
 
 
