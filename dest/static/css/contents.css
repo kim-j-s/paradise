@@ -76,6 +76,7 @@
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
 .layerfullWrap.btnAdd #layerContent {height:100%;}
 .layerfullWrap.btnAdd #layerContent:after {content:''; display:block; height:20px;}
+#layerContent > .layerInner {height:calc(100% - 20px); overflow:auto;}
 
 #container {position:relative; padding:0 16px; overflow:hidden;}
 #container:after {content:''; display:block; height:20px;}
@@ -148,6 +149,8 @@
 .btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;}
 .btnMore:after {content:''; position:absolute; top:7px; left:2px; width:12px; border-top:2px solid #111;}
 .btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 3px; background-size:6px 10px; line-height:16px;}
+.btnMoreTxt.ty1 {top:0 !important;}
+.btnMoreTxt.ty2 {top:0 !important;; right:16px !important;;}
 .btnCalendarView {display:inline-block; width:20px; height:20px; text-indent:-9999px;}
 .btnCalendarView {background:url(../images/common/icon/icon_calendar2.png) no-repeat 0 0; background-size:20px 40px;}
 .btnCalendarView:disabled {background:url(../images/common/icon/icon_calendar2.png) no-repeat 0 -20px; background-size:20px 40px;}
@@ -193,6 +196,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .notiTxt.list dt.point {color:#e66045;}
 .notiTxt.list dd > ul {padding-top:4px;}
 
+.notiTxt2 {padding-left:20px; font-size:11px; line-height:14px; color:#e66045;}
+.notiTxt2 {background:url(../images/common/icon/icon_mark2.png) no-repeat left top; background-size:13px 13px;}
+
 
 /* 공통 리스트 */
 .list {}
@@ -228,8 +234,10 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent.none {padding:0; border:none;}
 .txtContent + .txtContent {padding-top:20px; border:none;}
 .txtContent + .txtContent.t36 {padding-top:33px;}
+.txtContent + .txtContent.t36.swipeType1, .txtContent + .txtContent.t36.swipeType2 {margin-top:0;}
 .txtContent .thumb {width:100%;}
 .txtContent dl > .tit {display:block; font-weight:bold; font-size:14px; line-height:18px; color:#333;}
+.txtContent dl > .tit .subTxt {display:block;}
 .txtContent dl > .desc {padding:13px 0 0 0; font-size:12px; line-height:16px;}
 .txtContent dl > .tit + .desc {padding:7px 0 0 0;}
 .txtContent .thumb + dl > .tit {padding:12px 0 0 0;}
@@ -930,7 +938,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .smallItemNoti .ty2 {background:#857b71;}
 .smallItemNoti .ty3 {background:#9d836a;}
 
-.prodListWrap {width:calc(100% + 32px); margin-left:-16px; padding:12px 16px 10px 16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
+.prodListWrap {width:calc(100% + 32px); padding:12px 16px 10px 16px; margin-left:-16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
+.prodListWrap.etc {width:100%; padding:0; margin:0; border:none;}
 .prodList {overflow:hidden; width:calc(100% + 8px);}
 .prodList > li {float:left; width:33.3%; padding-left:8px; margin-top:8px;}
 .prodList > li:nth-child(3n + 1) {padding-left:0; width:calc(33.3% - 8px);}
@@ -940,6 +949,15 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .prodList > li .inner .thumb:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.4;}
 .prodList > li img {width:100%;}
 .prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:11px; color:#fff; text-align:center;}
+
+.prodList.etc {width:100%;}
+.prodList.etc > li {width:50%; padding:0 4px 0 0; margin-top:8px;}
+.prodList.etc > li:nth-child(even) {padding:0 0 0 4px;}
+.prodList.etc > li a {display:block;}
+.prodList.etc > li:nth-child(3n + 1) {width:50%;}
+.prodList.etc > li:nth-child(-n + 2) {margin-top:0;}
+
+
 
 .upToWrap {width:calc(100% + 32px); margin-left:-16px; padding:0 16px 18px 16px; background:#f9f9f9;}
 .upTo {display:table; width:100%;}
@@ -1406,6 +1424,9 @@ line-height:18px;}
 
 .detailTop {}
 .detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
+.detailTop > .subTitle {color:#333;}
+.detailTop > .title + .subTitle {padding:4px 0 0 0;}
+.detailTop > .subTitle + .detailDesc {padding:8px 0 0 0; color:#333; border:none;}
 .detailTop > .desc {padding:5px 0 13px 0; font-size:12px; color:#333; line-height:16px;}
 .detailTop > .detailDesc {padding:13px 0 18px 0; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
 .detailTop .title + .detailDesc {padding:13px 0 0 0; border-top:none;}
@@ -1434,7 +1455,9 @@ line-height:18px;}
 .stationCont .txt.other {padding:0 0 2px 0; font-size:11px; line-height:14px;}
 .stationCont .tag {display:block; padding:5px 0 9px 0; font-size:12px; color:#9c836a; line-height:14px;}
 
-.fineEvent {width:calc(100% + 32px); padding:28px 0 36px 16px; margin-left:-16px; background:#f9f9f9;}
+
+
+.fineEvent {width:calc(100% + 32px); padding:28px 0 32px 16px; margin-left:-16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .fineEvent .swiper-container {padding-right:16px;}
 .fineEvent.single {padding:28px 0 36px 0; }
 .fineEvent.single .fineEventCont {width:100%; text-align:center; font-size:0;}
@@ -1591,9 +1614,39 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px;}
 .visualTop .titleArea .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px;}
 .visualTop .titleArea .txtArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
-.visualTop .desc {padding:13px 16px 0 16px; font-size:12px; line-height:16px;}
+.visualTop > .desc {padding:13px 16px 0 16px; font-size:12px; line-height:16px;}
+.visualTop.casino > .desc {margin-top:33px;}
 
 .visualTop + .swipeType1 {margin-top:30px;}
+
+.jackpot {position:absolute; left:0; bottom:-15px; width:100%; padding:0 16px;}
+.jackpot .inner {position:relative; padding:20px 0 23px 0; text-align:center;}
+.jackpot .inner {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 16px 12px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 16px 12px rgba(0,0,0,.25);
+	box-shadow: 0 16px 12px rgba(0,0,0,.25);
+}
+.jackpot .inner:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.4;}
+.jackpot .cont {position:relative; z-index:1; color:#fff;}
+.jackpot .cont > .tit {display:block; padding-bottom:9px; text-align:center; font-weight:bold;}
+.jackpot .cont > .money {}
+.jackpot .cont > .money .amount {display:inline-block; padding-left:25px; background:url(../images/common/icon/icon_won.png) no-repeat left center; background-size:16px 12px; font-size:20px; font-weight:300; letter-spacing:5px;}
+
+.FacilitiesList {overflow:hidden;}
+.FacilitiesList li {float:left; width:50%; padding:0 4px 0 0; margin-top:8px; }
+.FacilitiesList li:nth-child(even) {padding:0 0 0 4px;}
+.FacilitiesList li:nth-child(-n + 2) {margin-top:0;}
+.FacilitiesList li .inner {position:relative; padding:73px 0 17px 0; border:1px solid #e7e3e0;}
+.FacilitiesList li .inner:before {content:''; position:absolute; top:19px; left:50%; margin-left:-22px; width:44px; height:44px; background:url(../images/casino/casino_facilities.jpg) no-repeat; background-size:44px 176px;}
+.FacilitiesList li.ty1 .inner:before {background-position:0 0;}
+.FacilitiesList li.ty2 .inner:before {background-position:0 -44px;}
+.FacilitiesList li.ty3 .inner:before {background-position:0 -88px;}
+.FacilitiesList li.ty4 .inner:before {background-position:0 -132px;}
+.FacilitiesList li .inner .count {display:block; font-weight:bold; font-size:20px; text-align:center;}
+.FacilitiesList li .inner .txt {display:block; padding:5px 0 0 0; font-size:12px; text-align:center;}
 
 
 /* dimmed layer popup */
@@ -1624,6 +1677,15 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType1 .counter .now {font-weight:bold;}
 .swipeType1 > dl > .tit {padding-bottom:10px;}
 
+.swipeType2 {}
+.swipeType2 .swiper-pagination {position:static; padding-left:8px;}
+.swipeType2 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
+.swipeType2 .swiper-container {}
+.swipeType2 .swiper-pagination {display:none;}
+.swipeType2 .counter {padding-left:7px;}
+.swipeType2 .counter .now {font-weight:bold;}
+.swipeType2 > dl > .tit {padding-bottom:10px;}
+
 .galleryInner {}
 .galleryInner.etc {padding:0 12px;}
 .galleryInner > img {width:100%;}
@@ -1647,8 +1709,6 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 .swiper-slide > a {display:block;}
 .txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
-.txtContent.moreAdd .btnMoreTxt {top:0; right:16px;}
-.fineEvent .btnMoreTxt {right:16px;}
 
 /* etc */
 .contReset {}
