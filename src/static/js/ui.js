@@ -890,7 +890,7 @@ $(function(){
 		var containerHeight = $('#container').height();
 		var FooterHeight = $('#footerWrap').height();
 
-		$('.dp').html(Top);
+		$('.dp').html(Top + ' , ' + containerHeight + ' , ' + (WinHeight - 110) + ' , ' + (containerHeight - Top));
 
 		if (FloatingBtn >= 1)
 		{

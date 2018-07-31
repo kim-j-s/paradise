@@ -146,6 +146,7 @@
 
 
         <!-- 하단 영역 -->
+        <a href="#none" class="pageTop">Top</a>
         <footer id="footerWrap">
             <div class="footerTop">
                 <div class="footerLinkTop">
@@ -247,9 +248,9 @@
                     <a href="#"><span>이용약관</span></a>
                 </div>
             </div>
-            <a href="#none" class="pageTop">Top</a>
 
             <div class="dp">0</div>
+
         </footer>
 
         <script type="text/javascript">
@@ -260,45 +261,8 @@
                     }, 'slow');
                 });
 
-                /*
 
-                var FooterHeight = $('#footerWrap').height();
-                var WinHeight = $('html, body').height();
-                console.log(FooterHeight + ' , ' + WinHeight);
 
-                $(window).scroll(function(){
-                	var WinHeight = $('html, body').height();
-                	var htmlScroll = $('html, body').scrollTop();
-                	var floatingTab = $('.floatingTab').length;
-                	var FooterHeight = $('#footerWrap').height();
-                	var BreakPosition = WinHeight - FooterHeight;
-
-                	$('.dp').html(htmlScroll + ' , ' + FooterHeight + ' , ' + BreakPosition);
-                	
-                	if ( htmlScroll > 60)
-                	{
-                		$('.headerFixed').addClass('fixed');
-                	} else if (htmlScroll < 60 )
-                	{
-                		$('.headerFixed').removeClass('fixed');
-                	}
-
-                	if (floatingTab == 1)
-                	{
-                		console.log('작동');
-                		if ( htmlScroll > 60)
-                		{
-                			$('.floatingTab').addClass('on');
-                			$('.floatingTab').parent('.tabWrap').css('padding-top','41px');
-                		} else if (htmlScroll < 60 )
-                		{
-                			$('.floatingTab').removeClass('on');
-                			$('.floatingTab').parent('.tabWrap').css('padding-top','0');
-                		}
-                	}
-                });
-
-                */
             });
         </script>
 
