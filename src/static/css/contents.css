@@ -1828,9 +1828,9 @@ img.fullImg{width: 100%;}
 
 .imgBox{position: relative; margin: 35px 0 0;}
 .imgBox .btnMoreTxt{position: absolute; top: 2px; right: 0;}
+.imgBox .txt{padding-bottom: 14px;}
 .imgBox > h2{margin: 0 0 16px;}
 .imgBox > .fullImg{display: block; margin: 0 0 15px;}
-.imgBox > .descText{}
 
 /*About Us*/
 .aboutUs{}
