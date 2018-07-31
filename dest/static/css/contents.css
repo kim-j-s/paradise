@@ -1674,8 +1674,8 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .visualTop .titleArea {position:relative;}
 .visualTop .titleArea > img {width:100%;}
 .visualTop .titleArea .txtArea {position:absolute; bottom:16px; left:16px; color:#fff;}
-.visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px;}
-.visualTop .titleArea .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px;}
+.visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4);}
+.visualTop .titleArea .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
 .visualTop .titleArea .txtArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
 .visualTop > .desc {padding:13px 16px 0 16px; font-size:12px; line-height:16px;}
 .visualTop.casino > .desc {margin-top:33px;}
@@ -1785,7 +1785,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 /*윤주미*/
 
-h2.title{font-size: 14px; font-weight: bold; color: #111;}
+h2.title{margin-bottom: 3px; font-size: 14px; font-weight: bold; color: #111;}
 p.descText{font-size: 12px; line-height: 18px;}
 div.divTop{border-top: 1px solid #e7e3e0;}
 div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
@@ -1825,6 +1825,12 @@ img.fullImg{width: 100%;}
 .indentList > span{display: block; padding: 0 0 2px 15px; text-indent: -15px; font-size: 12px;  line-height: 17px; word-break: keep-all;}
 
 .btnGroup > a:last-child{margin-left: 3px; background-color: #9c836a; color: #fff;}
+
+.imgBox{position: relative; margin: 35px 0 0;}
+.imgBox .btnMoreTxt{position: absolute; top: 2px; right: 0;}
+.imgBox > h2{margin: 0 0 16px;}
+.imgBox > .fullImg{display: block; margin: 0 0 15px;}
+.imgBox > .descText{}
 
 /*About Us*/
 .aboutUs{}
