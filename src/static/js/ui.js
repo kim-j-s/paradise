@@ -607,7 +607,6 @@ $(window).scroll(function(){
 
 	if (floatingTab == 1)
 	{
-		console.log('작동');
 		if ( htmlScroll > 60)
 		{
 			$('.floatingTab').addClass('on');
@@ -875,8 +874,9 @@ $(function(){
 
 /* floating button */
 $(function(){
-	$('#wrap').scroll(function(){
-		var Top = $('#wrap').scrollTop();		
+	//$('#wrap').scroll(function(){
+	$(window).scroll(function(){
+		var Top = $(window).scrollTop();		
 		FloationEvent(Top);
 	});
 
@@ -888,15 +888,16 @@ $(function(){
 		var WinHeight = $(window).height();
 		var FloatingBtn = $('.floating').length;
 		var containerHeight = $('#container').height();
+		var FooterHeight = $('#footerWrap').height();
+
+		$('.dp').html(Top);
 
 		if (FloatingBtn >= 1)
 		{
 			if ( (containerHeight - Top) > (WinHeight - 110) )
 			{
-				$('#wrap').css('padding-bottom','50px');
-				$('.floating').css('position','absolute');
+				$('.floating').css('position','fixed');
 			} else {
-				$('#wrap').css('padding-bottom','0');
 				$('.floating').css('position','static');
 			}
 		}		
@@ -1051,4 +1052,25 @@ $(function(){
 	function commaSeparateNumber(x){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
+});
+
+
+// membership select
+$(function(){
+	$('.cardSelect > li').each(function(idx){
+		$(this).click(function(){
+			if ( !$(this).find('.ele').hasClass('on') )
+			{
+				$(this).children('.ele').addClass('on');
+				$(this).find('label', $(this)).trigger('click');
+			} else if ( $(this).find('.ele').hasClass('on') )
+			{
+				$(this).children('.ele').removeClass('on');
+				$(this).find('label', $(this)).trigger('click');
+			}
+		});
+		$(this).find('label').on('click', function(e) {
+			e.stopPropagation();
+		});
+	});
 });

@@ -38,7 +38,51 @@
 /* ==============================
  * footer
  * ============================== */
-footer {line-height:50px; background:#333; text-align:center; color:#fff;}
+#footerWrap {position:relative; padding-top:30px;}
+.footerTop {background:#191817;}
+.footerTop > .footerLinkTop {overflow:hidden;}
+.footerTop > .footerLinkTop ul {display:table; width:100%;}
+.footerTop > .footerLinkTop ul li {display:table-cell; width:33.3%; height:38px; vertical-align:middle; border-bottom:1px solid #474645;}
+.footerTop > .footerLinkTop ul li + li {border-left:1px solid #474645;}
+.footerTop > .footerLinkTop a {display:block; height:38px; padding:10px 0 0 0; text-align:center;}
+.footerTop > .footerLinkTop a span {display:inline-block; font-family:'Roboto'; font-weight:400; font-size:11px; color:#fff; line-height:20px; text-align:left; opacity:0.7;}
+.footerTop > .footerLinkTop .arrive span {padding-left:25px; background:url(../images/common/icon/icon_arrive.png) no-repeat left center; background-size:15px 17px;}
+.footerTop > .footerLinkTop .tel span {padding-left:22px; background:url(../images/common/icon/icon_tel.png) no-repeat left center; background-size:16px 15px;}
+.footerTop > .footerLinkTop .offers {padding:5px 0 0 0;}
+.footerTop > .footerLinkTop .offers span {line-height:14px;}
+.footerTop > .inner {padding:24px 16px 30px 16px;}
+.footerTop > .inner .appService dt {font-family:'Roboto'; font-weight:bold; font-size:12px; color:#9c836a;}
+.footerTop > .inner .appService dd p {font-size:12px; padding:5px 0 18px 0; color:#fff; opacity:0.5;}
+.footerTop > .inner .appService dd .appBtn {overflow:hidden;}
+.footerTop > .inner .appService dd .appBtn a {float:left; width:105px;}
+.footerTop > .inner .appService dd .appBtn a + a {margin-left:12px;}
+.footerTop > .inner .appService dd .appBtn a img {width:100%;}
+
+.footerLinkMIddle {margin-top:16px; overflow:hidden;}
+.footerLinkMIddle .familySite {float:left; width:144px; padding-top:3px; border-bottom:1px solid #8c8c8b;}
+.footerLinkMIddle .familySite .selectbox {height:26px; border:none;}
+.footerLinkMIddle .familySite .selectbox {background:#191817 url(../images/common/icon/bg_select2.png) no-repeat right center; background-size:8px 5px;}
+.footerLinkMIddle .sns {float:left; margin-left:30px; overflow:hidden;}
+.footerLinkMIddle .sns a {position:relative; display:inline-block; float:left; font-size:0; width:30px; height:30px; background:url(../images/common/icon/icon_footer_sns.png) no-repeat; background-size:30px 300px; text-indent:-9999px;}
+.footerLinkMIddle .sns a:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; border:1px solid #a3a3a2; border-radius:50%; box-sizing:border-box;}
+.footerLinkMIddle .sns a + a {margin-left:12px;}
+.footerLinkMIddle .sns .facebook {background-position:0 0;}
+.footerLinkMIddle .sns .insta {background-position:0 -30px;}
+.footerLinkMIddle .sns .youtube {background-position:0 -60px;}
+.footerLinkMIddle .sns .blog {background-position:0 -90px;}
+
+.footerBottom {padding:18px 16px 20px 16px; background:#161411;}
+.footerBottom > dl {}
+.footerBottom > dl dt {font-weight:bold; font-size:10px; color:#9c836a;}
+.footerBottom > dl dd {padding:3px 0 6px 0;font-size:10px; color:#7b7a7a; line-height:16px;}
+.footerBottom > dl dd a {color:#7b7a7a;}
+.footerBottom > dl dd .mail {display:inline-block; font-weight:bold; border-bottom:1px solid #7b7a7a;}
+.footerBottom > .copyright {padding-bottom:14px; font-size:10px; color:#60605e;}
+.footerBottom > .footerLinkBottom {overflow:hidden;}
+.footerBottom > .footerLinkBottom a {position:relative; float:left;}
+.footerBottom > .footerLinkBottom a + a {padding-left:7px; margin-left:7px; }
+.footerBottom > .footerLinkBottom a + a:before {content:''; position:absolute; top:3px; left:0; width:1px; border-bottom:8px solid #454341;}
+.footerBottom > .footerLinkBottom a span {display:block; font-weight:bold; font-size:10px; color:#7b7a7a; border-bottom:1px solid #7b7a7a;}
 
 
 @media screen and (max-width: 1214px) {
