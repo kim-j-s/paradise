@@ -307,11 +307,9 @@ $(function(){
 			}
 
 			var eventClassChk = $(this).attr('class').split(' ')[1];
-			console.log(eventClassChk);
 			var eventClassChkLng = $("."+eventClassChk).length;
 			var eventClassidx = $("."+eventClassChk).index();
 
-			//console.log(eventClassidx);		
 
 			if ( addDayChk == 0 )
 			{
@@ -328,7 +326,6 @@ $(function(){
 				var EventExDay = eventClassChkLng - thisIndex;
 				$('.eventDayChk').eq(i + EventExDay).removeClass('noEventDay').addClass(eventClassChk + ' addDay');
 
-				console.log(i + ' , ' + thisIndex + ' , ' + EventExDay);
 
 				if ( $('.eventDayChk').hasClass('first') &&  CalendarResetCnt == 0)
 				{
@@ -336,7 +333,6 @@ $(function(){
 					$(this).addClass('last');
 					CalendarLast = i;
 					calendarRangeEx(CalendarFirst, CalendarLast);
-					console.log('동작체크 11 ' + i);
 				} else {
 					if (CalendarResetCnt == 1)
 					{
@@ -344,11 +340,9 @@ $(function(){
 						$(this).addClass('first');
 						calendarResetEx(i);
 						CalendarResetCnt = 0;
-						console.log('동작체크 21');
 					} else {
 						$(this).addClass('first');
 						calendarResetEx(i);
-						console.log('동작체크 31 ' + i);
 					}
 				}
 				addDayChk++;
@@ -360,7 +354,6 @@ $(function(){
 					$(this).addClass('last');
 					CalendarLast = i;
 					calendarRangeEx(CalendarFirst, CalendarLast);
-					console.log('동작체크 1 ' + i);
 				} else {
 					if (CalendarResetCnt == 1)
 					{
@@ -368,11 +361,9 @@ $(function(){
 						$(this).addClass('first');
 						calendarResetEx(i);
 						CalendarResetCnt = 0;
-						console.log('동작체크 2');
 					} else {
 						$(this).addClass('first');
 						calendarResetEx(i);
-						console.log('동작체크 3 ' + i);
 					}
 				}
 			}
@@ -385,7 +376,6 @@ $(function(){
 		CalendarFirst = i;
 		for (var max = 0 ; max < i; max++)
 		{
-			console.log(max);
 			$('.eventDayChk').eq(max).addClass('noEventDay');
 		}
 		$('.datepickStart').removeClass('dateFoucs');
@@ -701,7 +691,6 @@ $(function(){
 	$(window).load(function(){
 		if ( $('.dimmedLayer').css('display') == 'block' )
 		{
-			console.log('z');
 			$('body').css('height','auto');
 			var windHeight = $('body').height();
 			$('.dimmedLayer').css({'display':'block', 'height':windHeight});
@@ -915,7 +904,13 @@ $(function(){
 	});
 
 	$(window).resize(function(){
-		PageTop();
+		var Top = $(window).scrollTop();
+		PageTop(Top);
+	});
+
+	$(window).load(function(){
+		var Top = $(window).scrollTop();		
+		PageTop(Top);
 	});
 
 	function PageTop(Top){
@@ -1098,6 +1093,32 @@ $(function(){
 		});
 		$(this).find('label').on('click', function(e) {
 			e.stopPropagation();
+		});
+	});
+});
+
+// Dine&Drink Sort
+$(function(){
+	$('.sorting').each(function(sort){
+		$(this).change(function(){
+			OptionVal = $(this).val();
+			if ( OptionVal == 'ty_a')
+			{
+				$('.fineList').eq(sort).children('li').show();
+			} else if ( OptionVal == 'ty_r' )
+			{
+				className = 'ty_r';
+				SortList(sort, className);
+			} else if ( OptionVal == 'ty_c' )
+			{
+				className = 'ty_c';
+				SortList(sort, className);
+			}
+
+			function SortList(sort, className){
+				$('.fineList').eq(sort).children('li').hide();
+				$('.fineList').eq(sort).find('.'+className).show();
+			}
 		});
 	});
 });

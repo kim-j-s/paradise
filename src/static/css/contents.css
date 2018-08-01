@@ -242,6 +242,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent dl > .tit .subTxt {display:block;}
 .txtContent dl > .desc {padding:13px 0 0 0; font-size:12px; line-height:16px;}
 .txtContent dl > .tit + .desc {padding:7px 0 0 0;}
+.txtContent dl > .tit + .desc.dot {padding:0; margin-top:7px; height:32px;}
 .txtContent .thumb + dl > .tit {padding:12px 0 0 0;}
 .txtContent .btnMoreTxt {position:absolute; top:20px; right:0;}
 .txtContent.t36 .btnMoreTxt {top:36px;}
@@ -1039,7 +1040,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 이벤트 페이지 */
 .eventListWrap {position:relative;}
-.eventListWrap .btnMoreTxt {position:absolute; top:29px; right:0; }
+.eventListWrap .btnMoreTxt {position:absolute; top:29px; right:0;}
+.eventListWrap > .btn.ty9 {position:absolute; top:27px; right:0;}
 
 .eventListChange {padding:27px 0 10px 0; overflow:hidden;}
 .eventListChange > button {float:left;}
@@ -1304,47 +1306,21 @@ line-height:18px;}
 
 
 /* 맴버십 혜택 */
-.benefitList {overflow:hidden;}
-.benefitList > li {position:relative; float:left; width:calc(50% - 4px); height:148px; margin-top:12px; padding-top:38px; text-align:center; border:1px solid #e7e3e0;}
-.benefitList > li {
-	display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-	flex-direction: column;
-}
-.benefitList > li:nth-child(even) {margin-left:8px;}
-.benefitList > li:nth-child(1), .benefitList > li:nth-child(2) {margin-top:0;}
-.benefitList > li:before {content:''; position:absolute; top:15px; left:50%; margin-left:-12px; width:24px; height:23px; background:url(../images/mypage/icon_membership.png) no-repeat; background-size:180px 23px;}
-.benefitList > li.park:before {background-position:0 0;}
-.benefitList > li.shuttle:before {background-position:-26px 0;}
-.benefitList > li.entertainment:before {background-position:-52px 0;}
-.benefitList > li.food:before {background-position:-78px 0;}
-.benefitList > li.room:before {background-position:-104px 0;}
-.benefitList > li.bene:before {background-position:-130px 0;}
-.benefitList > li.acc:before {background-position:-156px 0;}
-.benefitList > li .tit {display:block; padding-bottom:3px; text-align:center; font-size:12px; color:#9c836a;}
-.benefitList > li .benefitDetail {
-	display: -webkit-box;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-	flex:1;
-	flex-direction:column;
-	-webkit-box-align: center;
-		-webkit-align-items: center;
-		-ms-flex-align: center;
-		align-items: center;
-	 -webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-}
-.benefitList > li .benefitDetail * {flex:none;}
-.benefitList > li .benefitDetail .detailTxt {padding:0 3px; line-height:18px;}
-.benefitList > li .benefitCondition {padding:5px 0; background:#f9f9f9; font-size:11px; color:#999;}
-.benefitList > li .benefitCondition .txt {line-height:16px;}
-.membershipCont .selectDiv + .benefitList {margin-top:20px;}
+.benefitList {}
+.benefitList > li {position:relative; padding:13px 0 13px 40px; border-bottom:1px solid #e7e3e0;}
+.benefitList > li > dl dt {padding-bottom:3px; font-size:12px; color:#9c836a;}
+.benefitList > li > dl dd {color:#333;}
+.benefitList > li > .txt {position:absolute; top:13px; right:0; font-size:11px; color:#999;}
+.benefitList > li:before {content:''; position:absolute; top:50%; left:0; margin-top:-11px; width:22px; height:22px; background:url(../images/mypage/icon_membership.png) no-repeat; background-size:22px 198px;}
+.benefitList > li.save:before {background-position:0 0;}
+.benefitList > li.bene:before {background-position:0 -22px;}
+.benefitList > li.point:before {background-position:0 -44px;}
+.benefitList > li.room:before {background-position:0 -66px;}
+.benefitList > li.fnb:before {background-position:0 -88px;}
+.benefitList > li.park:before {background-position:0 -110px;}
+.benefitList > li.bus:before {background-position:0 -132px;}
+.benefitList > li.entertainment:before {background-position:0 -154px;}
+.benefitList > li.fac:before {background-position:0 -176px;}
 
 /* 맴버십 쿠폰 내역 */
 .couponTotal {width:calc(100% + 32px); padding:12px 16px; margin-left:-16px; overflow:hidden; border-bottom:1px solid #e7e3e0;}
@@ -1495,11 +1471,12 @@ line-height:18px;}
 .dineList li > a {display:block;}
 .dineList li .spOfferWrap {padding-top:0;}
 
-.fineList {padding:15px 0 0 0;}
-.fineList > li {border:1px solid #e9e9e9;}
-.fineList > li + li {margin-top:15px;}
+.fineList {padding:15px 0 0 0; margin-top:-15px;}
+.fineList > li {margin-top:15px; border:1px solid #e9e9e9;}
+.fineList > li:last-child {margin-bottom:0;}
 .fineList > li a {display:block;}
 .fineList > li dl, .fineList > li .table {padding:0 16px;}
+.fineList > li .txtContent dl > .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .fineList li .btnBox {padding:12px;}
 
 .bxWrap {position:relative; width:calc(100% + 32px); margin-left:-16px;}
@@ -1795,6 +1772,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .galleryInner.etc .desc {font-size:12px; line-height:16px;}
 .galleryInner > img + .tit {padding:12px 0 0 0;}
 .galleryInner > .tit + .desc {padding:7px 0 0 0;}
+.galleryInner > .tit + .desc.dot {padding:0; margin-top:7px;}
 .galleryInner > .tit + .list {padding:8px 0 12px 0;}
 .galleryInner > .desc + .list {padding:7px 0 12px 0;}
 .galleryInner > .desc.dot {height:32px;}
@@ -1887,7 +1865,7 @@ img.fullImg{width: 100%;}
 .aboutUs > p.titleTxt > span > br{display: block;}
 .aboutUs > .topArea{margin: 25px 0 -55px;}
 .roomList .galleryInner .tit{font-size: 14px; line-height: 18px;}
-.roomList .galleryInner .desc{font-size: 14px; line-height: 18px;}
+/* .roomList .galleryInner .desc{font-size: 14px; line-height: 18px;} */
 .fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
 
 /*convention*/
