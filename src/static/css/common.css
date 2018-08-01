@@ -84,6 +84,10 @@
 .footerBottom > .footerLinkBottom a + a:before {content:''; position:absolute; top:3px; left:0; width:1px; border-bottom:8px solid #454341;}
 .footerBottom > .footerLinkBottom a span {display:block; font-weight:bold; font-size:10px; color:#7b7a7a; border-bottom:1px solid #7b7a7a;}
 
+.pageTop {position:fixed; bottom:4px; right:16px;}
+.pageTop.fix {position:absolute; display:inline-block; right:16px;}
+.pageTop {z-index:99; width:36px; height:36px; background:url(../images/common/btn/btn_pagetop.png) no-repeat; background-size:cover; text-indent:-9999px;}
+
 
 @media screen and (max-width: 1214px) {
 }
