@@ -1702,9 +1702,10 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .visualTop .titleArea {position:relative;}
 .visualTop .titleArea > img {width:100%;}
 .visualTop .titleArea .txtArea {position:absolute; bottom:16px; left:16px; color:#fff;}
-.visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4);}
+.visualTop .titleArea .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
 .visualTop .titleArea .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
 .visualTop .titleArea .txtArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.visualTop .titleArea .txtArea .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
 .visualTop > .desc {padding:13px 16px 0 16px; font-size:12px; line-height:16px;}
 .visualTop.casino > .desc {margin-top:33px;}
 
@@ -1982,6 +1983,38 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .squareBox{position: absolute; right: 16px; bottom: 27px; padding: 17px 14px 16px; border: 1px solid #fff;  text-align: center; color: #fff; font-family: 'Roboto'; font-size: 12px; text-shadow: 0px 0px 10px rgba(0,0,0,0.6); font-weight: 400; line-height: 1;}
 .squareBox > span{display: block; padding-bottom: 16px; letter-spacing: 1.1px; font-weight: 400;}
 .squareBox:after{content: ''; display: block; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -8px; width: 16px; height: 1px; background-color: #fff; vertical-align: top;}
+.squareBox.type2{width: 80px; height: 80px; border: none; top: 20px; padding: 12px 13px; bottom: unset; background-color: rgba(156,131,106,0.9); text-align: left; font-family: 'Noto Sans'; font-weight: bold; line-height: 15px; font-size: 11px; color: #fff; text-shadow: none;}
+.squareBox.type2:after{top: unset; bottom: 13px; left: 13px;  width: 21px; height: 5px; margin: 0; background: url(../images/common/icon/icon_arrow3.png); vertical-align: top; background-size: 21px auto;}
+
+
+/*SUB MAIN FULL PAGE*/
+.mainFull{height: 100vh;}
+.mainFull #container{height: calc(100% - 90px); padding: 0;}
+.mainFull #footerWrap{padding-top: 0;}
+.mainFull .visualTop{height: 100%;}
+.mainFull .visualTop .titleArea{height: 100%;}
+.mainFull .pageTop{display: none;}
+.mainFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
+.fullVisual{height: 100%;}
+.fullVisual .bx-wrapper{position: relative;}
+.fullVisual .bx-wrapper, .fullVisual .bx-viewport, .fullVisual .normalSwiper, .fullVisual .item{height: 100%;}
+.fullVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
+.fullVisual .viewArea{position: relative; height: 100%;}
+.fullVisual .txtArea {position:absolute; left:0; width: 100%; padding: 0 16px; color:#fff;}
+.fullVisual .txtArea .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
+.fullVisual .txtArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
+.fullVisual .txtArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.fullVisual .txtArea .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
+.fullVisual .squareBox{bottom: 65px;}
+
+.fullVisual.artSpace{padding-bottom: 50px;}
+.fullVisual.artSpace .txtArea{bottom: 45px;}
+.fullVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+
+.fullVisual.wonderbox .txtArea{bottom: 55px;}
+.fullVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+
+
 
 
 @media screen and (max-width:640px){
