@@ -197,7 +197,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .notiTxt.list dt.point {color:#e66045;}
 .notiTxt.list dd > ul {padding-top:4px;}
 
-.notiTxt2 {padding-left:20px; font-size:11px; line-height:14px; color:#e66045;}
+.notiTxt2 {padding-left:20px; font-size:11px; line-height:15px; color:#e66045;}
 .notiTxt2 {background:url(../images/common/icon/icon_mark2.png) no-repeat left top; background-size:13px 13px;}
 
 
@@ -971,7 +971,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .prodList > li .inner .thumb {position:relative;}
 .prodList > li .inner .thumb:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.4;}
 .prodList > li img {width:100%;}
-.prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:11px; color:#fff; text-align:center;}
+.prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:12px; color:#fff; text-align:center;}
 
 .prodList.etc {width:100%;}
 .prodList.etc > li {width:50%; padding:0 4px 0 0; margin-top:8px;}
@@ -1529,6 +1529,7 @@ line-height:18px;}
 .fineEventCont > a .thumb {display:block; width:100%; height:135px;}
 .fineEventCont > a .tit {display:block; padding:12px 12px 4px 12px; font-weight:bold; font-size:14px; color:#111; text-align:left;}
 .fineEventCont > a .desc {height:32px; padding:0 12px; margin-bottom:13px; font-size:12px; line-height:16px; text-align:left;}
+.fineEventCont > a .date{display: block; padding: 0 12px 4px; font-size: 12px; color: #333;}
 
 .dineThumb {width:calc(100% + 32px); margin-left:-16px;}
 .dineThumb > img {width:100%;}
@@ -1784,7 +1785,6 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .Type1 .swiper-slide .thumb {height:135px;}
 .Type1.etc .swiper-slide {border:none;}
 
-
 .swiper-slide > a {display:block;}
 .txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
 
@@ -1801,6 +1801,11 @@ p.descText{font-size: 12px; line-height: 18px;}
 div.divTop{border-top: 1px solid #e7e3e0;}
 div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
 img.fullImg{width: 100%;}
+a.rightBtn{position: absolute; top: 2px; right: 0;}
+.fullBox{position: relative; width: calc(100% + 32px); margin-left: -16px; padding: 0 16px;}
+/*div.fullBox.btm{margin-bottom: -50px; padding-bottom: 50px; z-index: 1;}*/
+.fullBox.bg{padding-top: 25px; background-color: #f9f9f9;}
+.fullBox.bg .rightBtn{top: 27px; right: 16px;}
 
 .fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
 .fileDown > span{display: block; margin-top: 10px;}
@@ -1903,7 +1908,6 @@ img.fullImg{width: 100%;}
 .chromaWrap .facilityBox{padding-bottom: 30px;}
 .chromaWrap .facilityBox:last-child{padding-bottom: 0;}
 .chromaWrap .facilityBox h3{margin: 10px 0 8px;}
-.chromaWrap .floorMap{height: 160px; margin-bottom: 13px; background-color: #666;}
 .chromaWrap .timeTable > .table{margin: -10px 0 0;}
 
 /*픽토그램리스트*/
@@ -1937,7 +1941,6 @@ img.fullImg{width: 100%;}
 .photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 600; margin-bottom: 4px;}
 .photoList ul li{position: relative; margin: 0 0 8px;}
 .photoList ul li a{display: block;}
-.photoList ul li.video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
 .photoList .thumb{width: 100%;}
 .photoList .desc{position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; font-size: 12px; font-weight: bold; color: #fff;}
 
@@ -1972,8 +1975,10 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
 .mainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
 .mainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
-.mainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:16px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
+.mainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
 .mainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.mainVisual .txt.none{padding-top: 0; margin-top: 3px;}
+.mainVisual .txt.none:before {display: none;}
 .mainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
 .mainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 
@@ -2004,26 +2009,60 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .articleWrap > article + article{padding: 28px 0 0;}
 .articleWrap h3{margin: 0 0 14px; font-size: 20px; font-weight: bold; color: #333;}
 .articleWrap article > p.descText{margin-top: 12px;}
-.articleWrap .video{position: relative;}
-.articleWrap .video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
 .artistInfo{padding: 32px 0 0; overflow: hidden;}
 .artistInfo > .artistImg{width: 144px; box-sizing: unset;}
 .artistInfo .descText{line-height: 17.5px;}
 .artistInfo .descText > span{display: block; font-size: 12px; color: #9c836a; vertical-align: top;}
 .artistInfo .name{display: block; margin: 6px 0 9px; font-size: 14px; font-weight: bold; color: #333; vertical-align: top;}
-
 .articleWrap article:nth-child(odd) .artistImg{float: left; padding: 0 14px 5px 0;}
 .articleWrap article:nth-child(even) .artistImg{float: right; padding: 0 0 5px 14px;}
 
 /*Paradise Walk*/
 .walkCompany{margin-top: 20px;}
 .walkCompany > p{font-size: 12px;}
-.walkCompany > .title{}
 .walkCompany > .logo{margin: 0 0 15px; border: 1px solid #a8927e; padding: 15px 30px; text-align: center;}
 .walkCompany > .logo > img{width: 100%;}
 .walkCompany > .name{color: #111; font-weight: bold;}
 .walkCompany > .sub{margin: 5px 0 0; font-size: 11px; color: #999; line-height: 15px;}
 .walkCompany > .desc{margin: 10px 0 0; color: #666; line-height: 17.5px;}
+
+.fineEvent.none{border-top: none; background-color: unset;}
+.video{position: relative;}
+.video a{position: relative; display: block;}
+.video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
+
+.floorMap{position: relative; margin: 0 0 15px;}
+.floorMap a.btnMoreTxt{position: absolute; top: 2px; right: 0;}
+.floorMap .tabWrap{left: 0; width: 100%; margin: 15px 0 0;}
+.floorMap .tabContent{padding: 0;}
+.floorMap .tabSubContent {padding: 0;}
+.floorMap .floorImg{position: relative;}
+.floorMap .floorImg > img{width: 100%;}
+.floorMap .txtArea .tit{margin: 15px 0 8px; font-size: 12px; font-weight: bold; color: #333;}
+.floorMap .txtArea .desc{font-size: 12px; line-height: 17.5px; color: #666;}
+.btnVR{display: block; position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; background: #fff url(../images/common/btn/btn_vr.png) center no-repeat; background-size: 21px auto; border: 2px solid #9c836a; border-radius: 50%;}
+
+.chromaBox{margin: 10px 0;}
+.chromaBox h2.title{margin-bottom: 15px;}
+.chromaBox .swiper-slide p.desc{margin: 10px 0 0; font-size: 12px; color: #333;}
+.chromaBox .swiper-slide p.desc > span{font-weight: bold;}
+.artistSlide h2.title{margin-bottom: 15px;}
+.artistSlide .swiper-container {padding: 0 12px;}
+.artistSlide .swiper-slide {width:80px; margin-right: 16px !important; border:1px solid #e6e6e6;}
+.artistSlide .swiper-slide a{text-align: center;}
+.artistSlide .swiper-slide a > span{display: block; margin: 10px 0 0; font-size: 12px; letter-spacing: -0.02em;}
+.artistSlide .etc .swiper-slide {border:none;}
+.chromaTV{position: relative;}
+.chromaTV h2.title{margin-bottom: 15px;}
+.chromaTV .video > a > p{position: absolute; bottom: 0; left: 0; width: 100%; padding: 12px 10px; font-size: 12px; font-weight: bold; color: #fff;}
+
+.snsArea{padding: 18px 16px 20px; background-color: #1a1917; text-align: center;}
+.snsArea > p{font-size: 11px; color: #fff; opacity: .4;}
+.snsArea > ul{margin: 13px 0 0; font-size: 0;}
+.snsArea > ul li{display: inline-block; vertical-align: top; margin: 0 10px;}
+.snsArea > ul li > a{display: block; width: 30px; height: 30px; border: 1px solid #646362; border-radius: 50%;}
+.snsArea > ul li > a > img{display: block; width: 100%; vertical-align: top;}
+
 
 
 @media screen and (max-width:640px){
