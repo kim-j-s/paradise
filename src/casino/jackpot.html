@@ -1,0 +1,97 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":"PARADISE CASINO"
+		})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">잭팟스토리</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#">EVENTS</a></li>
+					<li><a href="#" class="on">잭팟스토리</a></li>
+					<li><a href="#">게임가이드</a></li>
+					<li><a href="#">시설안내</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt">
+				<span class="color">파라다이스시티 카지노</span>의 <span class="color">잭팟</span>에 관한 모든 것
+			</p>
+
+			<div class="jackpotDp fullWidth">
+				<img class="bg" src="../static/images/casino/bg_jackpot.png" alt="" />
+				<div class="inner">
+					<div class="cont">
+						<strong>Realtime Premiunm Jackpot</strong>
+						<p>
+							<span class="amount">2954951000</span>
+						</p>
+					</div>
+					<div class="cont">
+						<strong>Realtime Mega Jackpot</strong>
+						<p>
+							<span class="real">4951000</span>
+						</p>
+					</div>
+				</div>
+				<img class="coin" src="../static/images/casino/bg_jackpot_coin.png" alt="" />
+			</div>
+
+			<ul class="jactpotHistory">
+				<li>
+					<div class="cont">
+						<dl>
+							<dt>
+								<span>789</span> th
+							</dt>
+							<dd>
+								<span>2018.06.03</span>
+								<span>머신번호 : 3269</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="pay">
+						<span class="roboto">16,640,000</span>
+					</div>
+				</li>
+				<li>
+					<div class="cont">
+						<dl>
+							<dt>
+								<span>788</span> th
+							</dt>
+							<dd>
+								<span>2018.06.03</span>
+								<span>머신번호 : 3269</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="pay">
+						<span class="roboto">16,640,000</span>
+					</div>
+				</li>
+			</ul>
+
+			<div class="tc mt20">
+				@@include('static/include/btn_more.html')
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

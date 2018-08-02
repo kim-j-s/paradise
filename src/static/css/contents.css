@@ -240,6 +240,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent .thumb {width:100%;}
 .txtContent dl > .tit {display:block; font-weight:bold; font-size:14px; line-height:18px; color:#333;}
 .txtContent dl > .tit .subTxt {display:block;}
+.txtContent dl > .tit .date {display:block; padding-top:3px; font-size:12px; font-family:'Roboto'; font-weight:400; color:#333;}
 .txtContent dl > .desc {padding:13px 0 0 0; font-size:12px; line-height:16px;}
 .txtContent dl > .tit + .desc {padding:7px 0 0 0;}
 .txtContent dl > .tit + .desc.dot {padding:0; margin-top:7px; height:32px;}
@@ -408,7 +409,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .table table {width:100%;}
 .table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
 .table table th.roboto {padding-bottom:5px;}
-.table table td {padding:9px 0; text-align:center; font-size:11px; line-height:13px; border-right:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word; text-align:center;}
+.table table td {padding:9px 5px; text-align:center; font-size:11px; line-height:13px; border-right:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word; text-align:center;}
 .table table tr td:last-child {border-right:none;}
 .table table th .day1 {position:relative;}
 .table table th .day1:after {content:''; position:absolute; top:7px; right:-6px; border-top:1px solid #9d836a; width:3px;}
@@ -622,11 +623,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* special Offer */
 .spOfferWrap {padding-top:20px;}
-.spOfferWrap .spOfferHeader {display:table; width:100%;}
+.spOfferWrap .spOfferHeader {display:table; width:100%; table-layout:fixed;}
 .spOfferWrap .spOfferThumb {display:table-cell; width:116px}
 .spOfferWrap .spOfferThumb > img {width:100%; height:65px;}
 .spOfferWrap .spOfferTitle {display:table-cell; padding-left:12px; vertical-align:top;}
-.spOfferWrap .spOfferTitle strong {display:block; margin-top:-4px; font-size:14px; font-weight:bold; color:#111;}
+.spOfferWrap .spOfferTitle strong {display:block; margin-top:-4px; font-size:14px; font-weight:bold; color:#111; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .spOfferWrap .spOfferTitle .date {display:block; padding:1px 0 00 0; font-family:'Roboto'; font-size:12px; color:#333;}
 .spOfferWrap .spOfferTitle .price {font-weight:bold; color:#9c836a;}
 .spOfferWrap .spOfferTitle .price .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
@@ -1053,7 +1054,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .listView .listViewItem a {position:relative; display:block;}
 .listView .listViewItem .thumb {width:100%;}
 .listView .listViewItem strong {display:block; font-weight:bold; padding:11px 0 1px 0; color:#111; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
-.listView .listViewItem .date {display:block; padding-bottom:8px; font-family:'Roboto'; font-size:12px; color:#333;}
+.listView .listViewItem .date {display:block; padding-bottom:8px; font-family:'Roboto'; font-weight:400; font-size:12px; color:#333;}
 .listView .listViewItem .desc {display:block; height:36px; font-size:12px; color:#111; line-height:18px;}
 .listView .listViewItem .type {position:absolute; top:0; left:0; overflow:hidden;}
 .listView .listViewItem .type > * {float:left;}
@@ -1486,7 +1487,7 @@ line-height:18px;}
 
 
 .detailTop {}
-.detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px;}
+.detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px; text-transform:uppercase;}
 .detailTop > .subTitle {color:#333;}
 .detailTop > .title + .subTitle {padding:4px 0 0 0;}
 .detailTop > .subTitle + .detailDesc {padding:8px 0 0 0; color:#333; border:none;}
@@ -1537,6 +1538,9 @@ line-height:18px;}
 .reservationTop .title {display:block; padding:5px 0 10px 0; font-weight:bold; font-size:20px; color:#333;}
 .reservationTop .place {}
 .reservationTop .place .btnUnderline {font-size:14px;}
+
+.infoBox {padding:13px 16px 14px 16px; background:#f9f9f9; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
+.infoBox + .reservationTop {margin-top:8px;}
 
 /* art */
 .artGalleryWrap {padding-bottom:24px;}
@@ -1612,7 +1616,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .contact li {font-size:12px; color:#999;}
 .contact li + li {margin-top:3px;}
 .contact li a {display:inline-block; font-size:12px; color:#666; border-bottom:1px solid #666;}
-
+.help + .contact {margin-top:36px;}
 
 .casinoList {}
 .casinoList li {position:relative; min-height:58px; padding:0 0 14px 60px; border-bottom:1px solid #e7e3e0;}
@@ -1720,6 +1724,33 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .treasureImg {padding:30px 0; margin:11px 0 12px 0; text-align:center; border:1px solid #b69983;}
 .treasureImg > img {width:120px;}
 
+.jackpotDp {position:relative; margin-top:25px;}
+.jackpotDp > .bg {width:100%;}
+.jackpotDp > .coin {position:absolute; right:16px; bottom:-14%; width:14.5%;}
+.jackpotDp .inner {position:absolute; top:50%; left:50%; z-index:1; transform: translate(-50%, -50%);}
+.jackpotDp .inner .cont {}
+.jackpotDp .inner .cont + .cont {margin-top:34px;}
+.jackpotDp .inner .cont strong {display:block; font-size:11px; color:#e7bd93; text-align:center;}
+.jackpotDp .inner .cont p {height:25px; margin-top:7px; background:url(../images/casino/bg_jackpot_pay.png) no-repeat center center; background-size:255px 25px; text-align:center;}
+.jackpotDp .inner .cont p span {display:inline-block; width:255px; height:25px; font-family:'Roboto'; font-weight:400; font-size:20px; color:#fff; text-align:right;}
+.jackpotDp .inner .cont p span {position:relative; left:0.16em; letter-spacing:0.41em;}
+
+.jackpotDp + .jactpotHistory {margin-top:16px;}
+.jactpotHistory {}
+.jactpotHistory li {display:table; width:100%; padding:12px 0 13px 0; border-bottom:1px solid #e7e3e0;}
+.jactpotHistory li .cont {display:table-cell; vertical-align:middle;}
+.jactpotHistory li .pay {display:table-cell; vertical-align:middle;}
+.jactpotHistory li .cont > dl dt {font-family:'Roboto'; font-weight:400; color:#9c836a;}
+.jactpotHistory li .cont > dl dt span {font-weight:bold;}
+.jactpotHistory li .cont > dl dd {font-size:0;}
+.jactpotHistory li .cont > dl dd span {position:relative; display:inline-block; font-size:11px; color:#999; line-height:14px;}
+.jactpotHistory li .cont > dl dd span + span {padding-left:9px; margin-left:8px;}
+.jactpotHistory li .cont > dl dd span + span:before {content:''; position:absolute; top:3px; left:0; width:1px; border-bottom:8px solid #e6e3df;}
+.jactpotHistory li .pay {text-align:right;}
+.jactpotHistory li .pay span {display:inline-block; padding-left:17px; font-weight:bold; color:#9c836a; background:url(../images/common/icon/icon_won_red.png) no-repeat left center; background-size:11px 9px;}
+
+.container + .cabana {margin-top:16px;}
+
 .bxWrap > .link_room {position:absolute; right:16px; bottom:33px; display:inline-block; padding:1px 8px; border:1px solid #fff; font-weight:500; font-size:12px; color:#fff;}
 
 /* dimmed layer popup */
@@ -1784,9 +1815,34 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .Type1 .swiper-slide .thumb {height:135px;}
 .Type1.etc .swiper-slide {border:none;}
 
-
 .swiper-slide > a {display:block;}
 .txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
+
+.selectList {overflow:hidden;}
+.selectList > a {position:relative; float:left; font-size:12px;}
+.selectList > a.on {font-weight:bold; color:#9c836a;}
+.selectList > a + a {padding-left:11px; margin-left:10px;}
+.selectList > a + a:before {content:''; position:absolute; top:4px; left:0; width:1px; border-bottom:8px solid #e7e3e0;}
+.fineEvent > .selectList {margin:16px 0 17px 0;}
+
+.selectGroup {}
+.selectGroup .fineEventGallery {display:none;}
+.selectGroup .fineEventGallery.on {display:block;}
+
+.menuList {margin-top:10px;}
+.menuList + .menuList {margin-top:18px;}
+.menuList > .tit {font-weight:bold; font-size:12px; color:#333;}
+.menuList > dd {padding-top:13px;}
+.menuItem {}
+.menuItem li {display:table; width:100%; table-layout:fixed;}
+.menuItem li + li {margin-top:16px;}
+.menuItem li .thumb {display:table-cell; width:104px;}
+.menuItem li .thumb > img {width:100%;}
+.menuItem li .cont {display:table-cell; vertical-align:top; padding-left:12px;}
+.menuItem li .cont .name {display:block; font-weight:bold; font-size:12px;}
+.menuItem li .cont .price {display:block; padding:1px 0; font-size:12px;}
+.menuItem li .cont .price .roboto {font-weight:bold; color:#9c836a;}
+.menuItem li .cont .txt {font-size:12px; line-height:16px;}
 
 /* etc */
 .contReset {}
@@ -1866,7 +1922,6 @@ img.fullImg{width: 100%;}
 .aboutUs > p.titleTxt > span > br{display: block;}
 .aboutUs > .topArea{margin: 25px 0 -55px;}
 .roomList .galleryInner .tit{font-size: 14px; line-height: 18px;}
-/* .roomList .galleryInner .desc{font-size: 14px; line-height: 18px;} */
 .fineEvent.btm{padding-top: 30px; margin-bottom: -20px; background-color: #f9f9f9; border-top: 1px solid #e7e3e0;}
 
 /*convention*/

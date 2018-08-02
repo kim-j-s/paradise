@@ -804,6 +804,8 @@ $(function(){
 		var Fineswiper = new Swiper('.fineEventGallery', {
 			slidesPerView: 'auto',
 			spaceBetween: 12,
+			observer:true,
+			observeParents: true,
 		});
 	}
 });
@@ -1070,8 +1072,22 @@ $(function(){
 			$('.amount').text(commaSeparateNumber(Math.floor(now)));
 		}
 	});
-
 	function commaSeparateNumber(x){
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+});
+
+$(function(){
+	$('.real').prop('Counterx',0).animate({
+		Counterx: $('.real').text()
+	}, {
+		duration: 3000,
+		easing: 'linear',
+		step: function (real) {
+			$('.real').text(commaSeparateNumber2(Math.floor(real)));
+		}
+	});
+	function commaSeparateNumber2(x){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 });
@@ -1119,6 +1135,18 @@ $(function(){
 				$('.fineList').eq(sort).children('li').hide();
 				$('.fineList').eq(sort).find('.'+className).show();
 			}
+		});
+	});
+});
+
+// sbu
+$(function(){
+	$('.selectList > a').each(function(sg){
+		$(this).click(function(){
+			$('.selectList > a').removeClass('on');
+			$(this).addClass('on');
+			$('.selectList').next('.selectGroup').children('.fineEventGallery').removeClass('on');
+			$('.selectList').next('.selectGroup').children('.fineEventGallery').eq(sg).addClass('on');
 		});
 	});
 });
