@@ -761,7 +761,6 @@ $(function(){
 
 /* fine swiper */
 $(function(){
-	
 	var nBannerLng = $('.normalSwiper').find('.item').length;
 	if ( nBannerLng == 1)
 	{
@@ -865,7 +864,6 @@ $(function(){
 
 /* floating button */
 $(function(){
-	//$('#wrap').scroll(function(){
 	$(window).scroll(function(){
 		var Top = $(window).scrollTop();		
 		FloationEvent(Top);

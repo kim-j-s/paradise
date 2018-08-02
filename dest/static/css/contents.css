@@ -1167,6 +1167,7 @@ line-height:18px;}
 .tabSubListWrap .tabSubList {display:table; position:relative; width:100%; border-bottom:1px solid #e7e3e0;}
 .tabSubListWrap .tabSubList > li {display:table-cell; width:1000px; height:36px; vertical-align:middle;}
 .tabSubListWrap .tabSubList > li .tit {display:block; width:100%; text-align:center; outline:none; font-size:11px; color:#333; height:36px;}
+.tabSubListWrap .tabSubList.etc > li .tit.on {font-weight:bold; color:#9c836a;}
 .tabSubListWrap .tabSubList > li .tit span {position:relative; display:inline-block; line-height:36px;}
 .tabSubListWrap .tabSubList > li .tit.on span {}
 .tabSubListWrap .tabSubList > li .tit.on span:before {content:''; position:absolute; left:0; bottom:-1px; width:100%; border-top:3px solid #9d836a;}
@@ -1751,6 +1752,15 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .jactpotHistory li .pay span {display:inline-block; padding-left:17px; font-weight:bold; color:#9c836a; background:url(../images/common/icon/icon_won_red.png) no-repeat left center; background-size:11px 9px;}
 
 .container + .cabana {margin-top:16px;}
+
+.mdList {margin-top:20px; overflow:hidden;}
+.mdList li {padding:0 4px 0 0; margin-top:8px; float:left; width:50%;}
+.mdList li:nth-child(even) {padding:0 0 0 4px;}
+.mdList li:nth-child(-n + 2) {margin-top:0;}
+.mdList li > a {display:block;}
+.mdList li .inner {}
+.mdList li .inner .thumb {display:block; width:100%;}
+.mdList li .inner > p {padding:9px 0 3px 0; font-weight:bold; font-size:12px; color:#333; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
 .bxWrap > .link_room {position:absolute; right:16px; bottom:33px; display:inline-block; padding:1px 8px; border:1px solid #fff; font-weight:500; font-size:12px; color:#fff;}
 
