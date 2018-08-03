@@ -761,7 +761,6 @@ $(function(){
 
 /* fine swiper */
 $(function(){
-	
 	var nBannerLng = $('.normalSwiper').find('.item').length;
 	if ( nBannerLng == 1)
 	{
@@ -804,6 +803,8 @@ $(function(){
 		var Fineswiper = new Swiper('.fineEventGallery', {
 			slidesPerView: 'auto',
 			spaceBetween: 12,
+			observer:true,
+			observeParents: true,
 		});
 	}
 });
@@ -863,7 +864,6 @@ $(function(){
 
 /* floating button */
 $(function(){
-	//$('#wrap').scroll(function(){
 	$(window).scroll(function(){
 		var Top = $(window).scrollTop();		
 		FloationEvent(Top);
@@ -1070,8 +1070,22 @@ $(function(){
 			$('.amount').text(commaSeparateNumber(Math.floor(now)));
 		}
 	});
-
 	function commaSeparateNumber(x){
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+});
+
+$(function(){
+	$('.real').prop('Counterx',0).animate({
+		Counterx: $('.real').text()
+	}, {
+		duration: 3000,
+		easing: 'linear',
+		step: function (real) {
+			$('.real').text(commaSeparateNumber2(Math.floor(real)));
+		}
+	});
+	function commaSeparateNumber2(x){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 });
@@ -1123,6 +1137,7 @@ $(function(){
 	});
 });
 
+<<<<<<< HEAD
 
 // VR보기 팝업
 $(function(){
@@ -1137,3 +1152,16 @@ $(function(){
 		return false;
 	})
 })
+=======
+// sbu
+$(function(){
+	$('.selectList > a').each(function(sg){
+		$(this).click(function(){
+			$('.selectList > a').removeClass('on');
+			$(this).addClass('on');
+			$('.selectList').next('.selectGroup').children('.fineEventGallery').removeClass('on');
+			$('.selectList').next('.selectGroup').children('.fineEventGallery').eq(sg).addClass('on');
+		});
+	});
+});
+>>>>>>> f7c61de0e1d05f6c939b7784aa77fa408aabd85e

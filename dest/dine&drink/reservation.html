@@ -35,6 +35,12 @@
 
         <!-- 컨텐츠 영역 -->
         <section id="layerContent">
+            <!-- 2018-08-02 추가 -->
+            <div class="infoBox fullWidth">
+                예약 신청을 위한 페이지로, 예약 신청 후 해당 레스토랑 직원이 전화를 드려 예약을 확정해드립니다.<br /> 단, 레스토랑 사정에 따라 예약이 확정되지 않거나 시간이 변경될 수 있습니다.
+            </div>
+            <!-- 2018-08-02 추가 -->
+
             <div class="reservationTop">
                 <strong class="title">ON THE PLATE</strong>
                 <p class="place">
@@ -45,7 +51,8 @@
 
             <div class="inpWrap">
 
-                <span class="inpTitle">예약 날짜</span>
+                <span class="inpTitle">방문 희망 일자</span>
+                <!-- 2018-08-02 문구 수정 -->
                 <a href="#" class="btn ty5"><span>YYYY.MM.DD</span></a>
 
                 <label class="inpTitle mt17" for="food">Lunch / Dinner</label>
@@ -58,7 +65,8 @@
                     </select>
                 </div>
 
-                <label class="inpTitle" for="time">예약 시간</label>
+                <label class="inpTitle" for="time">예약 요청 시간</label>
+                <!-- 2018-08-02 문구 수정 -->
                 <div class="inputBox">
                     <select name="" id="time" class="selectbox" disabled="disabled">
                         <option value="">선택</option>
@@ -130,11 +138,18 @@
                         </div>
 
                         <label class="inpTitle" for="allergy">알러지 유무(선택)</label>
+                        <!-- 2018-08-02 수정 -->
+                        <!-- 2018-08-02 삭제
+						<div class="inputBox">
+							<select name="" id="allergy" class="selectbox">
+								<option value="">선택</option>
+							</select>
+						</div> 
+						-->
                         <div class="inputBox">
-                            <select name="" id="allergy" class="selectbox">
-                                <option value="">선택</option>
-                            </select>
+                            <textarea name="" id="allergy" cols="30" rows="10" class="textarea"></textarea>
                         </div>
+                        <!-- 2018-08-02 수정 -->
 
                         <label class="inpTitle" for="request">추가 요청사항(선택)</label>
                         <div class="inputBox">

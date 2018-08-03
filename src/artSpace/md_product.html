@@ -1,0 +1,72 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":""
+		})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">MD상품</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">갤러리 소개</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#">EVENTS</a></li>
+					<li><a href="#">OFFERS</a></li>
+					<li><a href="#" class="on">MD상품</a></li>
+					<li><a href="#">현재/지난 전시</a></li>
+					<li><a href="#">프레스룸</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt">
+				<span class="color">파라다이스 아트스페이스</span>에서 만나볼 수 있는 특별한 <span class="color">아트상품</span>들을 소개합니다.
+			</p>
+			<a href="#" class="btn ty9 mt8">상품 문의</a>
+
+			<ul class="mdList">
+				<li>
+					<a href="#">
+						<div class="inner">
+							<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+							<p>상품명</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="inner">
+							<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+							<p>상품명</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="inner">
+							<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+							<p>상품명</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<div class="tc mt20">
+				@@include('static/include/btn_more.html')
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
