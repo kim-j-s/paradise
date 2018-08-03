@@ -189,7 +189,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 공통 안내문 */
 .notiTxt {padding-top:15px;}
-.notiTxt > dt {padding-left:22px; margin-bottom: 4px; background:url(../images/common/icon/icon_mark1.png) no-repeat left center; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
+.notiTxt > dt {padding-left:22px; margin-bottom: 4px; background:url(../images/common/icon/icon_mark1.png) no-repeat left 6px; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
 .notiTxt > dd {line-height:24px;}
 .notiTxt > dd.fs12 {padding-top:4px;}
 
@@ -197,8 +197,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .notiTxt.list dt.point {color:#e66045;}
 .notiTxt.list dd > ul {padding-top:4px;}
 
-.notiTxt2 {padding-left:20px; font-size:11px; line-height:15px; color:#e66045;}
-.notiTxt2 {background:url(../images/common/icon/icon_mark2.png) no-repeat left top; background-size:13px 13px;}
+.notiTxt2 {padding-left:20px; font-size:11px; line-height:16px; color:#e66045;}
+.notiTxt2 {background:url(../images/common/icon/icon_mark2.png) no-repeat left 1px; background-size:13px 13px;}
 
 
 /* 공통 리스트 */
@@ -1845,7 +1845,8 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .imgBox{position: relative; margin: 35px 0 0;}
 .imgBox .btnMoreTxt{position: absolute; top: 2px; right: 0;}
 .imgBox .txt{padding-bottom: 14px;}
-.imgBox > h2{margin: 0 0 16px;}
+.imgBox h2.title{margin: 0 0 16px;}
+.imgBox h3.subtitle{font-weight: bold; font-size: 14px; color: #111; margin: 0 0 10px;}
 .imgBox > .fullImg{display: block; margin: 0 0 15px;}
 
 /*About Us*/
@@ -1878,7 +1879,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .convention .tabList > li .tit{font-size: 12px; line-height: 14px;}
 .convention h2{font-weight: bold; color: #111; font-size: 14px;}
 .convention p.desc{font-size: 12px; line-height: 18px;}
-.convention .listBar > li{word-break: keep-all;}
+.convention .listBar > li{word-break: keep-all; margin-bottom: 2px;}
 .convention .table.side a.btnMoreTxt{float: right; margin-top: 1px; vertical-align: top;}
 .convention .txtContent2{padding-bottom: 8px;}
 .convention .txtContent2 > .tit{font-size: 12px; color: #333; font-weight: bold; margin: 10px 0 7px;}
@@ -1886,7 +1887,8 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .convention .venue .title{position: relative; margin: 12px 0 10px; font-size: 14px; color: #000; font-weight: bold;}
 .convention .venue .title > a.btnMoreTxt{top: 2px;}
 .convention .venue .sub{font-size: 12px; line-height: 18px;}
-.convention .party h2{color: #333; margin: 12px 0 6px;}
+.convention .party h2{color: #333; margin: 10px 0 6px;}
+
 
 /*Plaza*/
 .plazaWrap .tabList > li .tit{font-size: 12px; line-height: 14px;}
@@ -2014,6 +2016,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .artistInfo .descText{line-height: 17.5px;}
 .artistInfo .descText > span{display: block; font-size: 12px; color: #9c836a; vertical-align: top;}
 .artistInfo .name{display: block; margin: 6px 0 9px; font-size: 14px; font-weight: bold; color: #333; vertical-align: top;}
+.artistInfo .btnMoreTxt{display: inline-block; margin: 8px 0 0;}
 .articleWrap article:nth-child(odd) .artistImg{float: left; padding: 0 14px 5px 0;}
 .articleWrap article:nth-child(even) .artistImg{float: right; padding: 0 0 5px 14px;}
 
@@ -2031,8 +2034,19 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .video a{position: relative; display: block;}
 .video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
 
+/*Chroma*/
 .floorMap{position: relative; margin: 0 0 15px;}
 .floorMap a.btnMoreTxt{position: absolute; top: 2px; right: 0;}
+
+.floorMap > .tabSubListWrap > .tabSubList{border-top: 1px solid #e7e3e0; border-bottom: 0;}
+.floorMap > .tabSubListWrap > .tabSubList > li {display:table-cell; width:1000px; height:40px; vertical-align:middle;}
+.floorMap > .tabSubListWrap > .tabSubList > li:first-child .tit {border-left:none;}
+.floorMap > .tabSubListWrap > .tabSubList .tit {display:block; width:100%; background:#f9f9f9; text-align:center; outline:none; font-size:14px; color:#666; height:40px; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
+.floorMap > .tabSubListWrap > .tabSubList .tit.on {padding-bottom:1px; background:#fff; color:#9d836a; font-weight:bold; border-bottom:none;}
+.floorMap > .tabSubListWrap > .tabSubList .tit.on > small {color:#9d836a;}
+.floorMap > .tabSubListWrap > .tabSubList.ty3 > li {width:33.3%;}
+.floorMap > .tabSubListWrap > .tabSubList.ty4 > li {width:25%;}
+
 .floorMap .tabWrap{left: 0; width: 100%; margin: 15px 0 0;}
 .floorMap .tabContent{padding: 0;}
 .floorMap .tabSubContent {padding: 0;}
@@ -2047,7 +2061,8 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .chromaBox .swiper-slide p.desc{margin: 10px 0 0; font-size: 12px; color: #333;}
 .chromaBox .swiper-slide p.desc > span{font-weight: bold;}
 .artistSlide h2.title{margin-bottom: 15px;}
-.artistSlide .swiper-container {padding: 0 12px;}
+.artistSlide .txtContent.swipeType1{padding: 0 16px;}
+.artistSlide .swiper-container {padding: 0 0 0 12px;}
 .artistSlide .swiper-slide {width:80px; margin-right: 16px !important; border:1px solid #e6e6e6;}
 .artistSlide .swiper-slide a{text-align: center;}
 .artistSlide .swiper-slide a > span{display: block; margin: 10px 0 0; font-size: 12px; letter-spacing: -0.02em;}
@@ -2063,6 +2078,19 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .snsArea > ul li > a{display: block; width: 30px; height: 30px; border: 1px solid #646362; border-radius: 50%;}
 .snsArea > ul li > a > img{display: block; width: 100%; vertical-align: top;}
 
+/*VR 준비중 팝업*/
+body.fix{overflow: hidden;} /*스크롤방지*/
+.layerWrap{position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;}
+.layerWrap > .mask{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: .6;}
+.layerWrap > .layerBox{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #fff; text-align: center; }
+.layerBox > .closeLayer{position: absolute; top: 0; left: 0; width: 57px; height: 57px; background:url(../images/common/btn/btn_layerclose.gif) center no-repeat; background-size: 15px auto; text-indent: -99999px;}
+.layerBox p.title{padding: 0 0 20px; font-size: 17px; font-weight: bold; line-height: 1; color: #191919;}
+.layerBox .mark{display: block; margin: 19px auto 20px; width: 43px;}
+.layerBox .mark > img{width: 100%;}
+.layerBox .waitTxt{font-size: 14px; color: #111; font-weight: bold;}
+.layerBox .waitTxt > span{display: block; margin: 10px 0 0; font-size: 12px; color: #e66045;}
+.layerBox .btmBtn{margin-top: 30px;}
+.layerVR > .layerBox{width: 288px;}
 
 
 @media screen and (max-width:640px){

@@ -1122,3 +1122,18 @@ $(function(){
 		});
 	});
 });
+
+
+// VR보기 팝업
+$(function(){
+	$('.btnVR').click(function(){
+		$('.layerVR').show();
+		$('body').addClass('fix');
+		return false;
+	})
+	$('.closeLayer').click(function(){
+		$(this).closest('.layerWrap').hide();
+		$('body').removeClass('fix');
+		return false;
+	})
+})
