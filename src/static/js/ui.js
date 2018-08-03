@@ -1148,3 +1148,73 @@ $(function(){
 		});
 	});
 });
+
+// gnb
+// gnb list
+$(function(){
+	var GnbList = $('.gnbList > .dept');
+	$(GnbList).each(function(){
+		$(this).children('.tit').click(function(){
+			if ( $(this).next('.subGnb').css('display') == 'block' )
+			{
+				$(this).removeClass('on');
+				$(this).next('.subGnb').slideUp(300);
+			} else {
+				$(this).addClass('on');
+				$(this).next('.subGnb').slideDown(300);
+			}
+		});
+	});
+
+	// gnb 내부 리스크 스크롤 이벤트
+	var gnbListPos = 0;
+	$('.gnbCont > .inner').scroll(function(){
+		var gnbContOffset = $('.gnbCont').offset().top;
+		var gnbListTop = $('.gnbList').offset().top;
+
+		if (gnbListTop == gnbContOffset)
+		{
+			$('.gnbCont > .inner').removeClass('on');
+		} else if ( gnbListTop < gnbContOffset )
+		{
+			$('.gnbCont > .inner').addClass('on');
+		}
+	});
+
+	//gnb open
+	$('.menuBtn').click(function(){
+		var htmlHeight = $(window).height();
+		$('.navDimmed').height(htmlHeight);
+		$('body').addClass('fixed');
+		$('nav').addClass('on');
+		$('.gnb').animate({
+			left: '0'
+		}, 300);
+		GnbContHeight();
+	});
+
+	// gnb close
+	$('.gnb > .close').click(function(){
+		$('.gnb').animate({
+			left: '-100%'
+		}, 300 , function(){
+			$('nav').removeClass('on');
+			$('body').removeClass('fixed');
+			$('body').css('height','auto');
+		});
+	});
+
+	//GnbContHeight();
+	function GnbContHeight() {
+		var WinHeight = $(window).height();
+		var GnbGroup = $('.gnb > .groupTop').outerHeight();
+		$('.gnbCont').height(WinHeight - GnbGroup);
+		$('body').height(WinHeight);
+	}
+
+	// 높이 제어
+	$(window).resize(function(){
+		GnbContHeight();			
+	});
+
+});
