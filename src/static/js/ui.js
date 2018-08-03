@@ -1137,7 +1137,6 @@ $(function(){
 	});
 });
 
-<<<<<<< HEAD
 
 // VR보기 팝업
 $(function(){
@@ -1152,7 +1151,7 @@ $(function(){
 		return false;
 	})
 })
-=======
+
 // sbu
 $(function(){
 	$('.selectList > a').each(function(sg){
@@ -1164,7 +1163,6 @@ $(function(){
 		});
 	});
 });
-<<<<<<< HEAD
 
 // gnb
 // gnb list
@@ -1235,6 +1233,3 @@ $(function(){
 	});
 
 });
-=======
->>>>>>> f7c61de0e1d05f6c939b7784aa77fa408aabd85e
->>>>>>> cbb8e51736207002f8ded4d92218fecbf5ae968e
