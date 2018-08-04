@@ -93,7 +93,7 @@ nav .navDimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:102
 /* ==============================
  * footer
  * ============================== */
-#footerWrap {position:relative; padding-top:30px;}
+#footerWrap {position:relative; padding-top:50px;}
 .footerTop {background:#191817;}
 .footerTop > .footerLinkTop {overflow:hidden;}
 .footerTop > .footerLinkTop ul {display:table; width:100%;}

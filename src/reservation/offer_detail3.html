@@ -1,6 +1,6 @@
 @@include('static/include/head.html')
 <body>
-	<div class="layerfullWrap">
+	<div class="layerfullWrap btnAdd">	<!-- 2018-08-04 수정 -->
 		<!-- 헤더영역 -->
 		@@include('static/include/layer_header.html',{
 			"title":"OFFER"
@@ -8,7 +8,7 @@
 		<!-- //헤더영역 -->
 
 		<!-- 컨텐츠 영역 -->
-		<section id="layerContent">
+		<section id="layerContent" class="floating">	<!-- 2018-08-04 클래스 추가 -->
 
 			<div class="state">
 				<div class="stateInfo">
@@ -85,7 +85,7 @@
 				</dd>
 			</dl>
 
-			<div class="tblDiv btnTbl half full mt36">
+			<div class="tblDiv btnTbl half floating">	<!-- 2018-08-04 클래스 수정 -->
 				<div class="cellDiv">
 					<a href="#" class="btn ty8 big">담기</a>
 				</div>
@@ -96,6 +96,10 @@
 
 		</section>
 		<!-- //컨텐츠 영역 -->
+
+		<!-- 2018-08-04 추가 -->
+		<a href="#none" class="pageTop etc">Top</a>
+		<!--// 2018-08-04 추가 -->
 	</div>
 </body>
 </html>

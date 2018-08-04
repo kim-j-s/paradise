@@ -523,6 +523,8 @@ $(function(){
 	var swiper = new Swiper('.roomGallery', {
 		slidesPerView: 'auto',
 		spaceBetween: 8,
+		observer: true,
+		observeParents: true,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'fraction',
@@ -542,6 +544,8 @@ $(function(){
 		var swiper = new Swiper('.mypageGallery', {
 			slidesPerView: 'auto',
 			spaceBetween: 12,
+			observer: true,
+			observeParents: true,
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -555,6 +559,8 @@ $(function(){
 	var Memberswiper = new Swiper('.cardGallery.membership', {
 		slidesPerView: 'auto',
 		spaceBetween: 12,
+		observer: true,
+		observeParents: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true
@@ -884,45 +890,22 @@ $(function(){
 		{
 			if ( (containerHeight - Top) > (WinHeight - 110) )
 			{
-				$('.floating').css('position','fixed');
+				if ( $('.floating').hasClass('etc') )
+				{
+					return false
+				} else {
+					$('.floating').css('position','fixed');
+				}
+				
 			} else {
-				$('.floating').css('position','static');
+				if ( $('.floating').hasClass('etc') )
+				{
+					return false
+				} else {
+					$('.floating').css('position','static');
+				}
 			}
 		}		
-	}
-});
-
-// pageTop
-$(function(){
-	$('.pageTop').click(function(){
-		$('html, body').animate({scrollTop:0}, 'slow');
-	});
-
-	$(window).scroll(function(){
-		var Top = $(window).scrollTop();		
-		PageTop(Top);
-	});
-
-	$(window).resize(function(){
-		var Top = $(window).scrollTop();
-		PageTop(Top);
-	});
-
-	$(window).load(function(){
-		var Top = $(window).scrollTop();		
-		PageTop(Top);
-	});
-
-	function PageTop(Top){
-		var BodyHeight = $('body, html').height();
-		var WinHeight = $(window).height();
-		var FooterHeight = $('#footerWrap').height();
-		if ( (BodyHeight - FooterHeight - WinHeight) > Top )
-		{
-			$('.pageTop').removeClass('fix').css('bottom','4px');
-		} else {
-			$('.pageTop').addClass('fix').css('bottom',FooterHeight + 4);
-		}
 	}
 });
 
@@ -999,6 +982,8 @@ $(function(){
 		var slider = new Swiper('.s'+index, {
 			slidesPerView: 'auto',
 			spaceBetween: 8,
+			observer: true,
+			observeParents: true,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'fraction',
@@ -1040,6 +1025,8 @@ $(function(){
 		var slider2 = new Swiper('.s2'+index, {
 			slidesPerView: 'auto',
 			spaceBetween: 8,
+			observer: true,
+			observeParents: true,
 			pagination: {
 				el: '.swiper-pagination',
 				type: 'fraction',
@@ -1225,11 +1212,58 @@ $(function(){
 		var GnbGroup = $('.gnb > .groupTop').outerHeight();
 		$('.gnbCont').height(WinHeight - GnbGroup);
 		$('body').height(WinHeight);
+		$('.navDimmed').height(WinHeight);
 	}
 
 	// 높이 제어
 	$(window).resize(function(){
-		GnbContHeight();			
+		if ( $('nav').hasClass('on') )
+		{
+			GnbContHeight();
+		}
 	});
 
+});
+
+
+// pageTop
+$(function(){
+	$('.pageTop').click(function(){
+		$('html, body').animate({scrollTop:0}, 'fast');
+		$('#layerContent').animate({scrollTop:0}, 'fast');
+		
+		console.log('event');
+	});
+
+	$(window).scroll(function(){
+		var Top = $(window).scrollTop();		
+		PageTop(Top);
+	});
+
+	/*
+	$(window).resize(function(){
+		var Top = $(window).scrollTop();
+		console.log('resize');
+		PageTop(Top);
+	});
+	*/
+
+	$(window).load(function(){
+		var Top = $(window).scrollTop();		
+		PageTop(Top);
+	});
+
+	function PageTop(Top){
+		var BodyHeight = $('body, html').height();
+		var WinHeight = $(window).height();
+		var FooterHeight = $('#footerWrap').height();
+
+		if ( (BodyHeight - FooterHeight - WinHeight) > Top )
+		{
+			$('.pageTop').removeClass('fix').css('bottom','4px');
+		} else if ( (BodyHeight - FooterHeight - WinHeight) < Top )
+		{
+			$('.pageTop').addClass('fix').css('bottom',FooterHeight + 4);
+		}
+	}
 });

@@ -76,15 +76,18 @@
 .layerfullWrap.floorZone {padding:60px 0 130px 0;}
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
 .layerfullWrap.btnAdd #layerContent {height:100%;}
-.layerfullWrap.btnAdd #layerContent:after {content:''; display:block; height:20px;}
+/* .layerfullWrap.btnAdd #layerContent:after {content:''; display:block; height:20px;} */
+.layerfullWrap.btnAdd #layerContent.floating {padding-bottom:50px;}
 #layerContent > .layerInner {height:calc(100% - 20px); overflow:auto;}
 
 #container {position:relative; padding:0 16px; overflow:hidden;}
-#container:after {content:''; display:block; height:20px;}
+/* #container:after {content:''; display:block; height:20px;} */
 #container.none:after {content:none;}
 #container.subHeader {}
 #container.btnAdd {height:calc(100% - 60px);}
-
+#container.btnAdd2 {padding-bottom:80px;}
+#container.floating {padding-bottom:50px;}
+#container + .tblDiv.btnTbl.half {margin-top:36px;}
 
 /* 레이어팝업 헤더 */
 #layerHeader {position:fixed; top:0; left:0; z-index:99; width:100%; height:60px; background:#fff; font-size:17px; font-weight:bold; color:#191919; text-align:center; line-height:60px;}
@@ -578,20 +581,22 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .floorAddList > ul li .del {position:absolute; top:2px; right:0; text-indent:-9999px; width:22px; height:22px; border:1px solid #e8e4e1; border-radius:50%;}
 .floorAddList > ul li .del:after {content:''; position:absolute; top:5px; right:5px; display:inline-block; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
 
-/* .floorTotal {position:absolute; bottom:50px; left:0; width:calc(100% - 32px); margin:0 16px; background:#fff; border-top:1px solid #e9e5e2;} */
-.floorTotal {margin:0 16px; background:#fff; border-top:1px solid #e9e5e2;}
-.floorTotal.none {border-top:none;}
+.floorTotal {background:#fff; border-top:1px solid #e9e5e2;}
+.floorTotal.none {margin:21px 0 13px 0; border-top:none;}
 
 
 /* 상품 검색 갤러리 리스트 */
 .itemWrap {position:relative; width:calc(100% + 16px); margin-top:20px;}
 .itemWrap h2 {padding-bottom:13px; font-size:20px; color:#333;}
-.itemWrap .itemMore {position:absolute; top:5px; right:16px; }
+.itemWrap .itemMore {position:absolute; top:5px; right:16px;}
+.itemWrap .swiper-pagination {display:none;}
 .itemListWrap {}
 .itemListWrap .item {border:1px solid #e9e9e9;}
 .itemListWrap .item > a {display:block;}
 .itemThumb {position:relative; display:block;}
 .itemThumb > img {width:100%;}
+.itemThumb.soldout:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#9d836a; opacity:0.8;}
+.itemThumb.soldout:after {content:'SOLD OUT'; position:absolute; top:50%; left:0; z-index:3; display:block; width:100%; height:100%; margin-top:-8px; text-align:center; font-weight:bold; color:#fff; line-height:16px;}
 .itemPrice {vertical-align:bottom;}
 .itemPrice .price1 {font-weight:bold; color:#9c836a;}
 .itemPrice .price1 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
@@ -1502,7 +1507,7 @@ line-height:18px;}
 .detailList .btnMoreTxt {position:absolute; top:0; right:0;}
 .detailList .btnMoreTxt.none {position:static;}
 
-.stationGallery {padding-bottom:32px;}
+.stationGallery {}
 .stationGallery .title {display:block;  font-weight:bold; color:#111;}
 .stationGallery .title + .station {margin-top:17px;}
 .stationGallery .title + .download {margin:9px 0 16px 0; overflow:hidden;}
@@ -1530,6 +1535,7 @@ line-height:18px;}
 .fineEventCont > a {display:block; border:1px solid #e3e3e3;}
 .fineEventCont > a .thumb {display:block; width:100%; height:135px;}
 .fineEventCont > a .tit {display:block; padding:12px 12px 4px 12px; font-weight:bold; font-size:14px; color:#111; text-align:left;}
+.fineEventCont > a .tit {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .fineEventCont > a .desc {height:32px; padding:0 12px; margin-bottom:13px; font-size:12px; line-height:16px; text-align:left;}
 .fineEventCont > a .date{display: block; padding: 0 12px 4px; font-size: 12px; color: #333;}
 
