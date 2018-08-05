@@ -133,7 +133,17 @@ $(function(){
 	/* ==============================
 	 * main 
 	 * ============================== */
+$(function(){
+	var htmlHeight = $(window).height();
+	$('.mainVisual').height(htmlHeight);
+	$('.mainVisual').find('.bx-viewport').height(htmlHeight);
 
+	$(window).resize(function(){
+		var htmlHeight = $(window).height();
+		$('.mainVisual').height(htmlHeight);
+		$('.mainVisual').find('.bx-viewport').height(htmlHeight);
+	});
+});
 
 	/* ==============================
 	 * content 

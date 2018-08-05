@@ -16,10 +16,11 @@ body.fixed #wrap {overflow:hidden;}
 #headerWrap h1 {line-height:60px; font-size:17px; font-weight:bold; color:#111;}
 #headerWrap h1 > img {width:146px;}
 #headerWrap .cartBtn {position:absolute; top:21px; right:17px; width:20px; height:18px; text-indent:-9999px; background:url(../images/common/btn/btn_cart.png) no-repeat; background-size:100%;}
+#headerWrap .cartBtn.etc {background:url(../images/common/btn/btn_cart_main.png) no-repeat; background-size:100%;}
 #headerWrap .cartBtn span {position:absolute; top:-5px; right:-12px; width:24px; height:12px; line-height:12px; font-size:10px; color:#fff; text-align:center; text-indent:0; background:#9d836a; border-radius:6px;}
 #headerWrap .menuBtn {position:absolute; top:22px; left:17px; z-index:10; width:18px; height:15px; background:url(../images/common/btn/btn_menu.png) no-repeat; background-size:100%; text-indent:-9999px;}
+#headerWrap .menuBtn.etc {background:url(../images/common/btn/btn_menu_main.png) no-repeat; background-size:100%;}
 #headerWrap .snsBtn {position:absolute; top:21px; right:17px; width:20px; height:18px; text-indent:-9999px; background:url(../images/common/btn/btn_cart.png) no-repeat; background-size:100%;}
-
 
 .headerSubWrap {position:relative; z-index:2; height:30px;}
 .headerFixed {background:#fff;}
@@ -143,7 +144,7 @@ nav .navDimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:102
 .pageTop {position:fixed; bottom:4px; right:16px;}
 .pageTop.etc {bottom:54px !important;}
 .pageTop.fix {position:absolute; display:inline-block; right:16px;}
-.pageTop {z-index:99; width:36px; height:36px; background:url(../images/common/btn/btn_pagetop.png) no-repeat; background-size:cover; text-indent:-9999px;}
+.pageTop {z-index:98; width:36px; height:36px; background:url(../images/common/btn/btn_pagetop.png) no-repeat; background-size:cover; text-indent:-9999px;}
 
 
 @media screen and (max-width: 1214px) {
