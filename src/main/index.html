@@ -1,293 +1,273 @@
 @@include('static/include/head.html')
 <body>
-	<!-- 헤더영역 -->
-	@@include('static/include/header.html')
-	<!-- //헤더영역 -->
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":"<img src='../static/images/main/img_main_logo.png' alt=''>"
+		})
+		<!-- //헤더영역 -->
 
-<script type="text/javascript">
-	$(function(){
-		$('.sw').bxSlider({
-			auto: true,
-			slideWidth: 2500,
-            minSlides: 1.5,
-            maxSlides: 3,
-            slideMargin: 50,
-			moveSlides: 1,
-            pager: false
-		});
-	});
-</script>
+		<div class="mainVisual">
+			<div class="swiper-container Type1 full etc">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide lng">
+						1
+					</div>
+					<div class="swiper-slide lng">
+						2
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
 
 <style type="text/css">
-	#container {padding:0 10px;}
-	.item {line-height:100px; border:1px solid blue; text-align:center; box-sizing:border-box; }
-	.item.a {background:#ddd;}
-	.item.b {background:blue;}
-	.item.c {background:red;}
-	
-</style>
+.mainVisual {height:100%; margin-top:-60px; background:#ddd;}
+.mainVisual .swiper-slide {height:100%; background:blue;}
 
-	<!-- 컨텐츠 영역 -->
-	<section id="container">
-		<div class="sw">
-			<div class="item a">1</div>
-			<div class="item b">2</div>
-			<div class="item c">3</div>
-			<div class="item a">4</div>
-			<div class="item b">5</div>
-			<div class="item c">6</div>
-			<div class="item a">7</div>
-			<div class="item b">8</div>
-			<div class="item c">9</div>
-			<div class="item a">10</div>
-			<div class="item b">11</div>
-			<div class="item c">12</div>
-		</div>
-
-
-		<div class="dateSetting">
-			<div class="dateStep">
-				<button class="datepickStart dateFoucs">
-					<span class="txt">가는날</span>
-					<span class="dateDisplay">선택해주세요</span>
-				</button>
-			</div>
-			<div class="dateStep arrive">
-				<button class="datepickArrive">
-					<span class="txt">오는날</span>
-					<span class="dateDisplay">선택해주세요</span>
-				</button>
-			</div>
-		</div>
-		<div class="calendar">
-			<div class="calendarHead clearFixed">
-				<ul class="calendarDay">
-					<li class="sun">일</li>
-					<li>월</li>
-					<li>화</li>
-					<li>수</li>
-					<li>목</li>
-					<li>금</li>
-					<li class="sat">토</li>
-				</ul>
-				<span class="tit">2018-05</span>
-				<ul class="calendarDate">
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="noDate">1</li>
-					<li class="noDate">2</li>
-					<li class="noDate">3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="calendar">
-			<div class="calendarHead clearFixed">
-				<ul class="calendarDay">
-					<li class="sun">일</li>
-					<li>월</li>
-					<li>화</li>
-					<li>수</li>
-					<li>목</li>
-					<li>금</li>
-					<li class="sat">토</li>
-				</ul>
-				<span class="tit">2018-05</span>
-				<ul class="calendarDate">
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li class="blinkDate"></li>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
-				</ul>
-			</div>
-		</div>
-
-		<span class="calendarAllReset">초기화</span>
-
-
-<style type="text/css">
-/* 화면 표기 */
-.dateSetting {background:#ddd; margin-top:20px;}
-.dateSetting {display:table; width:100%; border:1px solid blue;}
-.dateSetting .dateStep {display:table-cell; width:1000px;}
-.dateSetting .dateStep button {display:block; width:100%; padding:10px; text-align:right;}
-.dateSetting .dateStep button.dateFoucs {background:#000; color:#fff;}
-.dateSetting .arrive {border-left:1px solid blue;}
-.dateSetting .txt {float:left;}
-
-
-/* 달력 */
-.calendar {padding:20px 0; margin:20px 0; border:1px solid blue;}
-.calendar {}
-.calendarHead {text-align:center;}
-.calendarHead {}
-.calendarDay {background:#ddd;}
-.calendarDay li {float:left; width:14.28%; text-align:center;}
-.calendarDate {background:#333; color:#fff;}
-.calendarDate li {float:left; width:14.28%; height:20px; line-height:20px; text-align:center;}
-.calendarDate .first {background:blue;}
-.calendarDate .last {background:red;}
-.calendarDate .first.last {background:blue;}
-.calendarDate .range {background:#ddd;}
-.calendarDate .noDate {background:magenta;}
-.calendarDate .noDateEx {background:magenta;}
-.calendarDate .blinkDate {background:#fff;}
-.calendarDate .blinkDate.noDateEx {background:#fff;}
 </style>
 
 <script type="text/javascript">
-	$(function(){
-		var CalendarDate = $('.calendarDate > li');
-		var lng = $('.calendarDate > li').length;
-		var CalendarFirst = 0;
-		var CalendarLast = 0;
-		var CalendarResetCnt = 0;
-
-		$('.calendarDate > li').each(function(Calendar){
-			$(this).click(function(){
-				// 예약 불가능 날짜 선택
-				if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') )
-				{
-					return false;
-				}
-
-				// 예약 범위 설정
-				if ( $(CalendarDate).hasClass('first') &&  CalendarResetCnt == 0)
-				{
-					$(CalendarDate).removeClass('range last');
-					$(this).addClass('last');
-					CalendarLast = Calendar;
-					calendarRange(CalendarFirst, CalendarLast);
-				} else {
-					if (CalendarResetCnt == 1)
-					{
-						$(CalendarDate).removeClass('first last range');
-						$(this).addClass('first');
-						calendarReset(Calendar);
-						CalendarResetCnt = 0;
-					} else {
-						$(this).addClass('first');
-						calendarReset(Calendar);
-					}
-				}
-			});
-		});
-
-		console.log('x');
-
-		// 달력 초기화 버튼 - 전체
-		$('.calendarAllReset').click(function(){
-			$(CalendarDate).removeClass('first last range noDateEx');
-			$('.datepickArrive').removeClass('dateFoucs');
-			$('.datepickStart').addClass('dateFoucs');
-			CalendarResetCnt = 0;
-		});
-
-		// 달력 초기화 - 가는날
-		$('.datepickStart').click(function(){
-			$(CalendarDate).removeClass('noDateEx');
-			$('.datepickArrive').removeClass('dateFoucs');
-			$('.datepickStart').addClass('dateFoucs');
-			CalendarResetCnt = 1;
-		});
-
-		// 달력 선택 불가능 영역 설정
-		function calendarNoDate(f) {
-			console.log('x');
-			console.log(f);
-			for (var i = 0; f > i; i++ )
-			{
-				$(CalendarDate).eq(i).addClass('noDateEx');
-			}
-		}
-
-		// 달력 범위 클래스 추가
-		function calendarRange(f, l) {
-			for (var i = f + 1; i < l; i++ )
-			{
-				$(CalendarDate).eq(i).addClass('range');
-			}
-		}
-
-		// 달력 리셋
-		function calendarReset(Calendar) {
-			CalendarFirst = Calendar;
-			calendarNoDate(CalendarFirst);
-			$('.datepickStart').removeClass('dateFoucs');
-			$('.datepickArrive').addClass('dateFoucs');
-		}
-	});
+$(function(){
+	var htmlHeight = $(window).height();
+	$('.mainVisual').height(htmlHeight);
+});
 </script>
 
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<div class="mainCont">
+				<div class="itemWrap swipeType1">
+					<h2>FEATURED OFFERS</h2>
+					<p class="subTxt">
+						파라다이스시티에서 준비한 특별한 상품과 혜택을 지금 만나보세요.
+					</p>
+					<div class="swiper-container Type1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide lng">
+								<a href="#">
+									<span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+											<span class="nt ty2">전화상품</span>
+											<span class="nt ty3">특가</span>
+										</span>
+									</span>
+									<span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+										<span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+										<span class="hashtag">#Hotel Paradise  #Art Space</span>
+										<span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="pricePer roboto">-20%</span>
+										</span>
+									</span>
+								</a>
+								<div class="itemBtnWrap">
+									<span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+									<span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+								</div>
+							</div>
 
+							<div class="swiper-slide lng">
+								<a href="#">
+									<span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+											<span class="nt ty2">전화상품</span>
+											<span class="nt ty3">특가</span>
+										</span>
+									</span>
+									<span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+										<span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+										<span class="hashtag">#Hotel Paradise  #Art Space</span>
+										<span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="pricePer roboto">-20%</span>
+										</span>
+									</span>
+								</a>
+								<div class="itemBtnWrap">
+									<span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+									<span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+								</div>
+							</div>
+						</div>
+						<span class="swiper-pagination"></span>
+					</div>
+					<a href="#" class="itemMore btnMoreTxt">MORE</a>
+				</div>
 
-	</section>
-	<!-- //컨텐츠 영역 -->
+				<div class="itemWrap swipeType1">
+					<h2>PARADISE CITY EVENTS</h2>
+					<p class="subTxt">
+						파라다이스시티에서 지금 벌어지고 있는 다양한 이벤트를 만나보세요.
+					</p>
+					<div class="swiper-container Type1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide lng">
+								<a href="#">
+									<span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+											<span class="nt ty2">전화상품</span>
+											<span class="nt ty3">특가</span>
+										</span>
+									</span>
+									<span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+										<span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+										<span class="hashtag">#Hotel Paradise  #Art Space</span>
+										<span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="pricePer roboto">-20%</span>
+										</span>
+									</span>
+								</a>
+								<div class="itemBtnWrap">
+									<span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+									<span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+								</div>
+							</div>
 
-	<!-- 하단 영역 -->
-	@@include('static/include/footer.html')
-	<!-- //하단 영역 -->
+							<div class="swiper-slide lng">
+								<a href="#">
+									<span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+											<span class="nt ty2">전화상품</span>
+											<span class="nt ty3">특가</span>
+										</span>
+									</span>
+									<span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+										<span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+										<span class="hashtag">#Hotel Paradise  #Art Space</span>
+										<span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span> 
+											<span class="pricePer roboto">-20%</span>
+										</span>
+									</span>
+								</a>
+								<div class="itemBtnWrap">
+									<span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+									<span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+								</div>
+							</div>
+						</div>
+						<span class="swiper-pagination"></span>
+					</div>
+					<a href="#" class="itemMore btnMoreTxt">MORE</a>
+				</div>
+			</div>
+
+			<div class="mainCont">
+				<h2>PARADISE CITY MEMBERSHIP</h2>
+				<p class="subTxt">파라다이스시티 고객님께 특별한 혜택을 제공해드리는 다양한 멤버십 프로그램을 소개합니다.</p>
+
+				<ul class="itemList3">
+					<li>
+						<div class="thumb">
+							<img src="../static/images/main/img_mainlist01.jpg" alt="">
+						</div>
+						<div class="cont">
+							<dl>
+								<dt>PARADISE REWARDS</dt>
+								<dd>
+									차별화된 회원 특전과 포인트 혜택을 제공하는 파라다이스시티 통합 무료 멤버십입니다.
+								</dd>
+							</dl>
+							<div class="moreDiv">
+								<a href="#" class="btnUnderline">자세히</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="../static/images/main/img_mainlist02.jpg" alt="">
+						</div>
+						<div class="cont">
+							<dl>
+								<dt>PARADISE SIGNATURE</dt>
+								<dd>
+									고품격 서비스와 다양한 혜택이 어우러진 파라다이스시티 통합 유료 멤버십입니다.
+								</dd>
+							</dl>
+							<div class="moreDiv">
+								<a href="#" class="btnUnderline">자세히</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="../static/images/main/img_mainlist03.jpg" alt="">
+						</div>
+						<div class="cont">
+							<dl>
+								<dt>CHROMA VIP</dt>
+								<dd>
+									회원의 가치를 더욱 빛나게 해줄 차별화된 서비스와 혜택 중심의 Invitation Only 크로마 전용 멤버십입니다.
+								</dd>
+							</dl>
+							<div class="moreDiv">
+								<a href="#" class="btnUnderline">자세히</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<img src="../static/images/main/img_mainlist04.jpg" alt="">
+						</div>
+						<div class="cont">
+							<dl>
+								<dt>CASINO</dt>
+								<dd>
+									K-Style 프리미엄 외국인 전용 카지노의 회원만을 위해 다양한 혜택으로 구성된 카지노 전용 멤버십입니다.
+								</dd>
+							</dl>
+							<div class="moreDiv">
+								<a href="#" class="btnUnderline">자세히</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer_main.html')
+		<!-- //하단 영역 -->
+	</div>
 </body>
 </html>

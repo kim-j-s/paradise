@@ -20,7 +20,6 @@
 	display: none;
 		-webkit-appearance: none;
 }
-/* input::-webkit-datetime-edit{ color: transparent; } */
 .inp.date:disabled {background:#f9f9f9; font-size:13px; color:#999;}
 
 
@@ -65,7 +64,6 @@
 /* 공통 */
 /* 레이어 */
 #wrap {position:relative; height:100%;}
-/* #wrap.btnAdd {height:100%; padding:0 0 50px 0; overflow:auto;} */
 #wrap.btnAdd {height:100%; overflow:auto;}
 
 
@@ -76,12 +74,10 @@
 .layerfullWrap.floorZone {padding:60px 0 130px 0;}
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
 .layerfullWrap.btnAdd #layerContent {height:100%;}
-/* .layerfullWrap.btnAdd #layerContent:after {content:''; display:block; height:20px;} */
 .layerfullWrap.btnAdd #layerContent.floating {padding-bottom:50px;}
 #layerContent > .layerInner {height:calc(100% - 20px); overflow:auto;}
 
 #container {position:relative; padding:0 16px; overflow:hidden;}
-/* #container:after {content:''; display:block; height:20px;} */
 #container.none:after {content:none;}
 #container.subHeader {}
 #container.btnAdd {height:calc(100% - 60px);}
@@ -112,7 +108,6 @@
 .tabWrap .tabContent.event {padding:12px 16px 0 16px;}
 .tabWrap.membership .tabContent {position:absolute; top:0; left:-9999px; display:block; width:100%; height:100%;}
 .tabWrap.membership .tabContent.on {position:static;}
-
 
 
 /* 공통 버튼 */
@@ -588,6 +583,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 상품 검색 갤러리 리스트 */
 .itemWrap {position:relative; width:calc(100% + 16px); margin-top:20px;}
 .itemWrap h2 {padding-bottom:13px; font-size:20px; color:#333;}
+.itemWrap h2 + .subTxt {padding-bottom:18px; margin-top:-2px; color:#333; line-height:18px;}
 .itemWrap .itemMore {position:absolute; top:5px; right:16px;}
 .itemWrap .swiper-pagination {display:none;}
 .itemListWrap {}
@@ -1028,6 +1024,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .singleSlide .title .text .desc {display:block; font-size:12px; line-height:18px;}
 .singleSlide .content {display:none; padding:9px 0 0 0;}
 .singleSlide .content .txt {font-size:12px; line-height:16px;}
+.singleSlide .content .txt + .txt {margin-top:7px;}
 .singleSlide .content .txt + .listStar {margin-top:7px;}
 .singleSlide .content .list + .listStar {margin-top:9px;}
 
@@ -1831,6 +1828,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .Type1 .swiper-slide {width:240px; border:1px solid #e6e6e6;}
 .Type1 .swiper-slide .thumb {height:135px;}
 .Type1.etc .swiper-slide {border:none;}
+.Type1.full .swiper-slide {width:100%}
 
 .swiper-slide > a {display:block;}
 .txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
@@ -1903,6 +1901,15 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
 .itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
 .itemList2 .txtArea > .desc{font-size: 12px;}
+
+.itemList3 {}
+.itemList3 > li {padding:16px 0; display:table; width:100%; table-layout:fixed; border-bottom:1px solid #e7e3e0;}
+.itemList3 > li .thumb {display:table-cell; width:72px; vertical-align:top;}
+.itemList3 > li .thumb > img {width:100%;}
+.itemList3 > li .cont {display:table-cell; padding-left:12px; vertical-align:top;}
+.itemList3 > li .cont dl dt {padding-bottom:1px; margin-top:-4px; font-weight:bold;}
+.itemList3 > li .cont dl dd {font-size:11px; line-height:16px;}
+.itemList3 > li .cont dl + .moreDiv {padding-top:8px;}
 
 .timeTable .side3 table tbody tr > *{vertical-align: top; padding: 2px 0; line-height: 17px;}
 .timeTable .side3 table tbody tr > * > span{vertical-align: top; line-height: 17px;}
@@ -2043,40 +2050,40 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 
 /*Sub Main Visual*/
-.mainVisual{width: calc(100% + 32px); margin-left: -16px;}
-.mainVisual .viewArea{position: relative;}
-.mainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
-.mainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
-.mainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
-.mainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
-.mainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
-.mainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
-.mainVisual .txt.none{padding-top: 0; margin-top: 3px;}
-.mainVisual .txt.none:before {display: none;}
-.mainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
-.mainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
+.subMainVisual{width: calc(100% + 32px); margin-left: -16px;}
+.subMainVisual .viewArea{position: relative;}
+.subMainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
+.subMainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
+.subMainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
+.subMainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
+.subMainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
+.subMainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.subMainVisual .txt.none{padding-top: 0; margin-top: 3px;}
+.subMainVisual .txt.none:before {display: none;}
+.subMainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
+.subMainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 
 .mainFull{height: 100vh;}
 .mainFull #container{height: calc(100% - 90px);}
 .mainFull #footerWrap{padding-top: 0;}
 .mainFull .pageTop{display: none;}
 .mainFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
-.mainFull .mainVisual .bx-wrapper{position: relative;}
-.mainFull .mainVisual,
-.mainFull .mainVisual .titleArea,
-.mainFull .mainVisual .bx-wrapper, 
-.mainFull .mainVisual .bx-viewport, 
-.mainFull .mainVisual .normalSwiper, 
-.mainFull .mainVisual .item{height: 100%;}
-.mainFull .mainVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
-.mainFull .mainVisual .viewArea{position: relative; height: 100%;}
-.mainFull .mainVisual .squareBox{bottom: 65px;}
+.mainFull .subMainVisual .bx-wrapper{position: relative;}
+.mainFull .subMainVisual,
+.mainFull .subMainVisual .titleArea,
+.mainFull .subMainVisual .bx-wrapper, 
+.mainFull .subMainVisual .bx-viewport, 
+.mainFull .subMainVisual .normalSwiper, 
+.mainFull .subMainVisual .item{height: 100%;}
+.mainFull .subMainVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
+.mainFull .subMainVisual .viewArea{position: relative; height: 100%;}
+.mainFull .subMainVisual .squareBox{bottom: 65px;}
 
-.mainVisual.artSpace{padding-bottom: 50px;}
-.mainVisual.artSpace .txtArea{bottom: 45px;}
-.mainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
-.mainVisual.wonderbox .txtArea{bottom: 55px;}
-.mainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.artSpace{padding-bottom: 50px;}
+.subMainVisual.artSpace .txtArea{bottom: 45px;}
+.subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.wonderbox .txtArea{bottom: 55px;}
+.subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 
 /*Art Garden*/
 .gardenArtist{margin-top: 20px; padding-top: 20px; border-top: 1px solid #e7e3e0;}

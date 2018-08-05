@@ -57,7 +57,78 @@ $(function(){
 	/* ==============================
 	 * gnb 
 	 * ============================== */
+// gnb
+// gnb list
+$(function(){
+	var GnbList = $('.gnbList > .dept');
+	$(GnbList).each(function(){
+		$(this).children('.tit').click(function(){
+			if ( $(this).next('.subGnb').css('display') == 'block' )
+			{
+				$(this).removeClass('on');
+				$(this).next('.subGnb').slideUp(300);
+			} else {
+				$(this).addClass('on');
+				$(this).next('.subGnb').slideDown(300);
+			}
+		});
+	});
 
+	// gnb 내부 리스크 스크롤 이벤트
+	var gnbListPos = 0;
+	$('.gnbCont > .inner').scroll(function(){
+		var gnbContOffset = $('.gnbCont').offset().top;
+		var gnbListTop = $('.gnbList').offset().top;
+
+		if (gnbListTop == gnbContOffset)
+		{
+			$('.gnbCont > .inner').removeClass('on');
+		} else if ( gnbListTop < gnbContOffset )
+		{
+			$('.gnbCont > .inner').addClass('on');
+		}
+	});
+
+	//gnb open
+	$('.menuBtn').click(function(){
+		var htmlHeight = $(window).height();
+		$('.navDimmed').height(htmlHeight);
+		$('body').addClass('fixed');
+		$('nav').addClass('on');
+		$('.gnb').animate({
+			left: '0'
+		}, 300);
+		GnbContHeight();
+	});
+
+	// gnb close
+	$('.gnb > .close').click(function(){
+		$('.gnb').animate({
+			left: '-100%'
+		}, 300 , function(){
+			$('nav').removeClass('on');
+			$('body').removeClass('fixed');
+			$('body').css('height','auto');
+		});
+	});
+
+	//GnbContHeight();
+	function GnbContHeight() {
+		var WinHeight = $(window).height();
+		var GnbGroup = $('.gnb > .groupTop').outerHeight();
+		$('.gnbCont').height(WinHeight - GnbGroup);
+		$('body').height(WinHeight);
+		$('.navDimmed').height(WinHeight);
+	}
+
+	// 높이 제어
+	$(window).resize(function(){
+		if ( $('nav').hasClass('on') )
+		{
+			GnbContHeight();
+		}
+	});
+});
 
 	/* ==============================
 	 * main 
@@ -134,7 +205,6 @@ function selectMake(){
 	});
 }
 
-
 function selectMakeUI(){
 	$(document).on("hover",".ui-select-option:first-of-type",function(){
 	  $(this).closest(".ui-select-options").addClass("ui-select-option-hover");
@@ -160,7 +230,6 @@ function selectMakeUI(){
 	});
 }
 
-
 // 탭
 $(function(){
 	var tabList = $('.tabList > li').children('.tit');
@@ -184,9 +253,7 @@ $(function(){
 			});
 		});
 	});
-
 });
-
 
 // input type date placeholder
 $(function(){
@@ -210,20 +277,6 @@ $(function(){
 			$('.radioTabContent').removeClass('on');
 			$('.radioTabContent').eq(radio).addClass('on');
 		});
-	});
-});
-
-// 상품 갤러리
-$(function(){
-	$('.itemListWrap').bxSlider({
-		//auto: true,
-		slideWidth: 2500,
-		minSlides: 1.2,
-		maxSlides: 3,
-		slideMargin: 12,
-		moveSlides: 1,
-		pager: false,
-		controls: false
 	});
 });
 
@@ -367,7 +420,6 @@ $(function(){
 					}
 				}
 			}
-
 		});
 	});
 
@@ -394,7 +446,6 @@ $(function(){
 		$('.calendarDate').children('.last').addClass('fix');
 	}
 
-
 	// 달력 초기화 버튼 - 전체
 	$('.calendarAllReset').click(function(){
 		$(CalendarDate).removeClass('first last range noDateEx');
@@ -417,9 +468,7 @@ $(function(){
 				$(this).addClass('noEventDay');
 			}
 		});
-
 		$('.eventCalendar').find('.addDay').removeClass().addClass('noEventDay eventDayChk');
-		
 	});
 
 	// 달력 초기화 - 가는날
@@ -457,12 +506,9 @@ $(function(){
 		$('.calendarDate').children('.first').removeClass('fix');
 		$('.calendarDate').children('.last').removeClass('fix');
 	}
-
-	
-
 });
 
-// 카운트
+// counter
 $(function(){
 	$('.countMinus').click(function(){
 		countMinus = $(this).prev('.count').html();
@@ -482,7 +528,6 @@ $(function(){
 		$(this).parent('.countWrap').find('.count').html(countPlus);;
 	});
 });
-
 
 // 결제 리스트 
 $(function(){
@@ -518,63 +563,7 @@ $(function(){
 	});
 });
 
-/* 침대 객실 */
-$(function(){
-	var swiper = new Swiper('.roomGallery', {
-		slidesPerView: 'auto',
-		spaceBetween: 8,
-		observer: true,
-		observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			type: 'fraction',
-		},
-	});
-});
-
-/* 카드 갤러리 기본 */
-$(function(){
-	var cardLength = $('.mypageGallery').find('.swiper-slide').length;
-
-	if (cardLength == 1)
-	{
-		$('.mypageGallery').addClass('single');
-	} else if (cardLength != 1)
-	{
-		var swiper = new Swiper('.mypageGallery', {
-			slidesPerView: 'auto',
-			spaceBetween: 12,
-			observer: true,
-			observeParents: true,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-		});
-	}
-});
-
-// 카드 갤러리 - 맴버십
-$(function(){
-	var Memberswiper = new Swiper('.cardGallery.membership', {
-		slidesPerView: 'auto',
-		spaceBetween: 12,
-		observer: true,
-		observeParents: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true
-		}
-	});
-
-	Memberswiper.on('slideChangeTransitionEnd', function () {
-	  	var idx = $('.swiper-pagination-bullet-active').index();
-	  	$('.membershipCardInfo .signatureCardInfo').eq(idx).addClass('on').siblings().removeClass('on');
-	});
-});
-
-
-/* 구매 상품 목록 */
+// 구매 상품 목록
 $(function(){
 	$('.purchaseListTitle').click(function(){
 		if ( !$(this).hasClass('on'))
@@ -632,7 +621,6 @@ $(subHeaderCall).click(function(){
 	}
 });
 
-
 // sub Header 메뉴
 $(function(){
 	var subHeaderCall = $('.headerFixed > .now');
@@ -652,7 +640,7 @@ $(function(){
 	});
 });
 
-/* faq */
+// faq
 $(function(){
 	var faqList = $('.faqWrap > .faqList')
 	$(faqList).each(function(faq){
@@ -679,9 +667,8 @@ $(function(){
 	});
 });
 
-
-/* mypage */
-/* barcode */
+// mypage
+// barcode 
 $(function(){
 	$('.btnBarcode').click(function(){
 		$('body').css('height','auto');
@@ -702,11 +689,9 @@ $(function(){
 			$('.dimmedLayer').css({'display':'block', 'height':windHeight});
 		}
 	});
-
 });
 
-
-/* graph gauge */
+// graph gauge
 $(function(){
 	$('.tabWrap.membership > .tabList').children('li').eq(3).click(function(){
 		var GraphVal1 = $('.pointGraph').find('.pointColor').html();
@@ -720,8 +705,7 @@ $(function(){
 	});
 });
 
-
-/* coupon */
+// coupon
 $(function(){
 	$(window).load(function(){
 		$('.couponList > li').each(function(){
@@ -734,7 +718,7 @@ $(function(){
 	});
 });
 
-/* 이용문의 슬라이드 */
+// 이용문의 슬라이드
 $(function(){
 	slideTime = 300;
 	var inquiryList = $('.inquiryList > .inquiryItem');
@@ -747,7 +731,6 @@ $(function(){
 				$('.inquiryItem').eq(idx).find('.inquiryItemTitle').addClass('on');
 				$(inquiryList).eq(idx).removeClass('on open none');
 			});
-			
 		} else {
 			$('.inquiryItem').not(this).find('.txt').slideUp(slideTime);
 			$('.inquiryItem').not(this).find('.answer').slideUp(slideTime);
@@ -764,73 +747,6 @@ $(function(){
 		}
 	});
 });
-
-/* fine swiper */
-$(function(){
-	var nBannerLng = $('.normalSwiper').find('.item').length;
-	if ( nBannerLng == 1)
-	{
-		return false;
-	} else {
-		$('.normalSwiper').bxSlider({
-			controls: false,
-			pager: true
-		});
-	}
-});
-
-/* 스테이션 소개 */
-$(function(){
-	$(window).load(function(){
-		var stationLng = $('.stationCont').length;
-		$('.stationGallery').find('.all').html(stationLng);
-	});
-	var stationswiper = new Swiper('.station', {
-		slidesPerView: 'auto',
-		pagination: {
-			el: '.swiper-pagination',
-		},		
-	});
-	stationswiper.on('slideChangeTransitionEnd', function () {
-	  	var idx = $('.swiper-pagination-bullet-active').index();
-		$('.counter').find('.now').html(idx + 1);
-	});
-});
-
-/* fine */
-$(function(){
-	var FineLength = $('.fineEventGallery').find('.swiper-slide').length;
-
-	if (FineLength == 1)
-	{
-		$('.fineEventGallery').parent('.fineEvent').addClass('single');
-	} else if (FineLength != 1)
-	{
-		var Fineswiper = new Swiper('.fineEventGallery', {
-			slidesPerView: 'auto',
-			spaceBetween: 12,
-			observer:true,
-			observeParents: true,
-		});
-	}
-});
-
-// 스테이션 소개
-$(function(){
-	var artContLng = $('.artCont').length;
-	$('.artGalleryWrap').find('.all').html(artContLng);
-	var artswiper = new Swiper('.artGallery', {
-		slidesPerView: 'auto',
-		pagination: {
-			el: '.swiper-pagination',
-		},		
-	});
-	artswiper.on('slideChangeTransitionEnd', function () {
-	  	var idx = $('.swiper-pagination-bullet-active').index();
-		$('.artGalleryWrap').find('.now').html(idx + 1);
-	});
-});
-
 
 // input reset
 $(function(){
@@ -867,8 +783,7 @@ $(function(){
 	});
 });
 
-
-/* floating button */
+// floating button
 $(function(){
 	$(window).scroll(function(){
 		var Top = $(window).scrollTop();		
@@ -962,6 +877,148 @@ $(function(){
 	}
 });
 
+// 상품 갤러리
+$(function(){
+	$('.itemListWrap').bxSlider({
+		//auto: true,
+		slideWidth: 2500,
+		minSlides: 1.2,
+		maxSlides: 3,
+		slideMargin: 12,
+		moveSlides: 1,
+		pager: false,
+		adaptiveHeight: true,
+		infiniteLoop: false,
+		controls: false
+	});
+});
+
+// normalSwiper
+$(function(){
+	var nBannerLng = $('.normalSwiper').find('.item').length;
+	if ( nBannerLng == 1)
+	{
+		return false;
+	} else {
+		$('.normalSwiper').bxSlider({
+			controls: false,
+			adaptiveHeight: true,
+			infiniteLoop: false,
+			pager: true
+		});
+	}
+	$(window).resize(function(){
+		var subMainVisualHeight = $('.subMainVisual').height();
+		$('.subMainVisual').find('.bx-viewport').height(subMainVisualHeight);
+	});
+});
+
+// 카드 갤러리 - 맴버십
+$(function(){
+	var Memberswiper = new Swiper('.cardGallery.membership', {
+		slidesPerView: 'auto',
+		spaceBetween: 12,
+		observer: true,
+		observeParents: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		}
+	});
+
+	Memberswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+	  	$('.membershipCardInfo .signatureCardInfo').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+});
+
+// 카드 갤러리 기본
+$(function(){
+	var cardLength = $('.mypageGallery').find('.swiper-slide').length;
+
+	if (cardLength == 1)
+	{
+		$('.mypageGallery').addClass('single');
+	} else if (cardLength != 1)
+	{
+		var swiper = new Swiper('.mypageGallery', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	}
+});
+
+// 침대 객실
+$(function(){
+	var swiper = new Swiper('.roomGallery', {
+		slidesPerView: 'auto',
+		spaceBetween: 12,
+		observer: true,
+		observeParents: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'fraction',
+		},
+	});
+});
+
+// station
+$(function(){
+	$(window).load(function(){
+		var stationLng = $('.stationCont').length;
+		$('.stationGallery').find('.all').html(stationLng);
+	});
+	var stationswiper = new Swiper('.station', {
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+		},		
+	});
+	stationswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+		$('.counter').find('.now').html(idx + 1);
+	});
+});
+
+// fine
+$(function(){
+	var FineLength = $('.fineEventGallery').find('.swiper-slide').length;
+	if (FineLength == 1)
+	{
+		$('.fineEventGallery').parent('.fineEvent').addClass('single');
+	} else if (FineLength != 1)
+	{
+		var Fineswiper = new Swiper('.fineEventGallery', {
+			slidesPerView: 'auto',
+			spaceBetween: 12,
+			observer:true,
+			observeParents: true,
+		});
+	}
+});
+
+// 스테이션 소개
+$(function(){
+	var artContLng = $('.artCont').length;
+	$('.artGalleryWrap').find('.all').html(artContLng);
+	var artswiper = new Swiper('.artGallery', {
+		slidesPerView: 'auto',
+		pagination: {
+			el: '.swiper-pagination',
+		},		
+	});
+	artswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+		$('.artGalleryWrap').find('.now').html(idx + 1);
+	});
+});
+
 // multi Swipe
 $(function(){
 
@@ -981,7 +1038,7 @@ $(function(){
 		$(this).addClass('s'+index);
 		var slider = new Swiper('.s'+index, {
 			slidesPerView: 'auto',
-			spaceBetween: 8,
+			spaceBetween: 12,
 			observer: true,
 			observeParents: true,
 			pagination: {
@@ -1024,7 +1081,7 @@ $(function(){
 		$(this).addClass('s2'+index);
 		var slider2 = new Swiper('.s2'+index, {
 			slidesPerView: 'auto',
-			spaceBetween: 8,
+			spaceBetween: 12,
 			observer: true,
 			observeParents: true,
 			pagination: {
@@ -1076,7 +1133,6 @@ $(function(){
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 });
-
 
 // membership select
 $(function(){
@@ -1151,81 +1207,6 @@ $(function(){
 	});
 });
 
-// gnb
-// gnb list
-$(function(){
-	var GnbList = $('.gnbList > .dept');
-	$(GnbList).each(function(){
-		$(this).children('.tit').click(function(){
-			if ( $(this).next('.subGnb').css('display') == 'block' )
-			{
-				$(this).removeClass('on');
-				$(this).next('.subGnb').slideUp(300);
-			} else {
-				$(this).addClass('on');
-				$(this).next('.subGnb').slideDown(300);
-			}
-		});
-	});
-
-	// gnb 내부 리스크 스크롤 이벤트
-	var gnbListPos = 0;
-	$('.gnbCont > .inner').scroll(function(){
-		var gnbContOffset = $('.gnbCont').offset().top;
-		var gnbListTop = $('.gnbList').offset().top;
-
-		if (gnbListTop == gnbContOffset)
-		{
-			$('.gnbCont > .inner').removeClass('on');
-		} else if ( gnbListTop < gnbContOffset )
-		{
-			$('.gnbCont > .inner').addClass('on');
-		}
-	});
-
-	//gnb open
-	$('.menuBtn').click(function(){
-		var htmlHeight = $(window).height();
-		$('.navDimmed').height(htmlHeight);
-		$('body').addClass('fixed');
-		$('nav').addClass('on');
-		$('.gnb').animate({
-			left: '0'
-		}, 300);
-		GnbContHeight();
-	});
-
-	// gnb close
-	$('.gnb > .close').click(function(){
-		$('.gnb').animate({
-			left: '-100%'
-		}, 300 , function(){
-			$('nav').removeClass('on');
-			$('body').removeClass('fixed');
-			$('body').css('height','auto');
-		});
-	});
-
-	//GnbContHeight();
-	function GnbContHeight() {
-		var WinHeight = $(window).height();
-		var GnbGroup = $('.gnb > .groupTop').outerHeight();
-		$('.gnbCont').height(WinHeight - GnbGroup);
-		$('body').height(WinHeight);
-		$('.navDimmed').height(WinHeight);
-	}
-
-	// 높이 제어
-	$(window).resize(function(){
-		if ( $('nav').hasClass('on') )
-		{
-			GnbContHeight();
-		}
-	});
-
-});
-
-
 // pageTop
 $(function(){
 	$('.pageTop').click(function(){
@@ -1267,3 +1248,45 @@ $(function(){
 		}
 	}
 });
+
+
+/*	체널 오픈 및 일정 레이어팝업 오픈 기능 / 개발진행건과 문의 후 오픈
+// channel
+$(function(){
+	// 높이 제어
+	$(window).resize(function(){
+		if ( $('.layerInner').hasClass('on') )
+		{
+			BodyHeight();
+		}
+	});
+
+	var Inner = "<div class='layerInner'></div>";
+	$('.chnnelView').click(function(e){
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInner').addClass('on');
+		$('.layerInner').load('channel.html .layerfullWrap');
+		BodyHeight();
+	});
+
+	$('.timeTable').click(function(e){
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInner').addClass('on');
+		$('.layerInner').load('operating_time.html .layerfullWrap');
+		BodyHeight();
+	});	
+
+	function BodyHeight() {
+		var WinHeight = $(window).height();
+		$('body').height(WinHeight);
+		$('body').addClass('fixed');
+	}
+});
+
+$(document).on('click', '.layerCloseEtc', function(){
+	$('.layerInner').removeClass('on').remove();
+	$('body').removeClass('fixed').css('height','auto');
+});
+*/
