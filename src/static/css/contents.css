@@ -20,7 +20,6 @@
 	display: none;
 		-webkit-appearance: none;
 }
-/* input::-webkit-datetime-edit{ color: transparent; } */
 .inp.date:disabled {background:#f9f9f9; font-size:13px; color:#999;}
 
 
@@ -65,7 +64,6 @@
 /* 공통 */
 /* 레이어 */
 #wrap {position:relative; height:100%;}
-/* #wrap.btnAdd {height:100%; padding:0 0 50px 0; overflow:auto;} */
 #wrap.btnAdd {height:100%; overflow:auto;}
 
 
@@ -76,15 +74,16 @@
 .layerfullWrap.floorZone {padding:60px 0 130px 0;}
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
 .layerfullWrap.btnAdd #layerContent {height:100%;}
-.layerfullWrap.btnAdd #layerContent:after {content:''; display:block; height:20px;}
+.layerfullWrap.btnAdd #layerContent.floating {padding-bottom:50px;}
 #layerContent > .layerInner {height:calc(100% - 20px); overflow:auto;}
 
 #container {position:relative; padding:0 16px; overflow:hidden;}
-#container:after {content:''; display:block; height:20px;}
 #container.none:after {content:none;}
 #container.subHeader {}
 #container.btnAdd {height:calc(100% - 60px);}
-
+#container.btnAdd2 {padding-bottom:80px;}
+#container.floating {padding-bottom:50px;}
+#container + .tblDiv.btnTbl.half {margin-top:36px;}
 
 /* 레이어팝업 헤더 */
 #layerHeader {position:fixed; top:0; left:0; z-index:99; width:100%; height:60px; background:#fff; font-size:17px; font-weight:bold; color:#191919; text-align:center; line-height:60px;}
@@ -109,7 +108,6 @@
 .tabWrap .tabContent.event {padding:12px 16px 0 16px;}
 .tabWrap.membership .tabContent {position:absolute; top:0; left:-9999px; display:block; width:100%; height:100%;}
 .tabWrap.membership .tabContent.on {position:static;}
-
 
 
 /* 공통 버튼 */
@@ -350,11 +348,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 로그인 */
-.titleTxt {padding:17px 0 0 0; font-size:20px; color:#999; line-height:24px; word-break:keep-all;}
-.titleTxt .color {color:#9d836a; line-height:23px;}
+.titleTxt {padding:17px 0 0 0; font-weight:200; font-size:20px; color:#999; line-height:24px; word-break:keep-all;}
+.titleTxt .color { font-weight:200; color:#9d836a; line-height:23px;}
 .titleTxt.single {padding-top:9px !important; line-height:23px;}
 .titleTxt br {display:none;}
-.titleTxt .dpib {display:inline;}
+.titleTxt .dpib {font-weight:200; display:inline;}
 
 .loginWrap {position:relative; min-height:100%;}
 #layerContent .loginWrap {padding-bottom:70px;}
@@ -578,20 +576,23 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .floorAddList > ul li .del {position:absolute; top:2px; right:0; text-indent:-9999px; width:22px; height:22px; border:1px solid #e8e4e1; border-radius:50%;}
 .floorAddList > ul li .del:after {content:''; position:absolute; top:5px; right:5px; display:inline-block; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
 
-/* .floorTotal {position:absolute; bottom:50px; left:0; width:calc(100% - 32px); margin:0 16px; background:#fff; border-top:1px solid #e9e5e2;} */
-.floorTotal {margin:0 16px; background:#fff; border-top:1px solid #e9e5e2;}
-.floorTotal.none {border-top:none;}
+.floorTotal {background:#fff; border-top:1px solid #e9e5e2;}
+.floorTotal.none {margin:21px 0 13px 0; border-top:none;}
 
 
 /* 상품 검색 갤러리 리스트 */
 .itemWrap {position:relative; width:calc(100% + 16px); margin-top:20px;}
 .itemWrap h2 {padding-bottom:13px; font-size:20px; color:#333;}
-.itemWrap .itemMore {position:absolute; top:5px; right:16px; }
+.itemWrap h2 + .subTxt {padding-bottom:18px; margin-top:-2px; color:#333; line-height:18px;}
+.itemWrap .itemMore {position:absolute; top:5px; right:16px;}
+.itemWrap .swiper-pagination {display:none;}
 .itemListWrap {}
 .itemListWrap .item {border:1px solid #e9e9e9;}
 .itemListWrap .item > a {display:block;}
 .itemThumb {position:relative; display:block;}
 .itemThumb > img {width:100%;}
+.itemThumb.soldout:before {content:''; position:absolute; top:0; left:0; z-index:2; width:100%; height:100%; background:#9d836a; opacity:0.8;}
+.itemThumb.soldout:after {content:'SOLD OUT'; position:absolute; top:50%; left:0; z-index:3; display:block; width:100%; height:100%; margin-top:-8px; text-align:center; font-weight:bold; color:#fff; line-height:16px;}
 .itemPrice {vertical-align:bottom;}
 .itemPrice .price1 {font-weight:bold; color:#9c836a;}
 .itemPrice .price1 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
@@ -1023,6 +1024,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .singleSlide .title .text .desc {display:block; font-size:12px; line-height:18px;}
 .singleSlide .content {display:none; padding:9px 0 0 0;}
 .singleSlide .content .txt {font-size:12px; line-height:16px;}
+.singleSlide .content .txt + .txt {margin-top:7px;}
 .singleSlide .content .txt + .listStar {margin-top:7px;}
 .singleSlide .content .list + .listStar {margin-top:9px;}
 
@@ -1502,7 +1504,7 @@ line-height:18px;}
 .detailList .btnMoreTxt {position:absolute; top:0; right:0;}
 .detailList .btnMoreTxt.none {position:static;}
 
-.stationGallery {padding-bottom:32px;}
+.stationGallery {}
 .stationGallery .title {display:block;  font-weight:bold; color:#111;}
 .stationGallery .title + .station {margin-top:17px;}
 .stationGallery .title + .download {margin:9px 0 16px 0; overflow:hidden;}
@@ -1530,6 +1532,7 @@ line-height:18px;}
 .fineEventCont > a {display:block; border:1px solid #e3e3e3;}
 .fineEventCont > a .thumb {display:block; width:100%; height:135px;}
 .fineEventCont > a .tit {display:block; padding:12px 12px 4px 12px; font-weight:bold; font-size:14px; color:#111; text-align:left;}
+.fineEventCont > a .tit {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
 .fineEventCont > a .desc {height:32px; padding:0 12px; margin-bottom:13px; font-size:12px; line-height:16px; text-align:left;}
 .fineEventCont > a .date{display: block; padding: 0 12px 4px; font-size: 12px; color: #333;}
 
@@ -1825,6 +1828,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .Type1 .swiper-slide {width:240px; border:1px solid #e6e6e6;}
 .Type1 .swiper-slide .thumb {height:135px;}
 .Type1.etc .swiper-slide {border:none;}
+.Type1.full .swiper-slide {width:100%}
 
 .swiper-slide > a {display:block;}
 .txtContent.swipeType1 .btnMoreTxt {top:0; right:16px;}
@@ -1897,6 +1901,15 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .itemList2 .txtArea > .title{margin-bottom: 8px; font-size: 14px; font-weight: bold; color: #000;}
 .itemList2 .txtArea > .sub{margin-bottom: 11px; font-size: 12px; color: #9c836a;}
 .itemList2 .txtArea > .desc{font-size: 12px;}
+
+.itemList3 {}
+.itemList3 > li {padding:16px 0; display:table; width:100%; table-layout:fixed; border-bottom:1px solid #e7e3e0;}
+.itemList3 > li .thumb {display:table-cell; width:72px; vertical-align:top;}
+.itemList3 > li .thumb > img {width:100%;}
+.itemList3 > li .cont {display:table-cell; padding-left:12px; vertical-align:top;}
+.itemList3 > li .cont dl dt {padding-bottom:1px; margin-top:-4px; font-weight:bold;}
+.itemList3 > li .cont dl dd {font-size:11px; line-height:16px;}
+.itemList3 > li .cont dl + .moreDiv {padding-top:8px;}
 
 .timeTable .side3 table tbody tr > *{vertical-align: top; padding: 2px 0; line-height: 17px;}
 .timeTable .side3 table tbody tr > * > span{vertical-align: top; line-height: 17px;}
@@ -2037,24 +2050,25 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 
 /*Sub Main Visual*/
-.mainVisual{width: calc(100% + 32px); margin-left: -16px;}
-.mainVisual .viewArea{position: relative;}
-.mainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
-.mainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
-.mainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
-.mainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
-.mainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
-.mainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
-.mainVisual .txt.none{padding-top: 0; margin-top: 3px;}
-.mainVisual .txt.none:before {display: none;}
-.mainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
-.mainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
+.subMainVisual{width: calc(100% + 32px); margin-left: -16px;}
+.subMainVisual .viewArea{position: relative;}
+.subMainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
+.subMainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
+.subMainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
+.subMainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
+.subMainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
+.subMainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.subMainVisual .txt.none{padding-top: 0; margin-top: 3px;}
+.subMainVisual .txt.none:before {display: none;}
+.subMainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
+.subMainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 
 .mainFull{height: 100vh; min-height: 500px;}
 .mainFull #container{height: calc(100% - 90px);}
 .mainFull #footerWrap{padding-top: 0;}
 .mainFull .pageTop{display: none;}
 .mainFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
+<<<<<<< HEAD
 .mainFull .mainVisual .bx-wrapper{position: relative;}
 .mainFull .mainVisual,
 .mainFull .mainVisual .titleArea,
@@ -2071,6 +2085,24 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 .mainVisual.wonderbox .txtArea{bottom: 55px;}
 .mainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+=======
+.mainFull .subMainVisual .bx-wrapper{position: relative;}
+.mainFull .subMainVisual,
+.mainFull .subMainVisual .titleArea,
+.mainFull .subMainVisual .bx-wrapper, 
+.mainFull .subMainVisual .bx-viewport, 
+.mainFull .subMainVisual .normalSwiper, 
+.mainFull .subMainVisual .item{height: 100%;}
+.mainFull .subMainVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
+.mainFull .subMainVisual .viewArea{position: relative; height: 100%;}
+.mainFull .subMainVisual .squareBox{bottom: 65px;}
+
+.subMainVisual.artSpace{padding-bottom: 50px;}
+.subMainVisual.artSpace .txtArea{bottom: 45px;}
+.subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.wonderbox .txtArea{bottom: 55px;}
+.subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+>>>>>>> 091d4444281ec8d495fc71fd9fc4d1bd0a874173
 
 /*Art Garden*/
 .gardenArtist{margin-top: 20px; padding-top: 20px; border-top: 1px solid #e7e3e0;}

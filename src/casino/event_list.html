@@ -1,0 +1,71 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+				"header":"PARADISE CASINO"
+			})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">EVENTS</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#" class="on">EVENTS</a></li>
+					<li><a href="#">잭팟스토리</a></li>
+					<li><a href="#">게임가이드</a></li>
+					<li><a href="#">시설안내</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt">
+				쉴 틈 없이 진행되는 파라다이스시티 카지노만의 이벤트를 만나보세요.
+			</p>
+			<a href="#" class="btn ty9 mt8">전체 이벤트 보기</a>
+
+			<div class="searchWrap mt20">
+				<div class="searchSort">
+					<select name="" id="" class="selectbox sort1">
+						<option value="">진행중</option>
+						<option value="">종료됨</option>
+					</select>
+					<select name="" id="" class="selectbox sort2">
+						<option value="">인기순</option>
+					</select>
+				</div>
+			</div>
+
+			<ul class="listView">
+				<li class="listViewItem">
+					<a href="#">
+						<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+						<strong>SECRET EVENT</strong>
+						<span class="date">2018.05.01- 2018.06.01</span>
+						<span class="desc dot">파라다이스시티에서 제공하는 당신만을 위한 최고의 휴식 Summer Paradise Cocktail과 함께</span>
+					</a>
+				</li>
+				<li class="listViewItem">
+					<a href="#">
+						<img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
+						<strong>SECRET EVENT</strong>
+						<span class="date">2018.05.01- 2018.06.01</span>
+						<span class="desc dot">파라다이스시티에서 제공하는 당신만을 위한 최고의 휴식 Summer Paradise Cocktail과 함께</span>
+					</a>
+				</li>
+			</ul>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

@@ -10,7 +10,6 @@
     <link href="../static/css/reset.css" rel="stylesheet" />
     <link href="../static/css/common.css" rel="stylesheet" />
     <link href="../static/css/contents.css" rel="stylesheet" />
-    <link href="../static/css/main.css" rel="stylesheet" />
     <script type="text/javascript" src="../static/js/common.js"></script>
     <script type="text/javascript" src="../static/js/ui.js"></script>
     <!--[if lt IE 9]>
@@ -25,409 +24,688 @@
 </head>
 
 <body>
-    <!-- 헤더영역 -->
-    <header id="headerWrap">
-        <h1>@@header</h1>
-        <a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
-        <a href="#" class="menuBtn">메뉴</a>
-    </header>
-    <!-- //헤더영역 -->
+    <div id="wrap">
+        <!-- 헤더영역 -->
+        <header id="headerWrap">
+            <h1>
+                <img src='../static/images/main/img_main_logo.png' alt=''>
+            </h1>
+            <a href="#" class="cartBtn etc">장바구니 수량<span>99+</span></a>
+            <a href="#" class="menuBtn etc">메뉴</a>
 
-    <script type="text/javascript">
-        $(function() {
-            $('.sw').bxSlider({
-                auto: true,
-                slideWidth: 2500,
-                minSlides: 1.5,
-                maxSlides: 3,
-                slideMargin: 50,
-                moveSlides: 1,
-                pager: false
-            });
-        });
-    </script>
+            <nav>
+                <div class="navDimmed"></div>
+                <div class="gnb">
+                    <div class="groupTop">
+                        <div class="country">
+                            <a href="#" class="on">KO</a>
+                            <a href="#">EN</a>
+                            <a href="#">CN</a>
+                            <a href="#">JP</a>
+                            <a href="#">TW</a>
+                        </div>
+                        <div class="util">
+                            <ul>
+                                <li>
+                                    <a href="#">로그인</a>
+                                </li>
+                                <li>
+                                    <a href="#">회원가입</a>
+                                </li>
+                                <li>
+                                    <a href="#">예약확인/취소</a>
+                                </li>
+                            </ul>
+                        </div>
 
-    <style type="text/css">
-        #container {
-            padding: 0 10px;
-        }
+                        <!-- 로그인 후 -->
+                        <!--
+			<div class="util">
+				<ul>
+					<li>
+						<a href="#">마이페이지</a>
+					</li>
+					<li>
+						<a href="#">예약확인/취소</a>
+					</li>
+					<li>
+						<a href="#">로그아웃</a>
+					</li>
+				</ul>
+			</div>
+			<p class="greetings">홍길동님 안녕하세요.</p>
+			-->
+                        <!-- 로그인 후 -->
 
-        .item {
-            line-height: 100px;
-            border: 1px solid blue;
-            text-align: center;
-            box-sizing: border-box;
-        }
+                        <div class="link">
+                            <a href="#" class="btn ty4 big">OFFERS &amp; RESERVATION</a>
+                        </div>
+                    </div>
 
-        .item.a {
-            background: #ddd;
-        }
+                    <div class="gnbCont">
+                        <div class="inner">
+                            <ul class="gnbList">
+                                <li>
+                                    <a href="#">EVENTS</a>
+                                </li>
+                                <li class="dept">
+                                    <div class="tit">HOTELS</div>
+                                    <ul class="subGnb">
+                                        <li>
+                                            <a href="#">PARADISE</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ART PARADISO</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">CASINO</a>
+                                </li>
+                                <li class="dept">
+                                    <div class="tit">ART</div>
+                                    <ul class="subGnb">
+                                        <li>
+                                            <a href="#">ART SPACE</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ART GARDEN</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PARADISE WALK</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ART COLLECTION</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ART MAP</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dept">
+                                    <div class="tit">ENTERTAINMENT</div>
+                                    <ul class="subGnb">
+                                        <li>
+                                            <a href="#">CIMER</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">CHROMA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">PLAZA</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">WONDER BOX</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">DINE&amp;DRINK</a>
+                                </li>
+                                <li class="dept">
+                                    <div class="tit">GROUPS&amp;WEDDINGS</div>
+                                    <ul class="subGnb">
+                                        <li>
+                                            <a href="#">CONVENTION</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">STUDIO PARADISE</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">CHROMA FIELD</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">ACTIVITIES</a>
+                                </li>
+                                <li>
+                                    <a href="#">MEMBERSHIP</a>
+                                </li>
+                                <li class="dept">
+                                    <div class="tit">CUSTOMER SERVICE</div>
+                                    <ul class="subGnb">
+                                        <li>
+                                            <a href="#">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">FAQ/Q&amp;A</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">P-CITY MAP</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gnbBottom">
+                            <ul>
+                                <li>
+                                    <a href="mailto:paradise@paradise.com"><span class="ty1">메일</span></a>
+                                </li>
+                                <li>
+                                    <a href="tel:032-000-0000"><span class="ty2">전화</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="ty3">오시는 길</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
-        .item.b {
-            background: blue;
-        }
+                    <a href="#none" class="close">Close</a>
 
-        .item.c {
-            background: red;
-        }
-    </style>
+                </div>
+            </nav>
+        </header>
+        <!-- //헤더영역 -->
 
-    <!-- 컨텐츠 영역 -->
-    <section id="container">
-        <div class="sw">
-            <div class="item a">1</div>
-            <div class="item b">2</div>
-            <div class="item c">3</div>
-            <div class="item a">4</div>
-            <div class="item b">5</div>
-            <div class="item c">6</div>
-            <div class="item a">7</div>
-            <div class="item b">8</div>
-            <div class="item c">9</div>
-            <div class="item a">10</div>
-            <div class="item b">11</div>
-            <div class="item c">12</div>
+        <div class="mainVisual">
+            <div class="normalSwiper">
+                <div class="cont ty1">
+                    <div class="division">
+                        <strong>HOSPITALITY</strong>
+                        <span></span>
+                    </div>
+                    <div class="inner">
+                        <p class="title ty1">Enjoy<br /> Fabulous<br /> Stay!</p>
+                        <div class="linkBox">
+                            <ul class="ty1">
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty1"></span>
+                                            <div class="txt">
+                                                <span>HOTEL</span>
+                                                <strong>PARADISE CITY</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty1"></span>
+                                            <div class="txt">
+                                                <span>HOTEL</span>
+                                                <strong>ART PARADISO</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont ty2">
+                    <div class="division">
+                        <strong>EXCITEMENT</strong>
+                        <span></span>
+                    </div>
+                    <div class="inner">
+                        <p class="title ty2">plaY more,<br /> have fun!</p>
+                        <div class="linkBox">
+                            <ul class="ty2">
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty2"></span>
+                                            <div class="txt">
+                                                <span>SPA</span>
+                                                <strong>CIMER</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty2"></span>
+                                            <div class="txt">
+                                                <span>SPA</span>
+                                                <strong>CHROMA</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty2"></span>
+                                            <div class="txt">
+                                                <span>THEME PARK</span>
+                                                <strong>WONDER BOX</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont ty3">
+                    <div class="division">
+                        <strong>INSPIRATION</strong>
+                        <span></span>
+                    </div>
+                    <div class="inner">
+                        <p class="title ty3">imagine<br /> beyond<br /> your limit !</p>
+                        <div class="linkBox">
+                            <ul class="ty2">
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty3"></span>
+                                            <div class="txt">
+                                                <span>shopping</span>
+                                                <strong>plaza</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty3"></span>
+                                            <div class="txt">
+                                                <span>art gallery</span>
+                                                <strong>art space</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty3"></span>
+                                            <div class="txt">
+                                                <span>studio</span>
+                                                <strong>studio paradise</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont ty4">
+                    <div class="division">
+                        <strong>GOURMET</strong>
+                        <span></span>
+                    </div>
+                    <div class="inner">
+                        <p class="title ty3">meet<br /> exclusive<br /> dining quality !</p>
+                        <div class="linkBox">
+                            <ul class="ty1">
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty4"></span>
+                                            <div class="txt">
+                                                <span>dine &amp; Drink</span>
+                                                <strong>fine dining</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="inner">
+                                            <span class="dimmed ty4"></span>
+                                            <div class="txt">
+                                                <span>dine &amp; Drink</span>
+                                                <strong>casual dining</strong>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <!-- 컨텐츠 영역 -->
+        <section id="container">
+            <div class="mainCont">
+                <div class="itemWrap swipeType1">
+                    <h2>FEATURED OFFERS</h2>
+                    <p class="subTxt">
+                        파라다이스시티에서 준비한 특별한 상품과 혜택을 지금 만나보세요.
+                    </p>
+                    <div class="swiper-container Type1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide lng">
+                                <a href="#">
+                                    <span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+                                    <span class="nt ty2">전화상품</span>
+                                    <span class="nt ty3">특가</span>
+                                    </span>
+                                    </span>
+                                    <span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+                                    <span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+                                    <span class="hashtag">#Hotel Paradise  #Art Space</span>
+                                    <span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="pricePer roboto">-20%</span>
+                                    </span>
+                                    </span>
+                                </a>
+                                <div class="itemBtnWrap">
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+                                </div>
+                            </div>
 
-        <div class="dateSetting">
-            <div class="dateStep">
-                <button class="datepickStart dateFoucs">
-                    <span class="txt">가는날</span>
-                    <span class="dateDisplay">선택해주세요</span>
-                </button>
+                            <div class="swiper-slide lng">
+                                <a href="#">
+                                    <span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+                                    <span class="nt ty2">전화상품</span>
+                                    <span class="nt ty3">특가</span>
+                                    </span>
+                                    </span>
+                                    <span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+                                    <span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+                                    <span class="hashtag">#Hotel Paradise  #Art Space</span>
+                                    <span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="pricePer roboto">-20%</span>
+                                    </span>
+                                    </span>
+                                </a>
+                                <div class="itemBtnWrap">
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-pagination"></span>
+                    </div>
+                    <a href="#" class="itemMore btnMoreTxt">MORE</a>
+                </div>
+
+                <div class="itemWrap swipeType1">
+                    <h2>PARADISE CITY EVENTS</h2>
+                    <p class="subTxt">
+                        파라다이스시티에서 지금 벌어지고 있는 다양한 이벤트를 만나보세요.
+                    </p>
+                    <div class="swiper-container Type1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide lng">
+                                <a href="#">
+                                    <span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+                                    <span class="nt ty2">전화상품</span>
+                                    <span class="nt ty3">특가</span>
+                                    </span>
+                                    </span>
+                                    <span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+                                    <span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+                                    <span class="hashtag">#Hotel Paradise  #Art Space</span>
+                                    <span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="pricePer roboto">-20%</span>
+                                    </span>
+                                    </span>
+                                </a>
+                                <div class="itemBtnWrap">
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide lng">
+                                <a href="#">
+                                    <span class="itemThumb">
+										<img src="../static/images/sample/img_item.jpg" alt="" />
+										<span class="itemNoti">
+											<span class="nt ty1">마감상품</span>
+                                    <span class="nt ty2">전화상품</span>
+                                    <span class="nt ty3">특가</span>
+                                    </span>
+                                    </span>
+                                    <span class="itemDetail">
+										<strong>SCENT OF PARADISE</strong>
+										<span class="date roboto">2018.05.01 ~ 2018.06.01</span>
+                                    <span class="txt dot">모던하면서도 아늑한 인테리어의 호텔 파라다이스 객실과 아트 스페이스 기획전을</span>
+                                    <span class="hashtag">#Hotel Paradise  #Art Space</span>
+                                    <span class="itemPrice">
+											<span class="price1 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="price2 roboto">400,000<span class="unit">원</span></span> <span class="wave">~</span>
+                                    <span class="pricePer roboto">-20%</span>
+                                    </span>
+                                    </span>
+                                </a>
+                                <div class="itemBtnWrap">
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty3 big">담기</a>
+									</span>
+                                    <span class="itemBtn">
+										<a href="#" class="btn ty4 big">바로 구매</a>
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-pagination"></span>
+                    </div>
+                    <a href="#" class="itemMore btnMoreTxt">MORE</a>
+                </div>
             </div>
-            <div class="dateStep arrive">
-                <button class="datepickArrive">
-                    <span class="txt">오는날</span>
-                    <span class="dateDisplay">선택해주세요</span>
-                </button>
-            </div>
-        </div>
-        <div class="calendar">
-            <div class="calendarHead clearFixed">
-                <ul class="calendarDay">
-                    <li class="sun">일</li>
-                    <li>월</li>
-                    <li>화</li>
-                    <li>수</li>
-                    <li>목</li>
-                    <li>금</li>
-                    <li class="sat">토</li>
+
+            <div class="mainCont">
+                <h2>PARADISE CITY MEMBERSHIP</h2>
+                <p class="subTxt">파라다이스시티 고객님께 특별한 혜택을 제공해드리는 다양한 멤버십 프로그램을 소개합니다.</p>
+
+                <ul class="itemList3">
+                    <li>
+                        <div class="thumb">
+                            <img src="../static/images/main/img_mainlist01.jpg" alt="">
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>PARADISE REWARDS</dt>
+                                <dd>
+                                    차별화된 회원 특전과 포인트 혜택을 제공하는 파라다이스시티 통합 무료 멤버십입니다.
+                                </dd>
+                            </dl>
+                            <div class="moreDiv">
+                                <a href="#" class="btnUnderline">자세히</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="../static/images/main/img_mainlist02.jpg" alt="">
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>PARADISE SIGNATURE</dt>
+                                <dd>
+                                    고품격 서비스와 다양한 혜택이 어우러진 파라다이스시티 통합 유료 멤버십입니다.
+                                </dd>
+                            </dl>
+                            <div class="moreDiv">
+                                <a href="#" class="btnUnderline">자세히</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="../static/images/main/img_mainlist03.jpg" alt="">
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>CHROMA VIP</dt>
+                                <dd>
+                                    회원의 가치를 더욱 빛나게 해줄 차별화된 서비스와 혜택 중심의 Invitation Only 크로마 전용 멤버십입니다.
+                                </dd>
+                            </dl>
+                            <div class="moreDiv">
+                                <a href="#" class="btnUnderline">자세히</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb">
+                            <img src="../static/images/main/img_mainlist04.jpg" alt="">
+                        </div>
+                        <div class="cont">
+                            <dl>
+                                <dt>CASINO</dt>
+                                <dd>
+                                    K-Style 프리미엄 외국인 전용 카지노의 회원만을 위해 다양한 혜택으로 구성된 카지노 전용 멤버십입니다.
+                                </dd>
+                            </dl>
+                            <div class="moreDiv">
+                                <a href="#" class="btnUnderline">자세히</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-                <span class="tit">2018-05</span>
-                <ul class="calendarDate">
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="noDate">1</li>
-                    <li class="noDate">2</li>
-                    <li class="noDate">3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                </ul>
             </div>
-        </div>
+        </section>
+        <!-- //컨텐츠 영역 -->
 
-        <div class="calendar">
-            <div class="calendarHead clearFixed">
-                <ul class="calendarDay">
-                    <li class="sun">일</li>
-                    <li>월</li>
-                    <li>화</li>
-                    <li>수</li>
-                    <li>목</li>
-                    <li>금</li>
-                    <li class="sat">토</li>
-                </ul>
-                <span class="tit">2018-05</span>
-                <ul class="calendarDate">
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li class="blinkDate"></li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                </ul>
+        <!-- 하단 영역 -->
+        <a href="#none" class="pageTop">Top</a>
+        <footer id="footerWrap">
+            <div class="footerTop">
+                <div class="footerLinkTop">
+                    <ul>
+                        <li>
+                            <a href="#" class="arrive">
+                                <span>오시는 길</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:032-000-0000" class="tel">
+                                <span>전화예약</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="offers">
+                                <span>OFFERS &amp;<br />RESERVATION</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inner">
+                    <dl class="appService">
+                        <dt>E-Concierge Service</dt>
+                        <dd>
+                            <p>파라다이스시티를 편리하게 만드는 컨시어지앱 서비스</p>
+                            <div class="appBtn">
+                                <a href="https://itunes.apple.com/kr/app/id1207706348?mt=8" target="_blank">
+                                    <img src="../static/images/common/btn/btn_appstore.png" alt="">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.paradise.pcity" target="_blank">
+                                    <img src="../static/images/common/btn/btn_playstore.png" alt="">
+                                </a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div class="footerLinkMIddle">
+                        <div class="familySite">
+                            <select name="" id="" class="selectbox">
+                                <option value="">FAMILY SITE</option>
+                                <optgroup label="그룹">
+                                    <option value="">파라다이스 그룹</option>
+                                </optgroup>
+                                <optgroup label="호텔">
+                                    <option value="">파라다이스 호텔 부산</option>
+                                    <option value="">올림포스 호텔</option>
+                                </optgroup>
+                                <optgroup label="건설/제조">
+                                    <option value="">파라다이스 건설</option>
+                                </optgroup>
+                                <optgroup label="여행/레저">
+                                    <option value="">파라다이스 투어</option>
+                                    <option value="">파라다이스 스파 도고</option>
+                                </optgroup>
+                                <optgroup label="카지노">
+                                    <option value="">파라다이스 카지노</option>
+                                </optgroup>
+                                <optgroup label="사회공헌">
+                                    <option value="">계원예술대학교</option>
+                                    <option value="">계원예술고등학교</option>
+                                    <option value="">계원예술학교(중등)</option>
+                                    <option value="">파라다이스 복지재단</option>
+                                    <option value="">파라다이스 문화재단</option>
+                                    <option value="">한국현대문학</option>
+                                    <option value="">파라다이스상</option>
+                                </optgroup>
+                                <optgroup label="세가사미홀딩스">
+                                    <option value="">SEGA SAMMY Holdings INC.</option>
+                                    <option value="">SEGA Holdings Co.,Ltd.</option>
+                                    <option value="">Sammy Corporation</option>
+                                    <option value="">PHOENX Resort CO.,LTD</option>
+                                    <option value="">SEGA SAMMY</option>
+                                    <option value="">Golf Entertainment INC.</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="sns">
+                            <a href="https://www.facebook.com/pcitykorea" class="facebook" target="_black">FaceBook</a>
+                            <a href="https://www.instagram.com/pcitykorea" class="insta" target="_black">Instagram</a>
+                            <a href="http://blog.paradise.co.kr/category/%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4%EB%A5%BC%20%EB%A7%8C%EB%82%98%EB%8B%A4/%ED%8C%8C%EB%9D%BC%EB%8B%A4%EC%9D%B4%EC%8A%A4%20%EC%8B%9C%ED%8B%B0" class="blog" target="_black">Blog</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <span class="calendarAllReset">초기화</span>
-
-
-        <style type="text/css">
-            /* 화면 표기 */
-
-            .dateSetting {
-                background: #ddd;
-                margin-top: 20px;
-            }
-
-            .dateSetting {
-                display: table;
-                width: 100%;
-                border: 1px solid blue;
-            }
-
-            .dateSetting .dateStep {
-                display: table-cell;
-                width: 1000px;
-            }
-
-            .dateSetting .dateStep button {
-                display: block;
-                width: 100%;
-                padding: 10px;
-                text-align: right;
-            }
-
-            .dateSetting .dateStep button.dateFoucs {
-                background: #000;
-                color: #fff;
-            }
-
-            .dateSetting .arrive {
-                border-left: 1px solid blue;
-            }
-
-            .dateSetting .txt {
-                float: left;
-            }
-
-            /* 달력 */
-
-            .calendar {
-                padding: 20px 0;
-                margin: 20px 0;
-                border: 1px solid blue;
-            }
-
-            .calendar {}
-
-            .calendarHead {
-                text-align: center;
-            }
-
-            .calendarHead {}
-
-            .calendarDay {
-                background: #ddd;
-            }
-
-            .calendarDay li {
-                float: left;
-                width: 14.28%;
-                text-align: center;
-            }
-
-            .calendarDate {
-                background: #333;
-                color: #fff;
-            }
-
-            .calendarDate li {
-                float: left;
-                width: 14.28%;
-                height: 20px;
-                line-height: 20px;
-                text-align: center;
-            }
-
-            .calendarDate .first {
-                background: blue;
-            }
-
-            .calendarDate .last {
-                background: red;
-            }
-
-            .calendarDate .first.last {
-                background: blue;
-            }
-
-            .calendarDate .range {
-                background: #ddd;
-            }
-
-            .calendarDate .noDate {
-                background: magenta;
-            }
-
-            .calendarDate .noDateEx {
-                background: magenta;
-            }
-
-            .calendarDate .blinkDate {
-                background: #fff;
-            }
-
-            .calendarDate .blinkDate.noDateEx {
-                background: #fff;
-            }
-        </style>
-
-        <script type="text/javascript">
-            $(function() {
-                var CalendarDate = $('.calendarDate > li');
-                var lng = $('.calendarDate > li').length;
-                var CalendarFirst = 0;
-                var CalendarLast = 0;
-                var CalendarResetCnt = 0;
-
-                $('.calendarDate > li').each(function(Calendar) {
-                    $(this).click(function() {
-                        // 예약 불가능 날짜 선택
-                        if ($(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate')) {
-                            return false;
-                        }
-
-                        // 예약 범위 설정
-                        if ($(CalendarDate).hasClass('first') && CalendarResetCnt == 0) {
-                            $(CalendarDate).removeClass('range last');
-                            $(this).addClass('last');
-                            CalendarLast = Calendar;
-                            calendarRange(CalendarFirst, CalendarLast);
-                        } else {
-                            if (CalendarResetCnt == 1) {
-                                $(CalendarDate).removeClass('first last range');
-                                $(this).addClass('first');
-                                calendarReset(Calendar);
-                                CalendarResetCnt = 0;
-                            } else {
-                                $(this).addClass('first');
-                                calendarReset(Calendar);
-                            }
-                        }
-                    });
-                });
-
-                console.log('x');
-
-                // 달력 초기화 버튼 - 전체
-                $('.calendarAllReset').click(function() {
-                    $(CalendarDate).removeClass('first last range noDateEx');
-                    $('.datepickArrive').removeClass('dateFoucs');
-                    $('.datepickStart').addClass('dateFoucs');
-                    CalendarResetCnt = 0;
-                });
-
-                // 달력 초기화 - 가는날
-                $('.datepickStart').click(function() {
-                    $(CalendarDate).removeClass('noDateEx');
-                    $('.datepickArrive').removeClass('dateFoucs');
-                    $('.datepickStart').addClass('dateFoucs');
-                    CalendarResetCnt = 1;
-                });
-
-                // 달력 선택 불가능 영역 설정
-                function calendarNoDate(f) {
-                    console.log('x');
-                    console.log(f);
-                    for (var i = 0; f > i; i++) {
-                        $(CalendarDate).eq(i).addClass('noDateEx');
-                    }
-                }
-
-                // 달력 범위 클래스 추가
-                function calendarRange(f, l) {
-                    for (var i = f + 1; i < l; i++) {
-                        $(CalendarDate).eq(i).addClass('range');
-                    }
-                }
-
-                // 달력 리셋
-                function calendarReset(Calendar) {
-                    CalendarFirst = Calendar;
-                    calendarNoDate(CalendarFirst);
-                    $('.datepickStart').removeClass('dateFoucs');
-                    $('.datepickArrive').addClass('dateFoucs');
-                }
-            });
-        </script>
-
-
-
-    </section>
-    <!-- //컨텐츠 영역 -->
-
-    <!-- 하단 영역 -->
-    <a href="#none" class="pageTop">Top</a>
-    <footer id="footerWrap">
-        <div class="footerBottom">
-            <dl>
-                <dt>(주) 파라다이스세가사미</dt>
-                <dd>
-                    인천광역시 중구 영종해안남로 321번길 186 <br /> Tel.
-                    <a href="tel:1833-8855" class="tel">1833-8855</a> / E-mail.
-                    <a href="mailto:p-city@paradian.com" class="mail">p-city@paradian.com</a>
-                </dd>
-            </dl>
-            <div class="copyright">Copyright © PARADISE SEGASAMMY Co. Ltd. All rights reserved</div>
-            <div class="footerLinkBottom">
-                <a href="#"><span>개인정보취급방침</span></a>
-                <a href="#"><span>영상정보처리기기운영관리방침</span></a>
-                <a href="#"><span>이용약관</span></a>
+            <div class="footerBottom">
+                <dl>
+                    <dt>(주) 파라다이스세가사미</dt>
+                    <dd>
+                        인천광역시 중구 영종해안남로 321번길 186 <br /> Tel.
+                        <a href="tel:1833-8855" class="tel">1833-8855</a> / E-mail.
+                        <a href="mailto:p-city@paradian.com" class="mail">p-city@paradian.com</a>
+                    </dd>
+                </dl>
+                <div class="copyright">Copyright © PARADISE SEGASAMMY Co. Ltd. All rights reserved</div>
+                <div class="footerLinkBottom">
+                    <a href="#"><span>개인정보취급방침</span></a>
+                    <a href="#"><span>영상정보처리기기운영관리방침</span></a>
+                    <a href="#"><span>이용약관</span></a>
+                </div>
             </div>
-        </div>
-    </footer>
-    <!-- //하단 영역 -->
+        </footer>
+        <!-- //하단 영역 -->
+    </div>
 </body>
 
 </html>
