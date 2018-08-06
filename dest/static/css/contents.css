@@ -148,7 +148,7 @@
 .btnMore {text-indent:-9999px;}
 .btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;}
 .btnMore:after {content:''; position:absolute; top:7px; left:2px; width:12px; border-top:2px solid #111;}
-.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 3px; background-size:6px 10px; line-height:16px;}
+.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 2px; background-size:6px 10px; line-height:16px;}
 .btnMoreTxt.ty1 {top:0 !important;}
 .btnMoreTxt.ty2 {top:0 !important;; right:16px !important;;}
 .btnCalendarView {display:inline-block; width:20px; height:20px; text-indent:-9999px;}
@@ -2072,16 +2072,19 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 /*Sub Main Visual*/
 .subMainVisual {position:relative; width: calc(100% + 32px); margin-left: -16px;}
 .subMainVisual .viewArea{position: relative;}
+.subMainVisual{width: calc(100% + 32px); margin-left: -16px;}
+.subMainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 .subMainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
 .subMainVisual .viewArea .bx-controls > .bx-pager{margin: 0;}
-.subMainVisual .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
-.subMainVisual .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
-.subMainVisual .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
-.subMainVisual .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
-.subMainVisual .txt.none{padding-top: 0; margin-top: 3px;}
-.subMainVisual .txt.none:before {display: none;}
-.subMainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
-.subMainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
+
+.viewArea{position: relative;}
+.viewArea .txtArea {position:absolute; left:0; bottom: 15px; padding: 0 16px; color:#fff;}
+.viewArea .tit {font-weight:bold; font-size:20px; line-height:24px; text-shadow: 0px 0px 13px rgba(0,0,0,0.4); text-transform: uppercase;}
+.viewArea .txt {position:relative; padding-top:6px; margin-top:8px; font-weight:bold; font-size:12px; line-height:17px; text-shadow: 0px 0px 13px rgba(0,0,0,0.6);}
+.viewArea .txt:before {content:''; position:absolute; top:0; left:0; width:20px; border-bottom:1px solid #fff;}
+.viewArea .txt.none{padding-top: 0; margin-top: 3px;}
+.viewArea .txt.none:before {display: none;}
+.viewArea .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
 
 .mainFull{height: 100vh; min-height: 500px;}
 .mainFull #container{height: calc(100% - 90px);}
@@ -2116,6 +2119,13 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .subMainVisualFull .subMainVisual.artSpace .bx-controls {position: absolute; left: 0; bottom: 70px; width: 100%;}
 
 .subMainVisualFull + .pageTop + #footerWrap {padding-top:0;}
+.subMainVisual{position: relative;}
+.subMainVisual.artSpace{padding-bottom: 50px;}
+.subMainVisual.artSpace .txtArea{bottom: 45px;}
+.subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.wonderbox .txtArea{bottom: 55px;}
+.subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+
 
 /*Art Garden*/
 .gardenArtist{margin-top: 20px; padding-top: 20px; border-top: 1px solid #e7e3e0;}
@@ -2146,7 +2156,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .video a:after{content: ''; position: absolute; top: 50%; left: 50%; width: 43px; height: 43px; margin: -21.5px 0 0 -21.5px; background: url(../images/chroma/btn_play.png); background-size: 43px 43px;}
 
 /*Chroma*/
-.floorMap{position: relative; margin: 0 0 15px;}
+.floorMap{position: relative; margin: 0 0 20px;}
 .floorMap a.btnMoreTxt{position: absolute; top: 2px; right: 0;}
 
 .floorMap > .tabSubListWrap > .tabSubList{border-top: 1px solid #e7e3e0; border-bottom: 0;}
