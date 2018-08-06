@@ -2068,24 +2068,6 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull #footerWrap{padding-top: 0;}
 .mainFull .pageTop{display: none;}
 .mainFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
-<<<<<<< HEAD
-.mainFull .mainVisual .bx-wrapper{position: relative;}
-.mainFull .mainVisual,
-.mainFull .mainVisual .titleArea,
-.mainFull .mainVisual .bx-wrapper, 
-.mainFull .mainVisual .bx-viewport, 
-.mainFull .mainVisual .normalSwiper, 
-.mainFull .mainVisual .item{height: 100%; }
-.mainFull .mainVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
-.mainFull .mainVisual .viewArea{position: relative; height: 100%;}
-.mainFull .mainVisual .squareBox{bottom: 65px;}
-
-.mainVisual.artSpace{padding-bottom: 50px;}
-.mainVisual.artSpace .txtArea{bottom: 45px;}
-.mainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
-.mainVisual.wonderbox .txtArea{bottom: 55px;}
-.mainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
-=======
 .mainFull .subMainVisual .bx-wrapper{position: relative;}
 .mainFull .subMainVisual,
 .mainFull .subMainVisual .titleArea,
@@ -2102,7 +2084,6 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.wonderbox .txtArea{bottom: 55px;}
 .subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
->>>>>>> 091d4444281ec8d495fc71fd9fc4d1bd0a874173
 
 /*Art Garden*/
 .gardenArtist{margin-top: 20px; padding-top: 20px; border-top: 1px solid #e7e3e0;}
