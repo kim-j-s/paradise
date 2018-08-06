@@ -55,6 +55,7 @@
 .selectbox:disabled {background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px; color:#999;}
 
 .textarea {width:100%; height:120px; padding:10px; border:1px solid #e7e3e0; color:#333; resize:none;}
+.textarea2 {width:100%; height:112px; padding:7px 0; border:1px solid #fff; color:#333; resize:none;}
 
 
  /* ==============================
@@ -69,7 +70,7 @@
 
 /* 전체 레이어 팝업 */
 .layerfullWrap {position:absolute; top:0; right:0; bottom:0; left:0; z-index:500; width:100%; height:100%; padding:60px 0 0 0; background:#fff;}
-.layerfullWrap.btnAdd {padding:60px 0 50px 0;}
+.layerfullWrap.btnAdd {padding:60px 0 70px 0;}
 .layerfullWrap.floorLocation {padding:60px 0 125px 0;}
 .layerfullWrap.floorZone {padding:60px 0 130px 0;}
 #layerContent {position:relative; height:100%; min-height:100%; padding:0 16px; overflow:auto;}
@@ -867,11 +868,18 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .floating.tblDiv + .pageTop + #footerWrap {padding-top:50px;}
 
 /* 카트 상품 없음 */
-.cartNone {padding:55px 0 25px 0;}
+.cartNone {position:relative; display:table; width:100%;}
+.cartNone.etc {padding-bottom:160px;}
 .cartNone > strong {display:block; font-size:20px; color:#999;}
 .cartNone > strong span {color:#9d836a;}
-.cartNone .txt {padding-top:20px; font-size:14px; line-height:18px;}
-
+.cartNone .txt {font-size:14px; line-height:18px;}
+.cartNone .listNone {margin:0;}
+.cartNone > .inner {display:table-cell; width:100%; height:100%; vertical-align:middle;}
+.cartNone > .inner .listNone {margin-top:-60px;}
+.cartNone.etc > .inner .listNone {margin-top:0;}
+.cartNone > .cont {position:absolute; bottom:0; left:0; display:table; height:160px; padding:0 16px; border-top:1px solid #e7e3e0; background:#f9f9f9;}
+.cartNone > .cont p {display:table-cell; vertical-align:middle; height:90px; color:#333; line-height:18px; text-align:center;}
+.cartNone > .cont .tbl {display:table; width:100%;}
 
 /* 구매 상품 목록 */
 .purchaseList {}
@@ -897,8 +905,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .paymentCardList {padding:17px 0 20px 0;}
 .paymentCardList:after {content:''; display:block; clear:both;}
-.paymentCardList li {position:relative; float:left; width:25%; padding-left:4px;}
-.paymentCardList li:first-child {padding-left:0; width:calc(25% - 4px);}
+.paymentCardList li {position:relative; float:left; width:25%; padding-left:4px; margin-top:8px;}
+.paymentCardList li:nth-child(-n + 4) {margin-top:0;}
+.paymentCardList li:nth-child(4n + 1) {padding-left:0; width:calc(25% - 4px);}
 .paymentCardList li img {width:100%;}
 .paymentCardList li > img {
 	border-radius:5px;
@@ -919,9 +928,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .payment .holdTxt .point {font-size:14px; font-weight:bold; color:#9d836a;}
 
 .paymentCouponList {position:relative; padding-top:9px;}
-.paymentCouponList li {position:relative;}
-.paymentCouponList li + li {margin-top:3px;}
-.paymentCouponList li > button {position:absolute; top:5px; right:8px; display:inline-block; text-indent:-9999px; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
+.paymentCouponList li {position:relative; padding:12px 20px 13px 0; line-height:18px; border-bottom:1px solid #e9e5e2;}
+.paymentCouponList li > button {position:absolute; top:50%; right:0; width:22px; height:22px; margin-top:-11px; border:1px solid #e8e4e1; border-radius:50%; text-indent:-9999px;}
+.paymentCouponList li > button:after {content:''; position:absolute; top:5px; right:5px; display:inline-block; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
 
 .paymentAgreeStepOne {padding:0 0 29px 0;}
 .paymentAgreeStepOne > p {padding:12px 0 0 28px; font-size:12px; line-height:17px;}
@@ -982,7 +991,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .prodList.etc > li:nth-child(3n + 1) {width:50%;}
 .prodList.etc > li:nth-child(-n + 2) {margin-top:0;}
 
-
+.couponSelect {padding:16px 0 20px 0; margin-top:10px; border-bottom:1px solid #e7e3e0;}
+.couponSelect + .couponSelect {margin:0;}
+.couponSelect > .tit {padding-bottom:26px; font-weight:bold; color:#333;}
+.couponSelect > dd {}
+.couponSelect > dd li + li {margin-top:16px;}
 
 .upToWrap {width:calc(100% + 32px); margin-left:-16px; padding:0 16px 18px 16px; background:#f9f9f9;}
 .upTo {display:table; width:100%;}
@@ -1480,7 +1493,7 @@ line-height:18px;}
 .fineList > li:last-child {margin-bottom:0;}
 .fineList > li a {display:block;}
 .fineList > li dl, .fineList > li .table {padding:0 16px;}
-.fineList > li .txtContent dl > .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.fineList > li .txtContent dl > .tit {text-transform:uppercase; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .fineList li .btnBox {padding:12px;}
 
 .bxWrap {position:relative; width:calc(100% + 32px); margin-left:-16px;}
@@ -1911,6 +1924,13 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .itemList3 > li .cont dl dd {font-size:11px; line-height:16px;}
 .itemList3 > li .cont dl + .moreDiv {padding-top:8px;}
 
+.itemList4 {}
+.itemList4 > li {position:relative; padding:13px 40px 13px 0; border-bottom:1px solid #e9e5e2;}
+.itemList4 > li dl dt {font-weight:bold; padding-bottom:3px; font-size:12px; line-height:16px;}
+.itemList4 > li dl dd {}
+.itemList4 > li .del {position:absolute; top:50%; right:0; width:22px; height:22px; margin-top:-11px; border:1px solid #e8e4e1; border-radius:50%; text-indent:-9999px;}
+.itemList4 > li .del:after {content:''; position:absolute; top:5px; right:5px; display:inline-block; width:10px; height:10px; background:url(../images/common/btn/btn_x.png) no-repeat right bottom; background-size:100%;}
+
 .timeTable .side3 table tbody tr > *{vertical-align: top; padding: 2px 0; line-height: 17px;}
 .timeTable .side3 table tbody tr > * > span{vertical-align: top; line-height: 17px;}
 .timeTable .side3 table tbody th{padding-right: 10px;}
@@ -1991,6 +2011,9 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .chromaWrap .facilityBox h3{margin: 10px 0 8px;}
 .chromaWrap .timeTable > .table{margin: -10px 0 0;}
 
+.chromaField {position:relative;}
+.chromaField .btnMoreTxt {position:absolute; top:0; right:0;}
+
 /*픽토그램리스트*/
 .chromaInfo .pictoList > li:before{background:url(../images/chroma/bg_step.png) no-repeat; background-size:23px 115px;}
 .etiquette .pictoList > li:before{background:url(../images/chroma/bg_step_etiquette.png) no-repeat; background-size:23px 92px;}
@@ -2051,6 +2074,8 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 
 /*Sub Main Visual*/
+.subMainVisual {position:relative; width: calc(100% + 32px); margin-left: -16px;}
+.subMainVisual .viewArea{position: relative;}
 .subMainVisual{width: calc(100% + 32px); margin-left: -16px;}
 .subMainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 .subMainVisual .viewArea .bx-controls{position: absolute; left: 0; bottom: 8px; width: 100%;}
@@ -2081,6 +2106,23 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull .subMainVisual .viewArea{position: relative; height: 100%;}
 .mainFull .subMainVisual .squareBox{bottom: 65px;}
 
+.subMainVisual.artSpace {padding-bottom: 50px;}
+.subMainVisual.artSpace .txtArea {bottom: 45px;}
+.subMainVisual.artSpace .viewArea {height:100%; background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.wonderbox .txtArea {bottom: 55px;}
+.subMainVisual.wonderbox .viewArea {height:100%; background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+
+.subMainVisualFull {position:relative; width:100%; z-index:60;}
+.subMainVisualFull .subMainVisual {width:100%; height:100%; margin:0;}
+.subMainVisualFull .subMainVisual .squareBox{bottom: 65px;}
+.subMainVisualFull .subMainVisual .bx-viewport {height:100%;}
+.subMainVisualFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
+.subMainVisualFull .subMainVisual.artSpace .bx-wrapper {height:100%;}
+.subMainVisualFull .subMainVisual.artSpace .bx-viewport {height:100% !important;}
+.subMainVisualFull .subMainVisual.artSpace .normalSwiper {height:100%;}
+.subMainVisualFull .subMainVisual.artSpace .bx-controls {position: absolute; left: 0; bottom: 70px; width: 100%;}
+
+.subMainVisualFull + .pageTop + #footerWrap {padding-top:0;}
 .subMainVisual{position: relative;}
 /*.subMainVisual.artSpace{padding-bottom: 50px;}*/
 .subMainVisual.artSpace .bx-controls{bottom: 70px;}
