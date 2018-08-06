@@ -2050,7 +2050,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainVisual .txt > span{display: block; margin-top: 4px; line-height: 17.5px;}
 .mainVisual + .desc{margin: 15px 0 0; font-size: 12px; line-height: 17.5px;}
 
-.mainFull{height: 100vh;}
+.mainFull{height: 100vh; min-height: 500px;}
 .mainFull #container{height: calc(100% - 90px);}
 .mainFull #footerWrap{padding-top: 0;}
 .mainFull .pageTop{display: none;}
@@ -2061,7 +2061,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull .mainVisual .bx-wrapper, 
 .mainFull .mainVisual .bx-viewport, 
 .mainFull .mainVisual .normalSwiper, 
-.mainFull .mainVisual .item{height: 100%;}
+.mainFull .mainVisual .item{height: 100%; }
 .mainFull .mainVisual .bx-controls{position: absolute; left: 0; bottom: 20px; width: 100%;}
 .mainFull .mainVisual .viewArea{position: relative; height: 100%;}
 .mainFull .mainVisual .squareBox{bottom: 65px;}
