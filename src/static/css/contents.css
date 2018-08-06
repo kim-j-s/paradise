@@ -2013,8 +2013,9 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .artistWrap .carrer .side3 table td{padding-bottom: 6px;}
 .artistWrap .albumList{margin: 0 -8px; font-size: 0;}
 .artistWrap .albumList > li{display: inline-block; width: 101px; padding: 10px 8px; vertical-align: top; text-align: center;}
+.artistWrap .albumList > li > a{display: block;}
 .artistWrap .albumList .img{width: 80px; margin: 0 auto;}
-.artistWrap .albumList .img > img{width: 100%;}
+.artistWrap .albumList .img img{width: 100%;}
 .artistWrap .albumList .txt{width: 100%; margin: 6px 0 0; font-size: 12px; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
 
 /*PHOTOS & VIDEOS*/
@@ -2081,8 +2082,9 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull .subMainVisual .squareBox{bottom: 65px;}
 
 .subMainVisual{position: relative;}
-.subMainVisual.artSpace{padding-bottom: 50px;}
-.subMainVisual.artSpace .txtArea{bottom: 45px;}
+/*.subMainVisual.artSpace{padding-bottom: 50px;}*/
+.subMainVisual.artSpace .bx-controls{bottom: 70px;}
+.subMainVisual.artSpace .txtArea{bottom: 95px;}
 .subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.wonderbox .txtArea{bottom: 55px;}
 .subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
