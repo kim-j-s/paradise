@@ -10,7 +10,7 @@
  /* ==============================
  * main
  * ============================== */
-.mainVisual {position:relative; z-index:99; height:100%; margin-top:-60px; background:#ddd;}
+.mainVisual {position:relative; z-index:60; height:100%; margin-top:-60px; background:#ddd;}
 .mainVisual .normalSwiper {height:100%;}
 .mainVisual .bx-controls {position:absolute; left:0; bottom:20px; width:100%;}
 .mainVisual .bx-controls .bx-pager {margin-top:0;}

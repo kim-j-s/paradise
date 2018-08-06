@@ -24,12 +24,11 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div class="layerfullWrap btnAdd">
         <!-- 헤더영역 -->
-        <header id="headerWrap">
-            <h1>WONDERBOX</h1>
-            <a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
-            <a href="#" class="menuBtn">메뉴</a>
+        <div id="layerHeader">
+            쿠폰 선택
+            <a href="#" class="layerCloseBtn"></a>
 
             <nav>
                 <div class="navDimmed"></div>
@@ -198,56 +197,66 @@
 
                 </div>
             </nav>
-        </header>
+        </div>
         <!-- //헤더영역 -->
 
-        <div class="headerSubWrap">
-            <div class="headerFixed">
-                <div class="now">OVERVIEW</div>
-                <ul class="headerSubLink">
-                    <li>
-                        <a href="#" class="on">OVERVIEW</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
         <!-- 컨텐츠 영역 -->
-        <div class="subMainVisualFull">
-            <div class="subMainVisual wonderbox">
-                <div class="viewArea">
-                    <div class="txtArea">
-                        <h2 class="tit">THEME PARK<br /> WONDERBOX</h2>
-                        <p class="txt">온 가족이 함께 즐길 수 있는 <br>놀이와 축제가 있는 “밤의 유원지”</p>
-                    </div>
-                    <div class="squareBox"><span>2019</span>OPEN</div>
-                </div>
-            </div>
-        </div>
+        <section id="layerContent">
+
+            <dl class="couponSelect">
+                <dt class="tit">CIMER 입장권</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <div class="radioBox">
+                                <input type="radio" id="radio1" name="cimer" checked="checked">
+                                <label for="radio1">CIMER 입장권 <span class="pointColor">1,000</span>원 할인 쿠폰</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="radioBox">
+                                <input type="radio" id="radio2" name="cimer">
+                                <label for="radio2">CIMER 입장권 <span class="pointColor">20</span>% 할인 쿠폰</label>
+                            </div>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="couponSelect">
+                <dt class="tit">CIMER CABANA 대여</dt>
+                <dd>
+                    <ul>
+                        <li>
+                            <div class="radioBox">
+                                <input type="radio" id="radio3" name="cavana">
+                                <label for="radio3">CABANA <span class="pointColor">2,000</span>원 할인 쿠폰</label>
+                            </div>
+                        </li>
+                    </ul>
+                </dd>
+            </dl>
+
+            <dl class="notiTxt">
+                <dt>쿠폰 사용 안내</dt>
+                <dd>
+                    <ul class="list">
+                        <li>하나의 상품 당 1개의 할인만 적용 가능 합니다.<br /> (멤버십, 쿠폰 중 1개만 적용 가능)</li>
+                    </ul>
+                </dd>
+            </dl>
+
+        </section>
         <!-- //컨텐츠 영역 -->
-
-        <!-- 하단 영역 -->
-        <a href="#none" class="pageTop">Top</a>
-        <footer id="footerWrap">
-            <div class="footerBottom">
-                <dl>
-                    <dt>(주) 파라다이스세가사미</dt>
-                    <dd>
-                        인천광역시 중구 영종해안남로 321번길 186 <br /> Tel.
-                        <a href="tel:1833-8855" class="tel">1833-8855</a> / E-mail.
-                        <a href="mailto:p-city@paradian.com" class="mail">p-city@paradian.com</a>
-                    </dd>
-                </dl>
-                <div class="copyright">Copyright © PARADISE SEGASAMMY Co. Ltd. All rights reserved</div>
-                <div class="footerLinkBottom">
-                    <a href="#"><span>개인정보취급방침</span></a>
-                    <a href="#"><span>영상정보처리기기운영관리방침</span></a>
-                    <a href="#"><span>이용약관</span></a>
-                </div>
-            </div>
-        </footer>
-        <!-- //하단 영역 -->
-
+        <div class="footerBtn">
+            <a href="#" class="btn ty1">완료</a>
+        </div>
+        <!-- 버튼 활성화 -->
+        <!--
+		<div class="footerBtn on">
+			<a href="#" class="btn ty1">완료</a>
+		</div>
+		-->
+        <!--// 버튼 활성화 -->
     </div>
 </body>
 
