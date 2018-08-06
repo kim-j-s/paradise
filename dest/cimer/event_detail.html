@@ -24,12 +24,12 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div class="layerfullWrap btnAdd">
         <!-- 헤더영역 -->
-        <header id="headerWrap">
-            <h1></h1>
-            <a href="#" class="cartBtn">장바구니 수량<span>99+</span></a>
-            <a href="#" class="menuBtn">메뉴</a>
+        <div id="layerHeader">
+            EVENTS
+            <a href="#" class="snsBtn">공유</a>
+            <a href="#" class="layerCloseBtn"></a>
 
             <nav>
                 <div class="navDimmed"></div>
@@ -198,105 +198,46 @@
 
                 </div>
             </nav>
-        </header>
+        </div>
         <!-- //헤더영역 -->
 
-        <div class="headerSubWrap">
-            <div class="headerFixed">
-                <div class="now">MD상품</div>
-                <ul class="headerSubLink">
-                    <li>
-                        <a href="#">OVERVIEW</a>
-                    </li>
-                    <li>
-                        <a href="#">갤러리 소개</a>
-                    </li>
-                    <li>
-                        <a href="#">이용안내</a>
-                    </li>
-                    <li>
-                        <a href="#">EVENTS</a>
-                    </li>
-                    <li>
-                        <a href="#">OFFERS</a>
-                    </li>
-                    <li>
-                        <a href="#" class="on">MD상품</a>
-                    </li>
-                    <li>
-                        <a href="#">지난 전시</a>
-                    </li>
-                    <li>
-                        <a href="#">프레스룸</a>
-                    </li>
-                    <li>
-                        <a href="#">고객지원</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
         <!-- 컨텐츠 영역 -->
-        <section id="container">
-            <p class="titleTxt">
-                <span class="color">파라다이스 아트스페이스</span>에서 만나볼 수 있는 특별한 <span class="color">아트상품</span>들을 소개합니다.
-            </p>
-            <a href="#" class="btn ty9 mt8">상품 문의</a>
+        <section id="layerContent">
+            <div class="eventDetailHeader">
+                <p class="titleTxt single"><span class="color">파라다이스시티</span> 홈페이지 리뉴얼 <span class="dpb">오픈 이벤트</span></p>
+                <span class="date">2018.05.20</span>
+            </div>
 
-            <ul class="mdList">
-                <li>
-                    <a href="#">
-                        <div class="inner">
-                            <img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
-                            <p>상품명</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="inner">
-                            <img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
-                            <p>상품명</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="inner">
-                            <img class="thumb" src="../static/images/sample/img_list.jpg" alt="" />
-                            <p>상품명</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-            <div class="tc mt20">
-                <a href="#" class="btn ty4 big more"><span>더보기</span></a>
+            <div class="eventDetailWrap">
+                진행중
             </div>
         </section>
         <!-- //컨텐츠 영역 -->
-
-        <!-- 하단 영역 -->
-        <a href="#none" class="pageTop">Top</a>
-        <footer id="footerWrap">
-            <div class="footerBottom">
-                <dl>
-                    <dt>(주) 파라다이스세가사미</dt>
-                    <dd>
-                        인천광역시 중구 영종해안남로 321번길 186 <br /> Tel.
-                        <a href="tel:1833-8855" class="tel">1833-8855</a> / E-mail.
-                        <a href="mailto:p-city@paradian.com" class="mail">p-city@paradian.com</a>
-                    </dd>
-                </dl>
-                <div class="copyright">Copyright © PARADISE SEGASAMMY Co. Ltd. All rights reserved</div>
-                <div class="footerLinkBottom">
-                    <a href="#"><span>개인정보취급방침</span></a>
-                    <a href="#"><span>영상정보처리기기운영관리방침</span></a>
-                    <a href="#"><span>이용약관</span></a>
-                </div>
+        <div class="footerBtn">
+            <!-- 1개일 경우 -->
+            <div class="footerBtn on">
+                <a href="#" class="btn ty1">MAIN BUTTON</a>
             </div>
-        </footer>
-        <!-- //하단 영역 -->
+
+            <!-- 2개일 경우 -->
+            <!--
+			<div class="tblDiv btnTbl half">
+				<div class="cellDiv">
+					<a href="#" class="btn ty8 big">BTN1</a>
+				</div>
+				<div class="cellDiv">
+					<a href="#" class="btn ty1">BTN2</a>
+				</div>
+			</div>
+			-->
+
+            <!-- 비 활성화 -->
+            <!--
+			<div class="footerBtn">
+				<a href="#" class="btn ty1">종료된 이벤트 입니다.</a>
+			</div>
+			-->
+        </div>
     </div>
 </body>
 

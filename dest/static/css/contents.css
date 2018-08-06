@@ -1493,7 +1493,7 @@ line-height:18px;}
 .fineList > li:last-child {margin-bottom:0;}
 .fineList > li a {display:block;}
 .fineList > li dl, .fineList > li .table {padding:0 16px;}
-.fineList > li .txtContent dl > .tit {overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.fineList > li .txtContent dl > .tit {text-transform:uppercase; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .fineList li .btnBox {padding:12px;}
 
 .bxWrap {position:relative; width:calc(100% + 32px); margin-left:-16px;}
@@ -2010,6 +2010,9 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .chromaWrap .facilityBox:last-child{padding-bottom: 0;}
 .chromaWrap .facilityBox h3{margin: 10px 0 8px;}
 .chromaWrap .timeTable > .table{margin: -10px 0 0;}
+
+.chromaField {position:relative;}
+.chromaField .btnMoreTxt {position:absolute; top:0; right:0;}
 
 /*픽토그램리스트*/
 .chromaInfo .pictoList > li:before{background:url(../images/chroma/bg_step.png) no-repeat; background-size:23px 115px;}
