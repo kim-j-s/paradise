@@ -1987,6 +1987,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .convention .venue .title > a.btnMoreTxt{top: 2px;}
 .convention .venue .sub{font-size: 12px; line-height: 18px;}
 .convention .party h2{color: #333; margin: 10px 0 6px;}
+.conventionSlide h3.subtitle{margin: 10px 0 0;}
 
 
 /*Plaza*/
