@@ -1111,6 +1111,22 @@ $(function(){
 		});
 	});
 
+	// Type3
+	var sliders3 = [];
+	$('.Type3').each(function(index, element){
+
+		$(this).addClass('s3'+index);
+		var slider3 = new Swiper('.s3'+index, {
+			slidesPerView: 'auto',
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+				//type: 'fraction',
+			},
+		});
+		sliders3.push(slider3);
+	});
 });
 
 //jackpot

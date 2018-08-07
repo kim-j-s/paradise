@@ -104,6 +104,7 @@
 .tabList .tit.on > small {color:#9d836a;}
 .tabList.ty3 > li {width:33.3%;}
 .tabList.ty4 > li {width:25%;}
+.tabList.ty5 > li {width:20%;}
 .tabWrap .tabContent {display:none; padding:20px 16px 0 16px;}
 .tabWrap .tabContent.on {display:block;}
 .tabWrap .tabContent.event {padding:12px 16px 0 16px;}
@@ -501,7 +502,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .box .chkList2 li:nth-child(3n) {width:40%;}
 
 .facility {margin-bottom:17px; background:#f9f9f9; border:1px solid #e7e3e0;}
+.facility.etc {border:none;}
 .facility .facilityTop {padding:15px; border-bottom:1px solid #e7e3e0;}
+.facility.etc .facilityTop {border:1px solid #e7e3e0; border-bottom:none;}
 .facility .facilityList {padding:15px 0 8px 15px; overflow:hidden;}
 .facility .facilityList li {float:left; width:50%; margin-bottom:7px;}
 
@@ -1501,6 +1504,11 @@ line-height:18px;}
 .fineSwipe .item {}
 .fineSwipe .item > img {display:block; width:100%;}
 
+.singleSwipe {}
+.singleSwipe.bg {padding:27px 16px 48px 16px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
+.singleSwipe > .bxWrap {width:100%; margin:0;}
+.singleSwipe .txt {padding:9px 0 0 0; font-size:12px; line-height:16px; text-align:left;}
+
 
 .detailTop {}
 .detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px; text-transform:uppercase;}
@@ -1816,6 +1824,17 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType2 .counter {padding-left:7px;}
 .swipeType2 .counter .now {font-weight:bold;}
 .swipeType2 > dl > .tit {padding-bottom:10px;}
+
+.swipeType3 {}
+.swipeType3 .swiper-pagination {position:static; display:block; padding-left:8px; margin-top:12px; font-size:0; text-align:center; }
+.swipeType3 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
+.swipeType3 .swiper-container {}
+.swipeType3 .swiper-pagination {}
+.swipeType3 .counter {padding-left:7px;}
+.swipeType3 .counter .now {font-weight:bold;}
+.swipeType3 .swiper-slide {}
+.swipeType3 .swiper-slide > img {width:100%;}
+.swipeType3 > dl > .tit {padding-bottom:10px;}
 
 .bullet {display:block; font-size:0; text-align:center;}
 .bullet > span {display:inline-block; width:5px; height:5px; margin:0 4px; background:#e7e1dc; border-radius:50%;}
