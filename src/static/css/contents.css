@@ -2218,6 +2218,35 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .layerBox .btmBtn{margin-top: 30px;}
 .layerVR > .layerBox{width: 288px;}
 
+/*activity*/
+.activityList li + li{margin: 26px 0 0;}
+.activityList li > a{display: block;}
+.activityList .img{position: relative;}
+.activityList .img > img{width: 100%;}
+.activityList .txt{margin: 13px 0 0;}
+.activityList .txt > strong{font-size: 14px; font-weight: bold; color: #111;}
+.activityList .txt > .sub{display: block; margin: 7px 0 0; font-size: 12px; color: #111; line-height: 17px;}
+.activityList .txt > .descText{margin: 6px 0 0;}
+.activityWrap > .fullWidth > img{width: 100%;}
+.activityWrap > h2{margin: 13px 0 5px; font-size: 20px; color: #333; font-weight: bold;}
+.activityWrap > h2 > span{display: block; margin: 2px 0 0; font-size: 12px; color: #111; line-height: 17px;}
+.activityWrap > .imgSource{margin: 10px 0 0; font-size: 11px; color: #999}
+.activityWrap > .container{margin: 20px 0 0; padding: 26px 16px 40px;}
+.activityWrap .info a{color: #666;}
+.activityWrap .info > dt{margin: 0 0 8px; font-size: 14px; font-weight: bold; color: #111; line-height: 1;}
+.activityWrap .info > dd{font-size: 12px; color: #666; line-height: 18px;}
+.activityWrap .info > dd + dt{margin-top: 30px;}
+.activityWrap .info table + ul.list {margin: 17.5px 0 0;}
+.activityWrap .info table + ul.list > li {margin: 0 0 2px;}
+.activityWrap .detail{margin: 0 0 4px; text-align: left; font-size: 12px; line-height: 18px;}
+.activityWrap .detail th{font-weight: normal; white-space: nowrap; vertical-align: top; padding: 0 0 3px;}
+.activityWrap .detail td{vertical-align: top; padding: 0 0 3px 10px;}
+.activityWrap .detail.type2{margin: 12px 0 0;}
+.activityWrap .detail.type2 th{width: 28px; color: #9c836a; padding-bottom: 4px;}
+.activityWrap .detail.type2 td{padding-bottom: 4px;}
+.activityWrap .table table th{padding-top: 0;}
+
+
 
 @media screen and (max-width:640px){
 }
