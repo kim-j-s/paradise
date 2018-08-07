@@ -1601,10 +1601,15 @@ line-height:18px;}
 .artBanner .thumb .inner img {max-width:100%; max-height:100%;}
 
 .dlSlide {}
-.dlSlide .title {position:relative; padding:12px 0 14px 0; font-weight:bold; color:#333; border-bottom:1px solid #e7e3e0; line-height:18px;}
+.dlSlide .title {position:relative; padding:12px 20px 14px 0; font-weight:bold; color:#333; border-bottom:1px solid #e7e3e0; line-height:18px;}
 .dlSlide .title:before {content:''; position:absolute; top:50%; right:6px; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
 .dlSlide .title.on:before {background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
 .dlSlide .title.etc {border-bottom:none;}
+.dlSlide .title.etc2 {font-size:12px; color:#666;}
+.dlSlide .title.etc2 .date {display:block; padding-top:8px; font-size:11px; line-height:14px; color:#999;}
+.dlSlide .title.etc2 + dd {width:calc(100% + 32px); padding:16px; margin-left:-16px; background:#f9f9f9; font-size:12px; line-height:16px;}
+.dlSlide .title.etc2 + dd img {display:block; width:100%;}
+.dlSlide .title.etc2 + dd img + img {margin-top:5px;}
 .dlSlide > dd {display:none; padding:4px 0 24px 0;}
 .dlSlide > dd > .txtContent2:first-child {margin-top:8px;}
 .dlSlide > dd > .list {margin-top:8px;}

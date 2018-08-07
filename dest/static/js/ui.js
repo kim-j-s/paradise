@@ -112,6 +112,23 @@ $(function(){
 		});
 	});
 
+	$('.mainLink').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+		$('.gnb').animate({
+			left: '-100%'
+		}, 300 , function(){
+			console.log('z');
+			$('nav').removeClass('on');
+			$('body').removeClass('fixed');
+			$('body').css('height','auto');
+			var href = $this.attr('href');
+			setTimeout(function() {window.location = href}, 300);
+			return false;
+		});
+	});
+
+
 	//GnbContHeight();
 	function GnbContHeight() {
 		var WinHeight = $(window).height();

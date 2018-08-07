@@ -47,9 +47,14 @@ nav .navDimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:102
 .gnb > .close {position:absolute; top:15px; left:16px; width:20px; height:20px;}
 .gnb > .close:before {content:''; position:absolute; top:9px; left:0; width:20px; border-bottom:1px solid #fff; transform: rotate(45deg);}
 .gnb > .close:after {content:''; position:absolute; top:9px; right:0; width:20px; border-bottom:1px solid #fff; transform: rotate(-45deg);}
-.gnb .country {padding:0 16px 0 38px; height:50px; background:#161411; overflow:hidden;}
-.gnb .country > a {float:left; display:block; width:20%; text-align:center; font-family:'Roboto'; font-weight:400; font-size:12px; color:#fff; opacity:0.2; line-height:50px;}
-.gnb .country > a.on {opacity:1;}
+
+.gnb .gnbTop {position:relative; height:50px;}
+.gnb .mainLink {position:absolute; top:50%; left:50%; margin:-11px 0 0 -73px;}
+.gnb .mainLink > img {width:146px;}
+.gnb .country {float:right; margin-right:20px;}
+.gnb .country .selectbox {height:50px; padding:0 15px 0 0; color:#a7a7a6; border:none;}
+.gnb .country .selectbox {background:transparent url(../images/common/icon/bg_select2.png) no-repeat right center; background-size:8px 5px;}
+
 .gnb .util {background:#161411; border-top:1px solid #333;}
 .gnb .util > ul {overflow:hidden;}
 .gnb .util > ul li {position:relative; float:left; width:33.3%}

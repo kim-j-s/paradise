@@ -35,12 +35,19 @@
                 <div class="navDimmed"></div>
                 <div class="gnb">
                     <div class="groupTop">
-                        <div class="country">
-                            <a href="#" class="on">KO</a>
-                            <a href="#">EN</a>
-                            <a href="#">CN</a>
-                            <a href="#">JP</a>
-                            <a href="#">TW</a>
+                        <div class="gnbTop">
+                            <a href="../main/index.html" class="mainLink">
+                                <img src="../static/images/main/img_main_logo.png" alt="PARADISE CITY" />
+                            </a>
+                            <div class="country">
+                                <select name="" id="" class="selectbox">
+                                    <option value="">KO</option>
+                                    <option value="">EN</option>
+                                    <option value="">CN</option>
+                                    <option value="">JP</option>
+                                    <option value="">TW</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="util">
                             <ul>
@@ -262,7 +269,6 @@
                     <section class="pb30">
                         <div class="floorMap">
                             <h2 class="title">Floor Map</h2>
-                            <a href="#" class="btnMoreTxt">더보기</a>
                             <div class="tabSubListWrap">
                                 <ul class="tabSubList etc">
                                     <li>
@@ -386,7 +392,6 @@
                                 </div>
                             </div>
                             <p class="descText mt10">4,000평의 잔디공원과 6,000평의 역광장으로 이루어진 크로마 필드는 어린이들을 위한 대형 피규어 전시 부터 힙합, 록, EDM, K-Pop, 뮤지컬 등 다양한 장르의 대형 페스티벌 까지 관람객에게 문화적 풍요로움과 휴식을 제공합니다.</p>
-                            <a href="#" class="btnMoreTxt">더보기</a>
                         </div>
                     </section>
                 </div>
@@ -431,31 +436,77 @@
 
                     <section class="ticketTable container">
                         <h2 class="title">입장권</h2>
-                        <div class="table">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">구분</th>
-                                        <th scope="col">통합입장권 <br>(비치클럽포함)</th>
-                                        <th scope="col">일반입장권 <br>(비치클럽미포함)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>남성</td>
-                                        <td>50,000 원</td>
-                                        <td>30,000 원</td>
-                                    </tr>
-                                    <tr>
-                                        <td>여성</td>
-                                        <td>30,000 원</td>
-                                        <td>20,000 원</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="notiRed mt4">여성고객 50% 할인 이벤트 중</div>
-                        <div class="tblDiv btnTbl mt20">
+
+                        <style type="text/css">
+                            .chromaTicket {}
+
+                            .chromaTicket li {
+                                padding: 16px;
+                                border: 1px solid #e7e3e0;
+                            }
+
+                            .chromaTicket li+li {
+                                margin-top: 8px;
+                            }
+
+                            .chromaTicket li .txtContent2+.table.side {
+                                margin-top: 10px;
+                            }
+                        </style>
+
+                        <ul class="chromaTicket">
+                            <li>
+                                <dl class="txtContent2">
+                                    <dt class="tit">통합 입장권</dt>
+                                    <dd class="desc">크로마의 시설을 통합적으로 이용 가능한 입장권</dd>
+                                </dl>
+                                <div class="table side">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">위치</th>
+                                                <td>2F&amp;3F + 4F(Beach Club)</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">남성</th>
+                                                <td>50,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">여성</th>
+                                                <td>30,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                            <li>
+                                <dl class="txtContent2">
+                                    <dt class="tit">일반 입장권</dt>
+                                    <dd class="desc">비치클럽을 제외한 크로마의 시설을 즐길 수 있는 입장권</dd>
+                                </dl>
+                                <div class="table side">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">위치</th>
+                                                <td>2F&3F</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">남성</th>
+                                                <td>30,000원</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">여성</th>
+                                                <td>20,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="notiRed mt9">※ 여성고객 50% 할인 이벤트 중</div>
+                        <div class="tblDiv btnTbl mt10">
                             <a href="#" class="btn ty4 big">티켓 구매</a>
                         </div>
                     </section>
