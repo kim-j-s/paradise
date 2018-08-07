@@ -2011,6 +2011,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .convention .venue .title > a.btnMoreTxt{top: 2px;}
 .convention .venue .sub{font-size: 12px; line-height: 18px;}
 .convention .party h2{color: #333; margin: 10px 0 6px;}
+.conventionSlide h3.subtitle{margin: 10px 0 0;}
 
 
 /*Plaza*/
@@ -2052,7 +2053,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .pictoList > li .desc{line-height: 17.5px;}
 
 /*artist view*/
-.artistWrap{}
+.artistWrap{padding-bottom: 50px;}
 .artistWrap .title{margin: 0 0 5px;}
 .artistWrap .title > span{display: block; margin: 4px 0 0; color: #9c836a;}
 .artistWrap .carrer .side3 .roboto{color: #333; font-weight: 600;}
@@ -2211,16 +2212,14 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .chromaBox .swiper-slide p.desc{margin: 10px 0 0; font-size: 12px; color: #333;}
 .chromaBox .swiper-slide p.desc > span{font-weight: bold;}
 .artistSlide h2.title{margin-bottom: 15px;}
-.artistSlide .txtContent.swipeType1{padding: 0 16px;}
-.artistSlide .swiper-container {padding: 0 0 0 12px;}
-.artistSlide .swiper-slide {width:80px; margin-right: 16px !important; border:1px solid #e6e6e6;}
-.artistSlide .swiper-slide a{text-align: center;}
-.artistSlide .swiper-slide a > span{display: block; margin: 10px 0 0; font-size: 12px; letter-spacing: -0.02em;}
+.artistSlide .swiper-container {padding: 0 0 0 8px;}
+.artistSlide .swiper-slide {width:80px; margin-right: 16px !important; border:1px solid #e6e6e6; text-align: center;}
+.artistSlide .name{display: block; margin: 10px 0 0; font-size: 12px; letter-spacing: -0.02em; color: #333;}
+.artistSlide .circle{width: 80px; height: 80px; border-radius: 50%; overflow: hidden;}
 .artistSlide .etc .swiper-slide {border:none;}
 .chromaTV{position: relative;}
 .chromaTV h2.title{margin-bottom: 15px;}
 .chromaTV .video > a > p{position: absolute; bottom: 0; left: 0; width: 100%; padding: 12px 10px; font-size: 12px; font-weight: bold; color: #fff;}
-
 .snsArea{padding: 18px 16px 20px; background-color: #1a1917; text-align: center;}
 .snsArea > p{font-size: 11px; color: #fff; opacity: .4;}
 .snsArea > ul{margin: 13px 0 0; font-size: 0;}
