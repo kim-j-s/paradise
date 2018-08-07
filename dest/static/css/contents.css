@@ -2043,7 +2043,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 
 /*PHOTOS & VIDEOS*/
 .photoList{padding: 0 0 10px;}
-.photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 600; margin-bottom: 4px;}
+.photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 500; margin-bottom: 4px; color: #333;}
 .photoList ul li{position: relative; margin: 0 0 8px;}
 .photoList ul li a{display: block;}
 .photoList .thumb{width: 100%;}
