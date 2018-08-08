@@ -934,7 +934,6 @@ $(function(){
 		slideMargin: 12,
 		moveSlides: 1,
 		pager: false,
-		adaptiveHeight: true,
 		infiniteLoop: false,
 		controls: false
 	});
@@ -949,7 +948,6 @@ $(function(){
 	} else {
 		$('.normalSwiper').bxSlider({
 			controls: false,
-			adaptiveHeight: true,
 			infiniteLoop: false,
 			pager: true
 		});
