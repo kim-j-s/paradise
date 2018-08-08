@@ -699,8 +699,8 @@ $(function(){
 $(function(){
 	$('.btnBarcode').click(function(){
 		$('body').css('height','auto');
-		var windHeight = $('body').height();
-		$('.dimmedLayer').css({'display':'block', 'height':windHeight});
+		var bodyHeight = $('body').height();
+		$('.dimmedLayer').css({'display':'block', 'height':bodyHeight});
 	});
 
 	$('.dimmedCont > .layerCloseBtn').click(function(){
@@ -712,10 +712,30 @@ $(function(){
 		if ( $('.dimmedLayer').css('display') == 'block' )
 		{
 			$('body').css('height','auto');
-			var windHeight = $('body').height();
-			$('.dimmedLayer').css({'display':'block', 'height':windHeight});
+			var bodyHeight = $('body').height();
+			$('.dimmedLayer').css({'display':'block', 'height':bodyHeight});
 		}
 	});
+
+	$('.snsBtn').click(function(){
+		var winHeight = $(window).height();
+		$('.dimmedLayer').css({'display':'block', 'height':winHeight});
+	});
+
+	$(window).resize(function(){
+		var winHeight = $(window).height();
+		var bodyHeight = $('body').height();
+		chkLng = $('.layerfullWrap').length;
+		if ( chkLng == 1 )
+		{
+			$('.dimmedLayer').height(winHeight);
+		} else if ( !chkLng == 1 )
+		{
+			$('.dimmedLayer').height(bodyHeight);
+		}
+	});
+
+
 });
 
 // graph gauge

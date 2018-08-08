@@ -166,7 +166,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 공통 입력 필드 */
-.tblDiv {display:table; width:100%;}
+.tblDiv {display:table; width:100%; table-layout:fixed;}
 .tblDiv + .tblDiv {margin-top:20px;}
 .tblDiv .cellDiv {position:relative; display:table-cell; padding:0 4px; vertical-align:top;}
 .tblDiv .cellDiv.middle {vertical-align:middle;}
@@ -407,7 +407,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 테이블 */
 .table {}
 .table table {width:100%;}
-.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
+.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:2px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
 .table table th.roboto {padding-bottom:5px;}
 .table table td {padding:9px 5px; text-align:center; font-size:11px; line-height:13px; border-right:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word; text-align:center;}
 .table table tr td:last-child {border-right:none;}

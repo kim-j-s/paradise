@@ -4,6 +4,7 @@
 /* font */
 @font-face {
  font-family: 'Noto Sans';
+ font-weight:normal;
  src: url('../../fonts/NotoSans-Medium.eot');
  src: url('../../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
       url('../../fonts/NotoSans-Medium.woff') format('woff'),
