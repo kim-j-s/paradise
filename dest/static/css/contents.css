@@ -166,7 +166,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 공통 입력 필드 */
-.tblDiv {display:table; width:100%;}
+.tblDiv {display:table; width:100%; table-layout:fixed;}
 .tblDiv + .tblDiv {margin-top:20px;}
 .tblDiv .cellDiv {position:relative; display:table-cell; padding:0 4px; vertical-align:top;}
 .tblDiv .cellDiv.middle {vertical-align:middle;}
@@ -407,7 +407,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 테이블 */
 .table {}
 .table table {width:100%;}
-.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:1px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
+.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:2px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
 .table table th.roboto {padding-bottom:5px;}
 .table table td {padding:9px 5px; text-align:center; font-size:11px; line-height:13px; border-right:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word; text-align:center;}
 .table table tr td:last-child {border-right:none;}
@@ -458,7 +458,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* bxslide option */
 .bx-pager {margin-top:12px; text-align:center; font-size:0;}
 .bx-pager .bx-pager-item {display:inline-block; width:5px; height:5px; font-size:0;}
-.bx-pager .bx-pager-item + .bx-pager-item {margin-left:5px;}
+.bx-pager .bx-pager-item + .bx-pager-item {margin-left:6px;}
 .bx-pager .bx-pager-item a {display:block; height:5px; text-indent:-999px; background:#ebe6e1; border-radius:50%;}
 .bx-pager .bx-pager-item a.active {background:#9d836a;}
 
@@ -1152,7 +1152,7 @@ line-height:18px;}
 .cardGallery .swiper-slide > a {display:block;}
 .cardGallery.single .swiper-slide {width:calc(100% - 16px); text-align:center;}
 .cardGalleryWrap .swiper-pagination {bottom:-14px;}
-.swiper-pagination-bullet {width:5px; height:5px; background:#e7e1dc; opacity:1; border-radius:50%; outline:none;}
+.swiper-pagination-bullet {width:5px; height:5px; margin:0 3px !important; background:#e7e1dc; opacity:1; border-radius:50%; outline:none;}
 .swiper-pagination-bullet-active {background:#9d836a;}
 
 
@@ -1834,7 +1834,6 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType3 .swiper-pagination {position:static; display:block; padding-left:8px; margin-top:12px; font-size:0; text-align:center; }
 .swipeType3 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
 .swipeType3 .swiper-container {}
-.swipeType3 .swiper-pagination {}
 .swipeType3 .counter {padding-left:7px;}
 .swipeType3 .counter .now {font-weight:bold;}
 .swipeType3 .swiper-slide {}
@@ -2097,7 +2096,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .squareBox{position: absolute; right: 16px; bottom: 27px; padding: 17px 14px 16px; border: 1px solid #fff;  text-align: center; color: #fff; font-family: 'Roboto'; font-size: 12px; text-shadow: 0px 0px 10px rgba(0,0,0,0.6); font-weight: 400; line-height: 1;}
 .squareBox > span{display: block; padding-bottom: 16px; letter-spacing: 1.1px; font-weight: 400;}
 .squareBox:after{content: ''; display: block; position: absolute; top: 50%; left: 50%; margin: 0 0 0 -8px; width: 16px; height: 1px; background-color: #fff; vertical-align: top;}
-.squareBox.type2{width: 80px; height: 80px; border: none; top: 20px; padding: 12px 13px; bottom: unset; background-color: rgba(156,131,106,0.9); text-align: left; font-family: 'Noto Sans'; font-weight: bold; line-height: 15px; font-size: 11px; color: #fff; text-shadow: none;}
+.squareBox.type2{width: 80px; height: 80px; border: none; top: 20px; z-index:1; padding: 12px 13px; bottom: unset; background-color: rgba(156,131,106,0.9); text-align: left; font-family: 'Noto Sans'; font-weight: bold; line-height: 15px; font-size: 11px; color: #fff; text-shadow: none;}
 .squareBox.type2:after{top: unset; bottom: 13px; left: 13px;  width: 21px; height: 5px; margin: 0; background: url(../images/common/icon/icon_arrow3.png); vertical-align: top; background-size: 21px auto;}
 
 
@@ -2145,10 +2144,8 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .subMainVisualFull .subMainVisual .squareBox{bottom: 65px;}
 .subMainVisualFull .subMainVisual .bx-viewport {height:100%;}
 .subMainVisualFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
-.subMainVisualFull .subMainVisual.artSpace .bx-wrapper {height:100%;}
-.subMainVisualFull .subMainVisual.artSpace .bx-viewport {height:100% !important;}
-.subMainVisualFull .subMainVisual.artSpace .normalSwiper {height:100%;}
-.subMainVisualFull .subMainVisual.artSpace .bx-controls {position: absolute; left: 0; bottom: 70px; width: 100%;}
+.subMainVisualFull .subMainVisual.artSpace .swipeType3 {height:100%;}
+.subMainVisualFull .subMainVisual.artSpace .swipeType3 .swiper-pagination {position:absolute; bottom:20px; left:0; width:100%;}
 
 .subMainVisualFull + .pageTop + #footerWrap {padding-top:0;}
 .subMainVisual{position: relative;}
