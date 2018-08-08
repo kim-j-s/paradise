@@ -203,7 +203,30 @@
 			</div>
 
 			<div class="fineEvent pt0 mt20">
-				@@include('static/include/sbu_hotelparadise_suite.html')
+				<div class="selectList">
+					<a href="#none">Guestroom</a>
+					<a href="#none" class="on">Suite</a>
+					<a href="#none">Pool Villa</a>
+					<a href="#none">Lounge</a>
+				</div>
+
+				<div class="selectGroup">
+					<div class="swiper-container fineEventGallery">
+						@@include('static/include/sbu_hotelparadise_guestroom.html')
+					</div>
+
+					<div class="swiper-container fineEventGallery on">
+						@@include('static/include/sbu_hotelparadise_suite.html')
+					</div>
+
+					<div class="swiper-container fineEventGallery">
+						@@include('static/include/sbu_hotelparadise_poolvilla.html')
+					</div>
+
+					<div class="swiper-container fineEventGallery">
+						@@include('static/include/sbu_hotelparadise_lounge.html')
+					</div>
+				</div>
 			</div>
 			
 		</section>
