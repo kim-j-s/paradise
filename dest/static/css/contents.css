@@ -2134,7 +2134,8 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull .subMainVisual .squareBox{bottom: 65px;}
 
 .subMainVisual.artSpace {padding-bottom: 50px;}
-.subMainVisual.artSpace .txtArea {bottom: 45px;}
+.subMainVisual.artSpace .bx-controls{bottom: 70px;}
+.subMainVisual.artSpace .txtArea {bottom: 10%;}
 .subMainVisual.artSpace .viewArea {height:100%; background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.wonderbox .txtArea {bottom: 55px;}
 .subMainVisual.wonderbox .viewArea {height:100%; background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
@@ -2149,12 +2150,8 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 .subMainVisualFull + .pageTop + #footerWrap {padding-top:0;}
 .subMainVisual{position: relative;}
-/*.subMainVisual.artSpace{padding-bottom: 50px;}*/
-.subMainVisual.artSpace .bx-controls{bottom: 70px;}
-.subMainVisual.artSpace .txtArea{bottom: 95px;}
-.subMainVisual.artSpace .viewArea{background: #000 url(../images/artSpace/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
-.subMainVisual.wonderbox .txtArea{bottom: 55px;}
-.subMainVisual.wonderbox .viewArea{background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+
+
 
 
 /*Art Garden*/
