@@ -149,7 +149,7 @@
 .btnMore {text-indent:-9999px;}
 .btnMore:before {content:''; position:absolute; top:2px; left:7px; height:12px; border-right:2px solid #111;}
 .btnMore:after {content:''; position:absolute; top:7px; left:2px; width:12px; border-top:2px solid #111;}
-.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right 2px; background-size:6px 10px; line-height:16px;}
+.btnMoreTxt {display:inline-block; font-weight:normal; font-size:12px; color:#9c836a !important; padding-right:13px; background:url(../images/common/icon/icon_arrow.png) no-repeat right center; background-size:6px 10px; line-height:16px;}
 .btnMoreTxt.ty1 {top:0 !important;}
 .btnMoreTxt.ty2 {top:0 !important;; right:16px !important;;}
 .btnCalendarView {display:inline-block; width:20px; height:20px; text-indent:-9999px;}
@@ -985,7 +985,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .prodList > li .inner .thumb {position:relative;}
 .prodList > li .inner .thumb:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.4;}
 .prodList > li img {width:100%;}
-.prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:12px; color:#fff; text-align:center;}
+.prodList > li span {position:absolute; top:50%; left:50%; width:100%; transform: translate(-50%, -50%); font-size:12px; color:#fff; text-align:center; font-weight: bold;}
 
 .prodList.etc {width:100%;}
 .prodList.etc > li {width:50%; padding:0 4px 0 0; margin-top:8px;}
@@ -1908,12 +1908,12 @@ h2.title{margin-bottom: 3px; font-size: 14px; font-weight: bold; color: #111;}
 p.descText{font-size: 12px; line-height: 18px;}
 div.divTop{border-top: 1px solid #e7e3e0;}
 div.divBtm{padding-bottom: 20px; border-bottom: 1px solid #e7e3e0;}
-img.fullImg{width: 100%;}
+img.fullImg{display: block; width: 100%;}
 a.rightBtn{position: absolute; top: 2px; right: 0;}
 .fullBox{position: relative; width: calc(100% + 32px); margin-left: -16px; padding: 0 16px;}
-/*div.fullBox.btm{margin-bottom: -50px; padding-bottom: 50px; z-index: 1;}*/
 .fullBox.bg{padding-top: 25px; background-color: #f9f9f9;}
 .fullBox.bg .rightBtn{top: 27px; right: 16px;}
+.imgSlide .txtArea{width: 100%;}
 
 .fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
 .fileDown > span{display: block; margin-top: 10px;}
@@ -2035,6 +2035,8 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .chromaWrap .facilityBox:last-child{padding-bottom: 0;}
 .chromaWrap .facilityBox h3{margin: 10px 0 8px;}
 .chromaWrap .timeTable > .table{margin: -10px 0 0;}
+.chromaWrap .timeTable > .table th{font-size: 11px;}
+.chromaWrap .timeTable > .table th > span{font-size: 12px;}
 
 .chromaField {position:relative;}
 .chromaField .btnMoreTxt {position:absolute; top:0; right:0;}
@@ -2067,12 +2069,13 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .artistWrap .albumList .txt{width: 100%; margin: 6px 0 0; font-size: 12px; overflow:hidden; text-overflow:ellipsis; white-space: nowrap;}
 
 /*PHOTOS & VIDEOS*/
-.photoList{padding: 0 0 10px;}
+.photoList{margin: 20px 0 0;}
 .photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 500; margin-bottom: 4px; color: #333;}
-.photoList ul li{position: relative; margin: 0 0 8px;}
+.photoList ul li{position: relative;}
+.photoList ul li + li{margin: 8px 0 0;}
 .photoList ul li a{display: block;}
 .photoList .thumb{width: 100%;}
-.photoList .desc{position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; font-size: 12px; font-weight: bold; color: #fff;}
+.photoList .desc{position: absolute; bottom: 0; left: 0; width: 100%; padding: 10px; font-size: 12px; font-weight: bold; color: #fff; text-shadow: 0px 0px 7px rgba(0,0,0,0.7);}
 
 /*studio*/
 .studioWrap h2.title{color: #333; margin: 15px 0 4px;}
