@@ -186,7 +186,6 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .tblDiv.time .cellDiv:last-child {padding:0 0 0 8px;}
 .tblDiv.time .cellDiv:last-child:before {content:':'; position:absolute; top:0; left:-8px; width:16px; text-align:center; line-height:36px;}
 
-
 /* 공통 안내문 */
 .notiTxt {padding-top:15px;}
 .notiTxt > dt {padding-left:22px; margin-bottom: 4px; background:url(../images/common/icon/icon_mark1.png) no-repeat left 6px; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
