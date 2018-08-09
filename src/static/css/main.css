@@ -16,6 +16,8 @@
 .mainVisual .cont {height:100%; color:#fff;}
 .mainVisual .cont .division {position:absolute; top:76px; left:0; width:100%; display:table; width:100%; overflow:hidden;}
 .mainVisual .cont .division strong {position:relative; display:table-cell; padding:0 8px 0 16px; font-family:'Roboto'; font-weight:bold; font-size:11px; color:#fff; line-height:20px;}
+.mainVisual .cont .division strong:before {content:''; position:absolute; left:0; top:50%; margin-top:-1px; width:8px; border-bottom:1px solid #e7e3e0;}
+.mainVisual .cont.ty1 .division strong:before {content:none;}
 .mainVisual .cont .division span {position:relative; display:table-cell; width:100%; height:20px;}
 .mainVisual .cont .division span:before {content:''; position:absolute; right:0; top:50%; margin-top:-1px; width:100%; border-bottom:1px solid #e7e3e0;}
 .mainVisual .cont > .inner {position:absolute; bottom:44px; left:0; width:100%; padding:0 16px;}
@@ -50,6 +52,7 @@
 .mainVisual .cont.ty4 {background:url(../images/main/img_mainVisual04.jpg) no-repeat; background-size:cover;}
 
 .mainVisual .swipeType3 .swiper-pagination {position:absolute; bottom:20px;}
+.mainVisual .swipeType3 .bullet {position:absolute; bottom:20px; left:0; top:auto; width:100%; z-index:55;}
 
  /* ==============================
  * content

@@ -364,7 +364,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .loginWrap .loginBtn {display:block; background:#9d836a; text-align:center; font-size:14px; font-weight:normal; color:#fff; line-height:36px;}
 .loginWrap .loginFind {text-align:center; padding-top:17px; font-size:0;}
 .loginWrap .loginFind a {display:inline-block; border-bottom:1px solid #9d836a; font-weight:normal; font-size:12px; line-height:16px; color:#9d836a;}
-.loginWrap .loginFooter {display:table; position:absolute; bottom:0; left:-16px; width:calc(100% + 32px); height:63px; background:#f9f9f9; color:#fff; text-align:center;}
+.loginWrap .loginFooter {position:absolute; bottom:0; left:-16px; display:table; padding:0 16px; width:calc(100% + 32px); height:63px; background:#f9f9f9; color:#fff; text-align:left;}
 .loginWrap .loginFooter .cell {display:table-cell; vertical-align:middle; width:100%; height:63px; font-size:12px; color:#999;}
 .loginWrap .loginFooter a {display:inline-block; font-weight:normal; font-size:12px; color:#666; border-bottom:1px solid #666;}
 .loginWrap .inputBox + .inputBox {margin-top:8px;}
@@ -375,7 +375,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .loginWrap.cart .loginFooter {display:table; position:absolute; bottom:63px; left:-16px; width:calc(100% + 32px); height:117px; background:#f9f9f9; text-align:center;}
 .loginWrap.cart .loginFooter.two {bottom:0; height:63px;}
 .loginWrap.cart .loginFooter .cell {display:table-cell; vertical-align:middle; width:100%; height:117px; padding:0 16px;}
-.loginWrap.cart .loginFooter.two .cell {height:63px;}
+.loginWrap.cart .loginFooter.two .cell {padding:0; height:63px; text-align:left;}
 .loginWrap.cart .loginFooter a {display:block; font-weight:normal; color:#fff; border-bottom:1px solid #666;}
 .loginWrap.cart .loginFooter.two .cell a {display:inline-block; font-weight:normal; color:#666; border-bottom:1px solid #666;}
 
@@ -470,7 +470,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .joinStep .txt {display:block; position:relative; z-index:2; padding-top:21px; font-size:14px; font-weight:bold; color:#999;}
 .joinStep .txt:before {content:''; position:absolute; top:0; left:50%; margin-left:-8px; width:16px; height:16px; background:#fff url(../images/common/bg_joinStep.gif) no-repeat; background-size:16px 32px; background-position:center 0;}
 .joinStep .txt.pass {color:#9d836a;}
-.joinStep .txt.on {color:#9d836a;}
+.joinStep .txt.on {color:#bdae9f;}
 .joinStep .txt.on:before {background-position:center -16px;}
 .joinStep .txt span {opacity:0.7;}
 .joinStep .txt.on span {font-weight:bold; opacity:1;}
@@ -491,7 +491,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .inpWrap + .inpWrap {position:relative; margin-top:20px; padding-top:25px;}
 .inpWrap + .inpWrap:before {content:''; position:absolute; top:0; left:-16px; width:calc(100% + 32px); height:7px; background:#f9f9f9; border-top:1px solid #e7e3e0;}
 .inpWrap .infoTitle {position:relative; padding-bottom:13px; font-size:14px; font-weight:bold; color:#111;}
-.inpWrap .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e66045;}
+.inpWrap .infoTitleSub1 {position:absolute; top:0; right:0; font-size:11px; color:#e55649;}
 .inpWrap .infoTitleSub1.matching {top:17px;}
 .inpWrap .infoTitle .infoTitleSub2 {display:block; padding-top:3px; font-size:12px; color:#666; line-height:16px; }
 
