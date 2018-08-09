@@ -48,7 +48,7 @@ nav .navDimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:102
 .gnb > .close:before {content:''; position:absolute; top:9px; left:0; width:20px; border-bottom:1px solid #fff; transform: rotate(45deg);}
 .gnb > .close:after {content:''; position:absolute; top:9px; right:0; width:20px; border-bottom:1px solid #fff; transform: rotate(-45deg);}
 
-.gnb .gnbTop {position:relative; height:50px;}
+.gnb .gnbTop {position:relative; height:50px; background:#161411;}
 .gnb .mainLink {position:absolute; top:50%; left:50%; margin:-11px 0 0 -73px;}
 .gnb .mainLink > img {width:146px;}
 .gnb .country {float:right; margin-right:20px;}
