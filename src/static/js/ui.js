@@ -1178,12 +1178,26 @@ $(function(){
 		sliders3.push(slider3);
 	});
 
+	/*
 	$('.swipeType3').each(function(swipeType3){
 		$(this).find('.swiper-pagination-current').on('DOMSubtreeModified', function(){
 			PagerNum3 = $(this).html();
 			$('.swipeType3').eq(swipeType3).find('.now').html(PagerNum3);
 			$('.swipeType3').eq(swipeType3).find('.bullet').children('span').removeClass('on');
 			$('.swipeType3').eq(swipeType3).find('.bullet').children('span').eq(PagerNum3 - 1).addClass('on');
+		});
+	});
+	*/
+
+	//swiper display none block refresh event
+	$("body").on('DOMSubtreeModified', function() {
+		$('.swipeType3').each(function(swipeType3){
+			$(this).find('.swiper-pagination-current').on('DOMSubtreeModified', function(){
+				PagerNum3 = $(this).html();
+				$('.swipeType3').eq(swipeType3).find('.now').html(PagerNum3);
+				$('.swipeType3').eq(swipeType3).find('.bullet').children('span').removeClass('on');
+				$('.swipeType3').eq(swipeType3).find('.bullet').children('span').eq(PagerNum3 - 1).addClass('on');
+			});
 		});
 	});
 });
