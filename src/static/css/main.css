@@ -49,6 +49,8 @@
 .mainVisual .cont.ty3 {background:url(../images/main/img_mainVisual03.jpg) no-repeat; background-size:cover;}
 .mainVisual .cont.ty4 {background:url(../images/main/img_mainVisual04.jpg) no-repeat; background-size:cover;}
 
+.mainVisual .swipeType3 .swiper-pagination {position:absolute; bottom:20px;}
+
  /* ==============================
  * content
  * ============================== */

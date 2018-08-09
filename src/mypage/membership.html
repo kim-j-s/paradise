@@ -3,14 +3,32 @@
 	<div id="wrap">
 		<!-- 헤더영역 -->
 		@@include('static/include/header.html',{
-				"header":"맴버십"
+				"header":"MY PAGE"
 			})
 		<!-- //헤더영역 -->
+		<!-- 2018-08-08 타이틀 수정 -->
+
+		<!-- 2018-08-08 추가 -->
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">맴버십</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#" class="on">맴버십</a></li>
+					<li><a href="#">포인트</a></li>
+					<li><a href="#">예약내역</a></li>
+					<li><a href="#">쿠폰</a></li>
+					<li><a href="#">이용문의</a></li>
+					<li><a href="#">회원정보수정</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--// 2018-08-08 추가 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
 			<div class="tabWrap membership">
-				<ul class="tabList">
+				<ul class="tabList etc">		<!-- 2018-08-08 클래스 수정 -->
 					<li>
 						<button class="tit on">CASINO</button>
 					</li>
@@ -68,11 +86,12 @@
 									<dt class="tit">카지노 회원 전용 프로모션</dt>
 									<dd>
 										<ul class="promotionList">
+											<!-- 2018-08-08 수정 -->
 											<li>
 												<div class="promotionBox">
 													<a href="#">
 														<p class="txt">
-															카지노 회원 여름 특별 혜택 호텔 파라다이스
+															카지노 회원 전용 객실 프로모션
 														</p>
 														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
 														<div class="mt7">
@@ -81,32 +100,7 @@
 													</a>
 												</div>
 											</li>
-											<li>
-												<div class="promotionBox">
-													<a href="#">
-														<p class="txt">
-															카지노 회원 여름 특별 혜택 호텔 파라다이스
-														</p>
-														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
-														<div class="mt7">
-															<span class="linkTxt">예약하러 가기</span>
-														</div>
-													</a>
-												</div>
-											</li>
-											<li>
-												<div class="promotionBox">
-													<a href="#">
-														<p class="txt">
-															카지노 회원 여름 특별 혜택 호텔 파라다이스
-														</p>
-														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
-														<div class="mt7">
-															<span class="linkTxt">예약하러 가기</span>
-														</div>
-													</a>
-												</div>
-											</li>
+											<!--// 2018-08-08 수정 -->
 										</ul>
 									</dd>
 								</dl>
@@ -119,15 +113,6 @@
 						<!-- 맴버십 쿠폰 -->
 						<div class="tabSubContent">
 							<div class="membershipCont">
-
-								<!-- PARADISE SIGNATURE 탭에서 발생 -->
-								<div class="selectDiv">
-									<select name="" id="" class="selectbox">
-										<option value="">전체</option>
-									</select>
-								</div>
-								<!-- PARADISE SIGNATURE 탭에서 발생 -->
-
 								<p class="txt">멤버십 쿠폰 별 사용조건 및 제외기간, 기타 안내사항은 멤버십 안내 페이지를 참고하시기 바랍니다. </p>
 								<div class="go">
 									<a href="#" class="btnMoreTxt">바로가기</a>
@@ -488,13 +473,111 @@
 						</ul>
 						<!-- 맴버십 등급 -->
 						<div class="tabSubContent on">
-							맴버십 등급
+							<div class="membershipCont">
+								<div class="tc">
+									@@include('static/include/card_box.html',{
+										"card":"img_cardimg.jpg"
+									})
+								</div>
+							</div>
+
+							<!-- 2018-08-08 삭제
+							<div class="txtContent none mt23">
+								<dl>
+									<dt class="tit">카지노 회원 전용 프로모션</dt>
+									<dd>
+										<ul class="promotionList">
+											<li>
+												<div class="promotionBox">
+													<a href="#">
+														<p class="txt">
+															카지노 회원 여름 특별 혜택 호텔 파라다이스
+														</p>
+														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
+														<div class="mt7">
+															<span class="linkTxt">예약하러 가기</span>
+														</div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="promotionBox">
+													<a href="#">
+														<p class="txt">
+															카지노 회원 여름 특별 혜택 호텔 파라다이스
+														</p>
+														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
+														<div class="mt7">
+															<span class="linkTxt">예약하러 가기</span>
+														</div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="promotionBox">
+													<a href="#">
+														<p class="txt">
+															카지노 회원 여름 특별 혜택 호텔 파라다이스
+														</p>
+														<div class="date roboto">2019.07.12 ~ 2019.08.12</div>
+														<div class="mt7">
+															<span class="linkTxt">예약하러 가기</span>
+														</div>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+							-->
 						</div>
 						<!--// 맴버십 등급 -->
 
 						<!-- 맴버십 쿠폰 -->
 						<div class="tabSubContent">
-							맴버십 쿠폰
+							<div class="membershipCont">
+								<p class="txt">멤버십 쿠폰 별 사용조건 및 제외기간, 기타 안내사항은 멤버십 안내 페이지를 참고하시기 바랍니다. </p>
+								<div class="go">
+									<a href="#" class="btnMoreTxt">바로가기</a>
+								</div>
+								<div class="table">
+									<table>
+										<colgroup>
+											<col style="" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:77px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="tl">맴버십 쿠폰</th>
+												<th>기준</th>
+												<th>제공</th>
+												<th>잔여</th>
+												<th class="tr">&nbsp;</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tl">객실 무료<br /> 업그레이드 이용권</td>
+												<td>-</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+											<tr>
+												<td class="tl">온 더 플레이트<br /> 조식 이용권</td>
+												<td><span class="pointColor">2</span>인</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 						<!--// 맴버십 쿠폰 -->
 
@@ -697,7 +780,53 @@
 
 						<!-- 맴버십 쿠폰 -->
 						<div class="tabSubContent">
-							맴버십 쿠폰
+							<div class="membershipCont">
+								<div class="selectDiv">
+									<select name="" id="" class="selectbox">
+										<option value="">전체</option>
+									</select>
+								</div>
+								<p class="txt">멤버십 쿠폰 별 사용조건 및 제외기간, 기타 안내사항은 멤버십 안내 페이지를 참고하시기 바랍니다. </p>
+								<div class="go">
+									<a href="#" class="btnMoreTxt">바로가기</a>
+								</div>
+								<div class="table">
+									<table>
+										<colgroup>
+											<col style="" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:77px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="tl">맴버십 쿠폰</th>
+												<th>기준</th>
+												<th>제공</th>
+												<th>잔여</th>
+												<th class="tr">&nbsp;</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tl">객실 무료<br /> 업그레이드 이용권</td>
+												<td>-</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+											<tr>
+												<td class="tl">온 더 플레이트<br /> 조식 이용권</td>
+												<td><span class="pointColor">2</span>인</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 						<!--// 맴버십 쿠폰 -->
 
@@ -975,7 +1104,48 @@
 
 						<!-- 맴버십 쿠폰 -->
 						<div class="tabSubContent">
-							맴버십 쿠폰
+							<div class="membershipCont">
+								<p class="txt">멤버십 쿠폰 별 사용조건 및 제외기간, 기타 안내사항은 멤버십 안내 페이지를 참고하시기 바랍니다. </p>
+								<div class="go">
+									<a href="#" class="btnMoreTxt">바로가기</a>
+								</div>
+								<div class="table">
+									<table>
+										<colgroup>
+											<col style="" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:35px" />
+											<col style="width:77px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th class="tl">맴버십 쿠폰</th>
+												<th>기준</th>
+												<th>제공</th>
+												<th>잔여</th>
+												<th class="tr">&nbsp;</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="tl">객실 무료<br /> 업그레이드 이용권</td>
+												<td>-</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+											<tr>
+												<td class="tl">온 더 플레이트<br /> 조식 이용권</td>
+												<td><span class="pointColor">2</span>인</td>
+												<td><span class="pointColor">1</span></td>
+												<td><span class="pointColor">0</span></td>
+												<td class="tr"><a href="#" class="btn ty9">내역 보기</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 						</div>
 						<!--// 맴버십 쿠폰 -->
 
