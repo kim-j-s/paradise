@@ -18,7 +18,6 @@ legend, caption { display:none; }
 textarea { resize:vertical; font:inherit; overflow-y:auto; box-sizing:border-box;}
 input, select { color:inherit; font:inherit; vertical-align: middle; box-sizing:border-box;}
 address, i { font-style:normal; }
-table { border-collapse:collapse; table-layout:fixed; }
 img, select, input, button { vertical-align:middle; }
 button {outline:none;}
 em { font-style:normal; }

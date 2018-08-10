@@ -189,7 +189,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 공통 안내문 */
 .notiTxt {padding-top:15px;}
-.notiTxt > dt {padding-left:22px; margin-bottom: 4px; background:url(../images/common/icon/icon_mark1.png) no-repeat left 6px; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
+.notiTxt > dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left 6px; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
 .notiTxt > dd {font-size:12px; line-height:16px;}
 .notiTxt > dd.fs12 {padding-top:4px;}
 
@@ -508,6 +508,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .facility.etc .facilityTop {border:1px solid #e7e3e0; border-bottom:none;}
 .facility .facilityList {padding:15px 0 8px 15px; overflow:hidden;}
 .facility .facilityList li {float:left; width:50%; margin-bottom:7px;}
+.facility .facilityList li label {display:inline-block; line-height:16px;}
 
 /* 회원가입 - 가입완료 */
 .joinComplete {padding:13px 0 0 0; font-size:14px; color:#333;}
@@ -523,7 +524,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .joinComplete .joinCard .name {top:80px;}
 .joinComplete .joinCard .joinCardNum {top:100px; font-family:'Roboto';}
 .joinComplete .txt {padding-top:20px;}
-.joinComplete + .notiTxt.list {margin-top:0px; padding-top:11px;}
+.joinComplete + .notiTxt.list {margin-top:0px; padding:11px 0 16px 0;}
 
 
 /* 이용약관 동의 */
@@ -545,9 +546,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 검색 소팅 */
 .searchSort {padding-bottom:8px; overflow:hidden;}
-.searchSort .selectbox {width:auto; height:27px; padding-left:0; padding-right:25px; border:1px solid #fff;s}
-.searchSort .selectbox.sort1 {float:left; font-weight:bold; font-size:14px; color:#9c836a;}
-.searchSort .selectbox.sort2 { padding-right:15px; float:right; font-size:12px; color:#999; background:#fff url(../images/common/icon/bg_select2.png) no-repeat right center; background-size:8px 5px;}
+.searchSort .selectbox {width:auto; height:27px; padding-left:0; padding-right:25px; border:1px solid #fff;}
+.searchSort .selectbox.sort1 {float:left; font-weight:bold; font-size:14px; color:#9c836a; max-width:49%;}
+.searchSort .selectbox.sort2 { padding-right:15px; float:right; font-size:12px; color:#999; background:#fff url(../images/common/icon/bg_select2.png) no-repeat right center; background-size:8px 5px;  max-width:49%;}
 
 
 /* floor */
@@ -600,7 +601,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .itemThumb.soldout:after {content:'SOLD OUT'; position:absolute; top:50%; left:0; z-index:3; display:block; width:100%; height:100%; margin-top:-8px; text-align:center; font-weight:bold; color:#fff; line-height:16px;}
 .itemPrice {vertical-align:bottom;}
 .itemPrice .price1 {font-weight:bold; color:#9c836a;}
-.itemPrice .price1 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
+.itemPrice .price1 .unit {padding-left:4px; font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
 .itemPrice .price1 + .wave {font-weight:bold; font-size:14px; color:#9c836a; font-family:'Roboto';}
 .itemPrice .price2 {font-size:12px; color:#999; text-decoration:line-through;}
 .itemPrice .price2 .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#999;}
@@ -634,9 +635,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .spOfferWrap .spOfferThumb > img {width:100%; height:65px;}
 .spOfferWrap .spOfferTitle {display:table-cell; padding-left:12px; vertical-align:top;}
 .spOfferWrap .spOfferTitle strong {display:block; margin-top:-4px; font-size:14px; font-weight:bold; color:#111; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.spOfferWrap .spOfferTitle .date {display:block; padding:1px 0 00 0; font-family:'Roboto'; font-size:12px; color:#333;}
+.spOfferWrap .spOfferTitle .date {display:block; padding:1px 0 00 0; font-family:'Roboto'; font-weight:400; font-size:12px; color:#333;}
 .spOfferWrap .spOfferTitle .price {font-weight:bold; color:#9c836a;}
-.spOfferWrap .spOfferTitle .price .unit {font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
+.spOfferWrap .spOfferTitle .price .unit {padding-left:4px; font-family: 'Noto Sans', sans-serif; font-size:12px; color:#666;}
 .spOfferWrap .spOfferTitle .price + .wave {font-weight:bold; font-size:14px; color:#9c836a; font-family:'Roboto';}
 .spOfferWrap .spOfferTitle .desc {padding-top:4px; font-size:12px; line-height:13px;}
 .spOfferWrap .hashtag {display:block; padding:9px 0 6px 0; font-size:12px; color:#9c836a; line-height:15px;}
@@ -715,7 +716,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .slideWrap.bill {padding:11px 0 12px 0; border-bottom:1px solid #e9e5e2;}
 
 .slideList .slideDept1 {display:table; position:relative; width:100%;}
-.slideList .slideDept1 > .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; line-height:20px;}
+.slideList .slideDept1 > .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; color:#333; line-height:20px; text-align:left;}
 .slideList .slideDept1 > .title small {font-size:12px;}
 .slideList .slideDept1 .price {display:table-cell; vertical-align:middle; height:100%; text-align:right;}
 .slideList .slideDept1 .price .num {font-weight:bold; color:#9c836a; font-family:'Roboto';}
@@ -753,7 +754,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 슬라이드 리스트 단순 표기용 */
 .slideWrap.display {}
 .slideWrap.dept.display .slideDept1 {padding-right:0;}
-.slideWrap.dept.display .slideDept1:before {content:none;}
+.slideWrap.dept.display .slideDept1:after {content:none;}
 .slideWrap.dept.display .slideDept2 {padding-right:0;}
 
 /* 금액 단순 표기  */
@@ -771,15 +772,15 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 슬라이드 기능이 추가된 경우 */
 .slideWrap.dept {}
 .slideWrap.dept .slideList {position:relative;}
-.slideWrap.dept .slideList:before {content:''; position:absolute; top:0; left:-16px; z-index:500; width:calc(100% + 32px); height:100%; background:#fff; opacity:0.8;}
-.slideWrap.dept .slideList.on:before {content:none;}
-.slideWrap.dept .slideList:first-child:before {content:none;}
-.slideWrap.dept .slideList.price:before {content:none;}
-.slideWrap.dept .slideDept1 {padding-right:16px;}
-.slideWrap.dept .slideDept1:before {content:''; position:absolute; top:50%; right:0; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
-.slideWrap.dept .slideDept1.on:before {content:''; position:absolute; top:50%; right:0; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
-.slideWrap.dept.none .slideDept1:before {content:none;}
-.slideWrap.dept .slideDept1.none:before {content:none;}
+.slideWrap.dept .slideList:after {content:''; position:absolute; top:0; left:-16px; z-index:500; width:calc(100% + 32px); height:100%; background:#fff; opacity:0.8;}
+.slideWrap.dept .slideList.on:after {content:none;}
+.slideWrap.dept .slideList:first-child:after {content:none;}
+.slideWrap.dept .slideList.price:after {content:none;}
+.slideWrap.dept .slideDept1 {padding-right:24px;}
+.slideWrap.dept .slideDept1:after {content:''; position:absolute; top:50%; right:8px; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 -6px; background-size:9px 12px;}
+.slideWrap.dept .slideDept1.on:after {content:''; position:absolute; top:50%; right:8px; width:9px; height:6px; margin-top:-3px; background:url(../images/common/icon/icon_updown.png) no-repeat 0 0; background-size:9px 12px;}
+.slideWrap.dept.none .slideDept1:after {content:none;}
+.slideWrap.dept .slideDept1.none:after {content:none;}
 
 .slideWrap .slideList.other {padding:12px 0 13px 0;}
 .slideWrap .slideList.other + .slideList.other {margin-top:0;}
@@ -805,7 +806,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .detailSettingWrap .btnMore:after {content:none;}
 
 .detailSettingWrap .detailHeader + .slideWrap {margin-top:16px; padding-top:12px; border-top:1px solid #e7e3e0;}
-.detailSettingWrap .detailHeader + .slideWrap .title {font-weight:300;}
+.detailSettingWrap .detailHeader + .slideWrap .title {font-weight:300; color:#333;}
 
 /* btnMoreTxt */
 .settingCont {position:relative;}
@@ -2081,7 +2082,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .studioWrap h2.title{color: #333; margin: 15px 0 4px;}
 
 .rentTable{margin: 10px 0 0;}
-.rentTable tbody td{border-right: 1px solid #e9e5e2; word-break: keep-all;}
+.rentTable tbody td{word-break: keep-all;}
 .rentTable tbody td:last-child{border-right: none;}
 
 .table > table + p.addTxt{margin: 7px 0 0; font-size: 11px; text-align: right; color: #999; line-height: 13px;}
