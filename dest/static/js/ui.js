@@ -1429,3 +1429,15 @@ $(document).on('click', '.layerCloseEtc', function(){
 	$('body').removeClass('fixed').css('height','auto');
 });
 */
+
+$(function(){
+	var	infoTab = $('.tabContetArea').find('.tit');
+	$(infoTab).each(function(tab){
+		$(this).click(function(){
+			$(infoTab).removeClass('on');
+			$(this).addClass('on');
+			$('.tabContetArea > .tabContetTop').children('.cont').removeClass('on').eq(tab).addClass('on');
+			$('.tabContetArea > .tabContetBottom').children('.cont').removeClass('on').eq(tab).addClass('on');
+		});
+	});
+});

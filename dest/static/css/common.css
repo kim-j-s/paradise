@@ -28,7 +28,7 @@ body.fixed #wrap {overflow:hidden;}
 .headerFixed .now {position:relative; padding:0 16px; height:30px; line-height:30px; text-align:left; border-bottom:1px solid #e7e3e0;}
 .headerFixed .now:before {content:''; position:absolute; top:50%; right:16px; margin-top:-3px; width:10px; height:6px; background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 0; background-size:10px 12px;}
 .headerFixed .now.on:before {background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 -6px; background-size:100%;}
-.headerSubLink {position:relative; display:none; background:#fff; overflow:hidden;}
+.headerSubLink {position:relative; display:none; padding:14px 0; background:#fff; overflow:hidden;}
 .headerSubLink {
 	-webkit-box-shadow: 0 7px 10px rgba(0,0,0,.1);
 	-moz-box-shadow: 0 7px 10px rgba(0,0,0,.1);
@@ -36,7 +36,7 @@ body.fixed #wrap {overflow:hidden;}
 }
 .headerSubLink li {}
 .headerSubLink li:nth-child(even) {padding-left:0;}
-.headerSubLink li > a {display:block; padding:10px 0; text-align:center; color:#333;}
+.headerSubLink li > a {display:block; padding:10px 0 11px 0; text-align:center; color:#333;}
 .headerSubLink li > .on {font-weight:bold; color:#9d836a;}
 
 
