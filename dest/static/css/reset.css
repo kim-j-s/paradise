@@ -168,7 +168,7 @@ html, body {background:#fff;}
 .pointColor3 {color:#999 !important;}
 .pointColor4 {color:#666 !important;}
 .pointColor5 {color:#5d88de !important;}
-.pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#9d836a;}
+.pointMark {display:inline-block; padding-right:20px; background:url(../images/common/icon/icon_point.png) no-repeat right center; background-size:15px 15px; line-height:15px; font-family:'Roboto'; font-weight:bold; font-size:14px; color:#e66045;}
 .pointMark.red {background:url(../images/common/icon/icon_point_red.png) no-repeat right center; background-size:13px 13px;}
 .notiRed {font-size:11px; color:#e66045;}
 .notiMark {position:relative; padding-left:15px; font-size:12px; line-height:16px;}

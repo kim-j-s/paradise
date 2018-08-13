@@ -875,13 +875,30 @@ $(function(){
 $(function(){
 	var dlSlide = $('.dlSlide > .title');
 	$(dlSlide).click(function(){
-		if ( $(this).next('dd').css('display') == 'block' )
+		if ( $(this).hasClass('other') )
 		{
-			$(dlSlide).removeClass('on').next('dd').slideUp(300);
-		} else {
-			$(this).siblings().removeClass('on').next('dd').slideUp(300);
-			$(this).addClass('on').next('dd').slideDown(300);
-		}
+			console.log('체크');
+			if ( $(this).next('dd').css('display') == 'block' )
+			{
+				$(dlSlide).removeClass('on').next('dd').slideUp(300, function(){
+					$(this).prev().removeClass('etc');
+				});
+			} else {
+				$(this).addClass('etc');
+				$(this).siblings().removeClass('on').next('dd').slideUp(300);
+				$(this).addClass('on').next('dd').slideDown(300);
+			}
+		} else if ( !$(this).hasClass('other') )
+		{
+			console.log('체크 2');
+			if ( $(this).next('dd').css('display') == 'block' )
+			{
+				$(dlSlide).removeClass('on').next('dd').slideUp(300);
+			} else {
+				$(this).siblings().removeClass('on').next('dd').slideUp(300);
+				$(this).addClass('on').next('dd').slideDown(300);
+			}
+		}		
 	});
 });
 
@@ -916,12 +933,15 @@ $(function(){
 
 // floor
 $(function(){
-	var floorSwipeLng = $('.floorSwipe').find('.item').length;
-	floorSwipeLng = floorSwipeLng - 2;
-	for (var i = 0 ;i < floorSwipeLng ; i++)
-	{
-		$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
-	}
+	$(window).load(function(){
+		var floorSwipeLng = $('.floorSwipe').find('.item').length;
+		floorSwipeLng = floorSwipeLng;
+		console.log(floorSwipeLng);
+		for (var i = 0 ;i < floorSwipeLng ; i++)
+		{
+			$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
+		}
+	});
 });
 
 // 상품 갤러리
