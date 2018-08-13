@@ -1532,6 +1532,7 @@ line-height:18px;}
 .singleSwipe .txt {padding:9px 0 0 0; font-size:12px; line-height:16px; text-align:left;}
 
 
+.bxWrap + .detailTop {margin-top:15px;}
 .detailTop {}
 .detailTop > .title {font-weight:bold; font-size:20px; color:#333; line-height:24px; text-transform:uppercase;}
 .detailTop > .subTitle {color:#333;}
