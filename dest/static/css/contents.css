@@ -52,7 +52,7 @@
 .ui-select-option.selection{background:#f9f9f9;}
 
 .selectbox {display:inline-block; width:100%; height:36px; padding:0 24px 0 8px; border:1px solid #e7e3e0;}
-.selectbox {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
+.selectbox {-webkit-border-radius:0px; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#fff url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
 .selectbox::-ms-expand {display:none;}
 .selectbox:disabled {background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px; color:#999;}
 
@@ -569,8 +569,17 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .titleTxt + .searchWrap {margin-top:26px;}
 .searchSort {padding-bottom:8px; overflow:hidden;}
 .searchSort .selectbox {width:auto; height:28px; padding-right:25px; border:1px solid #fff;}
-.searchSort .selectbox.sort1 {float:left; font-weight:bold; font-size:14px; color:#9c836a; width:68%;}
-.searchSort .selectbox.sort2 {padding-right:15px; width:calc(32% - 8px); float:right; font-size:12px; color:#999; background:#f9f9f9 url(../images/common/icon/bg_select2.png) no-repeat right 8px center; background-size:8px 5px;  max-width:49%;}
+.searchSort .selectbox.sort1 {float:left; font-weight:bold; font-size:14px; color:#9c836a; width:68%; background:#f9f9f9 url(../images/common/icon/bg_select.png) no-repeat right center; background-size:17px 6px;}
+.searchSort .selectbox.sort2 {padding-right:25px; width:calc(32% - 8px); float:right; font-size:12px; color:#999; background:#f9f9f9 url(../images/common/icon/bg_select2.png) no-repeat right 8px center; background-size:8px 5px;  max-width:49%;}
+.searchSort .selectbox.sort2.fl {float:left;}
+.searchSort .selectbox.single {display:block; width:100%; height:36px; padding:0 24px 0 8px; border:1px solid #e7e3e0;}
+.searchSort + .eventListWrap {padding-top:4px;}
+.searchSort + .fineList {padding-top:8px;}
+.searchSort + .dineList {padding-top:8px;}
+.searchSort + .listView {padding-top:8px;}
+.searchSort + .activityList {padding-top:8px;}
+.btn + .searchSort {margin-top:20px;}
+
 
 
 /* floor */
@@ -1102,7 +1111,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .eventListChange {padding:27px 0 10px 0; overflow:hidden;}
 .eventListChange > button {float:left;}
 .eventListChange > button + button {margin-left:16px;}
-.eventListChange + .tabWrap {padding-top:1px;}
+.eventListChange + .tabWrap {padding-top:4px;}
 
 .listView {}
 .listView .listViewItem {}
@@ -2134,7 +2143,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 
 /*PHOTOS & VIDEOS*/
 .photoList{margin: 20px 0 0;}
-.photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 500; margin-bottom: 4px; color: #333;}
+.photoList > p.date{font-family: 'Roboto'; font-size: 14px; font-weight: 400; margin-bottom: 4px; color: #333;}
 .photoList ul li{position: relative;}
 .photoList ul li + li{margin: 8px 0 0;}
 .photoList ul li a{display: block;}
