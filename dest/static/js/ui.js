@@ -1205,17 +1205,6 @@ $(function(){
 		}
 	});
 
-	/*
-	$('.swipeType3').each(function(swipeType3){
-		$(this).find('.swiper-pagination-current').on('DOMSubtreeModified', function(){
-			PagerNum3 = $(this).html();
-			$('.swipeType3').eq(swipeType3).find('.now').html(PagerNum3);
-			$('.swipeType3').eq(swipeType3).find('.bullet').children('span').removeClass('on');
-			$('.swipeType3').eq(swipeType3).find('.bullet').children('span').eq(PagerNum3 - 1).addClass('on');
-		});
-	});
-	*/
-
 	//swiper display none block refresh event
 	$("body").on('DOMSubtreeModified', function() {
 		$('.swipeType3').each(function(swipeType3){
@@ -1282,6 +1271,19 @@ $(function(){
 
 // Dine&Drink Sort
 $(function(){
+	var artSwipeheight = $('.artSwipe').outerHeight();
+	var Artswiper = new Swiper('.artSwipe', {
+        slidesPerView: 'auto',
+        spaceBetween: 7,
+        observer: true,
+        observeParents: true
+    });
+    
+    $(window).load(function() {
+        artSwipeheight = $('.artSwipe').outerHeight();
+        $('.artSwipe').find('.box').height(artSwipeheight - 49);
+    });
+
 	$('.sorting').each(function(sort){
 		$(this).change(function(){
 			OptionVal = $(this).val();
@@ -1296,16 +1298,139 @@ $(function(){
 			{
 				className = 'ty_c';
 				SortList(sort, className);
+			} else if ( OptionVal == 'ty_pom' ) 
+			{
+				className = 'ty_pom';
+				artSwiperSorting(className);
 			}
+			else if ( OptionVal == 'ty_cip' ) 
+			{
+				className = 'ty_cip';
+				artSwiperSorting(className);
+			}
+			else if ( OptionVal == 'ty_sp' ) 
+			{
+				className = 'ty_sp';
+				artSwiperSorting(className);
+			} else if ( OptionVal == 'ty_all' ) 
+			{
+				className = 'ty_all';
+				artSwiperSorting(className);
+			}
+
 
 			function SortList(sort, className){
 				$('.fineList').eq(sort).children('li').hide();
 				$('.fineList').eq(sort).find('.'+className).show();
 			}
+
+			function artSwiperSorting(className) {
+				$('.artSwipe').find('.box').hide();
+				$('.artSwipe').find('.'+className).show();
+
+				$('.artmapImage').children('img').hide();
+				$('.artmapImage').find('.'+className).show();
+
+				
+				Artswiper.destroy();
+				
+				$('.artSwipe').find('.box').hide();
+				$('.artSwipe').find('.'+className).show();
+				
+				Artswiper = new Swiper('.artSwipe', {
+					slidesPerView: 'auto',
+					spaceBetween: 7,
+					observer:true,
+					observeParents: true,
+					initialSlide:0
+				});
+				
+				$('.artSwipe').find('.box').height(artSwipeheight - 49);
+			}
+
 		});
 	});
 });
 
+
+/*
+$(function(){
+	
+	var artSwipeheight = $('.artSwipe').outerHeight();
+	var Artswiper = new Swiper('.artSwipe', {
+        slidesPerView: 'auto',
+        spaceBetween: 7,
+        observer: true,
+        observeParents: true
+    });
+    
+    $(window).load(function() {
+        artSwipeheight = $('.artSwipe').outerHeight();
+        $('.artSwipe').find('.box').height(artSwipeheight - 49);
+    });
+                    
+	$('.sorting').each(function(sort){
+		$(this).change(function(){
+			OptionVal = $(this).val();
+			if ( OptionVal == 'ty_a')
+			{
+				$('.fineList').eq(sort).children('li').show();
+			} else if ( OptionVal == 'ty_r' )
+			{
+				className = 'ty_r';
+				SortList(sort, className);
+			} else if ( OptionVal == 'ty_c' )
+			{
+				className = 'ty_c';
+				SortList(sort, className);
+			} else if ( OptionVal == 'ty_pom' ) 
+			{
+				className = 'ty_pom';
+				artSwiperSorting(className);
+			}
+			else if ( OptionVal == 'ty_cip' ) 
+			{
+				className = 'ty_cip';
+				artSwiperSorting(className);
+			}
+			else if ( OptionVal == 'ty_sp' ) 
+			{
+				className = 'ty_sp';
+				artSwiperSorting(className);
+			} else if ( OptionVal == 'ty_all' ) 
+			{
+				className = 'box';
+				artSwiperSorting(className);
+			}
+
+
+			function SortList(sort, className){
+				$('.fineList').eq(sort).children('li').hide();
+				$('.fineList').eq(sort).find('.'+className).show();
+			}
+
+			function artSwiperSorting(className) {
+
+				Artswiper.destroy();
+				
+				$('.artSwipe').find('.box').hide();
+				$('.artSwipe').find('.'+className).show();
+				
+				Artswiper = new Swiper('.artSwipe', {
+					slidesPerView: 'auto',
+					spaceBetween: 7,
+					observer:true,
+					observeParents: true,
+					initialSlide:0
+				});
+				
+                $('.artSwipe').find('.box').height(artSwipeheight - 49);
+			}
+
+		});
+	});
+});
+*/
 
 // VR보기 팝업
 $(function(){
@@ -1351,22 +1476,12 @@ $(function(){
 	$('.pageTop').click(function(){
 		$('html, body').animate({scrollTop:0}, 'fast');
 		$('#layerContent').animate({scrollTop:0}, 'fast');
-		
-		console.log('event');
 	});
 
 	$(window).scroll(function(){
 		var Top = $(window).scrollTop();		
 		PageTop(Top);
 	});
-
-	/*
-	$(window).resize(function(){
-		var Top = $(window).scrollTop();
-		console.log('resize');
-		PageTop(Top);
-	});
-	*/
 
 	$(window).load(function(){
 		var Top = $(window).scrollTop();		

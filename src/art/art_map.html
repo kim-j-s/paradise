@@ -7,41 +7,24 @@
 			})
 		<!-- //헤더영역 -->
 
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">Art Map</div>
+				<ul class="headerSubLink">
+					<li><a href="#">작품소개</a></li>
+					<li><a href="#" class="on">Art Map</a></li>
+				</ul>
+			</div>
+		</div>
+
 		<!-- 컨텐츠 영역 -->
 		<section id="container">
-			<p class="titleTxt single">
-				<span class="color">아트테인먼트 파라다이스시티</span>에서 격이 다른 예술 작품을 만나보세요.
+			<p class="titleTxt">
+				<span class="color">아트테인먼트 복합리조트</span>, <span class="color">파라다이스시티</span>에서 격이 다른 예술 작품을 만나보세요.
 			</p>
-			<div class="mt11">
-				<a href="#" class="btn ty9">아트콜렉션 보기</a>
-			</div>
 
-			<div class="offerResult mt20">
-				<div class="searchSort">
-					<select name="" id="" class="selectbox sort1">
-						<option value="">ALL</option>
-						<option value="">회화</option>
-						<option value="">디지털아트</option>
-						<option value="">Theme 1</option>
-						<option value="">Theme 2</option>
-						<option value="">Theme 3</option>
-					</select>
-					<select name="" id="" class="selectbox sort2">
-						<option value="">선택</option>
-						<option value="">30분</option>
-						<option value="">1시간</option>
-					</select>
-				</div>
+			@@include('static/include/artmap.html')
 
-				<div class="mapImg">
-					<img class="wd100per" src="../static/images/sample/img_map.jpg" alt="" />
-				</div>
-
-				<div class="tc mt20">
-					<a href="../static/images/sample/img_map.jpg" class="btn ty4 big">지도 저장</a>
-				</div>
-
-			</div>
 		</section>
 		<!-- //컨텐츠 영역 -->
 

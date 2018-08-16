@@ -1,0 +1,69 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":"CUSTOMER SERVICE"
+		})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">FAQ</div>
+				<ul class="headerSubLink">
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#" class="on">P-CITY MAP</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+
+			<p class="titleTxt">
+				<span class="color">파라다이스시티</span>에 오신 걸 환영합니다.
+			</p>
+
+
+			<div class="tabWrap">
+				<ul class="tabList">
+					<li>
+						<button class="tit">오시는 길</button>
+					</li>
+					<li>
+						<button class="tit">층별 안내</button>
+					</li>
+					<li>
+						<button class="tit on">Art Map</button>
+					</li>
+				</ul>
+				<!-- 오시는 길 -->
+				<div class="tabContent">오시는 길</div>
+				<!--// 오시는 길 -->
+
+				<!-- 층별 안내 -->
+				<div class="tabContent">층별 안내</div>
+				<!--// 층별 안내 -->
+
+				<!-- Art Map -->
+				<div class="tabContent on">
+					<p class="subTitle">
+						아트테인먼트 복합리조트, 파라다이스시티에서 격이 다른 예술 작품을 만나보세요
+					</p>
+
+					@@include('static/include/artmap.html')
+				
+				</div>
+				<!--// Art Map -->
+
+			</div>
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>
