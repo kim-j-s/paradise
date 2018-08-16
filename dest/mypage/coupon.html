@@ -257,9 +257,10 @@
             </div>
             <!--// 2018-07-20 수정 -->
 
+            <!-- 2018-08-14 수정 -->
             <ul class="couponList">
                 <li>
-                    <dl>
+                    <dl class="barcodeAdd">
                         <dt class="couponName">CIMER 5월 가정의 달 할인 쿠폰</dt>
                         <dd>
                             <ul class="couponDetail">
@@ -268,9 +269,7 @@
                                     <span class="roboto">23:59</span> 까지
                                 </li>
                                 <li class="sale">
-                                    할인율
-                                    <!-- 2018-07-20 문구 수정 -->
-                                    <span class="roboto per">50%</span>
+                                    오프라인 사용
                                 </li>
                                 <li class="txt">
                                     <span class="pointColor">40,000</span>원 이상 예약 시 <span class="pointColr">2</span>인 할인 적용<br /> 매주 평일 이용(금토일 및 공휴일 이용 불가)
@@ -278,6 +277,7 @@
                             </ul>
                         </dd>
                     </dl>
+                    <button class="btnBarcode"><span>바코드</span></button>
                     <span class="bubble"></span>
                 </li>
                 <li>
@@ -290,9 +290,7 @@
                                     <span class="roboto">23:59</span> 까지
                                 </li>
                                 <li class="sale">
-                                    할인율
-                                    <!-- 2018-07-20 문구 수정 -->
-                                    <span class="roboto per">50%</span>
+                                    홈페이지 결제 시 쿠폰적용 가능
                                 </li>
                                 <li class="txt">
                                     <span class="pointColor">40,000</span>원 이상 예약 시 <span class="pointColr">2</span>인 할인 적용<br /> 매주 평일 이용(금토일 및 공휴일 이용 불가)
@@ -303,6 +301,8 @@
                     <span class="bubble"></span>
                 </li>
             </ul>
+            <!--// 2018-08-14 수정 -->
+
 
             <!-- 리스트 10개 이상 시 노출 -->
             <div class="tc mt20 pb15">
@@ -346,6 +346,25 @@
             </div>
         </footer>
         <!-- //하단 영역 -->
+
+        <!-- barcode dimmed layer popup -->
+        <div class="dimmedLayer">
+            <div class="dimmedCont">
+                <div class="dimmedHeader">
+                    <strong class="tit">오프라인 바코드</strong>
+                </div>
+                <div class="timeline">
+                    <span class="remaining">남은 시간 : 2:20</span>
+                    <a href="#" class="btn ty9">시간 연장</a>
+                </div>
+                <div class="barcodeImg">
+                    <img src="../static/images/sample/img_barcode.gif" alt="" />
+                </div>
+                <a href="#" class="layerCloseBtn">닫기</a>
+            </div>
+        </div>
+        <!--// barcode dimmed layer popup -->
+
     </div>
 </body>
 
