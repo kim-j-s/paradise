@@ -1033,6 +1033,21 @@ $(function(){
 	});
 });
 
+/* Gallery reset */
+/*
+				Artswiper.destroy();
+				
+				Artswiper = new Swiper('.artSwipe', {
+					slidesPerView: 'auto',
+					spaceBetween: 12,
+					observer:true,
+					observeParents: true,
+					initialSlide:0
+				});
+*/
+/* Gallery reset */
+
+
 // station
 $(function(){
 	$(window).load(function(){
@@ -1316,6 +1331,10 @@ $(function(){
 			{
 				className = 'ty_all';
 				artSwiperSorting(className);
+			} else if ( OptionVal == 'ty_kart' ) 
+			{
+				className = 'ty_kart';
+				Kart(className);
 			}
 
 
@@ -1324,13 +1343,21 @@ $(function(){
 				$('.fineList').eq(sort).find('.'+className).show();
 			}
 
+			function Kart(className) {
+				$('.artSwipe').hide();
+				$('.artmapImage').hide();
+				$('.ty_kart').show();
+			}
+
 			function artSwiperSorting(className) {
+				$('.artSwipe').show();
+				$('.artmapImage').show();
+				$('.ty_kart').hide();
 				$('.artSwipe').find('.box').hide();
 				$('.artSwipe').find('.'+className).show();
 
 				$('.artmapImage').children('img').hide();
 				$('.artmapImage').find('.'+className).show();
-
 				
 				Artswiper.destroy();
 				
@@ -1351,86 +1378,6 @@ $(function(){
 		});
 	});
 });
-
-
-/*
-$(function(){
-	
-	var artSwipeheight = $('.artSwipe').outerHeight();
-	var Artswiper = new Swiper('.artSwipe', {
-        slidesPerView: 'auto',
-        spaceBetween: 7,
-        observer: true,
-        observeParents: true
-    });
-    
-    $(window).load(function() {
-        artSwipeheight = $('.artSwipe').outerHeight();
-        $('.artSwipe').find('.box').height(artSwipeheight - 49);
-    });
-                    
-	$('.sorting').each(function(sort){
-		$(this).change(function(){
-			OptionVal = $(this).val();
-			if ( OptionVal == 'ty_a')
-			{
-				$('.fineList').eq(sort).children('li').show();
-			} else if ( OptionVal == 'ty_r' )
-			{
-				className = 'ty_r';
-				SortList(sort, className);
-			} else if ( OptionVal == 'ty_c' )
-			{
-				className = 'ty_c';
-				SortList(sort, className);
-			} else if ( OptionVal == 'ty_pom' ) 
-			{
-				className = 'ty_pom';
-				artSwiperSorting(className);
-			}
-			else if ( OptionVal == 'ty_cip' ) 
-			{
-				className = 'ty_cip';
-				artSwiperSorting(className);
-			}
-			else if ( OptionVal == 'ty_sp' ) 
-			{
-				className = 'ty_sp';
-				artSwiperSorting(className);
-			} else if ( OptionVal == 'ty_all' ) 
-			{
-				className = 'box';
-				artSwiperSorting(className);
-			}
-
-
-			function SortList(sort, className){
-				$('.fineList').eq(sort).children('li').hide();
-				$('.fineList').eq(sort).find('.'+className).show();
-			}
-
-			function artSwiperSorting(className) {
-
-				Artswiper.destroy();
-				
-				$('.artSwipe').find('.box').hide();
-				$('.artSwipe').find('.'+className).show();
-				
-				Artswiper = new Swiper('.artSwipe', {
-					slidesPerView: 'auto',
-					spaceBetween: 7,
-					observer:true,
-					observeParents: true,
-					initialSlide:0
-				});
-				
-                $('.artSwipe').find('.box').height(artSwipeheight - 49);
-			}
-
-		});
-	});
-});
-*/
 
 // VR보기 팝업
 $(function(){
@@ -1504,7 +1451,7 @@ $(function(){
 });
 
 
-/*	체널 오픈 및 일정 레이어팝업 오픈 기능 / 개발진행건과 문의 후 오픈
+//	체널 오픈 및 일정 레이어팝업 오픈 기능 / 개발진행건과 문의 후 오픈
 // channel
 $(function(){
 	// 높이 제어
@@ -1532,6 +1479,17 @@ $(function(){
 		BodyHeight();
 	});	
 
+	// 달력 페이지 팝업 호출
+	/* 
+	$('.callCalendar').click(function(e){
+		e.preventDefault();
+		$('body').append(Inner);
+		$('.layerInner').addClass('on');
+		$('.layerInner').load('calandar-1.html .layerfullWrap');
+		BodyHeight();
+	});	
+	*/
+
 	function BodyHeight() {
 		var WinHeight = $(window).height();
 		$('body').height(WinHeight);
@@ -1543,7 +1501,7 @@ $(document).on('click', '.layerCloseEtc', function(){
 	$('.layerInner').removeClass('on').remove();
 	$('body').removeClass('fixed').css('height','auto');
 });
-*/
+
 
 $(function(){
 	var	infoTab = $('.tabContetArea').find('.tit');

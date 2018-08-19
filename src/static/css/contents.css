@@ -2368,6 +2368,37 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .activityWrap .detail.type2 td{padding-bottom: 4px;}
 .activityWrap .table table th{padding-top: 0;}
 
+.titleTxt + .artmapWrap {margin-top:25px;}
+.subTitle + .artmapWrap {margin-top:13px;}
+.subTitle {}
+
+.artmapWrap {position:relative;}
+.artmapCont {margin-top:6px; background:#f9f9f9;}
+.artmapImage {}
+.artmapImage img {display:none; width:100%;}
+.artmapImage img.ty_all {display:block;}
+
+.artSwipe {padding:0 16px; margin-top:20px; background:#f9f9f9;}
+.artSwipe .swiper-wrapper .swiper-slide {width:271px; border:1px solid #e6e6e6; border-radius:3px;}
+.artSwipe .swiper-wrapper .box {position:relative; padding:12px 12px 35px 114px; background:#fff;}
+.artSwipe .swiper-wrapper .box .img {position:absolute; top:12px; left:12px; width:90px;}
+.artSwipe .swiper-wrapper .box .img img {width:100%;}
+.artSwipe .swiper-wrapper .box h2 {position:relative; padding-left:22px; font-weight:bold; line-height:16px;}
+.artSwipe .swiper-wrapper .box h2 .cycle {position:absolute; top:0; left:0; width:16px; height:16px; margin-right:6px; text-align:center; border-radius:50%; font-family:'Roboto'; font-weight:400; font-size:10px; color:#fff; line-height:16px;}
+.artSwipe .swiper-wrapper .box h2 + .table {margin-top:5px;}
+.artSwipe .swiper-wrapper .box .pom {color:#07608b;}
+.artSwipe .swiper-wrapper .box .pom .cycle {background:#07608b;}
+.artSwipe .swiper-wrapper .box .cip {color:#bb3921;}
+.artSwipe .swiper-wrapper .box .cip .cycle {background:#bb3921;}
+.artSwipe .swiper-wrapper .box .sp {color:#946826;}
+.artSwipe .swiper-wrapper .box .sp .cycle {background:#946826;}
+.artSwipe .swiper-wrapper .box .btnMoreTxt {position:absolute; bottom:12px; left:12px; display:inline-block;}
+
+.ty_kart {display:none; padding:6px 16px 0 16px; background:#fff;}
+.ty_kart .itemList li .tit {padding-bottom:2px; font-size:12px; color:#111; line-height:14px;}
+.ty_kart .itemList li .desc {font-size:11px; color:#999;}
+.ty_kart .itemList li .hash {padding:7px 0 3px 0; font-size:11px; color:#9c836a;}
+
 
 
 @media screen and (max-width:640px){
