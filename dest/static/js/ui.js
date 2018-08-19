@@ -373,10 +373,8 @@ $(function(){
 					$(CalendarDate).removeClass('first');
 					$(this).addClass('first');
 				}
-
 			});
 		}
-		
 	});
 
 	$('.eventDayChk').each(function(i){
@@ -390,11 +388,17 @@ $(function(){
 			var eventClassChkLng = $("."+eventClassChk).length;
 			var eventClassidx = $("."+eventClassChk).index();
 
+			console.log('그룹 클래스명 : ' + eventClassChk);
+			console.log('이벤트 그룹의 날짜 길이 : ' + eventClassChkLng);
+
+			var cccc = $(this).index();
+			console.log('선택된 날짜의 인덱스 : ' + cccc + ' , ' + i);
 
 			if ( addDayChk == 0 )
 			{
 				// 이벤트 시작 시 클릭 가능 한 범위 리셋 기능
-				$('.eventDayChk').addClass('noEventDay');
+				// 선택된 이벤트 그룹 ex : eventDay1 을 제외한 나머지 비활성화
+				$('.eventDayChk').addClass('noEventDay');				
 				$(CalendarDate).each(function(){
 					if ( $(this).hasClass(eventClassChk) )
 					{
@@ -423,6 +427,14 @@ $(function(){
 					} else {
 						$(this).addClass('first');
 						calendarResetEx(i);
+						console.log(i);
+						$('.eventCalendar > li').addClass('noEventDay');
+						for ( z = i ; z < i + 10 ; z++)
+						{
+							console.log(z + ' , ' + i);
+							$('.eventDayChk').eq(z).removeClass('noEventDay');
+						}
+						
 					}
 				}
 				addDayChk++;
@@ -936,7 +948,6 @@ $(function(){
 	$(window).load(function(){
 		var floorSwipeLng = $('.floorSwipe').find('.item').length;
 		floorSwipeLng = floorSwipeLng;
-		console.log(floorSwipeLng);
 		for (var i = 0 ;i < floorSwipeLng ; i++)
 		{
 			$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');

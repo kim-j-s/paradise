@@ -33,6 +33,26 @@
         </div>
         <!-- //헤더영역 -->
 
+        <!-- 이벤트 별 클래스 기능 설명 -->
+        <!-- *********************
+blinkDate : 배정되는 날짜가 없는 경우 해당하는 클래스
+today : 오늘 날짜
+eventDay : 
+noEventDay : 평일 중 행사가 존재 하지 않는 날짜에 표시 / 날짜별 eventDay 클래스의 존재 유무로 페이지 생성 시 배정
+eventDay1 : 그룹단위 클래스는 이벤트 기간내 선택가능 일자를 설정하기 위하여 그룹단위 별도 클래스 필요
+********************* -->
+        <!--// 이벤트 별 클래스 기능 설명 -->
+
+        <style type="text/css">
+            .dateSetting .txt {}
+
+            .dateSetting .dateStep button.dateFoucs .dateDisplay {
+                color: blue;
+            }
+        </style>
+
+
+
         <!-- 컨텐츠 영역 -->
         <section id="layerContent">
             <div class="dateSetting">
@@ -70,44 +90,36 @@
                         <li><span>2</span></li>
                         <li><span>3</span></li>
                         <li class="today"><span>4</span></li>
-                        <li><span>5</span></li>
-                        <li><span>6</span></li>
-                        <li><span>7</span></li>
-                        <li><span>8</span></li>
-                        <li><span>9</span></li>
-                        <li><span>10</span></li>
-                        <li><span>11</span></li>
-
                         <!-- 이벤트 기간 -->
                         <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay1 -->
+                        <li class="eventDay eventDay1"><span>5</span></li>
+                        <li class="eventDay eventDay1"><span>6</span></li>
+                        <li class="eventDay eventDay1"><span>7</span></li>
+                        <li class="eventDay eventDay1"><span>8</span></li>
+                        <li class="eventDay eventDay1"><span>9</span></li>
+                        <li class="eventDay eventDay1"><span>10</span></li>
+                        <li class="eventDay eventDay1"><span>11</span></li>
                         <li class="eventDay eventDay1"><span>12</span></li>
                         <li class="eventDay eventDay1"><span>13</span></li>
                         <li class="eventDay eventDay1"><span>14</span></li>
                         <li class="eventDay eventDay1"><span>15</span></li>
                         <li class="eventDay eventDay1"><span>16</span></li>
+                        <li class="eventDay eventDay1"><span>17</span></li>
+                        <li class="eventDay eventDay1"><span>18</span></li>
+                        <li class="eventDay eventDay1"><span>19</span></li>
+                        <li class="eventDay eventDay1"><span>20</span></li>
+                        <li class="eventDay eventDay1"><span>21</span></li>
+                        <li class="eventDay eventDay1"><span>22</span></li>
+                        <li class="eventDay eventDay1"><span>23</span></li>
+                        <li class="eventDay eventDay1"><span>24</span></li>
+                        <li class="eventDay eventDay1"><span>25</span></li>
+                        <li class="eventDay eventDay1"><span>26</span></li>
+                        <li class="eventDay eventDay1"><span>27</span></li>
+                        <li class="eventDay eventDay1"><span>28</span></li>
+                        <li class="eventDay eventDay1"><span>29</span></li>
+                        <li class="eventDay eventDay1"><span>30</span></li>
                         <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 -->
                         <!--// 이벤트 기간 -->
-                        <li><span>17</span></li>
-                        <li><span>18</span></li>
-                        <li><span>19</span></li>
-                        <li><span>20</span></li>
-
-                        <!-- 단일 이벤트 날짜 -->
-                        <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay2 -->
-                        <li class="eventDay eventDay2"><span>21</span></li>
-                        <!-- 단일 이벤트 날짜 -->
-
-                        <li><span>22</span></li>
-                        <li><span>23</span></li>
-                        <li><span>24</span></li>
-                        <li><span>25</span></li>
-                        <li><span>26</span></li>
-                        <li><span>27</span></li>
-                        <li><span>28</span></li>
-                        <li><span>29</span></li>
-                        <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay2 -->
-                        <li class="eventDay eventDay3"><span>30</span></li>
-                        <!-- 단일 이벤트 날짜 -->
                     </ul>
                 </div>
             </div>
@@ -136,15 +148,13 @@
                         <li><span>4</span></li>
                         <li><span>5</span></li>
                         <li><span>6</span></li>
-                        <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay2 -->
-                        <li class="eventDay eventDay4"><span>7</span></li>
-                        <!-- 단일 이벤트 날짜 -->
+                        <li><span>7</span></li>
                         <li><span>8</span></li>
                         <li><span>9</span></li>
                         <li><span>10</span></li>
                         <li><span>11</span></li>
-                        <li class="eventDay eventDay6"><span>12</span></li>
-                        <li class="eventDay eventDay6"><span>13</span></li>
+                        <li><span>12</span></li>
+                        <li><span>13</span></li>
                         <li><span>14</span></li>
                         <li><span>15</span></li>
                         <li><span>16</span></li>
@@ -152,7 +162,9 @@
                         <li><span>18</span></li>
                         <li><span>19</span></li>
                         <li><span>20</span></li>
-                        <li><span>21</span></li>
+                        <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay2 -->
+                        <li class="eventDay eventDay2"><span>21</span></li>
+                        <!-- 단일 이벤트 날짜 -->
                         <li><span>22</span></li>
                         <li><span>23</span></li>
                         <li><span>24</span></li>
@@ -160,9 +172,7 @@
                         <li><span>26</span></li>
                         <li><span>27</span></li>
                         <li><span>28</span></li>
-                        <!-- 이벤트가 존재하는 날짜는 eventDay 클래스 추가 및 이벤트별 추가 클래스 포함 필요 ex : eventDay2 -->
-                        <li class="eventDay eventDay5"><span>29</span></li>
-                        <!-- 단일 이벤트 날짜 -->
+                        <li><span>29</span></li>
                         <li><span>30</span></li>
                     </ul>
                 </div>
