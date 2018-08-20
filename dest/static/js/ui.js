@@ -307,6 +307,7 @@ $(function(){
 	});
 });
 
+
 // counter
 $(function(){
 	$('.countMinus').click(function(){
