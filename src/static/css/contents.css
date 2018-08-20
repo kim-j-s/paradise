@@ -1855,7 +1855,9 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 /* dimmed layer popup */
 .dimmedLayer {position:absolute; top:0; right:0; bottom:0; left:0; z-index:600; text-align:center; background-color:rgba(0, 0, 0, 0.6); display:none;}
-.dimmedCont {position:fixed; top:50%; left:50%; width:100%; padding:0 16px 40px 16px; background:#fff; transform: translate(-50%, -50%);}
+.dimmedLayer:after {content:''; display:table; width:100%; text-align:center;}
+/* .dimmedCont {position:fixed; top:50%; left:50%; width:100%; padding:0 16px 40px 16px; background:#fff; transform: translate(-50%, -50%);} */
+.dimmedCont {display:inline-block; vertical-align:middle; padding:0 16px 40px 16px; background:#fff;}
 .dimmedCont .dimmedHeader {padding-bottom:20px; border-bottom:1px solid #e7e3e0;}
 .dimmedCont .dimmedHeader .tit {display:block; padding:17px 0 93px 0; text-align:center; font-weight:bold; font-size:17px; color:#191919;}
 .dimmedCont .dimmedHeader .tit {background:url(../images/common/logo_full.png) no-repeat center bottom; background-size:114px 59px;}
@@ -2378,9 +2380,15 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .artmapImage img {display:none; width:100%;}
 .artmapImage img.ty_all {display:block;}
 
-.artSwipe {padding:0 16px; margin-top:20px; background:#f9f9f9;}
+.artSwipe {padding:0 16px 50px 16px; margin-top:20px; background:#f9f9f9;}
 .artSwipe .swiper-wrapper .swiper-slide {width:271px; border:1px solid #e6e6e6; border-radius:3px;}
 .artSwipe .swiper-wrapper .box {position:relative; padding:12px 12px 35px 114px; background:#fff;}
+.artSwipe .swiper-wrapper .box {
+	background-color: #fff;
+	-webkit-box-shadow: 0 8px 6px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 8px 6px rgba(0,0,0,.1);
+	box-shadow: 0 8px 6px rgba(0,0,0,.1);
+}
 .artSwipe .swiper-wrapper .box .img {position:absolute; top:12px; left:12px; width:90px;}
 .artSwipe .swiper-wrapper .box .img img {width:100%;}
 .artSwipe .swiper-wrapper .box h2 {position:relative; padding-left:22px; font-weight:bold; line-height:16px;}
@@ -2393,6 +2401,9 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .artSwipe .swiper-wrapper .box .sp {color:#946826;}
 .artSwipe .swiper-wrapper .box .sp .cycle {background:#946826;}
 .artSwipe .swiper-wrapper .box .btnMoreTxt {position:absolute; bottom:12px; left:12px; display:inline-block;}
+.artSwipe .swiper-pagination {bottom:19px; padding-left:16px; text-align:left;}
+.artSwipe .swiper-pagination .swiper-pagination-current {font-family:'Roboto'; font-weight:bold; font-size:12px;}
+.artSwipe .swiper-pagination .swiper-pagination-total {font-family:'Roboto'; font-weight:400; font-size:12px;}
 
 .ty_kart {display:none; padding:6px 16px 0 16px; background:#fff;}
 .ty_kart .itemList li .tit {padding-bottom:2px; font-size:12px; color:#111; line-height:14px;}
