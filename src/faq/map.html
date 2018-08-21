@@ -1,8 +1,8 @@
-@@include('static/include/head.html')
+@@include('static/include/head_map.html')
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/head_map.html',{
+		@@include('static/include/header.html',{
 			"header":"CUSTOMER SERVICE"
 		})
 		<!-- //헤더영역 -->
@@ -42,20 +42,532 @@
 				<div class="tabContent pt0 on">
 
 					<!-- map start -->
-					<div class="fullWidth">
-						<div class="mapArea">
-							<div id="map" class="mapBox"></div>
-						</div>
+					<div class="mapArea">
+						<div id="map" class="mapBox"></div>
 					</div>
 					<!-- map end -->
 
-					지도위치
+					<div class="mapTitle">
+						<p class="txt">언제나 설레는 공항 가는길, 인천공항 바로 옆에 파라다이스시티가 있습니다.</p>
+						<p class="small">인천광역시 중구 영종해안남로 321길 186</p>
+					</div>
 
+					<div class="tblDiv btnTbl">
+						<div class="cellDiv">
+							<a href="#" class="btn ty12">NAVER MAP</a>
+						</div>
+						<div class="cellDiv">
+							<a href="#" class="btn ty12">DAUM MAP</a>
+						</div>
+					</div>
 
-<style type="text/css">
-#map {height:180px;}
-</style>
+					<div class="tabSubListWrap fullWidth">
+						<ul class="tabSubList">
+							<li>
+								<button class="tit on"><span>셔틀버스</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>자가용</span></button>
+							</li>
+							<li>
+								<button class="tit"><span>대중교통</span></button>
+							</li>
+						</ul>
 
+						<!-- 셔틀버스 -->
+						<div class="tabSubContent on">
+							<div class="txtContent none">
+								<dl>
+									<dt class="tit">운행 시간</dt>
+									<dd class="desc">
+										<div class="table side3">
+											<table>
+												<tbody>
+													<tr>
+														<th scope="row">배차간격</th>
+														<td>20분</td>
+													</tr>
+													<tr>
+														<th scope="row">첫차</th>
+														<td>
+															05:00
+															<p class="fs11 pointColor3">(파라다이스 출발 기준)</p>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">막차</th>
+														<td>
+															23:25 
+															<p class="fs11 pointColor3">(인천공항2터미널 기준)</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<p class="notiMark mt10">
+											인천국제공항 제1여객터미널, 제2여객터미널 1층에서 매 20분마다 파라다이스시티의 셔틀버스를 이용하실 수 있습니다.
+										</p>
+									</dd>
+								</dl>
+							</div>
+							<div class="txtContent t36">
+								<dl>
+									<dt class="tit">운행 노선</dt>
+									<dd>
+										<div class="buslineImg fullWidth">
+											<img src="../static/images/map/img_busline.jpg" alt="" />
+										</div>
+										<ul class="lineList">
+											<li class="ty1">
+												<strong>파라다이스시티</strong>
+												<span>매시 00,20,40분</span>
+											</li>
+											<li>
+												<strong>인천공항 1터미널 1층 3C</strong>
+												<span>1층 GATE 3출입구 건너편 3C정류소</span>
+											</li>
+											<li>
+												<strong>인천공항 1터미널 1층 14C</strong>
+												<span>1층 GATE 14출입구 건너편 14C정류소</span>
+											</li>
+											<li class="small">
+												<strong>인천공항 2터미널 1층 2A</strong>
+												<span>1층 2A정류소</span>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+
+							<div class="txtContent t36">
+								<dl>
+									<dt class="tit">운행 시간표</dt>
+									<dd class="desc">
+										<div class="busTimeTable">
+											<div class="table">
+												<table>
+													<colgroup>
+														<col style="width:33%;">
+														<col style="width:33%;">
+														<col style="width:33%;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col" colspan="3">
+																<span class="bold">출발위치</span>
+															</th>
+														</tr>
+														<tr>
+															<th scope="col">
+																<span class="dpb pb3 bold">1터미널</span>
+																2A
+															</th>
+															<th scope="col">
+																<span class="dpb pb3 bold">1터미널</span>
+																3C
+															</th>
+															<th scope="col">
+																<span class="dpb pb3 bold">1터미널</span>
+																14C
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr class="time 5">
+															<td>05:25</td>
+															<td>05:40</td>
+															<td>05:45</td>
+														</tr>
+														<tr class="time 5">
+															<td>05:45</td>
+															<td>06:00</td>
+															<td>06:05</td>
+														</tr>
+														<tr class="time 6 on">
+															<td>06:05</td>
+															<td>06:20</td>
+															<td>06:25</td>
+														</tr>
+														<tr class="time 6 on">
+															<td>06:25</td>
+															<td>06:40</td>
+															<td>06:45</td>
+														</tr>
+														<tr class="time 6 on">
+															<td>06:45</td>
+															<td>07:00</td>
+															<td>07:05</td>
+														</tr>
+														<tr class="time 7">
+															<td>07:05</td>
+															<td>07:20</td>
+															<td>07:25</td>
+														</tr>
+														
+														<tr class="time 7">
+															<td>07:25</td>
+															<td>07:40</td>
+															<td>07:45</td>
+														</tr>
+														<tr class="time 7">
+															<td>07:45</td>
+															<td>08:00</td>
+															<td>08:05</td>
+														</tr>
+														<tr class="time 8">
+															<td>08:05</td>
+															<td>08:20</td>
+															<td>08:25</td>
+														</tr>
+														<tr class="time 8">
+															<td>08:25</td>
+															<td>08:40</td>
+															<td>08:45</td>
+														</tr>
+														<tr class="time 8">
+															<td>08:45</td>
+															<td>09:00</td>
+															<td>09:05</td>
+														</tr>
+														<tr class="time 9">
+															<td>09:05</td>
+															<td>09:20</td>
+															<td>09:25</td>
+														</tr>
+														
+														<tr class="time 9">
+															<td>09:25</td>
+															<td>09:40</td>
+															<td>09:45</td>
+														</tr>
+														<tr class="time 9">
+															<td>09:45</td>
+															<td>10:00</td>
+															<td>10:05</td>
+														</tr>
+														<tr class="time 10">
+															<td>10:5</td>
+															<td>10:20</td>
+															<td>10:25</td>
+														</tr>
+														<tr class="time 10">
+															<td>10:25</td>
+															<td>10:40</td>
+															<td>10:45</td>
+														</tr>
+														<tr class="time 10">
+															<td>10:45</td>
+															<td>11:00</td>
+															<td>11:05</td>
+														</tr>
+														<tr class="time 11">
+															<td>11:05</td>
+															<td>11:20</td>
+															<td>11:25</td>
+														</tr>
+														
+														<tr class="time 11">
+															<td>11:25</td>
+															<td>11:40</td>
+															<td>11:45</td>
+														</tr>
+														<tr class="time 11">
+															<td>11:45</td>
+															<td>12:00</td>
+															<td>12:05</td>
+														</tr>
+														<tr class="time 12">
+															<td>12:05</td>
+															<td>12:20</td>
+															<td>12:25</td>
+														</tr>
+														<tr class="time 12">
+															<td>12:25</td>
+															<td>12:40</td>
+															<td>12:45</td>
+														</tr>
+														<tr class="time 12">
+															<td>12:45</td>
+															<td>13:00</td>
+															<td>13:05</td>
+														</tr>
+														<tr class="time 13">
+															<td>13:05</td>
+															<td>13:20</td>
+															<td>13:25</td>
+														</tr>
+														
+														<tr class="time 13">
+															<td>13:25</td>
+															<td>13:40</td>
+															<td>13:45</td>
+														</tr>
+														<tr class="time 13">
+															<td>13:45</td>
+															<td>14:00</td>
+															<td>14:05</td>
+														</tr>
+														<tr class="time 14">
+															<td>14:05</td>
+															<td>14:20</td>
+															<td>14:25</td>
+														</tr>
+														<tr class="time 14">
+															<td>14:25</td>
+															<td>14:40</td>
+															<td>14:45</td>
+														</tr>
+														<tr class="time 14">
+															<td>14:45</td>
+															<td>15:00</td>
+															<td>15:05</td>
+														</tr>
+														<tr class="time 15">
+															<td>15:05</td>
+															<td>15:20</td>
+															<td>15:25</td>
+														</tr>
+														
+														<tr class="time 15">
+															<td>15:25</td>
+															<td>15:40</td>
+															<td>15:45</td>
+														</tr>
+														<tr class="time 15">
+															<td>15:45</td>
+															<td>16:00</td>
+															<td>16:05</td>
+														</tr>
+														<tr class="time 16">
+															<td>16:05</td>
+															<td>16:20</td>
+															<td>16:25</td>
+														</tr>
+														<tr class="time 16">
+															<td>16:25</td>
+															<td>16:40</td>
+															<td>16:45</td>
+														</tr>
+														<tr class="time 16">
+															<td>16:45</td>
+															<td>17:00</td>
+															<td>17:05</td>
+														</tr>
+														<tr class="time 17">
+															<td>17:05</td>
+															<td>17:20</td>
+															<td>17:25</td>
+														</tr>
+														<tr class="time 17">
+															<td>17:25</td>
+															<td>17:40</td>
+															<td>17:45</td>
+														</tr>
+														<tr class="time 17">
+															<td>17:45</td>
+															<td>18:00</td>
+															<td>18:05</td>
+														</tr>
+														<tr class="time 18">
+															<td>18:05</td>
+															<td>18:20</td>
+															<td>18:25</td>
+														</tr>
+														<tr class="time 18">
+															<td>18:25</td>
+															<td>18:40</td>
+															<td>18:45</td>
+														</tr>
+														<tr class="time 18">
+															<td>18:45</td>
+															<td>19:00</td>
+															<td>19:05</td>
+														</tr>
+														<tr class="time 19">
+															<td>19:05</td>
+															<td>19:20</td>
+															<td>19:25</td>
+														</tr>
+														
+														<tr class="time 19">
+															<td>19:25</td>
+															<td>19:40</td>
+															<td>19:45</td>
+														</tr>
+														<tr class="time 19">
+															<td>19:45</td>
+															<td>20:00</td>
+															<td>20:05</td>
+														</tr>
+														<tr class="time 20">
+															<td>20:05</td>
+															<td>20:20</td>
+															<td>20:25</td>
+														</tr>
+														<tr class="time 20">
+															<td>20:25</td>
+															<td>20:40</td>
+															<td>20:45</td>
+														</tr>
+														<tr class="time 20">
+															<td>20:45</td>
+															<td>21:00</td>
+															<td>21:05</td>
+														</tr>
+														<tr class="time 21">
+															<td>21:05</td>
+															<td>21:20</td>
+															<td>21:25</td>
+														</tr>
+														
+														<tr class="time 21">
+															<td>21:25</td>
+															<td>21:40</td>
+															<td>21:45</td>
+														</tr>
+														<tr class="time 21">
+															<td>21:45</td>
+															<td>22:00</td>
+															<td>22:05</td>
+														</tr>
+														<tr class="time 22">
+															<td>22:05</td>
+															<td>22:20</td>
+															<td>22:25</td>
+														</tr>
+														<tr class="time 22">
+															<td>22:25</td>
+															<td>22:40</td>
+															<td>22:45</td>
+														</tr>
+														<tr class="time 22">
+															<td>22:45</td>
+															<td>23:00</td>
+															<td>23:05</td>
+														</tr>
+														<tr class="time 23">
+															<td>23:05</td>
+															<td>23:20</td>
+															<td>23:25</td>
+														</tr>
+														
+														<tr class="time 23">
+															<td>23:25</td>
+															<td>23:40</td>
+															<td>23:45</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="btn_gold">
+											<a href="#" class="btn ty12">현재 시간 기준 운행시간표 보기</a>
+										</div>
+									</dd>
+								</dl>
+							</div>
+
+						</div>
+						<!--// 셔틀버스 -->
+
+						<!-- 자가용 -->
+						<div class="tabSubContent">
+							<ul class="lineList">
+								<li>
+									<strong>인천국제공항고속도로</strong>
+								</li>
+								<li>
+									<strong>신불IC</strong>
+								</li>
+								<li>
+									<strong>인천 국제공항공사</strong>
+								</li>
+								<li>
+									<strong>IBC 지하차도</strong>
+								</li>
+								<li>
+									<strong>IBC 월드게이트 오피스텔 방향 좌회전</strong>
+								</li>
+								<li class="ty1">
+									<strong class="bold pointColor">파라다이스시티 도착</strong>
+								</li>
+							</ul>
+						</div>
+						<!--// 자가용 -->
+
+						<!-- 대중교통 -->
+						<div class="tabSubContent">
+							<div class="txtContent none">
+								<dl>
+									<dt class="tit">지하철 + 자기부상열차</dt>
+									<dd class="desc">
+										<ul class="lineList">
+											<li class="ty2">
+												<strong>공항철도 서울역 승차</strong>
+												<span>인천국제공항 방면</span>
+											</li>
+											<li>
+												<strong>인천국제공항역 환승</strong>
+											</li>
+											<li class="ty3">
+												<strong>자가부상열차</strong>
+												<span>용유 방면</span>
+											</li>
+											<li>
+												<strong>합동청사역 하차</strong>
+												<span>2번 출구</span>
+											</li>
+											<li>
+												<strong>웨스트 타워 방면 도보 이동</strong>
+												<span>약 8분</span>
+											</li>
+											<li class="ty1">
+												<strong class="bold pointColor">파라다이스시티 도착</strong>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+
+							<div class="txtContent t36">
+								<dl>
+									<dt class="tit">지하철 + 버스</dt>
+									<dd class="desc">
+										<ul class="lineList">
+											<li class="ty2">
+												<strong>공항철도 서울역 승차</strong>
+												<span>인천국제공항 방면</span>
+											</li>
+											<li>
+												<strong>인천국제공항역 하차</strong>
+												<span>3번 출구</span>
+											</li>
+											<li class="ty3">
+												<strong>인천국제공항정류장 방면 도보이동</strong>
+												<span>약 8분</span>
+											</li>
+											<li>
+												<strong>302, 306A, 306 승차</strong>
+												<span>용유 초등학교 방면</span>
+											</li>
+											<li>
+												<strong>이마트 정류장 하차</strong>
+											</li>
+											<li>
+												<strong>이마트 우측 방향 도보 이동</strong>
+												<span>약 8분</span>
+											</li>
+											<li class="ty1">
+												<strong class="bold pointColor">파라다이스시티 도착</strong>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+						<!--// 대중교통 -->
+					</div>
 
 				</div>
 				<!--// 오시는 길 -->
