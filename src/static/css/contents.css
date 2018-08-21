@@ -374,7 +374,6 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .titleTxt {padding:17px 0 0 0; font-weight:200; font-size:20px; color:#999; line-height:24px; word-break:keep-all;}
 .titleTxt .color { font-weight:200; color:#9d836a; line-height:23px;}
 .titleTxt.single {padding-top:9px !important; line-height:23px;}
-.titleTxt br {display:none;}
 .titleTxt .dpb {font-weight:200; display:inline;}
 .titleTxt .dpib {font-weight:200; display:inline;}
 

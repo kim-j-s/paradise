@@ -590,14 +590,30 @@ $(function(){
 // input type date placeholder
 $(function(){
 	var InpDate = $('input[type=date]');
+	/*
 	$(InpDate).on('change', function(e) {
 		if($(this).val()) {
 			$(this).prev('label').css('display','none');
+			console.log('이벤트 1');
 		}
 		if ( !$(this).val() )
 		{
 			$(this).prev('label').css('display','block');
+			console.log('이벤트 2');
 		}
+	});
+	*/
+
+	$(InpDate).each(function(){
+		$(this).on('change', function(){
+			if($(this).val()) {
+				$(this).next('label').css('display','none');
+			}
+			if ( !$(this).val() )
+			{
+				$(this).next('label').css('display','block');
+			}
+		});
 	});
 });
 
