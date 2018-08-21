@@ -1,27 +1,19 @@
 @@include('static/include/head.html')
 <body>
-	<div class="layerfullWrap btnAdd">
+	<div class="layerfullWrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/layer_header.html',{
-			"title":""
+		@@include('static/include/layer_header_sns.html',{
+			"title":"부유하다(BOOYOOHADA)",
+			"closeAdd":" layerCloseEtc"
 		})
 		<!-- //헤더영역 -->
 
 		<!-- 컨텐츠 영역 -->
 		<section id="layerContent">
-
+			<div class="youtubeFrame">
+				<iframe width="1206" height="678" src="https://www.youtube.com/embed/6qA753_oTYI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
 		</section>
-		<!-- //컨텐츠 영역 -->
-		<div class="footerBtn">
-			<a href="#" class="btn ty1">완료</a>
-		</div>
-		<!-- 버튼 활성화 -->
-		<!--
-		<div class="footerBtn on">
-			<a href="#" class="btn ty1">완료</a>
-		</div>
-		-->
-		<!--// 버튼 활성화 -->
 	</div>
 </body>
 </html>

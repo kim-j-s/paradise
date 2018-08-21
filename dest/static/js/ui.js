@@ -476,7 +476,7 @@ $(function(){
 		$('.dimmedLayer').css({'display':'block', 'height':bodyHeight});
 	});
 
-	$('.dimmedCont > .layerCloseBtn').click(function(){
+	$('.dimmedCont > .dimmedCloseBtn').click(function(){
 		$('body').css('height','100%');
 		$('.dimmedLayer').css('display','none');
 	});
@@ -507,8 +507,6 @@ $(function(){
 			$('.dimmedLayer').height(bodyHeight);
 		}
 	});
-
-
 });
 
 // graph gauge
@@ -1239,8 +1237,6 @@ $(function(){
 	}
 });
 
-
-//	체널 오픈 및 일정 레이어팝업 오픈 기능 / 개발진행건과 문의 후 오픈
 // channel
 $(function(){
 	// 높이 제어
@@ -1279,6 +1275,24 @@ $(function(){
 	});	
 	*/
 
+	//paradise work
+	$('.hyperrealism').click(function(e){
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInner').addClass('on');
+		$('.layerInner').load('movie1.html .layerfullWrap');
+		BodyHeight();
+	});	
+
+	//paradise work
+	$('.booyoo').click(function(e){
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInner').addClass('on');
+		$('.layerInner').load('movie2.html .layerfullWrap');
+		BodyHeight();
+	});	
+
 	function BodyHeight() {
 		var WinHeight = $(window).height();
 		$('body').height(WinHeight);
@@ -1291,6 +1305,15 @@ $(document).on('click', '.layerCloseEtc', function(){
 	$('body').removeClass('fixed').css('height','auto');
 });
 
+$(document).on('click', '.snsBtn', function(){
+	var winHeight = $(window).height();
+	$('.dimmedLayer').css({'display':'block', 'height':winHeight});
+});
+
+$(document).on('click', '.dimmedCloseBtn', function(){
+	$('body').css('height','100%');
+	$('.dimmedLayer').css('display','none');
+});
 
 $(function(){
 	var	infoTab = $('.tabContetArea').find('.tit');

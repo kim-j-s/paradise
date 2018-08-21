@@ -2,14 +2,14 @@
 <body>
 	<div id="wrap">
 		<!-- 헤더영역 -->
-		@@include('static/include/header.html',{
+		@@include('static/include/head_map.html',{
 			"header":"CUSTOMER SERVICE"
 		})
 		<!-- //헤더영역 -->
 
 		<div class="headerSubWrap">
 			<div class="headerFixed">
-				<div class="now">FAQ</div>
+				<div class="now">P-CITY MAP</div>
 				<ul class="headerSubLink">
 					<li><a href="#">공지사항</a></li>
 					<li><a href="#">FAQ</a></li>
@@ -29,17 +29,35 @@
 			<div class="tabWrap">
 				<ul class="tabList">
 					<li>
-						<button class="tit">오시는 길</button>
+						<button class="tit on">오시는 길</button>
 					</li>
 					<li>
 						<button class="tit">층별 안내</button>
 					</li>
 					<li>
-						<button class="tit on">Art Map</button>
+						<button class="tit">Art Map</button>
 					</li>
 				</ul>
 				<!-- 오시는 길 -->
-				<div class="tabContent">오시는 길</div>
+				<div class="tabContent pt0 on">
+
+					<!-- map start -->
+					<div class="fullWidth">
+						<div class="mapArea">
+							<div id="map" class="mapBox"></div>
+						</div>
+					</div>
+					<!-- map end -->
+
+					지도위치
+
+
+<style type="text/css">
+#map {height:180px;}
+</style>
+
+
+				</div>
 				<!--// 오시는 길 -->
 
 				<!-- 층별 안내 -->
@@ -47,7 +65,7 @@
 				<!--// 층별 안내 -->
 
 				<!-- Art Map -->
-				<div class="tabContent on">
+				<div class="tabContent">
 					<p class="subTitle">
 						아트테인먼트 복합리조트, 파라다이스시티에서 격이 다른 예술 작품을 만나보세요
 					</p>

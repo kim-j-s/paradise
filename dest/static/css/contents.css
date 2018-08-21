@@ -91,6 +91,8 @@
 /* 레이어팝업 헤더 */
 #layerHeader {position:fixed; top:0; left:0; z-index:99; width:100%; height:60px; background:#fff; font-size:17px; font-weight:bold; color:#191919; text-align:center; line-height:60px;}
 .layerCloseBtn {position:absolute; top:22px; left:16px; width:15px; height:15px; background:url(../images/common/btn/btn_layerclose.gif) no-repeat; background-size:100%; text-indent:-9999px;}
+.dimmedCloseBtn {position:absolute; top:22px; left:16px; width:15px; height:15px; background:url(../images/common/btn/btn_layerclose.gif) no-repeat; background-size:100%; text-indent:-9999px;}
+
 .snsBtn {position:absolute; top:21px; right:18px; width:17px; height:18px; background:url(../images/common/btn/btn_sns.png) no-repeat; background-size:100%; text-indent:-9999px;}
 
 
@@ -1856,8 +1858,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 /* dimmed layer popup */
 .dimmedLayer {position:absolute; top:0; right:0; bottom:0; left:0; z-index:600; text-align:center; background-color:rgba(0, 0, 0, 0.6); display:none;}
 .dimmedLayer:after {content:''; display:table; width:100%; text-align:center;}
-/* .dimmedCont {position:fixed; top:50%; left:50%; width:100%; padding:0 16px 40px 16px; background:#fff; transform: translate(-50%, -50%);} */
-.dimmedCont {display:inline-block; vertical-align:middle; padding:0 16px 40px 16px; background:#fff;}
+.dimmedCont {position:fixed; top:50%; left:50%; width:100%; padding:0 16px 40px 16px; background:#fff; transform: translate(-50%, -50%);}
 .dimmedCont .dimmedHeader {padding-bottom:20px; border-bottom:1px solid #e7e3e0;}
 .dimmedCont .dimmedHeader .tit {display:block; padding:17px 0 93px 0; text-align:center; font-weight:bold; font-size:17px; color:#191919;}
 .dimmedCont .dimmedHeader .tit {background:url(../images/common/logo_full.png) no-repeat center bottom; background-size:114px 59px;}
@@ -2409,6 +2410,9 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .ty_kart .itemList li .tit {padding-bottom:2px; font-size:12px; color:#111; line-height:14px;}
 .ty_kart .itemList li .desc {font-size:11px; color:#999;}
 .ty_kart .itemList li .hash {padding:7px 0 3px 0; font-size:11px; color:#9c836a;}
+
+.youtubeFrame {width:calc(100% + 32px); margin-left:-16px;}
+.youtubeFrame iframe {width:100%; height:auto;}
 
 
 
