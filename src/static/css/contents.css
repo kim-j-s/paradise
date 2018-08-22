@@ -1675,8 +1675,10 @@ line-height:18px;}
 .dlSlide > dd {display:none; padding:4px 0 24px 0;}
 .dlSlide > dd > .txtContent2:first-child {margin-top:8px;}
 .dlSlide > dd > .list {margin-top:8px;}
-
 .dlSlide > dd > .txtContent3 {padding-top:9px;}
+
+.dlSlide.etc {margin-top:5px;}
+.dlSlide.etc > dd {padding-bottom:8px;}
 
 .cardVisual {padding:12px 0 20px 0; text-align:center;}
 .tabContent > .cardVisual {padding-top:24px;}
