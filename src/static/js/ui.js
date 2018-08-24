@@ -252,7 +252,7 @@ function selectMakeUI(){
 	  
 	  $select.val($val);
 	  $(this).addClass("selection").parent().siblings().find(".ui-select-option").removeClass("selection");
-	  $(this).closest('.ui-select-options').hide().siblings(".ui-select-trigger").text($(this).text());;
+	  $(this).closest('.ui-select-options').hide().siblings(".ui-select-trigger").text($(this).text());
 	  return false;
 	});
 }
@@ -316,16 +316,16 @@ $(function(){
 		if (countMinus < 0)
 		{
 			countMinus = 0;
-			$(this).prev('.count').html(countMinus);;
+			$(this).prev('.count').html(countMinus);
 		} else {
-			$(this).prev('.count').html(countMinus);;
+			$(this).prev('.count').html(countMinus);
 		}
 	});
 
 	$('.countPlus').click(function(){
 		countPlus = $(this).parent('.countWrap').find('.count').html();
 		countPlus++;
-		$(this).parent('.countWrap').find('.count').html(countPlus);;
+		$(this).parent('.countWrap').find('.count').html(countPlus);
 	});
 });
 
@@ -650,7 +650,6 @@ $(function(){
 	$(dlSlide).click(function(){
 		if ( $(this).hasClass('other') )
 		{
-			console.log('체크');
 			if ( $(this).next('dd').css('display') == 'block' )
 			{
 				$(dlSlide).removeClass('on').next('dd').slideUp(300, function(){
@@ -663,7 +662,6 @@ $(function(){
 			}
 		} else if ( !$(this).hasClass('other') )
 		{
-			console.log('체크 2');
 			if ( $(this).next('dd').css('display') == 'block' )
 			{
 				$(dlSlide).removeClass('on').next('dd').slideUp(300);
@@ -690,6 +688,20 @@ $(function(){
 	});
 });
 
+$(function(){
+	var dlsingleSlide = $('.dlsingleSlide > .title');
+	$(dlsingleSlide).click(function(){
+		if ( $(this).next('dd').css('display') == 'block')
+		{
+			$(this).removeClass('on');
+			$(this).next('dd').slideUp(300);
+		} else {
+			$(this).addClass('on');
+			$(this).next('dd').slideDown(300);
+		}
+	});
+});
+
 // 카지노 - 이용방법
 $(function(){
 	$('.casinoList.step > li').click(function(){
@@ -700,18 +712,6 @@ $(function(){
 		} else {
 			$(this).addClass('on');
 			$(this).children('.desc').slideDown(300);
-		}
-	});
-});
-
-// floor
-$(function(){
-	$(window).load(function(){
-		var floorSwipeLng = $('.floorSwipe').find('.item').length;
-		floorSwipeLng = floorSwipeLng;
-		for (var i = 0 ;i < floorSwipeLng ; i++)
-		{
-			$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
 		}
 	});
 });
@@ -804,21 +804,6 @@ $(function(){
 		},
 	});
 });
-
-/* Gallery reset */
-/*
-				Artswiper.destroy();
-				
-				Artswiper = new Swiper('.artSwipe', {
-					slidesPerView: 'auto',
-					spaceBetween: 12,
-					observer:true,
-					observeParents: true,
-					initialSlide:0
-				});
-*/
-/* Gallery reset */
-
 
 // station
 $(function(){
@@ -1069,11 +1054,6 @@ $(function(){
 			type: 'fraction',
 		},
     });
-    
-    $(window).load(function() {
-        artSwipeheight = $('.artSwipe').outerHeight();
-        $('.artSwipe').find('.box').height(artSwipeheight - 49);
-    });
 
 	$('.sorting').each(function(sort){
 		$(this).change(function(){
@@ -1140,16 +1120,6 @@ $(function(){
 				$('.artSwipe').find('.box').hide();
 				$('.artSwipe').find('.'+className).show();
 
-				/*				
-				Artswiper = new Swiper('.artSwipe', {
-					slidesPerView: 'auto',
-					spaceBetween: 7,
-					observer:true,
-					observeParents: true,
-					initialSlide:0
-				});
-				*/
-
 				Artswiper = new Swiper('.artSwipe', {
 					slidesPerView: 'auto',
 					spaceBetween: 7,
@@ -1164,6 +1134,122 @@ $(function(){
 				$('.artSwipe').find('.box').height(artSwipeheight - 49);
 			}
 
+		});
+	});
+});
+
+// TabSwiper
+$(function(){
+	/*
+	var Tabswiper = new Swiper('.tabSwiper', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+	*/
+
+	var tabsliders = [];
+	$('.tabSwiper').each(function(index, element){
+
+		$(this).addClass('s'+index);
+		// 스와이프 슬라이드 초기값 선언방식
+		var ItemIndex = $('.tabSwiper').eq(index).data("idx");
+		var tabslider = new Swiper('.s'+index, {
+			slidesPerView: 'auto',
+			observer: true,
+			observeParents: true,
+			autoHeight:true,
+			initialSlide: ItemIndex,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				renderBullet: function (index, className) {
+					console.log(index);
+					var name = $(".swiper-wrapper .swiper-slide").eq(index).data("name");
+					return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+				},
+			}
+		});
+		tabsliders.push(tabslider);
+
+		tabslider.on('slideChangeTransitionEnd', function () {
+			var idx = $('.swiper-pagination-bullet-active').index();
+			$('.tabSwipeCont .tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+		});
+
+	});
+
+	/*
+	Tabswiper.on('slideChangeTransitionEnd', function () {
+	  	var idx = $('.swiper-pagination-bullet-active').index();
+	  	$('.tabSwipeCont .tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+	*/
+
+
+	/* 복수화 */
+	/*
+	var tabsliders = [];
+	$('.tabSwiper').each(function(index, element){
+
+		$(this).addClass('s'+index);
+		var tabslider = new Swiper('.s'+index, {
+			slidesPerView: 'auto',
+			observer: true,
+			observeParents: true,
+			autoHeight:true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				renderBullet: function (index, className) {
+					var name = $(".swiper-wrapper .swiper-slide").eq(index).data("name");
+					return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+				},
+			}
+		});
+		tabsliders.push(tabslider);
+	});
+
+	$('.swipeType1').each(function(swipeType1){
+		$(this).find('.swiper-pagination-current').on('DOMSubtreeModified', function(){
+			PagerNum = $(this).html();
+			$('.swipeType1').eq(swipeType1).find('.now').html(PagerNum);
+		});
+	});
+	*/
+
+
+});
+
+// sorting2
+$(function(){
+	$('.sorting2').each(function(sort){
+		$(this).change(function(){
+			OptionVal = $(this).val();
+			$('.sortingCont').removeClass('on');
+			$(this).parent().next('.sortingWrap').find('.'+OptionVal).addClass('on');
+		});
+	});
+});
+
+// sorting3
+$(function(){
+	$('.sorting3').each(function(sort){
+		$(this).change(function(x){
+			OptionVal = $(this).val();
+			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Cont').removeClass('on');
+			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.'+OptionVal).addClass('on');
+			$(this).closest('.sortAdd').children('img').removeClass('on');
+			$(this).closest('.sortAdd').find('.'+OptionVal).addClass('on');
 		});
 	});
 });

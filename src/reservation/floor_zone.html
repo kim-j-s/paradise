@@ -1,6 +1,6 @@
 @@include('static/include/head.html')
 <body>
-	<div class="layerfullWrap btnAdd">	<!-- 2018-08-04 클래스 수정 -->
+	<div class="layerfullWrap floorLocation">
 		<!-- 헤더영역 -->
 		@@include('static/include/layer_header.html',{
 			"title":"층 &amp; 존 설정"
@@ -8,52 +8,157 @@
 		<!-- //헤더영역 -->
 
 		<!-- 컨텐츠 영역 -->
-		<section id="layerContent"> <!-- 2018-08-04 클래스 수정 -->
-			<div class="floorSetting">
+		<section id="layerContent">
+			<div class="tabSwiperWrap">
+				<div class="swiper-container tabSwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" data-name="2F">
+							<img src="../static/images/reservation/img_floor_chroma2f.jpg" alt="" />
+						</div>
+						<div class="swiper-slide" data-name="3F">
+							<img src="../static/images/reservation/img_floor_chroma3f.jpg" alt="" />
+						</div>
+						<div class="swiper-slide" data-name="4F">
+							<img src="../static/images/reservation/img_floor_chroma4f.jpg" alt="" />
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>					
+				</div>
+			</div>
 
-				<div class="bxWrap floorSwipe">
-					<div class="normalSwiper">
-						<div class="item">
-							<img src="../static/images/sample/img_location.jpg" alt="" />
-						</div>
-						<div class="item">
-							<img src="../static/images/sample/img_location.jpg" alt="" />
-						</div>
-						<div class="item">
-							<img src="../static/images/sample/img_location.jpg" alt="" />
-						</div>
-						<div class="item">
-							<img src="../static/images/sample/img_location.jpg" alt="" />
-						</div>
+			<div class="tabSwipeCont">
+				<div class="tabSwipeInner on">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격</dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty10">
+										<div class="info1">1st Stage Party Room / 12인</div>
+										<div class="info2">
+											<span class="pointColor">3,000,000</span> 원
+										</div>
+									</li>
+									<li class="ty11">
+										<div class="info1">1st Stage Table / 8인</div>
+										<div class="info2">
+											<span class="pointColor">1,100,000</span>
+										</div>
+									</li>
+									<li class="ty12">
+										<div class="info1">2nd Stage Table / 8인</div>
+										<div class="info2">
+											<span class="pointColor">650,000</span> 원
+										</div>
+									</li>
+									<li class="ty13">
+										<div class="info1">1st Stage Table / 8인</div>
+										<div class="info2">
+											<span class="pointColor">1,500,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="tabSwipeInner">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격</dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty11">
+										<div class="info1">Suite Room / 12인</div>
+										<div class="info2">
+											<span class="pointColor">2,500,000</span> 원
+										</div>
+									</li>
+									<li class="ty10">
+										<div class="info1">Suite Room / 18인</div>
+										<div class="info2">
+											<span class="pointColor">5,000,000</span> 원
+										</div>
+									</li>
+									<li class="ty12">
+										<div class="info1">Skybox / 12인</div>
+										<div class="info2">
+											<span class="pointColor">3,500,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="tabSwipeInner">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격</dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty10">
+										<div class="info1">Cabana</div>
+										<div class="info2">
+											<span class="pointColor">1,400,000</span> 원
+										</div>
+									</li>
+									<li class="ty11">
+										<div class="info1">Deluxe Cabana</div>
+										<div class="info2">
+											<span class="pointColor">1,800,000</span> 원
+										</div>
+									</li>
+									<li class="ty12">
+										<div class="info1">Cabana</div>
+										<div class="info2">
+											<span class="pointColor">1,800,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
 					</div>
 				</div>
 			</div>
 
-			<!-- 2018-08-04 위치 수정 -->
-			<div class="floorTotal none">
-				<ul class="priceRstList">
-					<li>
-						<span class="title bold">위치</span>
-						<span class="price fs12">
-							<span class="pointColor">1</span>층 <span class="pointColor">A</span>존
-
-						</span>
-					</li>
-					<li class="mt10">
-						<span class="title bold">총 결제 금액</span>
-						<span class="price">
-							<span class="num">2,000,000</span><span class="unit">원</span>
-						</span>
-					</li>
-					<li>
-						<span class="title bold">선 결제 금액 <small class="notiRed pl4">총 결제 금액의 20%</small></span>
-						<span class="price">
-							<span class="num">400,000</span><span class="unit">원</span>
-						</span>
-					</li>
-				</ul>
+			<div class="floorOption">
+				<select name="" id="" class="selectbox">
+					<option value="">선택</option>
+				</select>
+				<div class="mt8">
+					<a href="#" class="btn ty4 big">추가</a>
+				</div>
 			</div>
-			<!--// 2018-08-04 위치 수정 -->
+
+			<div class="container">
+				<div class="floorTotal none">
+					<ul class="priceRstList">
+						<li>
+							<span class="title bold">위치</span>
+							<span class="price fs12">
+								<span class="pointColor">1</span>층 <span class="pointColor">A</span>존
+
+							</span>
+						</li>
+						<li class="mt10">
+							<span class="title bold">총 결제 금액</span>
+							<span class="price">
+								<span class="num">2,000,000</span><span class="unit">원</span>
+							</span>
+						</li>
+						<li>
+							<span class="title bold">선 결제 금액 <small class="notiRed pl4">총 결제 금액의 20%</small></span>
+							<span class="price">
+								<span class="num">400,000</span><span class="unit">원</span>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
 
 		</section>
 		<!-- //컨텐츠 영역 -->
