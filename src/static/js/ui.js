@@ -1230,6 +1230,29 @@ $(function(){
 		$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
 	});
 
+	//map_cimerSwipe
+	var map_cimerSwipe = new Swiper('.map_cimerSwipe', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		initialSlide:1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $('.map_cimerSwipe').find(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+
+	map_cimerSwipe.on('slideChangeTransitionEnd', function () {
+		var idx = $('.map_cimerSwipe').find('.swiper-pagination-bullet-active').index();
+		console.log(idx);
+		$('.map_cimerSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
 
 
 });
@@ -1249,15 +1272,17 @@ $(function(){
 
 // sorting3
 $(function(){
-	$('.sorting3').each(function(sort){
-		$(this).change(function(x){
-			OptionVal = $(this).val();
-			console.log(OptionVal);
-			//$(this).closest('.tabSwiperWrap').css('background','blue');
-			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Cont').removeClass('on');
-			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.'+OptionVal).addClass('on');
-			$(this).closest('.sortAdd').children('img').removeClass('on');
-			$(this).closest('.sortAdd').find('.'+OptionVal).addClass('on');
+	$('.sortingCont').each(function(){
+		$(this).find('.sorting3').each(function(sort){
+			$(this).change(function(x){
+				OptionVal = $(this).val();
+				console.log(OptionVal + ' , eq값,' + sort);
+				//$(this).closest('.tabSwiperWrap').css('background','blue');
+				$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Wrap').eq(sort).find('.sorting3Cont').removeClass('on');
+				$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Wrap').eq(sort).find('.'+OptionVal).addClass('on');
+				$(this).closest('.sortAdd').children('img').removeClass('on');
+				$(this).closest('.sortAdd').find('.'+OptionVal).addClass('on');
+			});
 		});
 	});
 });

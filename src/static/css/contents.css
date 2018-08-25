@@ -612,10 +612,11 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 .tabSwiper .swiper-pagination {position:static; display:table; width:100%; table-layout:fixed;}
-.tabSwiper .swiper-pagination .swiper-pagination-bullet {top:0; display:table-cell; width:auto; height:auto; background:none; border-bottom:1px solid #e7e3e0; border-radius:0;}
-.tabSwiper .swiper-pagination .swiper-pagination-bullet .num {position:relative; display:block; line-height:35px; font-size:12px; color:#999;}
+.tabSwiper .swiper-pagination .swiper-pagination-bullet {top:0; display:table-cell; vertical-align:middle; width:auto; height:auto; background:none; border-bottom:1px solid #e7e3e0; border-radius:0;}
+.tabSwiper .swiper-pagination .swiper-pagination-bullet .num {position:relative; display:block; padding:11px 0 10px 0;  line-height:14px; font-size:12px; color:#999; word-break:break-word;}
 .tabSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .num {font-weight:bold; color:#9c836a;}
-.tabSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active .num:after {content:''; position:absolute; bottom:-1px; left:50%; width:72px; border-top:2px solid #9c836a; margin-left:-36px;}
+.tabSwiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active:after {content:''; position:absolute; bottom:-1px; left:50%; width:72px; border-top:2px solid #9c836a; margin-left:-36px;}
+.tabSwiper .swiper-pagination.etc .swiper-pagination-bullet.swiper-pagination-bullet-active:after {content:''; position:absolute; bottom:-1px; left:50%; width:50px; border-top:2px solid #9c836a; margin-left:-25px;}
 
 .floorOption + .container {margin-top:28px;}
 
