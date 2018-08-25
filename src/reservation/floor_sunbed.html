@@ -1,0 +1,178 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap floorLocation">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"층 &amp; 위치 설정"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+
+			<div class="tabSwiperWrap">
+				<div class="swiper-container tabSwiper floorZone">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" data-name="1F">
+							<img src="../static/images/reservation/img_floor_sunbed1f.jpg" alt="" />
+						</div>
+						<div class="swiper-slide" data-name="2F">
+							<img src="../static/images/reservation/img_floor_sunbed2f.jpg" alt="" />
+						</div>
+						<div class="swiper-slide" data-name="3F">
+							<img src="../static/images/reservation/img_floor_sunbed3f.jpg" alt="" />
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+
+			<div class="tabSwipeCont">
+				<div class="tabSwipeInner on">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격 <small>(성수기/비수기)</small></dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty2">
+										<div class="info1">Water Plaza Double Bed (1~16)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">50,000</span> 원
+										</div>
+									</li>
+									<li class="ty3">
+										<div class="info1">Water Plaza Round Bed (17~21)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">50,000</span> 원
+										</div>
+									</li>
+									<li class="ty4">
+										<div class="info1">Water Plaza Single Bed (22~44)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">30,000</span> 원
+										</div>
+									</li>
+									<li class="ty5">
+										<div class="info1">Aqua Club Bed (45~57)</div>
+										<div class="info2">
+											<span class="pointColor">100,000</span> 원 / <span class="pointColor">70,000</span> 원
+										</div>
+									</li>
+									<li class="ty6">
+										<div class="info1">Outdoor Pool Round Bed (101~104)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">50,000</span> 원
+										</div>
+									</li>
+									<li class="ty7">
+										<div class="info1">Outdoor Pool Single Bed (105~127)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">30,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="tabSwipeInner">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격 <small>(성수기/비수기)</small></dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty8">
+										<div class="info1">Indoor Infinity Bed (201~203)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">50,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<div class="tabSwipeInner">
+					<div class="txtContent none">
+						<dl>
+							<dt class="tit">가격 <small>(성수기/비수기)</small></dt>
+							<dd class="desc">
+								<ul class="floorPrice">
+									<li class="ty9">
+										<div class="info1">Rooftop Bed (301~311)</div>
+										<div class="info2">
+											<span class="pointColor">50,000</span> 원 / <span class="pointColor">50,000</span> 원
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="floorOption">
+				<select name="" id="" class="selectbox">
+					<option value="">선택</option>
+				</select>
+				<div class="mt8">
+					<a href="#" class="btn ty4 big">추가</a>
+				</div>
+			</div>
+
+			<div class="container mt28">
+				<div class="floorAddList">
+					<strong class="tit">위치</strong>
+					<ul>
+						<li>
+							<div class="floor">
+								<span class="pointColor">1</span>층 <span class="pointColor">17</span>
+							</div>
+							<div class="price">
+								<span class="roboto">40,000</span> 원
+							</div>
+							<button class="del">Delete</button>
+						</li>
+						<li>
+							<div class="floor">
+								<span class="pointColor">2</span>층 <span class="pointColor">23</span>
+							</div>
+							<div class="price">
+								<span class="roboto">40,000</span> 원
+							</div>
+							<button class="del">Delete</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="floorTotal">
+				<ul class="slideWrap dept none display">
+					<li class="slideList final">
+						<div class="slideDept1">
+							<span class="title">총 결제 금액</span>
+							<span class="rst"><span class="finalPrice">200,000</span> <span class="unit">원</span></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<div class="footerBtn">
+			<a href="#" class="btn ty1">완료</a>
+		</div>
+		<!-- 버튼 활성화 -->
+		<!--
+		<div class="footerBtn on">
+			<a href="#" class="btn ty1">완료</a>
+		</div>
+		-->
+		<!--// 버튼 활성화 -->
+	</div>
+</body>
+</html>

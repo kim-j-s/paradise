@@ -252,7 +252,7 @@ function selectMakeUI(){
 	  
 	  $select.val($val);
 	  $(this).addClass("selection").parent().siblings().find(".ui-select-option").removeClass("selection");
-	  $(this).closest('.ui-select-options').hide().siblings(".ui-select-trigger").text($(this).text());;
+	  $(this).closest('.ui-select-options').hide().siblings(".ui-select-trigger").text($(this).text());
 	  return false;
 	});
 }
@@ -316,16 +316,16 @@ $(function(){
 		if (countMinus < 0)
 		{
 			countMinus = 0;
-			$(this).prev('.count').html(countMinus);;
+			$(this).prev('.count').html(countMinus);
 		} else {
-			$(this).prev('.count').html(countMinus);;
+			$(this).prev('.count').html(countMinus);
 		}
 	});
 
 	$('.countPlus').click(function(){
 		countPlus = $(this).parent('.countWrap').find('.count').html();
 		countPlus++;
-		$(this).parent('.countWrap').find('.count').html(countPlus);;
+		$(this).parent('.countWrap').find('.count').html(countPlus);
 	});
 });
 
@@ -650,7 +650,6 @@ $(function(){
 	$(dlSlide).click(function(){
 		if ( $(this).hasClass('other') )
 		{
-			console.log('체크');
 			if ( $(this).next('dd').css('display') == 'block' )
 			{
 				$(dlSlide).removeClass('on').next('dd').slideUp(300, function(){
@@ -663,7 +662,6 @@ $(function(){
 			}
 		} else if ( !$(this).hasClass('other') )
 		{
-			console.log('체크 2');
 			if ( $(this).next('dd').css('display') == 'block' )
 			{
 				$(dlSlide).removeClass('on').next('dd').slideUp(300);
@@ -690,6 +688,20 @@ $(function(){
 	});
 });
 
+$(function(){
+	var dlsingleSlide = $('.dlsingleSlide > .title');
+	$(dlsingleSlide).click(function(){
+		if ( $(this).next('dd').css('display') == 'block')
+		{
+			$(this).removeClass('on');
+			$(this).next('dd').slideUp(300);
+		} else {
+			$(this).addClass('on');
+			$(this).next('dd').slideDown(300);
+		}
+	});
+});
+
 // 카지노 - 이용방법
 $(function(){
 	$('.casinoList.step > li').click(function(){
@@ -700,18 +712,6 @@ $(function(){
 		} else {
 			$(this).addClass('on');
 			$(this).children('.desc').slideDown(300);
-		}
-	});
-});
-
-// floor
-$(function(){
-	$(window).load(function(){
-		var floorSwipeLng = $('.floorSwipe').find('.item').length;
-		floorSwipeLng = floorSwipeLng;
-		for (var i = 0 ;i < floorSwipeLng ; i++)
-		{
-			$('.floorSwipe').find('.bx-pager-item').eq(i).children('a').html((i + 1) +'F');
 		}
 	});
 });
@@ -804,21 +804,6 @@ $(function(){
 		},
 	});
 });
-
-/* Gallery reset */
-/*
-				Artswiper.destroy();
-				
-				Artswiper = new Swiper('.artSwipe', {
-					slidesPerView: 'auto',
-					spaceBetween: 12,
-					observer:true,
-					observeParents: true,
-					initialSlide:0
-				});
-*/
-/* Gallery reset */
-
 
 // station
 $(function(){
@@ -1069,11 +1054,6 @@ $(function(){
 			type: 'fraction',
 		},
     });
-    
-    $(window).load(function() {
-        artSwipeheight = $('.artSwipe').outerHeight();
-        $('.artSwipe').find('.box').height(artSwipeheight - 49);
-    });
 
 	$('.sorting').each(function(sort){
 		$(this).change(function(){
@@ -1140,16 +1120,6 @@ $(function(){
 				$('.artSwipe').find('.box').hide();
 				$('.artSwipe').find('.'+className).show();
 
-				/*				
-				Artswiper = new Swiper('.artSwipe', {
-					slidesPerView: 'auto',
-					spaceBetween: 7,
-					observer:true,
-					observeParents: true,
-					initialSlide:0
-				});
-				*/
-
 				Artswiper = new Swiper('.artSwipe', {
 					slidesPerView: 'auto',
 					spaceBetween: 7,
@@ -1164,6 +1134,130 @@ $(function(){
 				$('.artSwipe').find('.box').height(artSwipeheight - 49);
 			}
 
+		});
+	});
+});
+
+// FloorSwiper
+$(function(){
+
+	var floorZoneslider = new Swiper('.floorZone', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				console.log(index + ' , ' + className + ' + '+  name);
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+
+	floorZoneslider.on('slideChangeTransitionEnd', function () {
+		var idx = $('.swiper-pagination-bullet-active').index();
+		$('.tabSwipeCont .tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
+	//map_hpcSwipe
+	var map_hpcSwipe = new Swiper('.map_hpcSwipe', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		initialSlide:2,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+
+	map_hpcSwipe.on('slideChangeTransitionEnd', function () {
+		var idx = $('.map_hpcSwipe').find('.swiper-pagination-bullet-active').index();
+		$('.map_hpcSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
+	//map_hpcSwipe
+	var map_hapSwipe = new Swiper('.map_hapSwipe', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		initialSlide:1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $('.map_hapSwipe').find(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+
+	map_hapSwipe.on('slideChangeTransitionEnd', function () {
+		var idx = $('.map_hapSwipe').find('.swiper-pagination-bullet-active').index();
+		$('.map_hapSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
+	
+	//map_casinoSwipe
+	var map_casinoSwipe = new Swiper('.map_casinoSwipe', {
+		slidesPerView: 'auto',
+		observer: true,
+		observeParents: true,
+		autoHeight:true,
+		initialSlide:1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			renderBullet: function (index, className) {
+				var name = $('.map_casinoSwipe').find(".swiper-wrapper .swiper-slide").eq(index).data("name");
+				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+			},
+		}
+	});
+
+	map_casinoSwipe.on('slideChangeTransitionEnd', function () {
+		var idx = $('.map_casinoSwipe').find('.swiper-pagination-bullet-active').index();
+		console.log(idx);
+		$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
+
+
+});
+
+
+
+// sorting2
+$(function(){
+	$('.sorting2').each(function(sort){
+		$(this).change(function(){
+			OptionVal = $(this).val();
+			$('.sortingCont').removeClass('on');
+			$(this).parent().next('.sortingWrap').find('.'+OptionVal).addClass('on');
+		});
+	});
+});
+
+// sorting3
+$(function(){
+	$('.sorting3').each(function(sort){
+		$(this).change(function(x){
+			OptionVal = $(this).val();
+			console.log(OptionVal);
+			//$(this).closest('.tabSwiperWrap').css('background','blue');
+			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Cont').removeClass('on');
+			$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.'+OptionVal).addClass('on');
+			$(this).closest('.sortAdd').children('img').removeClass('on');
+			$(this).closest('.sortAdd').find('.'+OptionVal).addClass('on');
 		});
 	});
 });
