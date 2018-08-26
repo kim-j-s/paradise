@@ -100,12 +100,13 @@
 .tabWrap {position:relative; left:-16px; width:calc(100% + 32px)}
 .tabList {display:table; position:relative; width:100%; border-top:1px solid #e7e3e0; table-layout:fixed;}
 .tabList.etc {border-top:none;}
-.tabList > li {display:table-cell;  vertical-align:middle;}
-.tabList > li:first-child .tit {border-left:none;}
-.tabList .tit {display:block; width:100%; padding:13px 0 12px 0; background:#f9f9f9; text-align:center; outline:none; font-size:12px; line-height:14px; color:#999; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word;}
-.tabList .tit.on {/* padding-bottom:1px; */ padding:13px 0; background:#fff; color:#9d836a; font-weight:bold; border-bottom:none;}
-.tabList .tit > small {position:relative; top:-1px; font-size:11px;}
-.tabList .tit.on > small {color:#9d836a;}
+.tabList > li {display:table-cell;  vertical-align:middle; padding:13px 5px 12px 5px; background:#f9f9f9; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
+.tabList > li .tit {display:block; width:100%;  text-align:center; outline:none; font-size:12px; line-height:14px; color:#999;  word-break:break-word;}
+.tabList > li .tit > small {position:relative; top:-1px; font-size:11px;}
+.tabList > li:first-child {border-left:none;}
+.tabList > li.on {padding:13px 5px 13px 5px; background:#fff; border-bottom:none;}
+.tabList > li.on .tit {color:#9d836a; font-weight:bold;}
+.tabList > li.on .tit > small {color:#9d836a;}
 .tabList.ty3 > li {width:33.3%;}
 .tabList.ty4 > li {width:25%;}
 .tabList.ty5 > li {width:20%;}
@@ -1282,13 +1283,13 @@ line-height:18px;}
 .tabWrap.membership .tabList .tit {font-size:12px; line-height:14px;}
 .tabWrap.membership .tabContent {padding:0;}
 .tabSubListWrap {}
-.tabSubListWrap .tabSubList {display:table; position:relative; width:100%; border-bottom:1px solid #e7e3e0;}
-.tabSubListWrap .tabSubList > li {display:table-cell; width:1000px; height:36px; vertical-align:middle;}
-.tabSubListWrap .tabSubList > li .tit {display:block; width:100%; text-align:center; outline:none; font-size:11px; color:#999; height:36px;}
-.tabSubListWrap .tabSubList.etc > li .tit.on {font-weight:bold; color:#9c836a;}
-.tabSubListWrap .tabSubList > li .tit span {position:relative; display:inline-block; line-height:36px;}
-.tabSubListWrap .tabSubList > li .tit.on span {color:#333;}
-.tabSubListWrap .tabSubList > li .tit.on span:before {content:''; position:absolute; left:0; bottom:-1px; width:100%; border-top:3px solid #9d836a;}
+.tabSubListWrap .tabSubList {display:table; table-layout:fixed; position:relative; width:100%; border-bottom:1px solid #e7e3e0;}
+.tabSubListWrap .tabSubList > li {position:relative; display:table-cell; vertical-align:middle; padding:10px 5px;}
+.tabSubListWrap .tabSubList > li .tit {display:block; width:100%; text-align:center; outline:none; font-size:11px; color:#999;}
+.tabSubListWrap .tabSubList > li .tit span {position:relative; display:inline-block; font-size:11px; word-break:break-word;}
+.tabSubListWrap .tabSubList > li.on .tit span { color:#333;}
+.tabSubListWrap .tabSubList > li.on:after {content:''; position:absolute; left:50%; bottom:-1px; width:60px; margin-left:-30px; border-top:2px solid #9d836a;}
+
 .tabSubContent {display:none; padding:20px 16px 0 16px;}
 .tabSubContent.on {display:block;}
 
@@ -1342,11 +1343,6 @@ line-height:18px;}
 .membershipGuideInfo:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.55;}
 .membershipGuideInfo .inner {position:relative; z-index:1; display:table-cell; vertical-align:middle; width:100%; height:100%; padding:0 16px;}
 .membershipGuideInfo .txt {padding-top:45px; margin:10px 0; background:url(../images/membership/bg_mark.png) no-repeat center top; background-size:38px 38px; font-size:12px; line-height:17px; color:#fff;}
-
-.tabSubListWrap .tabSubList.etc {border-bottom:none;}
-.tabSubListWrap .tabSubList.etc > li .tit span {color:#999;}
-.tabSubListWrap .tabSubList.etc > li .tit.on span {color:#333;}
-.tabSubListWrap .tabSubList.etc > li .tit.on span:before {bottom:0; border-top:1px solid #9d836a;}
 
 .cardSelect {display:table; width:100%; margin-top:20px;}
 .cardSelect + .cardSelect {margin-top:8px;}
@@ -2351,15 +2347,6 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .floorMap{position: relative; margin: 0 0 20px;}
 .floorMap a.btnMoreTxt{position: absolute; top: 2px; right: 0;}
 .floorMap + .tblDiv {padding-top:14px;}
-
-.floorMap > .tabSubListWrap > .tabSubList{border-top: 1px solid #e7e3e0; border-bottom: 0;}
-.floorMap > .tabSubListWrap > .tabSubList > li {display:table-cell; width:1000px; height:40px; vertical-align:middle;}
-.floorMap > .tabSubListWrap > .tabSubList > li:first-child .tit {border-left:none;}
-.floorMap > .tabSubListWrap > .tabSubList .tit {display:block; width:100%; background:#f9f9f9; text-align:center; outline:none; font-size:14px; color:#666; height:40px; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
-.floorMap > .tabSubListWrap > .tabSubList .tit.on {padding-bottom:1px; background:#fff; color:#9d836a; font-weight:bold; border-bottom:none;}
-.floorMap > .tabSubListWrap > .tabSubList .tit.on > small {color:#9d836a;}
-.floorMap > .tabSubListWrap > .tabSubList.ty3 > li {width:33.3%;}
-.floorMap > .tabSubListWrap > .tabSubList.ty4 > li {width:25%;}
 
 .floorMap .tabWrap{left: 0; width: 100%; margin: 15px 0 0;}
 .floorMap .tabContent{padding: 0;}

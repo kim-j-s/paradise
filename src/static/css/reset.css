@@ -175,6 +175,7 @@ html, body {background:#fff;}
 .notiRed {font-size:11px; color:#e66045;}
 .notiMark {position:relative; padding-left:15px; font-size:12px; line-height:16px;}
 .notiMark:before {content:'※'; position:absolute; top:0; left:0;}
+.starmark {color:#e55649;}
 
 .colorRed {color:#dc5b51 !important;}
 .colorPurple {color:#9c4ac7 !important;}

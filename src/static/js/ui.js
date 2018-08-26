@@ -259,7 +259,7 @@ function selectMakeUI(){
 
 // 탭
 $(function(){
-	var tabList = $('.tabList > li').children('.tit');
+	var tabList = $('.tabList > li');
 	$(tabList).each(function(tab){
 		$(this).click(function(){
 			$(tabList).removeClass('on');
@@ -271,9 +271,11 @@ $(function(){
 
 	var subTabList = $('.tabSubList');
 	$(subTabList).each(function(idx){
-		$(this).children('li').children('.tit').each(function(cnt){
+		//$(this).children('li').children('.tit').each(function(cnt){
+		$(this).children('li').each(function(cnt){
 			$(this).click(function(){
-				$(subTabList).eq(idx).children('li').children('.tit').removeClass('on');
+				//$(subTabList).eq(idx).children('li').children('.tit').removeClass('on');
+				$(subTabList).eq(idx).children('li').removeClass('on');
 				$(this).addClass('on');
 				$(subTabList).eq(idx).parent('.tabSubListWrap').children('.tabSubContent').removeClass('on');
 				$(subTabList).eq(idx).parent('.tabSubListWrap').children('.tabSubContent').eq(cnt).addClass('on');
