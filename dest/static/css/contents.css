@@ -102,6 +102,7 @@
 .tabList.etc {border-top:none;}
 .tabList > li {display:table-cell;  vertical-align:middle; padding:13px 5px 12px 5px; background:#f9f9f9; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
 .tabList > li .tit {display:block; width:100%;  text-align:center; outline:none; font-size:12px; line-height:14px; color:#999;  word-break:break-word;}
+.tabList > li .tit {-webkit-appearance: none; -moz-appearance: none; -webkit-user-select: none;  -ms-user-select: none;}
 .tabList > li .tit > small {position:relative; top:-1px; font-size:11px;}
 .tabList > li:first-child {border-left:none;}
 .tabList > li.on {padding:13px 5px 13px 5px; background:#fff; border-bottom:none;}
@@ -286,6 +287,13 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .txtContent4 > dd {font-size:12px; line-height:18px;}
 .txtContent4 > dd .prodName {display:block; font-weight:normal; font-size:12px; line-height:14px;}
 .txtContent4 > dd + dd {padding-top:10px;}
+
+
+.txtContent5 {}
+.txtContent5 > dt {font-weight:bold; font-size:12px; color:#333; line-height:14px;}
+.txtContent5 > dd {font-size:12px; line-height:14px;}
+.txtContent5 > dt + dd {margin-top:11px;}
+.tabSwipeInner > .txtContent5 {margin-top:14px;}
 
 
 /* 공통 카운터 */
@@ -2347,6 +2355,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .floorMap{position: relative; margin: 0 0 20px;}
 .floorMap a.btnMoreTxt{position: absolute; top: 2px; right: 0;}
 .floorMap + .tblDiv {padding-top:14px;}
+.floorMap h2.title + .tabSwiperWrap {margin-top:13px;}
 
 .floorMap .tabWrap{left: 0; width: 100%; margin: 15px 0 0;}
 .floorMap .tabContent{padding: 0;}
@@ -2356,8 +2365,11 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .floorMap .txtArea .tit{margin: 15px 0 8px; font-size: 12px; font-weight: bold; color: #333;}
 .floorMap .txtArea .desc{font-size: 12px; line-height: 17.5px; color: #666;}
 .btnVR{display: block; position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; background: #fff url(../images/common/btn/btn_vr.png) center no-repeat; background-size: 21px auto; border: 2px solid #9c836a; border-radius: 50%;}
+.titleTxt + .floorMap {margin-top:22px;}
 
-.chromaBox{margin: 10px 0;}
+
+.floorMap + .chromaBox {margin-top:45px;}
+.chromaBox {margin: 10px 0;}
 .chromaBox h2.title{margin-bottom:15px; padding-left:16px;}
 .chromaBox .swiper-slide p.desc{margin: 10px 0 0; font-size: 12px; color: #333;}
 .chromaBox .swiper-slide p.desc > span{font-weight: bold;}
@@ -2444,9 +2456,9 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 }
 .artSwipe .swiper-wrapper .box .img {position:absolute; top:12px; left:12px; width:90px;}
 .artSwipe .swiper-wrapper .box .img img {width:100%;}
-.artSwipe .swiper-wrapper .box h2 {position:relative; padding-left:22px; font-weight:bold; line-height:16px;}
-.artSwipe .swiper-wrapper .box h2 .cycle {position:absolute; top:0; left:0; width:16px; height:16px; margin-right:6px; padding-top:3px; text-align:center; border-radius:50%; font-family:'Roboto'; font-weight:400; font-size:10px; color:#fff; line-height:normal;}
-.artSwipe .swiper-wrapper .box h2 + .table {margin-top:5px;}
+.artSwipe .swiper-wrapper .box h2 {position:relative; padding-left:22px; font-weight:bold; line-height:20px;}
+.artSwipe .swiper-wrapper .box h2 .cycle {position:absolute; top:2px; left:0; width:16px; height:16px; margin-right:6px; padding-top:3px; text-align:center; border-radius:50%; font-family:'Roboto'; font-weight:400; font-size:10px; color:#fff; line-height:14px;}
+.artSwipe .swiper-wrapper .box h2 + .table {width:100%; margin-top:1px;}
 .artSwipe .swiper-wrapper .box .pom {color:#07608b;}
 .artSwipe .swiper-wrapper .box .pom .cycle {background:#07608b;}
 .artSwipe .swiper-wrapper .box .cip {color:#bb3921;}
@@ -2457,6 +2469,8 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .artSwipe .swiper-pagination {bottom:19px; padding-left:16px; text-align:left;}
 .artSwipe .swiper-pagination .swiper-pagination-current {font-family:'Roboto'; font-weight:bold; font-size:12px;}
 .artSwipe .swiper-pagination .swiper-pagination-total {font-family:'Roboto'; font-weight:400; font-size:12px;}
+
+.artSwipe .table.side table th {width:10px;}
 
 .ty_kart {display:none; padding:6px 16px 0 16px; background:#fff;}
 .ty_kart .itemList li .tit {padding-bottom:2px; font-size:12px; color:#111; line-height:14px;}

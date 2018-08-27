@@ -1212,27 +1212,34 @@ $(function(){
 
 	
 	//map_casinoSwipe
-	var map_casinoSwipe = new Swiper('.map_casinoSwipe', {
-		slidesPerView: 'auto',
-		observer: true,
-		observeParents: true,
-		autoHeight:true,
-		initialSlide:1,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-			renderBullet: function (index, className) {
-				var name = $('.map_casinoSwipe').find(".swiper-wrapper .swiper-slide").eq(index).data("name");
-				return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
-			},
-		}
-	});
+	var CasinoSwipeLng = $('.map_casinoSwipe').find('.swiper-slide').length;
+	if ( CasinoSwipeLng < 2 )
+	{
+		return false;
+	} else {
+		var map_casinoSwipe = new Swiper('.map_casinoSwipe', {
+			slidesPerView: 'auto',
+			observer: true,
+			observeParents: true,
+			autoHeight:true,
+			initialSlide:1,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				renderBullet: function (index, className) {
+					var name = $('.map_casinoSwipe').find(".swiper-wrapper .swiper-slide").eq(index).data("name");
+					return '<span class="' + className + '"><span class="num">' + (name) + '</span></span>';
+				},
+			}
+		});
 
-	map_casinoSwipe.on('slideChangeTransitionEnd', function () {
-		var idx = $('.map_casinoSwipe').find('.swiper-pagination-bullet-active').index();
-		$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').removeClass('on');
-		$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on');
-	});
+		map_casinoSwipe.on('slideChangeTransitionEnd', function () {
+			var idx = $('.map_casinoSwipe').find('.swiper-pagination-bullet-active').index();
+			$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').removeClass('on');
+			$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on');
+		});
+	}
+	
 
 	//map_cimerSwipe
 	var map_cimerSwipe = new Swiper('.map_cimerSwipe', {
@@ -1258,12 +1265,13 @@ $(function(){
 	});
 
 	//map_chromaSwipe
+	var map_chromaSwipeIdx = $('.map_chromaSwipe').data("idx");
 	var map_chromaSwipe = new Swiper('.map_chromaSwipe', {
 		slidesPerView: 'auto',
 		observer: true,
 		observeParents: true,
 		autoHeight:true,
-		initialSlide:1,
+		initialSlide:map_chromaSwipeIdx,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -1281,12 +1289,13 @@ $(function(){
 	});
 
 	//map_plazaSwipe
+	var map_plazaSwipeSwipeIdx = $('.map_plazaSwipe').data("idx");
 	var map_plazaSwipe = new Swiper('.map_plazaSwipe', {
 		slidesPerView: 'auto',
 		observer: true,
 		observeParents: true,
 		autoHeight:true,
-		initialSlide:1,
+		initialSlide:map_plazaSwipeSwipeIdx,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -1368,12 +1377,12 @@ $(function(){
 
 // sorting3
 $(function(){
-	$('.sortingCont').each(function(){
+
+	$('.tabSwiperWrap').each(function(){
 		$(this).find('.sorting3').each(function(sort){
 			$(this).change(function(x){
 				OptionVal = $(this).val();
 				console.log(OptionVal + ' , eq값,' + sort);
-				//$(this).closest('.tabSwiperWrap').css('background','blue');
 				$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Wrap').eq(sort).find('.sorting3Cont').removeClass('on');
 				$(this).closest('.tabSwiperWrap').next('.tabSwipeCont').find('.sorting3Wrap').eq(sort).find('.'+OptionVal).addClass('on');
 				$(this).closest('.sortAdd').children('img').removeClass('on');

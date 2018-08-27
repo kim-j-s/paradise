@@ -1,0 +1,179 @@
+@@include('static/include/head.html')
+<body>
+	<div id="wrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/header.html',{
+			"header":"CASINO"
+		})
+		<!-- //헤더영역 -->
+
+		<div class="headerSubWrap">
+			<div class="headerFixed">
+				<div class="now">시설안내</div>
+				<ul class="headerSubLink">
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#">EVENTS</a></li>
+					<li><a href="#">잭팟스토리</a></li>
+					<li><a href="#">게임가이드</a></li>
+					<li><a href="#" class="on">시설안내</a></li>
+					<li><a href="#">고객지원</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 컨텐츠 영역 -->
+		<section id="container">
+			<p class="titleTxt">
+				타이틀 미수급
+			</p>
+
+			<div class="floorMap">
+				<h2 class="title">플로어맵</h2>
+
+				<div class="tabSwiperWrap">
+					<div class="swiper-container tabSwiper map_casinoSwipe">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide sortAdd">
+								<img src="../static/images/map/pcity/map_casino02-1.jpg" alt="" class="case01 on" />
+								<img src="../static/images/map/pcity/map_casino02-2.jpg" alt="" class="case02" />
+								<img src="../static/images/map/pcity/map_casino02-3.jpg" alt="" class="case03" />
+								<img src="../static/images/map/pcity/map_casino02-4.jpg" alt="" class="case04" />
+								<div class="sortingSelect">
+									<select name="" id="" class="selectbox sorting3">
+										<option value="case01">부대시설</option>
+										<option value="case02">GAMING ZONE</option>
+										<option value="case03">VIP ZONE</option>
+										<option value="case04">Dine &amp; Drink</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tabSwipeCont">
+					<!-- 주차안내 -->
+					<div class="tabSwipeInner">
+						<ul class="itemList6">
+							<li>
+								<dl>
+									<dt>가까운 주차구역</dt>
+									<dd>1구역</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>네비게이션 검색어</dt>
+									<dd>파라다이스시티 주차장</dd>
+								</dl>
+							</li>
+						</ul>								
+					</div>
+					<!--// 주차안내 -->
+
+					<!-- 1F -->
+					<div class="tabSwipeInner on">
+						<div class="sorting3Wrap">
+
+							<!-- 부대시설 -->
+							<div class="sorting3Cont case01 on">
+								
+							</div>
+							<!--// 부대시설 -->
+
+							<!-- gaming zone -->
+							<div class="sorting3Cont case02">
+								
+							</div>
+							<!--// gaming zone -->
+
+							<!-- vip zone -->
+							<div class="sorting3Cont case03">
+
+								<dl class="dlsingleSlide">
+									<dt class="title">
+										<span class="tit">Vip</span>
+										<span class="txt">VIP ROOMS</span>
+									</dt>
+									<dd class="content">
+										<p class="txt">
+											파라다이스시티 카지노의 최상급 서비스를 누릴 수 있는 VIP 전용 게임 공간
+										</p>
+									</dd>
+								</dl>
+
+								<dl class="dlsingleSlide">
+									<dt class="title">
+										<span class="tit">Vip</span>
+										<span class="txt">Sky Casino</span>
+									</dt>
+									<dd class="content">
+										<p class="txt">
+											서해의 멋진 노을, 아름다운 예술품이 게이밍과 함께하는 어디에서도 경험할 수 없는 유니크한 VIP 전용 공간
+										</p>
+									</dd>
+								</dl>
+
+							</div>
+							<!--// vip zone -->
+
+							<!-- Dine n drink -->
+							<div class="sorting3Cont case04">
+
+								<dl class="dlsingleSlide">
+									<dt class="title">
+										<span class="tit">Dine&amp;Drink</span>
+										<span class="txt">Bar 21</span>
+									</dt>
+									<dd class="content">
+										<p class="txt">
+											카지노를 한층 더 다이내믹하게 즐길 수 있는 카지노 엔터테인먼트 바
+										</p>
+									</dd>
+								</dl>
+
+								<dl class="dlsingleSlide">
+									<dt class="title">
+										<span class="tit">Dine&amp;Drink</span>
+										<span class="txt">Café 9</span>
+									</dt>
+									<dd class="content">
+										<p class="txt">
+											게임 속 오아시스, 미식의 즐거움을 경험하는 곳
+										</p>
+									</dd>
+								</dl>
+
+								<dl class="dlsingleSlide">
+									<dt class="title">
+										<span class="tit">Dine&amp;Drink</span>
+										<span class="txt">The Emperor</span>
+									</dt>
+									<dd class="content">
+										<p class="txt">
+											최고의 고객에게 최고의 메뉴만을 선보이는 VIP 전용 카지노 레스토랑 THE EMPEROR
+										</p>
+									</dd>
+								</dl>
+
+							</div>
+							<!--// Dine n drink -->
+
+						</div>
+					</div>
+					<!--// 1F -->
+					
+				</div>
+
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+
+		<!-- 하단 영역 -->
+		@@include('static/include/footer.html')
+		<!-- //하단 영역 -->
+	</div>
+</body>
+</html>

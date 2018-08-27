@@ -19,7 +19,7 @@ textarea { resize:vertical; font:inherit; overflow-y:auto; box-sizing:border-box
 input, select { color:inherit; font:inherit; vertical-align: middle; box-sizing:border-box;}
 address, i { font-style:normal; }
 img, select, input, button { vertical-align:middle; }
-button {outline:none;}
+button {outline:none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;}
 em { font-style:normal; }
 input { font-family: 'Noto Sans', sans-serif;}
 
