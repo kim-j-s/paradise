@@ -473,23 +473,14 @@ $(function(){
 // barcode 
 $(function(){
 	$('.btnBarcode').click(function(){
-		$('body').css('height','auto');
-		var bodyHeight = $('body').height();
-		$('.dimmedLayer').css({'display':'block', 'height':bodyHeight});
+		var winHeight = $(window).height();
+		$('.dimmedLayer').css({'display':'block', 'height':winHeight});
+		$('body').addClass('fixed').height(winHeight);
 	});
 
 	$('.dimmedCont > .dimmedCloseBtn').click(function(){
 		$('body').css('height','100%');
 		$('.dimmedLayer').css('display','none');
-	});
-
-	$(window).load(function(){
-		if ( $('.dimmedLayer').css('display') == 'block' )
-		{
-			$('body').css('height','auto');
-			var bodyHeight = $('body').height();
-			$('.dimmedLayer').css({'display':'block', 'height':bodyHeight});
-		}
 	});
 
 	$('.snsBtn').click(function(){
@@ -508,7 +499,39 @@ $(function(){
 		{
 			$('.dimmedLayer').height(bodyHeight);
 		}
+
+		if ( $('.dimmedLayer').css('display') == 'block' )
+		{
+			$('.dimmedLayer').height(winHeight);
+		}
+
+		if ( $('body').hasClass('fixed') )
+		{
+			$('body').height(winHeight);
+		}
 	});
+
+	// 시설 공사 한내 팝업
+	$(window).load(function(){
+		if ( $('.dimmedLayer').css('display') == 'block' )
+		{
+			AlertPopup();			
+		}
+	});
+
+	function AlertPopup() {
+		var bodyHeight = $('body').height();
+		var winHeight = $(window).height();
+		$('body').css('height',winHeight).addClass('fixed');
+		$('.dimmedLayer').css({'display':'block', 'height':winHeight});
+	}
+	// 시설 공사 한내 팝업
+
+});
+
+$(document).on('click', '.snsBtn', function(){
+	var winHeight = $(window).height();
+	$('.dimmedLayer').css({'display':'block', 'height':winHeight});
 });
 
 // graph gauge
@@ -1135,8 +1158,12 @@ $(function(){
 				
 				$('.artSwipe').find('.box').height(artSwipeheight - 49);
 			}
-
 		});
+	});
+
+	$(window).load(function(){
+		var fixedTd = $('.artSwipe').find('.table.side').width();
+		console.log(fixedTd);
 	});
 });
 
@@ -1463,50 +1490,39 @@ $(function(){
 	}
 });
 
-// channel
+// ajax popup
 $(function(){
 	// 높이 제어
 	$(window).resize(function(){
-		if ( $('.layerInner').hasClass('on') )
+		if ( $('.layerInnerCont').hasClass('on') )
 		{
 			BodyHeight();
 		}
 	});
 
-	var Inner = "<div class='layerInner'></div>";
+	var Inner = "<div class='layerInnerCont'></div>";
 	$('.chnnelView').click(function(e){
 		e.preventDefault();
 		$('#wrap').append(Inner);
-		$('.layerInner').addClass('on');
-		$('.layerInner').load('channel.html .layerfullWrap');
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('channel.html .layerfullWrap');
 		BodyHeight();
 	});
 
 	$('.timeTable').click(function(e){
 		e.preventDefault();
 		$('#wrap').append(Inner);
-		$('.layerInner').addClass('on');
-		$('.layerInner').load('operating_time.html .layerfullWrap');
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('operating_time.html .layerfullWrap');
 		BodyHeight();
 	});	
-
-	// 달력 페이지 팝업 호출
-	/* 
-	$('.callCalendar').click(function(e){
-		e.preventDefault();
-		$('body').append(Inner);
-		$('.layerInner').addClass('on');
-		$('.layerInner').load('calandar-1.html .layerfullWrap');
-		BodyHeight();
-	});	
-	*/
 
 	//paradise work
 	$('.hyperrealism').click(function(e){
 		e.preventDefault();
 		$('#wrap').append(Inner);
-		$('.layerInner').addClass('on');
-		$('.layerInner').load('movie1.html .layerfullWrap');
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('movie1.html .layerfullWrap');
 		BodyHeight();
 	});	
 
@@ -1514,10 +1530,16 @@ $(function(){
 	$('.booyoo').click(function(e){
 		e.preventDefault();
 		$('#wrap').append(Inner);
-		$('.layerInner').addClass('on');
-		$('.layerInner').load('movie2.html .layerfullWrap');
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('movie2.html .layerfullWrap');
 		BodyHeight();
-	});	
+	});
+	
+	$('.call_request').click(function(e){
+		e.preventDefault();
+		$('.layerInnerCont').addClass('on');
+		BodyHeight();
+	});
 
 	function BodyHeight() {
 		var WinHeight = $(window).height();
@@ -1527,17 +1549,17 @@ $(function(){
 });
 
 $(document).on('click', '.layerCloseEtc', function(){
-	$('.layerInner').removeClass('on').remove();
+	$('.layerInnerCont').removeClass('on').remove();
 	$('body').removeClass('fixed').css('height','auto');
 });
 
-$(document).on('click', '.snsBtn', function(){
-	var winHeight = $(window).height();
-	$('.dimmedLayer').css({'display':'block', 'height':winHeight});
+$(document).on('click', '.layerCloseEtc2', function(){
+	$('.layerInnerCont').removeClass('on');
+	$('body').removeClass('fixed').css('height','auto');
 });
 
 $(document).on('click', '.dimmedCloseBtn', function(){
-	$('body').css('height','100%');
+	$('body').css('height','100%').removeClass('fixed');
 	$('.dimmedLayer').css('display','none');
 });
 
@@ -1553,16 +1575,3 @@ $(function(){
 	});
 });
 
-
-// footer bg
-$(function(){
-	// 아트맵
-	/*
-	var artSwipeLng = $('.artmapWrap').length;
-	if (!artSwipeLng == 0)
-	{
-		console.log('zz');
-		$('#footerWrap').addClass('bgType1');
-	}
-	*/
-});
