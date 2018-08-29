@@ -206,6 +206,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .notiTxt > dt {padding-left:22px; background:url(../images/common/icon/icon_mark1.png) no-repeat left 6px; background-size:14px 14px; font-size:14px; font-weight:bold; color:#333; line-height:24px;}
 .notiTxt > dd {font-size:12px; line-height:16px;}
 .notiTxt > dd.fs12 {padding-top:4px;}
+.notiTxt > dd > .list {padding-top:4px;}
 
 .notiTxt.list dt {padding:0; background:none;}
 .notiTxt.list dt.point {color:#e66045;}
@@ -213,8 +214,10 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .slideWrap.dept + .notiTxt.list.mt15 {margin:0 !important; padding-top:10px;}
 
-.notiTxt2 {padding-left:20px; font-size:11px; line-height:16px; color:#9c836a;}
+.notiTxt2 {padding-left:20px; font-size:11px; line-height:16px; color:#e66045;}
 .notiTxt2 {background:url(../images/common/icon/icon_mark2.png) no-repeat left 1px; background-size:13px 13px;}
+.notiTxt3 {padding-left:20px; font-size:11px; line-height:16px; color:#9c836a;}
+.notiTxt3 {background:url(../images/common/icon/icon_mark3.png) no-repeat left 1px; background-size:13px 13px;}
 
 
 /* 공통 리스트 */
@@ -443,7 +446,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 테이블 */
 .table {}
 .table table {width:100%;}
-.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:2px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center;}
+.table table th {padding:7px 0; text-align:center; font-weight:300; font-size:12px; color:#9d836a; border-bottom:2px solid #9d836a; line-height:14px; vertical-align:bottom; text-align:center; word-break:break-all;}
 .table table th.roboto {padding-bottom:5px;}
 .table table td {padding:9px 5px; text-align:center; font-size:11px; line-height:13px; border-right:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0; word-break:break-word; text-align:center;}
 .table table tr td:last-child {border-right:none;}
@@ -493,9 +496,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* bxslide option */
 .bx-pager {position:relative; top:-1px; margin-top:12px; text-align:center; font-size:0;}
-.bx-pager .bx-pager-item {display:inline-block; width:5px; height:5px; font-size:0;}
+.bx-pager .bx-pager-item {display:inline-block;  font-size:0;}
 .bx-pager .bx-pager-item + .bx-pager-item {margin-left:6px;}
-.bx-pager .bx-pager-item a {display:block; height:5px; text-indent:-999px; background:#ebe6e1; border-radius:50%;}
+.bx-pager .bx-pager-item a {display:block; width:5px; height:5px; text-indent:-999px; background:#ebe6e1; border-radius:50%;}
 .bx-pager .bx-pager-item a.active {position:relative; top:-1px; width:7px; height:7px; background:#9d836a; background:#9d836a;}
 
 
@@ -1144,9 +1147,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .singleSlide .title.etc .text {display:block; padding-left:0;}
 .singleSlide .title .text strong {display:block; padding-bottom:2px; margin-top:-3px; font-weight:bold; color:#333; line-height:18px;}
 .singleSlide .title.etc .text strong {margin-top:0;}
-.singleSlide .title .text .desc {display:block; font-size:12px; line-height:18px;}
+.singleSlide .title .text .desc {display:block; font-size:12px; line-height:18px; word-break:break-all;}
 .singleSlide .content {display:none; padding:9px 0 0 0;}
-.singleSlide .content .txt {font-size:12px; line-height:16px;}
+.singleSlide .content .txt {font-size:12px; line-height:16px; word-break:break-all;}
 .singleSlide .content .txt + .txt {margin-top:7px;}
 .singleSlide .content .txt + .listStar {margin-top:7px;}
 .singleSlide .content .list + .listStar {margin-top:9px;}
@@ -1830,6 +1833,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 /* 약관 */
 .agreement {background:#f9f9f9; border:1px solid #e7e3e0;}
 .agreement .inner {padding:16px; height:100%; overflow:auto; font-size:12px; line-height:16px;}
+.agreement .inner > * {font-size:12px; line-height:16px;}
 #layerContent > .agreement {height:calc(100% - 20px);}
 
 /* 신청 완료 */
@@ -1883,8 +1887,8 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .FacilitiesList li .inner .count {display:block; font-weight:bold; font-size:20px; text-align:center;}
 .FacilitiesList li .inner .txt {display:block; padding:5px 0 0 0; font-size:12px; text-align:center;}
 
-.treasureImg {padding:30px 0; margin:11px 0 12px 0; text-align:center; border:1px solid #b69983;}
-.treasureImg > img {width:120px;}
+.treasureImg {padding:16px 0; margin:11px 0 12px 0; text-align:center; border:1px solid #b69983;}
+.treasureImg > img {width:132px;}
 
 .jackpotDp {position:relative; margin-top:25px;}
 .jackpotDp > .bg {width:100%;}
@@ -1973,7 +1977,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType3 > dl > .tit {padding-bottom:10px;}
 
 .bullet {position:relative; top:-1px; display:block; font-size:0; text-align:center;}
-.bullet > span {display:inline-block; width:5px; height:5px; margin:0 4px; background:#e7e1dc; border-radius:50%;}
+.bullet > span {display:inline-block; width:5px; height:5px; margin:0 3px; background:#e7e1dc; border-radius:50%;}
 .bullet > span.on {position:relative; top:1px; width:7px; height:7px; background:#9d836a;}
 
 .galleryInner {}
@@ -2301,13 +2305,14 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .mainFull .subMainVisual .viewArea{position: relative; height: 100%;}
 .mainFull .subMainVisual .squareBox{bottom: 65px;}
 
-.subMainVisual.artSpace {padding-bottom: 50px;}
+.subMainVisual.artSpace {}
 .subMainVisual.artSpace .bx-controls{bottom: 70px;}
 .subMainVisual.artSpace .txtArea {bottom: 10%;}
-.subMainVisual.artSpace .viewArea {height:100%;}
+.subMainVisual.artSpace .viewArea {height:calc(100% - 50px);}
 .subMainVisual.artSpace .viewArea.ty1 {background: #000 url(../images/artSpace/img_main_visual_full01.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.artSpace .viewArea.ty2 {background: #000 url(../images/artSpace/img_main_visual_full02.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.artSpace .viewArea.ty3 {background: #000 url(../images/artSpace/img_main_visual_full03.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.artSpace .viewArea > .full.btmButton {position:absolute; bottom:-50px; left:0;}
 .subMainVisual.wonderbox .txtArea {bottom: 55px;}
 .subMainVisual.wonderbox .viewArea {height:100%; background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
 
@@ -2318,7 +2323,7 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 .subMainVisualFull .btmButton{position: absolute; bottom: 0; left: 0; width: 100%;}
 .subMainVisualFull .subMainVisual.artSpace .swipeType3 {height:100%;}
 .subMainVisualFull .subMainVisual.artSpace .swipeType3 .swiper-pagination {position:absolute; bottom:20px; left:0; width:100%;}
-.subMainVisualFull .subMainVisual.artSpace .bullet {top:auto; bottom:28px; z-index:1;}
+.subMainVisualFull .subMainVisual.artSpace .bullet {top:auto; bottom:78px; z-index:1;}
 
 .subMainVisualFull + .pageTop + #footerWrap {padding-top:0;}
 .subMainVisual{position: relative;}
@@ -2462,6 +2467,7 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .artSwipe .swiper-wrapper .box .img img {width:100%;}
 .artSwipe .swiper-wrapper .box h2 {position:relative; padding-left:22px; font-weight:bold; line-height:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .artSwipe .swiper-wrapper .box h2 .cycle {position:absolute; top:2px; left:0; width:16px; height:16px; margin-right:6px; padding-top:3px; text-align:center; border-radius:50%; font-family:'Roboto'; font-weight:400; font-size:10px; color:#fff; line-height:14px;}
+.artSwipe .swiper-wrapper .box h2 .cycle.iphone {line-height:12px;}
 .artSwipe .swiper-wrapper .box h2 + .table {width:100%; margin-top:1px;}
 .artSwipe .swiper-wrapper .box .pom {color:#07608b;}
 .artSwipe .swiper-wrapper .box .pom .cycle {background:#07608b;}
@@ -2474,10 +2480,10 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .artSwipe .swiper-pagination .swiper-pagination-current {font-family:'Roboto'; font-weight:bold; font-size:12px;}
 .artSwipe .swiper-pagination .swiper-pagination-total {font-family:'Roboto'; font-weight:400; font-size:12px;}
 
-.artSwipe .table.side table th {width:10px;}
+.artSwipe .table.side table th {width:10px; padding:5px 11px 0 0;}
 .artSwipe .table.side table td {position:relative; overflow:hidden;}
 .artSwipe .table.side table td > div {position:absolute; top:0; left:0; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.artSwipe .table.side table td > div {padding:6px 0 0 0; font-size:12px; line-height:14px;}
+.artSwipe .table.side table td > div {padding:7px 0 0 0; font-size:12px; line-height:14px;}
 
 .ty_kart {display:none; padding:6px 16px 0 16px; background:#fff;}
 .ty_kart .itemList li .tit {padding-bottom:2px; font-size:12px; color:#111; line-height:14px;}

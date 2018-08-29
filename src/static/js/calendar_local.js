@@ -7,15 +7,12 @@ $(function(){
 	var CalendarResetCnt = 0;
 	var addDayChk = 0;
 
-	console.log('전체 길이 : ' + lng);
-
 	var cnt = 0;
 	$('#layerContent').scroll(function(){
 		var xx = $('#layerContent').scrollTop();
 		if (cnt < 3)
 		{
 			cnt++;
-			console.log('dd' + cnt);			
 			if ( xx < 150)
 			{
 				$.ajax({ type: "GET",   
@@ -24,7 +21,6 @@ $(function(){
 					success : function(text)
 					{
 						response= text;
-						console.log('페이지 호출' + cnt);
 					}
 				});
 				$(response).insertBefore('.calendarAllReset');
@@ -43,11 +39,8 @@ $(function(){
 	// 달력 날짜 초기화
 	function CalendarDayResetetc() {
 		var lng = $('.calendarDate > li').length;
-		console.log('스크롤시 길이 값 : ' + lng);
 		if ( $('.eventDayChk').hasClass('first') ) {
-			console.log('있음');
 			var eventClassChk = $('.first').attr('class').split(' ')[1];
-			console.log('예외처리 이벤트 클래스 : ' + eventClassChk);
 
 			$('.calendarDate > li').each(function(Calendar){
 				if ( !$(this).hasClass(eventClassChk) && !$(this).hasClass('noEventDay') && !$(this).hasClass('blinkDate') )
@@ -68,7 +61,6 @@ $(function(){
 		$('.eventDayChk').each(function(i){
 			$(this).off().on('click', function(){
 
-				console.log('클릭 이벤트');
 				
 				if ( $(this).hasClass('noDate') || $(this).hasClass('noDateEx') || $(this).hasClass('blinkDate') || $(this).hasClass('noEventDay'))
 				{
@@ -78,12 +70,7 @@ $(function(){
 				var eventClassChk = $(this).attr('class').split(' ')[1];
 				var eventClassChkLng = $("."+eventClassChk).length;
 				var eventClassidx = $("."+eventClassChk).index();
-
-				console.log('그룹 클래스명 : ' + eventClassChk);
-				console.log('이벤트 그룹의 날짜 길이 : ' + eventClassChkLng);
-
 				var cccc = $(this).index();
-				console.log('선택된 날짜의 인덱스 : ' + cccc + ' , ' + i);
 
 				if ( addDayChk == 0 )
 				{
@@ -101,7 +88,6 @@ $(function(){
 					var EventExDay = eventClassChkLng - thisIndex;
 					$('.eventDayChk').eq(i + EventExDay).removeClass('noEventDay').addClass(eventClassChk + ' addDay');
 
-					console.log('이벤트 그룹 명 : ' + thisIndex + ' , ' + EventExDay);
 
 
 					if ( $('.eventDayChk').hasClass('first') && CalendarResetCnt == 0)
@@ -120,7 +106,6 @@ $(function(){
 						} else {
 							$(this).addClass('first');
 							calendarResetEx(i);
-							console.log(i);
 							$('.'+eventClassChk).addClass('noEventDay');
 							for ( z = i ; z < i + 10 ; z++)
 							{
@@ -276,7 +261,6 @@ $(function(){
 	// 달력 초기화 버튼 - 전체
 	$('.calendarAllReset').click(function(){
 		calendarAllReset();
-		console.log('전체 길이 리셋 : ' + lng);
 	});
 
 	function calendarAllReset() {

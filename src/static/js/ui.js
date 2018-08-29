@@ -758,20 +758,22 @@ $(function(){
 
 // normalSwiper
 $(function(){
-	var nBannerLng = $('.normalSwiper').find('.item').length;
-	if ( nBannerLng == 1)
-	{
-		return false;
-	} else {
-		$('.normalSwiper').bxSlider({
-			controls: false,
-			infiniteLoop: false,
-			pager: true
-		});
-	}
 	$(window).resize(function(){
 		var subMainVisualHeight = $('.subMainVisual').height();
 		$('.subMainVisual').find('.bx-viewport').height(subMainVisualHeight);
+	});
+
+	$('.normalSwiper').each(function(index, item){
+		var chkBannerLng = $(item).find('.item').length;
+		if ( chkBannerLng != 1)
+		{
+			$('.normalSwiper').eq(index).bxSlider({
+				controls: false,
+				infiniteLoop: false,
+				pager: true
+			});
+			
+		}
 	});
 });
 
@@ -1161,10 +1163,6 @@ $(function(){
 		});
 	});
 
-	$(window).load(function(){
-		var fixedTd = $('.artSwipe').find('.table.side').width();
-		console.log(fixedTd);
-	});
 });
 
 // FloorSwiper
@@ -1575,3 +1573,9 @@ $(function(){
 	});
 });
 
+// iphone hack
+$(function(){
+	if( /iPhone/i.test(navigator.userAgent) ) {
+		$('.pom').children('.cycle').addClass('iphone');		 
+	}
+});
