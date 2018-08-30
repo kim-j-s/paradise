@@ -90,9 +90,10 @@
 
 /* 레이어팝업 헤더 */
 #layerHeader {position:fixed; top:0; left:0; z-index:101; width:100%; height:60px; background:#fff; font-size:17px; font-weight:bold; color:#191919; text-align:center; line-height:60px;}
+#layerHeader > .layerTitle {display:table; width:100%; height:60px; padding:0 52px;}
+#layerHeader > .layerTitle .inner {display:table-cell; height:60px; vertical-align:middle; font-weight:bold; font-size:17px; line-height:20px; color:#191919;}
 .layerCloseBtn {position:absolute; top:22px; left:16px; width:15px; height:15px; background:url(../images/common/btn/btn_layerclose.gif) no-repeat; background-size:100%; text-indent:-9999px;}
 .dimmedCloseBtn {position:absolute; top:22px; left:16px; width:15px; height:15px; background:url(../images/common/btn/btn_layerclose.gif) no-repeat; background-size:100%; text-indent:-9999px;}
-
 .snsBtn {position:absolute; top:21px; right:18px; width:17px; height:18px; background:url(../images/common/btn/btn_sns.png) no-repeat; background-size:100%; text-indent:-9999px;}
 
 
@@ -2528,9 +2529,12 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .busTimeTable .table table tr.on td {background:#f9f9f9; color:#e66045;}
 .busTimeTable + .btn_gold {margin-top:12px;}
 
-
 .layerInnerCont {display:none;}
 .layerInnerCont.on {display:block;}
+
+.loading {position:fixed; top:0; right:0; bottom:0; left:0; z-index:999;}
+.loading > .inner {position:absolute; top:0; left:0; width:100%; height:100%; background:#1e1c19; opacity:0.9;}
+.loading >  img {position:fixed; top:50%; left:50%; margin:-30px 0 0 -30px; width:60px; height:60px;}
 
 @media screen and (max-width:640px){
 }
