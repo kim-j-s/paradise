@@ -1756,6 +1756,7 @@ line-height:18px;}
 .membershipClass .subTxt {padding:3px 0 5px 0;font-size:11px; color:#999;}
 .membershipClass .subTxt2 {padding:3px 0 5px 0;font-size:12px;}
 .membershipClass .desc {padding:13px 0 4px 0; margin-top:7px; font-size:12px; line-height:16px; border-top:1px solid #e7e3e0;}
+.membershipClass .desc br {display:none;}
 .membershipClass + .tblDiv {margin-top:22px;}
 .membershipClass .subTitle + .table.side2 {}
 .membershipClass .subTitle + .table.side2 table td {color:#666;}
@@ -1763,6 +1764,8 @@ line-height:18px;}
 .membershipClass .subTxt2 + .table.side2 table td {color:#666;}
 .membershipClass .subTxt2 + .table.side2 table td .roboto {color:#9d836a;}
 .beforeBenefit {padding:23px 0 0 0; text-align:center;}
+
+.membershipClass + .container .dlSlide .list li br {display:none;}
 
 
 .help {display:table; width:100%; margin-top:27px;}
@@ -2548,3 +2551,9 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 
 @media screen and (max-width:640px){
 }
+
+
+
+
+/* p-city 맵 화면 하단 버튼 박스 가림 처리 안정화 이후 삭제 */
+.sortingCont > .dlsingleSlide .btnWrap {display:none;}

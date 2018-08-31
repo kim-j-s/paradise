@@ -1528,6 +1528,15 @@ $(function(){
 		$('.layerInnerCont').load('movie2.html .layerfullWrap');
 		BodyHeight();
 	});
+
+	//chromatv
+	$('.chromatv').click(function(e){
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('movie1.html .layerfullWrap');
+		BodyHeight();
+	});	
 	
 	$('.call_request').click(function(e){
 		e.preventDefault();
