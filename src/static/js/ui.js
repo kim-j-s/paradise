@@ -1234,14 +1234,11 @@ $(function(){
 		$('.map_hapSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').removeClass('on');
 		$('.map_hapSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on');
 	});
-
 	
 	//map_casinoSwipe
 	var CasinoSwipeLng = $('.map_casinoSwipe').find('.swiper-slide').length;
-	if ( CasinoSwipeLng < 2 )
+	if ( CasinoSwipeLng > 1 )
 	{
-		return false;
-	} else {
 		var map_casinoSwipe = new Swiper('.map_casinoSwipe', {
 			slidesPerView: 'auto',
 			observer: true,
@@ -1263,8 +1260,7 @@ $(function(){
 			$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').removeClass('on');
 			$('.map_casinoSwipe').parent('.tabSwiperWrap').next('.tabSwipeCont').children('.tabSwipeInner').eq(idx).addClass('on');
 		});
-	}
-	
+	}	
 
 	//map_cimerSwipe
 	var map_cimerSwipe = new Swiper('.map_cimerSwipe', {
@@ -1577,5 +1573,34 @@ $(function(){
 $(function(){
 	if( /iPhone/i.test(navigator.userAgent) ) {
 		$('.pom').children('.cycle').addClass('iphone');		 
+	}
+});
+
+
+// 페이지 예외 처리
+$(function(){
+	var subMainVisualFullLng = $('.subMainVisualFull').length;
+	if (subMainVisualFullLng == 1)
+	{
+		$('#footerWrap').addClass('pt0');
+	}
+});
+
+// 도면보기
+$(function(){
+	var Inner = "<div class='layerInnerCont'></div>";
+	$('.link_room').click(function(e){
+		var idx = $(this).data("idx");
+		e.preventDefault();
+		$('#wrap').append(Inner);
+		$('.layerInnerCont').addClass('on');
+		$('.layerInnerCont').load('drawing_map'+idx+'.html .layerfullWrap');
+		BodyHeight();
+	});
+
+	function BodyHeight() {
+		var WinHeight = $(window).height();
+		$('body').height(WinHeight);
+		$('body').addClass('fixed');
 	}
 });

@@ -25,7 +25,7 @@ body.fixed #wrap {overflow:hidden;}
 .headerSubWrap {position:relative; z-index:70; height:30px;}
 .headerFixed {background:#fff;}
 .headerFixed.fixed {position:fixed; top:0; left:0; width:100%;}
-.headerFixed .now {position:relative; padding:0 16px; height:30px; line-height:30px; text-align:left; border-bottom:1px solid #e7e3e0;}
+.headerFixed .now {position:relative; padding:0 36px 0 16px; height:30px; line-height:30px; text-align:left; border-bottom:1px solid #e7e3e0; overflow:hidden;}
 .headerFixed .now:before {content:''; position:absolute; top:50%; right:16px; margin-top:-3px; width:10px; height:6px; background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 0; background-size:10px 12px;}
 .headerFixed .now.on:before {background:url(../images/common/icon/icon_arrow2.png) no-repeat 0 -6px; background-size:100%;}
 .headerSubLink {position:relative; display:none; padding:14px 0; background:#fff; overflow:hidden;}
@@ -157,6 +157,7 @@ nav .navDimmed {position:absolute; top:0; right:0; bottom:0; left:0; z-index:102
 .footerBottom > dl dt {font-weight:bold; font-size:10px; color:#9c836a;}
 .footerBottom > dl dd {padding:3px 0 6px 0;font-size:10px; color:#7b7a7a; line-height:16px;}
 .footerBottom > dl dd a {color:#7b7a7a;}
+.footerBottom > dl dd a.tel {position:relative; display:inline-block; border-bottom:1px solid #7b7a7a;}
 .footerBottom > dl dd .mail {display:inline-block; font-weight:bold; border-bottom:1px solid #7b7a7a;}
 .footerBottom > .copyright {padding-bottom:14px; font-size:10px; color:#60605e;}
 .footerBottom > .footerLinkBottom {overflow:hidden;}

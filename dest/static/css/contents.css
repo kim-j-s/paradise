@@ -101,12 +101,12 @@
 .tabWrap {position:relative; left:-16px; width:calc(100% + 32px)}
 .tabList {display:table; position:relative; width:100%; border-top:1px solid #e7e3e0; table-layout:fixed;}
 .tabList.etc {border-top:none;}
-.tabList > li {display:table-cell;  vertical-align:middle; padding:13px 5px 12px 5px; background:#f9f9f9; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
+.tabList > li {display:table-cell; vertical-align:middle; height:40px; padding:7px 5px 6px 5px; background:#f9f9f9; border-left:1px solid #e7e3e0; border-bottom:1px solid #e7e3e0;}
 .tabList > li .tit {display:block; width:100%;  text-align:center; outline:none; font-size:12px; line-height:14px; color:#999;  word-break:break-word;}
 .tabList > li .tit {-webkit-appearance: none; -moz-appearance: none; -webkit-user-select: none;  -ms-user-select: none;}
 .tabList > li .tit > small {position:relative; top:-1px; font-size:11px;}
 .tabList > li:first-child {border-left:none;}
-.tabList > li.on {padding:13px 5px 13px 5px; background:#fff; border-bottom:none;}
+.tabList > li.on {padding:6px 5px; background:#fff; border-bottom:none;}
 .tabList > li.on .tit {color:#9d836a; font-weight:bold;}
 .tabList > li.on .tit > small {color:#9d836a;}
 .tabList.ty3 > li {width:33.3%;}
@@ -814,6 +814,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 .slideList .slideDept1 {display:table; position:relative; width:100%;}
 .slideList .slideDept1 > .title {display:table-cell; vertical-align:middle; height:100%; font-weight:bold; font-size:14px; color:#666; line-height:20px; text-align:left;}
+.slideList.other .slideDept1 > .title {color:#333;}
 .slideList .slideDept1 > .title small {font-size:12px;}
 .slideList .slideDept1 .price {display:table-cell; vertical-align:middle; height:100%; text-align:right;}
 .slideList .slideDept1 .price .num {font-weight:bold; color:#9c836a; font-family:'Roboto';}
@@ -933,6 +934,8 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 /* 객실 / 침대 */
 .swiper-container {width:100%; height:100%;}
+.swiper-container.swiper-container-horizontal .link_room {position:absolute; right:16px; bottom:33px; z-index:1; display:inline-block; padding:1px 8px; border:1px solid #fff; font-weight:500; font-size:12px; color:#fff;}
+.swiper-container .link_room {position:absolute; right:16px; bottom:14px; z-index:1; display:inline-block; padding:1px 8px; border:1px solid #fff; font-weight:500; font-size:12px; color:#fff;}
 .roomGalleryCont {width:calc(100% + 32px); height:294px; margin-left:-16px}
 .roomGalleryCont .swiper-container {padding:0 16px;}
 .roomCont {width: 240px;}
@@ -1505,7 +1508,7 @@ line-height:18px;}
 .inquiryItem .answer .inner .date {padding-bottom:0;}
 
 /* 포인트 */
-.pointTotal {padding:12px 0 27px 0; overflow:hidden;}
+.pointTotal {padding:37px 0 36px 0; overflow:hidden;}
 .pointTotal .pointName {float:left; font-weight:bold;}
 .pointTotal .pointRst {float:right; font-weight:bold; font-size:20px; color:#9c836a;}
 .headerSubWrap + #container > .pointTotal {padding-top:20px;}
@@ -1968,7 +1971,8 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType2 > dl > .tit {padding-bottom:10px;}
 
 .swipeType3 {}
-.swipeType3 .swiper-pagination {position:static; display:block; padding-left:8px; margin-top:12px; font-size:0; text-align:center; }
+.swipeType3 .swiper-pagination {position:static; display:block; padding-left:8px; font-size:0; text-align:center; }
+.swipeType3 .swiper-pagination.swiper-pagination-fraction {margin-top:12px;}
 .swipeType3 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
 .swipeType3 .swiper-container {}
 .swipeType3 .counter {padding-left:7px;}
@@ -2075,6 +2079,8 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .fullBox.bg{padding-top: 25px; background-color: #f9f9f9;}
 .fullBox.bg .rightBtn{top: 27px; right: 16px;}
 .imgSlide .txtArea{width: 100%;}
+.bx-wrapper + h2.title {margin-top:11px;}
+.normalSwiper + h2.title {margin-top:13px;}
 
 .fileDown{margin-top: 23px; padding: 15px 16px 20px; background-color: #f9f9f9;}
 .fileDown > span{display: block; margin-top: 10px;}
@@ -2535,6 +2541,10 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .loading {position:fixed; top:0; right:0; bottom:0; left:0; z-index:999;}
 .loading > .inner {position:absolute; top:0; left:0; width:100%; height:100%; background:#1e1c19; opacity:0.9;}
 .loading >  img {position:fixed; top:50%; left:50%; margin:-30px 0 0 -30px; width:60px; height:60px;}
+
+.drawingwrap {width:calc(100% + 32px); margin-left:-16px; padding:10px 0;}
+.drawingwrap > img {display:block; width:100%;}
+.drawingwrap > img + img {margin-top:8px;}
 
 @media screen and (max-width:640px){
 }
