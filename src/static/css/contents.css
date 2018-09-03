@@ -387,7 +387,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 
 
 /* 로그인 */
-.titleTxt {padding:17px 0 0 0; font-weight:200; font-size:20px; color:#999; line-height:24px; word-break:keep-all;}
+.titleTxt {padding:17px 0 0 0; font-weight:200; font-size:20px; color:#999; line-height:24px; word-break:break-all;}
 .titleTxt .color { font-weight:200; color:#9d836a; line-height:23px;}
 .titleTxt.single {padding-top:9px !important; line-height:23px;}
 .titleTxt .dpb {font-weight:200; display:inline;}
@@ -682,7 +682,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 /* 상품 검색 갤러리 리스트 */
 .itemWrap {position:relative; width:calc(100% + 16px); margin-top:20px;}
 .itemWrap h2 {padding:0 0 13px 16px; font-size:20px; color:#333;}
-.itemWrap h2 + .subTxt {padding:0 0 18px 16px; margin-top:-2px; color:#333; line-height:18px;}
+.itemWrap h2 + .subTxt {padding:0 16px 18px 16px; margin-top:-2px; color:#333; line-height:18px;}
 .itemWrap .itemMore {position:absolute; top:5px; right:16px;}
 .itemWrap .swiper-pagination {display:none;}
 .itemListWrap {}
@@ -1327,8 +1327,8 @@ line-height:18px;}
 .membershipVisual .titleArea {position:relative;}
 .membershipVisual .titleArea > img {width:100%;}
 .membershipVisual .txtArea {position:absolute; left:16px; bottom:12px; color:#fff;}
-.membershipVisual .txtArea > .tit {padding-bottom:3px; font-weight:bold; font-size:20px;}
-.membershipVisual .txtArea > .info {font-size:11px; line-height:16px;}
+.membershipVisual .txtArea > .tit {padding-bottom:3px; font-weight:bold; font-size:20px; color:#fff;}
+.membershipVisual .txtArea > .info {font-size:11px; line-height:16px; color:#fff;}
 .membershipVisual > .desc {padding:0 16px;}
 .membershipVisual > .desc p {font-size:12px; line-height:18px; color:#333;}
 .membershipVisual > .desc .point {padding:12px 0 5px 0; font-weight:bold; color:#9c836a;}
@@ -1654,6 +1654,7 @@ line-height:18px;}
 .stationCont {}
 .stationCont > a {display:block;}
 .stationCont > a > img {display:block; width:100%; padding-bottom:11px;}
+.stationCont img, .stationCont > img {display:block; width:100%; padding-bottom:11px;}
 .stationCont .tit {display:block; font-weight:bold; color:#111;}
 .stationCont .txt {display:block; padding:5px 0 8px 0; font-size:12px; line-height:16px;}
 .stationCont .txt.other {padding:0 0 2px 0; font-size:11px; line-height:14px;}
@@ -1955,7 +1956,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 /* gallery */
 .swipeType1 {width:calc(100% + 32px); margin-top:25px; margin-left:-16px;}
 .txtContent.swipeType1 {}
-.swipeType1 + .swipeType1 {margin-top:32px;}
+.swipeType1 + .swipeType1 {margin-top:30px;}
 .swipeType1 .swiper-pagination {position:static; padding-left:8px;}
 .swipeType1 .swiper-pagination .swiper-pagination-current {font-weight:bold;}
 .swipeType1 .swiper-container {padding:0 16px;}
@@ -1963,6 +1964,7 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 .swipeType1 .counter {padding-left:7px;}
 .swipeType1 .counter .now {font-weight:bold;}
 .swipeType1 > dl > .tit {padding:0 0 10px 16px;}
+.swipeType1.txtContent + .swipeType1.txtContent {padding-top:0;}
 
 .swipeType2 {}
 .swipeType2 .swiper-pagination {position:static; padding-left:8px;}
@@ -2071,7 +2073,6 @@ background:url(../images/artSpace/bg_help.png) no-repeat; background-size:44px 1
 
 
 /*윤주미*/
-
 h2.title{margin-bottom: 3px; font-size: 14px; font-weight: bold; color: #111;}
 p.descText{font-size: 12px; line-height: 18px;}
 div.divTop{border-top: 1px solid #e7e3e0;}
@@ -2091,7 +2092,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 
 .itemList {margin: 0 -4px; font-size: 0; border: 0;}
 .itemList > li{display: inline-block; vertical-align: top; width: 50%; padding: 15px 4px 0; font-size: 12px;}
-.itemList > li img.thumb{width: 100%;}
+.itemList > li img.thumb {width:100%; border:1px solid #e7e3e0;}
 .itemList > li .tit{padding: 10px 0 5px; font-weight: bold; color: #333;}
 .itemList > li .tit > span{display: block; color: #666; font-weight: normal; line-height: 17.5px;}
 .itemList > li .desc{color: #666; line-height: 17.5px;}
@@ -2140,12 +2141,14 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .timeTable .side3 table tbody tr > * > span{vertical-align: top; line-height: 17px;}
 .timeTable .side3 table tbody th{padding-right: 10px;}
 .timeTable .side3 table tbody th > span{display: inline-block; width: 22px;}
-.timeTable .side3 table tbody td > span{display: block; word-break: keep-all; line-height: 15px; padding: 1px 0 3px;}
+.timeTable .side3 table tbody td > span{display: block; line-height: 15px; padding: 1px 0 3px;}
 
 .indentList{margin: 8px 0 0;}
-.indentList > span{display: block; padding: 0 0 2px 15px; text-indent: -15px; font-size: 12px;  line-height: 17px; word-break: keep-all;}
+.indentList > span{display: block; padding: 0 0 2px 15px; text-indent: -15px; font-size: 12px;  line-height: 17px;}
 
-.btnGroup > a:last-child{margin-left: 3px; background-color: #9c836a; color: #fff;}
+.btnGroup {}
+.btnGroup > a {margin:12px 3px 0 0;}
+.btnGroup > a:last-child{margin:12px 0 0 0; background-color: #9c836a; color: #fff;}
 
 .imgBox{position: relative; margin: 35px 0 0;}
 .imgBox .btnMoreTxt{position: absolute; top: 2px; right: 0;}
@@ -2183,7 +2186,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .convention .tabList > li .tit{font-size: 12px; line-height: 14px;}
 .convention h2{font-weight: bold; color: #111; font-size: 14px;}
 .convention p.desc{font-size: 12px; line-height: 18px;}
-.convention .listBar > li{word-break: keep-all; margin-bottom: 2px;}
+.convention .listBar > li{margin-bottom: 2px;}
 .convention .table.side a.btnMoreTxt{float: right; margin-top: 1px; vertical-align: top;}
 .convention .txtContent2{padding-bottom: 8px;}
 .convention .txtContent2 > .tit{font-size: 12px; color: #333; font-weight: bold; margin: 10px 0 7px;}
@@ -2206,7 +2209,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .wonderWrap ul.listBar .point:before{display: none;}
 
 /*chroma*/
-.chromaWrap .visualArea{/*height: 37.5vw; */min-height: 120px; padding: 10px; margin-top: -20px; background: #020d25 url(../images/chroma/chroma_visual.jpg) center center no-repeat; background-size: 100%; text-align: center;}
+.chromaWrap .visualArea{min-height: 120px; padding: 10px; margin-top: -20px; background: #020d25 url(../images/chroma/chroma_visual.jpg) center center no-repeat; background-size:cover; text-align:center;}
 .chromaWrap .visualArea > img{display: block; width: 76px; margin: 0 auto;}
 .chromaWrap .visualArea > p{margin: 6px 0 0; color: #fff;}
 .chromaWrap section{padding-top: 26px; padding-bottom: 20px;}
@@ -2262,7 +2265,7 @@ a.rightBtn{position: absolute; top: 2px; right: 0;}
 .studioWrap h2.title{color: #333; margin: 15px 0 4px;}
 
 .rentTable{margin: 10px 0 0;}
-.rentTable tbody td{word-break: keep-all;}
+.rentTable tbody td{}
 .rentTable tbody td:last-child{border-right: none;}
 
 .table > table + p.addTxt{margin: 7px 0 0; font-size: 11px; text-align: right; color: #999; line-height: 13px;}
@@ -2317,14 +2320,14 @@ dl.application > dd > a.btn.ty9{margin: 3px 0 7px;}
 
 .subMainVisual.artSpace {}
 .subMainVisual.artSpace .bx-controls{bottom: 70px;}
-.subMainVisual.artSpace .txtArea {bottom: 10%;}
-.subMainVisual.artSpace .viewArea {height:calc(100% - 50px);}
+.subMainVisual.artSpace .txtArea {bottom:92px;}
+.subMainVisual.artSpace .viewArea {height:100%;}
 .subMainVisual.artSpace .viewArea.ty1 {background: #000 url(../images/artSpace/img_main_visual_full01.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.artSpace .viewArea.ty2 {background: #000 url(../images/artSpace/img_main_visual_full02.jpg) center 0 no-repeat; background-size: cover;}
 .subMainVisual.artSpace .viewArea.ty3 {background: #000 url(../images/artSpace/img_main_visual_full03.jpg) center 0 no-repeat; background-size: cover;}
-.subMainVisual.artSpace .viewArea > .full.btmButton {position:absolute; bottom:-50px; left:0;}
 .subMainVisual.wonderbox .txtArea {bottom: 55px;}
 .subMainVisual.wonderbox .viewArea {height:100%; background: #19151a url(../images/wonderbox/img_main_visual_full.jpg) center 0 no-repeat; background-size: cover;}
+.subMainVisual.wonderbox .viewArea .txt {padding-right:93px;}
 
 .subMainVisualFull {position:relative; width:100%; z-index:60;}
 .subMainVisualFull .subMainVisual {width:100%; height:100%; margin:0;}
@@ -2434,7 +2437,8 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .activityList .txt{margin: 13px 0 0;}
 .activityList .txt > strong{font-size: 14px; font-weight: bold; color: #111;}
 .activityList .txt > .sub{display: block; margin: 7px 0 0; font-size: 12px; color: #111; line-height: 17px;}
-.activityList .txt > .descText{margin: 6px 0 0;}
+.activityList .txt > .descText {margin: 6px 0 0;}
+.activityList .txt > .descText + .table.side {margin-top:6px;}
 .activityWrap > .fullWidth > img{width: 100%;}
 .activityWrap > h2{margin: 13px 0 5px; font-size: 20px; color: #333; font-weight: bold;}
 .activityWrap > h2 > span{display: block; margin: 2px 0 0; font-size: 12px; color: #111; line-height: 17px;}
@@ -2452,7 +2456,7 @@ body.fix{overflow: hidden;} /*스크롤방지*/
 .activityWrap .detail.type2{margin: 12px 0 0;}
 .activityWrap .detail.type2 th{width: 28px; color: #9c836a; padding-bottom: 4px;}
 .activityWrap .detail.type2 td{padding-bottom: 4px;}
-.activityWrap .table table th{padding-top: 0;}
+/* .activityWrap .table table th {padding-top: 0;} */
 
 .titleTxt + .artmapWrap {margin-top:25px;}
 .subTitle + .artmapWrap {margin-top:13px;}
