@@ -8,6 +8,7 @@ $(function(){
 	var addDayChk = 0;
 
 	var cnt = 0;
+	/* 개발 반영 시 불필요 하여 기능 주석처리됨
 	$('#layerContent').scroll(function(){
 		var xx = $('#layerContent').scrollTop();
 		if (cnt < 3)
@@ -29,6 +30,7 @@ $(function(){
 			}
 		}
 	});
+	*/
 
 	// 달력 날짜 초기화
 	CalendarDayReset();
