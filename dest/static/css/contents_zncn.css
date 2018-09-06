@@ -648,6 +648,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .floorPrice li.ty11:before {background:#a26f3b;}
 .floorPrice li.ty12:before {background:#e28a3b;}
 .floorPrice li.ty13:before {background:#64729d;}
+.floorPrice li.ty14:before {background:#e3893b;}
 
 .floorPrice li .info1 {font-size:11px; line-height:14px;}
 .floorPrice li .info2 {margin-top:3px; font-size:12px; line-height:14px;}
@@ -803,6 +804,9 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .borderList.other li {border-bottom:none;}
 .borderList.other .tit {height:auto;}
 .borderList.other li + li {margin-top:12px;}
+.borderList li.dimmed {}
+.borderList li.dimmed:after {content:''; position:absolute; top:0; left:-16px; z-index:500; width:calc(100% + 32px); height:100%; background:#fff; opacity:0.8;}
+.borderList li.dimmed.on:after {content:none;}
 
 
 /* 결제 금액 리스트 */
@@ -873,6 +877,7 @@ a.btnUnderline {display:inline-block; padding-bottom:1px; font-weight:normal; fo
 .slideWrap.dept .slideList {position:relative;}
 .slideWrap.dept .slideList:after {content:''; position:absolute; top:0; left:-16px; z-index:500; width:calc(100% + 32px); height:100%; background:#fff; opacity:0.8;}
 .slideWrap.dept .slideList.on:after {content:none;}
+.slideWrap.dept .slideList.nodimmed:after {content:none;}
 .slideWrap.dept .slideList:first-child:after {content:none;}
 .slideWrap.dept .slideList.price:after {content:none;}
 .slideWrap.dept .slideDept1 {padding-right:24px;}

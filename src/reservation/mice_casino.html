@@ -3,7 +3,7 @@
 	<div class="layerfullWrap">
 		<!-- 헤더영역 -->
 		@@include('static/include/layer_header.html',{
-			"title":"외국(환승) 고객전용 예약"
+			"title":"CASINO SPECIAL PROMOTION"
 		})
 		<!-- //헤더영역 -->
 
@@ -18,7 +18,7 @@
 					</div>
 					<div class="cellDiv tr middle">
 						<div class="radioBox">
-							<input type="radio" id="mice" name="radio" checked="checked" /><label for="mice">외국(환승) 고객전용 예약</label>
+							<input type="radio" id="mice" name="radio" checked="checked" /><label for="mice">관리자 등록 영역</label>
 						</div>
 					</div>
 				</div>
@@ -26,16 +26,16 @@
 
 			<div class="offerResult mt20">
 				<div class="inpWrap pt0">
-					<p class="infoTitle">Personal information<span class="infoTitleSub1">* 필수 입력 항목</span></p>
+					<p class="infoTitle">Personal information<span class="infoTitleSub1">* Required Information</span></p>
 
 					<label class="inpTitle" for="gender">
-						Name(Eng) *
+						Name(Eng) <span class="starmark">*</span>
 						<span class="txt">姓名（请输入英文）/ 名前（アルファベットでのご入力をお願いいたします）</span>
 					</label>
 					<div class="tblDiv">
-						<div class="cellDiv" style="width:80px;">
+						<div class="cellDiv" style="width:100px;">
 							<select name="" id="gender" class="selectbox">
-								<option value="">성별</option>
+								<option value="">GENDER</option>
 								<option value="">Mr. 男</option>
 								<option value="">Ms. 女</option>
 							</select>
@@ -54,14 +54,14 @@
 						</div>
 					</div>
 
-					<label class="inpTitle" for="name">이름(Only for Korean)</label>
+					<label class="inpTitle" for="name">Name(Only for Korean)</label>
 					<div class="inputBox">
 						<input type="text" placeholder="홍길동" name="" id="name" class="inp" />
 						<button class="inpReset">초기화</button>
 					</div>
 
 					<label class="inpTitle" for="email">
-						Email *
+						Email <span class="starmark">*</span>
 						<span class="txt">电子邮箱 / メールアドレス</span>
 					</label>
 					<div class="inputBox">
@@ -69,17 +69,8 @@
 						<button class="inpReset">초기화</button>
 					</div>
 
-					<label class="inpTitle" for="company">
-						Company, Department *
-						<span class="txt">公司, 部门 / 会社, 部署</span>
-					</label>
-					<div class="inputBox">
-						<input type="text" name="" id="company" class="inp" />
-						<button class="inpReset">초기화</button>
-					</div>
-
 					<label class="inpTitle" for="tel">
-						Tel *
+						Tel <span class="starmark">*</span>
 						<span class="txt">电话号码 / 電話番号</span>
 					</label>
 					<div class="tblDiv">
@@ -109,7 +100,7 @@
 					</div>
 
 					<label class="inpTitle" for="Language">
-						Language *
+						Language <span class="starmark">*</span>
 						<span class="txt">語言/ 言語</span>
 					</label>
 					<div class="inputBox">
@@ -118,14 +109,14 @@
 						</select>
 					</div>
 
-					<label class="inpTitle" for="fax">
-						Fax
-						<span class="txt">传真号码 / FAX番号</span>
+					<label class="inpTitle" for="Request">
+						Special Request
+						<span class="txt">额外要求 / 追加事項</span>
 					</label>
 					<div class="inputBox">
-						<input type="text" name="" id="fax" class="inp" />
-						<button class="inpReset">초기화</button>
+						<textarea name="" id="Request" cols="30" rows="10" class="textarea"></textarea>
 					</div>
+
 				</div>
 			</div>
 
@@ -134,7 +125,7 @@
 					<p class="infoTitle">Room Requirements</p>
 
 					<span class="inpTitle">
-						Check in/out *
+						Check in/out <span class="starmark">*</span>
 						<span class="txt">入住, 退房 / チェックイン, アウト</span>
 					</span>
 					<div class="tblDiv btnTbl">
@@ -147,7 +138,7 @@
 					</div>
 
 					<label class="inpTitle" for="people">
-						Number of people *
+						Number of people <span class="starmark">*</span>
 						<span class="txt">人数 / 人数</span>
 					</label>
 					<div class="inputBox">
@@ -158,7 +149,7 @@
 					</div>
 
 					<span class="inpTitle">
-						Room, Bed type *
+						Room, Bed type <span class="starmark">*</span>
 						<span class="txt">房型, 床型 / 客室, ベッドタイプ</span>
 					</span>
 					<div class="inputBox">
@@ -231,7 +222,7 @@
 					</div>
 
 					<span class="inpTitle">
-						Option *
+						Option <span class="starmark">*</span>
 						<span class="txt">选项 / オプション</span>
 					</span>
 					<div class="inputBox">
@@ -260,7 +251,7 @@
 				</div>
 			</div>
 
-			 <div class="offerResult mt20 pt10">
+			<div class="offerResult mt20 pt10">
 				<ul class="slideWrap dept none display">
 					<li class="slideList final">
 						<div class="slideDept1 pb0">
@@ -275,65 +266,16 @@
 					</li>
 				</ul>
 				<div class="mt12 fs11 pointColor3">The above rate is included 1 breakfast(Included 10% Tax)</div>
-			 </div>
+			</div>
 
-			 <!-- MICE / 외국(환승) 고객전용 예약 경우 노출 -->
-			 <div class="offerResult mt17">
-
-				<!-- 외국(환승) 고객전용 예약 시 노출 / MICE는 노출하지 않음-->
-				<label class="inpTitle" for="Passport">
-					Passport No. *
-					<span class="txt">번역본 대기</span>
-				</label>
-				<div class="inputBox">
-					<input type="text" name="" id="Passport" class="inp" />
-				</div>
-				<!--// 외국(환승) 고객전용 예약 시 노출 / MICE는 노출하지 않음 -->
-
-				<label class="inpTitle" for="Flight">
-					Flight No.
-					<span class="txt">航班号 / フライト</span>
-				</label>
-				<div class="inputBox">
-					<input type="text" name="" id="Flight" class="inp" />
-				</div>
-
-				<label class="inpTitle" for="Arrival">
-					Arrival Time
-					<span class="txt">到达时间 / 到着時間</span>
-				</label>
-				<div class="tblDiv time">
-					<div class="cellDiv" style="width:65px;">
-						<select name="" id="Arrival" class="selectbox">
-							<option value="">AM</option>
-							<option value="">PM</option>
-						</select>
-					</div>
-					<div class="cellDiv">
-						<input type="tel" placeholder="00" class="inp" />
-					</div>
-					<div class="cellDiv">
-						<input type="tel" placeholder="00" class="inp" />
-					</div>
-				</div>
-
-				<label class="inpTitle" for="Departure">
-					Departure (city)
-					<span class="txt">出发（城市）/ 出発（都市）</span>
-				</label>
-				<div class="inputBox">
-					<input type="text" name="" id="Departure" class="inp" />
-				</div>
-
-				<label class="inpTitle" for="Request">
-					Special Request
-					<span class="txt">额外要求 / 追加事項</span>
-				</label>
-				<div class="inputBox">
-					<textarea name="" id="Request" cols="30" rows="10" class="textarea"></textarea>
-				</div>
-			 </div>
-			 <!--// MICE / 외국(환승) 고객전용 예약 경우 노출 -->
+			<dl class="notiTxt mt15">
+				<dt>Notice</dt>
+				<dd>
+					<ul class="list">
+						<li>관리자 등록 영역</li>
+					</ul>
+				</dd>
+			</dl>
 
 			 <div class="tblDiv btnTbl half full mt16">
 				<div class="cellDiv">

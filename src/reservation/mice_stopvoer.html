@@ -1,0 +1,360 @@
+@@include('static/include/head.html')
+<body>
+	<div class="layerfullWrap">
+		<!-- 헤더영역 -->
+		@@include('static/include/layer_header.html',{
+			"title":"STOPOVER/ TRANSFER"
+		})
+		<!-- //헤더영역 -->
+
+		<!-- 컨텐츠 영역 -->
+		<section id="layerContent">
+			<div class="inpWrap pt8">
+				<p class="infoTitle">Select Package</p>
+				<div class="tblDiv">
+					<div class="cellDiv middle">
+						<span class="inpTitle">Package</span>
+						<p class="fs12">套餐 / パッケージ</p>
+					</div>
+					<div class="cellDiv tr middle">
+						<div class="radioBox">
+							<input type="radio" id="mice" name="radio" checked="checked" /><label for="mice">관리자 등록 영역</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="offerResult mt20">
+				<div class="inpWrap pt0">
+					<p class="infoTitle">Personal information<span class="infoTitleSub1">* Required Information</span></p>
+
+					<label class="inpTitle" for="gender">
+						Name(Eng) <span class="starmark">*</span>
+						<span class="txt">姓名（请输入英文）/ 名前（アルファベットでのご入力をお願いいたします）</span>
+					</label>
+					<div class="tblDiv">
+						<div class="cellDiv" style="width:100px;">
+							<select name="" id="gender" class="selectbox">
+								<option value="">GENDER</option>
+								<option value="">Mr. 男</option>
+								<option value="">Ms. 女</option>
+							</select>
+						</div>
+						<div class="cellDiv">
+							<div class="inputBox">
+								<input type="text" placeholder="GILDONG 名" class="inp" />
+								<button class="inpReset">초기화</button>
+							</div>
+						</div>
+						<div class="cellDiv">
+							<div class="inputBox">
+								<input type="text" placeholder="HONG 姓" class="inp" />
+								<button class="inpReset">초기화</button>
+							</div>
+						</div>
+					</div>
+
+					<label class="inpTitle" for="name">Name(Only for Korean)</label>
+					<div class="inputBox">
+						<input type="text" placeholder="홍길동" name="" id="name" class="inp" />
+						<button class="inpReset">초기화</button>
+					</div>
+
+					<label class="inpTitle" for="email">
+						Email <span class="starmark">*</span>
+						<span class="txt">电子邮箱 / メールアドレス</span>
+					</label>
+					<div class="inputBox">
+						<input type="text" placeholder="Paradise@paradise.com" name="" id="email" class="inp" />
+						<button class="inpReset">초기화</button>
+					</div>
+
+					<label class="inpTitle" for="tel">
+						Tel <span class="starmark">*</span>
+						<span class="txt">电话号码 / 電話番号</span>
+					</label>
+					<div class="tblDiv">
+						<div class="cellDiv" style="width:80px;">
+							<select name="" id="" class="selectbox">
+								<option value="">010</option>
+								<option value="">011</option>
+								<option value="">016</option>
+								<option value="">017</option>
+								<option value="">018</option>
+								<option value="">019</option>
+							</select>
+						</div>
+						<div class="cellDiv">
+							<input type="tel" placeholder="휴대폰 번호" class="inp" />
+						</div>
+					</div>
+
+					<label class="inpTitle" for="Nationality">
+						Nationality
+						<span class="txt">國籍 / 国籍</span>
+					</label>
+					<div class="inputBox">
+						<select name="" id="Nationality" class="selectbox">
+							<option value="">SELECT</option>
+						</select>
+					</div>
+
+					<label class="inpTitle" for="Language">
+						Language <span class="starmark">*</span>
+						<span class="txt">語言/ 言語</span>
+					</label>
+					<div class="inputBox">
+						<select name="" id="Language" class="selectbox">
+							<option value="">Nationality</option>
+						</select>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="offerResult mt20">
+				<div class="inpWrap pt0">
+					<p class="infoTitle">Room Requirements</p>
+
+					<span class="inpTitle">
+						Check in/out <span class="starmark">*</span>
+						<span class="txt">入住, 退房 / チェックイン, アウト</span>
+					</span>
+					<div class="tblDiv btnTbl">
+						<div class="cellDiv">
+							<a href="#" class="btn ty5 etc"><span>CHECK IN</span></a>
+						</div>
+						<div class="cellDiv">
+							<a href="#" class="btn ty5 etc"><span>CHECK OUT</span></a>
+						</div>
+					</div>
+
+					<label class="inpTitle" for="people">
+						Number of people <span class="starmark">*</span>
+						<span class="txt">人数 / 人数</span>
+					</label>
+					<div class="inputBox">
+						<select name="" id="people" class="selectbox">
+							<option value="">SELECT</option>
+							<option value="">2 Person</option>
+						</select>
+					</div>
+
+					<span class="inpTitle">
+						Room, Bed type <span class="starmark">*</span>
+						<span class="txt">房型, 床型 / 客室, ベッドタイプ</span>
+					</span>
+					<div class="inputBox">
+						<div class="mt20">
+							<div class="radioBox">
+								<input type="radio" id="type1" name="type" checked="checked" />
+								<label for="type1">
+									Deluxe/Twin 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">330</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="mt12">
+							<div class="radioBox">
+								<input type="radio" id="type2" name="type" />
+								<label for="type2">
+									Deluxe/King 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">330</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="mt12">
+							<div class="radioBox">
+								<input type="radio" id="type3" name="type" />
+								<label for="type3">
+									premier Delux/Twin 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">495</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="mt12">
+							<div class="radioBox">
+								<input type="radio" id="type4" name="type" />
+								<label for="type4">
+									Premier Delux/King 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">495</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="mt12">
+							<div class="radioBox">
+								<input type="radio" id="type5" name="type" />
+								<label for="type5">
+									Grand Premier Delux/King 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">660</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+						<div class="mt12">
+							<div class="radioBox">
+								<input type="radio" id="type6" name="type" />
+								<label for="type6">
+									Grand Premier Delux/Twin 
+									<span class="fs12 pl4">
+										<span class="bold pointColor">660</span> <span class="pointColor4">KRW</span>
+									</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<span class="inpTitle">
+						Option <span class="starmark">*</span>
+						<span class="txt">选项 / オプション</span>
+					</span>
+					<div class="inputBox">
+						<div class="checkbox">
+							<input type="checkbox" id="option" />
+							<label for="option">
+								Breakfast 早餐 / 朝食
+								<span class="fs12 pl4">
+									<span class="bold pointColor">330</span> <span class="pointColor4">KRW</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="tblDiv btnTbl mt12">
+						<div class="cellDiv">
+							<select name="" id="people" class="selectbox">
+								<option value="">2 Person</option>
+							</select>
+						</div>
+						<div class="cellDiv">
+							<select name="" id="people" class="selectbox">
+								<option value="">3 Night</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			 <div class="offerResult mt20 pt10">
+				<ul class="slideWrap dept none display">
+					<li class="slideList final">
+						<div class="slideDept1 pb0">
+							<span class="title">
+								Total Amount
+								<span class="fs12 dpb">总额 / 合計金額</span>
+							</span>
+							<span class="rst">
+								<span class="unit pr5">KRW</span> <span class="finalPrice">200,000</span>
+							</span>
+						</div>
+					</li>
+				</ul>
+				<div class="mt12 fs11 pointColor3">The above rate is included 1 breakfast(Included 10% Tax)</div>
+			 </div>
+
+			 <div class="offerResult mt17">
+
+				<label class="inpTitle" for="Passport">
+					Passport No. <span class="starmark">*</span>
+					<span class="txt">护照号码/パスポート番号</span>
+				</label>
+				<div class="inputBox">
+					<input type="text" name="" id="Passport" class="inp" />
+				</div>
+
+				<label class="inpTitle" for="Flight">
+					Arrival
+					<span class="txt">抵达/到着</span>
+				</label>
+				<div class="tblDiv">
+					<div class="cellDiv">
+						<input type="text" placeholder="Flight No." id="Flight" class="inp" />
+					</div>
+					<div class="cellDiv">
+						<input type="date" name="" class="inp date" />
+					</div>
+				</div>
+
+				<div class="tblDiv time mt8">
+					<div class="cellDiv" style="width:65px;">
+						<select name="" id="Arrival" class="selectbox">
+							<option value="">AM</option>
+							<option value="">PM</option>
+						</select>
+					</div>
+					<div class="cellDiv">
+						<input type="tel" placeholder="00" class="inp" />
+					</div>
+					<div class="cellDiv">
+						<input type="tel" placeholder="00" class="inp" />
+					</div>
+				</div>
+
+				<label class="inpTitle" for="Departure">
+					Departure
+					<span class="txt">出发/出発</span>
+				</label>
+				<div class="tblDiv">
+					<div class="cellDiv">
+						<input type="text" placeholder="Flight No." id="Departure" class="inp" />
+					</div>
+					<div class="cellDiv">
+						<input type="date" name="" class="inp date" />
+					</div>
+				</div>
+
+				<div class="tblDiv time mt8">
+					<div class="cellDiv" style="width:65px;">
+						<select name="" id="Arrival" class="selectbox">
+							<option value="">AM</option>
+							<option value="">PM</option>
+						</select>
+					</div>
+					<div class="cellDiv">
+						<input type="tel" placeholder="00" class="inp" />
+					</div>
+					<div class="cellDiv">
+						<input type="tel" placeholder="00" class="inp" />
+					</div>
+				</div>
+
+				<label class="inpTitle" for="Request">
+					Special Request
+					<span class="txt">额外要求 / 追加事項</span>
+				</label>
+				<div class="inputBox">
+					<textarea name="" id="Request" cols="30" rows="10" class="textarea"></textarea>
+				</div>
+
+				<dl class="notiTxt mt15">
+					<dt>Notice</dt>
+					<dd>
+						<ul class="list">
+							<li>관리자 등록 영역</li>
+						</ul>
+					</dd>
+				</dl>
+			 </div>
+
+			 <div class="tblDiv btnTbl half full mt16">
+				<div class="cellDiv">
+					<a href="#" class="btn ty8 big">CANCEL</a>
+				</div>
+				<div class="cellDiv">
+					<a href="#" class="btn ty1">SUBMIT</a>
+				</div>
+			</div>
+
+		</section>
+		<!-- //컨텐츠 영역 -->
+	</div>
+</body>
+</html>
